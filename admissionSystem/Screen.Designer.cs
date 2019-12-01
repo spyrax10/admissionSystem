@@ -109,7 +109,7 @@
             this.gBForgot.Controls.Add(this.textBox1);
             this.gBForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gBForgot.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBForgot.Location = new System.Drawing.Point(494, 183);
+            this.gBForgot.Location = new System.Drawing.Point(251, 183);
             this.gBForgot.Name = "gBForgot";
             this.gBForgot.Size = new System.Drawing.Size(373, 214);
             this.gBForgot.TabIndex = 10;
@@ -190,7 +190,7 @@
             this.gBCreate.Controls.Add(this.pictureBox8);
             this.gBCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gBCreate.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBCreate.Location = new System.Drawing.Point(494, 183);
+            this.gBCreate.Location = new System.Drawing.Point(847, 183);
             this.gBCreate.Name = "gBCreate";
             this.gBCreate.Size = new System.Drawing.Size(373, 214);
             this.gBCreate.TabIndex = 5;
@@ -260,18 +260,20 @@
             // 
             // btnShut
             // 
+            this.btnShut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnShut.FlatAppearance.BorderSize = 0;
             this.btnShut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnShut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnShut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShut.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShut.ForeColor = System.Drawing.Color.Red;
-            this.btnShut.Location = new System.Drawing.Point(1284, 3);
+            this.btnShut.Image = global::admissionSystem.Properties.Resources.Apps_Dialog_Shutdown_icon;
+            this.btnShut.Location = new System.Drawing.Point(1291, 3);
             this.btnShut.Name = "btnShut";
-            this.btnShut.Size = new System.Drawing.Size(49, 48);
+            this.btnShut.Size = new System.Drawing.Size(40, 39);
             this.btnShut.TabIndex = 7;
-            this.btnShut.Text = "X";
             this.btnShut.UseVisualStyleBackColor = true;
+            this.btnShut.Click += new System.EventHandler(this.btnShut_Click);
             // 
             // gBId
             // 
@@ -300,6 +302,7 @@
             this.btnIDVer.TabIndex = 7;
             this.btnIDVer.Text = "VERIFY";
             this.btnIDVer.UseVisualStyleBackColor = true;
+            this.btnIDVer.Click += new System.EventHandler(this.btnIDVer_Click);
             // 
             // pictureBox1
             // 

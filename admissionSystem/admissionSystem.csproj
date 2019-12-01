@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +93,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
+    <None Include="Resources\One-storied-house-icon %281%29.png" />
+    <None Include="Resources\add-user-icon %281%29.png" />
+    <None Include="Resources\User-Group-icon %281%29.png" />
+    <None Include="Resources\user-info-icon.png" />
+    <None Include="Resources\user-info-icon %281%29.png" />
+    <None Include="Resources\Male-user-add-icon.png" />
+    <None Include="Resources\Male-user-info-icon.png" />
+    <None Include="Resources\Get-Info-icon.png" />
+    <None Include="Resources\Log-Out-icon.png" />
+    <None Include="Resources\Male-user-add-icon1.png" />
+    <None Include="Resources\user-add-icon.png" />
+    <None Include="Resources\Printer-blue-icon.png" />
+    <None Include="Resources\Search-icon.png" />
+    <None Include="Resources\Zoom-icon.png" />
+    <None Include="Resources\Save-icon.png" />
     <Content Include="spy.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -68,5 +68,20 @@ namespace admissionSystem
                 MessageBox.Show(f.Message);
             }
         }
+
+        private void btnShut_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnIDVer_Click(object sender, EventArgs e)
+        {
+            if (tBId.Text == "emanCute")
+            {
+                this.Visible = false;
+                Main ma = new Main();
+                ma.ShowDialog();    
+            }
+        }
     }
 }
