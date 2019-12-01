@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Screen));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gBForgot = new System.Windows.Forms.GroupBox();
@@ -62,6 +63,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneSlide = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.gBForgot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).BeginInit();
@@ -259,11 +262,15 @@
             // 
             this.btnShut.FlatAppearance.BorderSize = 0;
             this.btnShut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnShut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnShut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShut.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShut.ForeColor = System.Drawing.Color.Red;
             this.btnShut.Location = new System.Drawing.Point(1284, 3);
             this.btnShut.Name = "btnShut";
             this.btnShut.Size = new System.Drawing.Size(49, 48);
             this.btnShut.TabIndex = 7;
+            this.btnShut.Text = "X";
             this.btnShut.UseVisualStyleBackColor = true;
             // 
             // gBId
@@ -453,6 +460,18 @@
             this.paneSlide.Size = new System.Drawing.Size(114, 15);
             this.paneSlide.TabIndex = 3;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Screen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -463,6 +482,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Screen_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.gBForgot.ResumeLayout(false);
@@ -525,6 +545,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel paneSlide;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
 
