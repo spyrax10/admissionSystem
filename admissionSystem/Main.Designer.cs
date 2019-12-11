@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneSide = new System.Windows.Forms.Panel();
@@ -167,6 +168,10 @@
             this.cBEmpViewCoun = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
             this.tBEmpViewSer = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSPrint = new System.Windows.Forms.Button();
@@ -176,6 +181,8 @@
             this.btnEmpViewSave = new System.Windows.Forms.Button();
             this.pBEmpView = new System.Windows.Forms.PictureBox();
             this.btnEmpViewSer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnOut = new System.Windows.Forms.Button();
             this.btnAdInfo = new System.Windows.Forms.Button();
             this.btnStudInfo = new System.Windows.Forms.Button();
@@ -183,6 +190,9 @@
             this.btnEmpInfo = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
@@ -202,16 +212,20 @@
             this.gBEmpViewEmer.SuspendLayout();
             this.gBEmpViewCont.SuspendLayout();
             this.gBEmpViewInfo.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnOut);
             this.panel1.Controls.Add(this.btnAdInfo);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnStudInfo);
             this.panel1.Controls.Add(this.btnAddStud);
             this.panel1.Controls.Add(this.btnEmpInfo);
@@ -228,7 +242,7 @@
             // 
             this.paneSide.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSide.Location = new System.Drawing.Point(7, 135);
+            this.paneSide.Location = new System.Drawing.Point(7, 177);
             this.paneSide.Name = "paneSide";
             this.paneSide.Size = new System.Drawing.Size(10, 36);
             this.paneSide.TabIndex = 1;
@@ -1796,6 +1810,49 @@
             this.tBEmpViewSer.Size = new System.Drawing.Size(173, 23);
             this.tBEmpViewSer.TabIndex = 64;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.label61);
+            this.panel2.Controls.Add(this.label60);
+            this.panel2.Controls.Add(this.label59);
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.lblTime);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(203, 143);
+            this.panel2.TabIndex = 8;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(5, 92);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(97, 28);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "label59";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblDate.Location = new System.Drawing.Point(9, 117);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(52, 16);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "label60";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
@@ -1920,20 +1977,45 @@
             this.btnEmpViewSer.TabIndex = 65;
             this.btnEmpViewSer.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
+            this.button1.Location = new System.Drawing.Point(175, 146);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 22);
+            this.button1.TabIndex = 9;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkGray;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::admissionSystem.Properties.Resources.spy;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnOut
             // 
-            this.btnOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnOut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOut.Image = global::admissionSystem.Properties.Resources.Log_Out_icon;
             this.btnOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOut.Location = new System.Drawing.Point(0, 663);
+            this.btnOut.Location = new System.Drawing.Point(3, 660);
             this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(203, 36);
+            this.btnOut.Size = new System.Drawing.Size(41, 36);
             this.btnOut.TabIndex = 7;
-            this.btnOut.Text = "LOGOUT";
             this.btnOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnOut.UseVisualStyleBackColor = true;
             this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
@@ -1947,7 +2029,7 @@
             this.btnAdInfo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdInfo.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
             this.btnAdInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdInfo.Location = new System.Drawing.Point(19, 345);
+            this.btnAdInfo.Location = new System.Drawing.Point(19, 387);
             this.btnAdInfo.Name = "btnAdInfo";
             this.btnAdInfo.Size = new System.Drawing.Size(176, 36);
             this.btnAdInfo.TabIndex = 6;
@@ -1965,7 +2047,7 @@
             this.btnStudInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudInfo.Image = global::admissionSystem.Properties.Resources.Male_user_info_icon;
             this.btnStudInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudInfo.Location = new System.Drawing.Point(19, 303);
+            this.btnStudInfo.Location = new System.Drawing.Point(19, 345);
             this.btnStudInfo.Name = "btnStudInfo";
             this.btnStudInfo.Size = new System.Drawing.Size(176, 36);
             this.btnStudInfo.TabIndex = 5;
@@ -1983,7 +2065,7 @@
             this.btnAddStud.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStud.Image = global::admissionSystem.Properties.Resources.Male_user_add_icon;
             this.btnAddStud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStud.Location = new System.Drawing.Point(19, 261);
+            this.btnAddStud.Location = new System.Drawing.Point(19, 303);
             this.btnAddStud.Name = "btnAddStud";
             this.btnAddStud.Size = new System.Drawing.Size(176, 36);
             this.btnAddStud.TabIndex = 4;
@@ -2001,7 +2083,7 @@
             this.btnEmpInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpInfo.Image = global::admissionSystem.Properties.Resources.user_info_icon__1_;
             this.btnEmpInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpInfo.Location = new System.Drawing.Point(19, 219);
+            this.btnEmpInfo.Location = new System.Drawing.Point(19, 261);
             this.btnEmpInfo.Name = "btnEmpInfo";
             this.btnEmpInfo.Size = new System.Drawing.Size(176, 36);
             this.btnEmpInfo.TabIndex = 3;
@@ -2019,7 +2101,7 @@
             this.btnAddEmp.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmp.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
             this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(19, 177);
+            this.btnAddEmp.Location = new System.Drawing.Point(19, 219);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(176, 36);
             this.btnAddEmp.TabIndex = 2;
@@ -2037,7 +2119,7 @@
             this.btnHome.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = global::admissionSystem.Properties.Resources.One_storied_house_icon__1_;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(19, 135);
+            this.btnHome.Location = new System.Drawing.Point(19, 177);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(176, 36);
             this.btnHome.TabIndex = 0;
@@ -2045,6 +2127,39 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.Location = new System.Drawing.Point(84, 16);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(74, 21);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "Welcome";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label60.Location = new System.Drawing.Point(85, 37);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(61, 16);
+            this.label60.TabIndex = 10;
+            this.label60.Text = "spyrax10";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Lime;
+            this.label61.Location = new System.Drawing.Point(85, 61);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(75, 15);
+            this.label61.TabIndex = 11;
+            this.label61.Text = "2019-00000";
             // 
             // Main
             // 
@@ -2096,9 +2211,12 @@
             this.gBEmpViewCont.PerformLayout();
             this.gBEmpViewInfo.ResumeLayout(false);
             this.gBEmpViewInfo.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2259,5 +2377,14 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.TextBox tBEmpViewSer;
         private System.Windows.Forms.Button btnEmpViewSer;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label59;
     }
 }

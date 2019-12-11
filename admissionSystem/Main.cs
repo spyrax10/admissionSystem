@@ -28,6 +28,8 @@ namespace admissionSystem
         private void Main_Load(object sender, EventArgs e)
         {
             tabControl1.TabPages.Clear();
+            timer1.Start();
+            lblDate.Text = DateTime.Now.ToLongDateString();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -90,6 +92,11 @@ namespace admissionSystem
                 imgLoc = dlg.FileName.ToString();
                 pBEmpAdd.ImageLocation = imgLoc;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
