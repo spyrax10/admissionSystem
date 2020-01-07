@@ -27,6 +27,7 @@ namespace admissionSystem
 
         private void Main_Load(object sender, EventArgs e)
         {
+            paneSet.Visible = false;
             tabControl1.TabPages.Clear();
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
@@ -97,6 +98,31 @@ namespace admissionSystem
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnSet_Click(object sender, EventArgs e)
+        {
+            if (paneSet.Visible == false)
+                paneSet.Visible = true;
+            paneSet.BringToFront();
+        }
+
+        private void btnSetX_Click(object sender, EventArgs e)
+        {
+            paneSet.Visible = false;
+        }
+
+        private void paneSet_Leave(object sender, EventArgs e)
+        {
+            paneSet.Visible = false;
+        }
+
+        private void paneSet_Enter(object sender, EventArgs e)
+        {
+            if (!paneSet.Focus())
+            {
+                paneSet.Visible = false;
+            }
         }
     }
 }

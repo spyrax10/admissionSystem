@@ -31,12 +31,34 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.paneSet = new System.Windows.Forms.Panel();
+            this.btnSetX = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnAdInfo = new System.Windows.Forms.Button();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnStudInfo = new System.Windows.Forms.Button();
+            this.btnAddStud = new System.Windows.Forms.Button();
+            this.btnEmpInfo = new System.Windows.Forms.Button();
+            this.btnAddEmp = new System.Windows.Forms.Button();
             this.paneSide = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.tabAddEmp = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSPrint = new System.Windows.Forms.Button();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.tBEmpAddId = new System.Windows.Forms.TextBox();
+            this.btnEmpAddReg = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.btnEmpAddUp = new System.Windows.Forms.Button();
             this.gBEmpAddBasic = new System.Windows.Forms.GroupBox();
@@ -95,17 +117,21 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.pBEmpAdd = new System.Windows.Forms.PictureBox();
             this.gBEmpAddCont = new System.Windows.Forms.GroupBox();
             this.tBEmpAddEmail = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.tBEmpAddMob = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.tabEmpInfo = new System.Windows.Forms.TabPage();
+            this.btnVInfoPrint = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelUpSInfo = new System.Windows.Forms.Panel();
             this.label58 = new System.Windows.Forms.Label();
             this.btnEmpViewUp = new System.Windows.Forms.Button();
             this.tBEmpViewId = new System.Windows.Forms.TextBox();
+            this.btnEmpViewSave = new System.Windows.Forms.Button();
+            this.pBEmpView = new System.Windows.Forms.PictureBox();
             this.gBEmpViewEmp = new System.Windows.Forms.GroupBox();
             this.tBEmpViewStat = new System.Windows.Forms.ComboBox();
             this.tBEmpViewPos = new System.Windows.Forms.TextBox();
@@ -168,75 +194,300 @@
             this.cBEmpViewCoun = new System.Windows.Forms.ComboBox();
             this.label49 = new System.Windows.Forms.Label();
             this.tBEmpViewSer = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSPrint = new System.Windows.Forms.Button();
-            this.btnEmpAddReg = new System.Windows.Forms.Button();
-            this.pBEmpAdd = new System.Windows.Forms.PictureBox();
-            this.btnVInfoPrint = new System.Windows.Forms.Button();
-            this.btnEmpViewSave = new System.Windows.Forms.Button();
-            this.pBEmpView = new System.Windows.Forms.PictureBox();
             this.btnEmpViewSer = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnOut = new System.Windows.Forms.Button();
-            this.btnAdInfo = new System.Windows.Forms.Button();
-            this.btnStudInfo = new System.Windows.Forms.Button();
-            this.btnAddStud = new System.Windows.Forms.Button();
-            this.btnEmpInfo = new System.Windows.Forms.Button();
-            this.btnAddEmp = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.label59 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            this.paneSet.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelInfo.SuspendLayout();
             this.gBEmpAddBasic.SuspendLayout();
             this.gBEmpAddEmer.SuspendLayout();
             this.gBEmpAddEmp.SuspendLayout();
             this.gBEmpAddInfo.SuspendLayout();
             this.gBEmpAddOt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).BeginInit();
             this.gBEmpAddCont.SuspendLayout();
             this.tabEmpInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelUpSInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).BeginInit();
             this.gBEmpViewEmp.SuspendLayout();
             this.gBEmpViewBasic.SuspendLayout();
             this.gBEmpViewOt.SuspendLayout();
             this.gBEmpViewEmer.SuspendLayout();
             this.gBEmpViewCont.SuspendLayout();
             this.gBEmpViewInfo.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnOut);
             this.panel1.Controls.Add(this.btnAdInfo);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnSet);
             this.panel1.Controls.Add(this.btnStudInfo);
             this.panel1.Controls.Add(this.btnAddStud);
             this.panel1.Controls.Add(this.btnEmpInfo);
             this.panel1.Controls.Add(this.btnAddEmp);
             this.panel1.Controls.Add(this.paneSide);
             this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.paneSet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 701);
+            this.panel1.Size = new System.Drawing.Size(205, 726);
             this.panel1.TabIndex = 0;
+            // 
+            // paneSet
+            // 
+            this.paneSet.BackColor = System.Drawing.Color.Black;
+            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSet.Controls.Add(this.btnSetX);
+            this.paneSet.Controls.Add(this.button4);
+            this.paneSet.Controls.Add(this.button3);
+            this.paneSet.ForeColor = System.Drawing.Color.White;
+            this.paneSet.Location = new System.Drawing.Point(3, 174);
+            this.paneSet.Name = "paneSet";
+            this.paneSet.Size = new System.Drawing.Size(200, 116);
+            this.paneSet.TabIndex = 10;
+            this.paneSet.Enter += new System.EventHandler(this.paneSet_Enter);
+            this.paneSet.Leave += new System.EventHandler(this.paneSet_Leave);
+            // 
+            // btnSetX
+            // 
+            this.btnSetX.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSetX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnSetX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnSetX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetX.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetX.ForeColor = System.Drawing.Color.Red;
+            this.btnSetX.Location = new System.Drawing.Point(167, 3);
+            this.btnSetX.Name = "btnSetX";
+            this.btnSetX.Size = new System.Drawing.Size(28, 26);
+            this.btnSetX.TabIndex = 11;
+            this.btnSetX.Text = "X";
+            this.btnSetX.UseVisualStyleBackColor = true;
+            this.btnSetX.Click += new System.EventHandler(this.btnSetX_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(3, 73);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(192, 31);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "LOGOUT";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(3, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(192, 31);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Account Settings";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.label61);
+            this.panel2.Controls.Add(this.label60);
+            this.panel2.Controls.Add(this.label59);
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.lblTime);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(203, 143);
+            this.panel2.TabIndex = 8;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.ForeColor = System.Drawing.Color.Lime;
+            this.label61.Location = new System.Drawing.Point(85, 61);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(75, 15);
+            this.label61.TabIndex = 11;
+            this.label61.Text = "2019-00000";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label60.Location = new System.Drawing.Point(85, 37);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(61, 16);
+            this.label60.TabIndex = 10;
+            this.label60.Text = "spyrax10";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.Location = new System.Drawing.Point(84, 16);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(74, 21);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "Welcome";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblDate.Location = new System.Drawing.Point(9, 117);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(52, 16);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "label60";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(5, 92);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(97, 28);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "label59";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkGray;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = global::admissionSystem.Properties.Resources.spy;
+            this.pictureBox2.Location = new System.Drawing.Point(11, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnAdInfo
+            // 
+            this.btnAdInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAdInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAdInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdInfo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdInfo.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
+            this.btnAdInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdInfo.Location = new System.Drawing.Point(19, 387);
+            this.btnAdInfo.Name = "btnAdInfo";
+            this.btnAdInfo.Size = new System.Drawing.Size(176, 36);
+            this.btnAdInfo.TabIndex = 6;
+            this.btnAdInfo.Text = "ADMISSION INFO";
+            this.btnAdInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdInfo.UseVisualStyleBackColor = true;
+            this.btnAdInfo.Click += new System.EventHandler(this.btnAdInfo_Click);
+            // 
+            // btnSet
+            // 
+            this.btnSet.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnSet.FlatAppearance.BorderSize = 0;
+            this.btnSet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSet.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
+            this.btnSet.Location = new System.Drawing.Point(175, 146);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(25, 22);
+            this.btnSet.TabIndex = 9;
+            this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnStudInfo
+            // 
+            this.btnStudInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStudInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnStudInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStudInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudInfo.Image = global::admissionSystem.Properties.Resources.Male_user_info_icon;
+            this.btnStudInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStudInfo.Location = new System.Drawing.Point(19, 345);
+            this.btnStudInfo.Name = "btnStudInfo";
+            this.btnStudInfo.Size = new System.Drawing.Size(176, 36);
+            this.btnStudInfo.TabIndex = 5;
+            this.btnStudInfo.Text = "STUDENT INFO";
+            this.btnStudInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStudInfo.UseVisualStyleBackColor = true;
+            this.btnStudInfo.Click += new System.EventHandler(this.btnStudInfo_Click);
+            // 
+            // btnAddStud
+            // 
+            this.btnAddStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAddStud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAddStud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStud.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStud.Image = global::admissionSystem.Properties.Resources.Male_user_add_icon;
+            this.btnAddStud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStud.Location = new System.Drawing.Point(19, 303);
+            this.btnAddStud.Name = "btnAddStud";
+            this.btnAddStud.Size = new System.Drawing.Size(176, 36);
+            this.btnAddStud.TabIndex = 4;
+            this.btnAddStud.Text = "NEW STUDENT";
+            this.btnAddStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStud.UseVisualStyleBackColor = true;
+            this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
+            // 
+            // btnEmpInfo
+            // 
+            this.btnEmpInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEmpInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEmpInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpInfo.Image = global::admissionSystem.Properties.Resources.user_info_icon__1_;
+            this.btnEmpInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmpInfo.Location = new System.Drawing.Point(19, 261);
+            this.btnEmpInfo.Name = "btnEmpInfo";
+            this.btnEmpInfo.Size = new System.Drawing.Size(176, 36);
+            this.btnEmpInfo.TabIndex = 3;
+            this.btnEmpInfo.Text = "STAFF INFO";
+            this.btnEmpInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEmpInfo.UseVisualStyleBackColor = true;
+            this.btnEmpInfo.Click += new System.EventHandler(this.btnEmpInfo_Click);
+            // 
+            // btnAddEmp
+            // 
+            this.btnAddEmp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAddEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAddEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmp.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmp.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
+            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEmp.Location = new System.Drawing.Point(19, 219);
+            this.btnAddEmp.Name = "btnAddEmp";
+            this.btnAddEmp.Size = new System.Drawing.Size(176, 36);
+            this.btnAddEmp.TabIndex = 2;
+            this.btnAddEmp.Text = "NEW STAFF";
+            this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddEmp.UseVisualStyleBackColor = true;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // paneSide
             // 
@@ -246,6 +497,24 @@
             this.paneSide.Name = "paneSide";
             this.paneSide.Size = new System.Drawing.Size(10, 36);
             this.paneSide.TabIndex = 1;
+            // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = global::admissionSystem.Properties.Resources.One_storied_house_icon__1_;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(19, 177);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(176, 36);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "HOMEPAGE";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // tabControl1
             // 
@@ -257,7 +526,7 @@
             this.tabControl1.Location = new System.Drawing.Point(205, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1155, 701);
+            this.tabControl1.Size = new System.Drawing.Size(1139, 726);
             this.tabControl1.TabIndex = 1;
             // 
             // tabHome
@@ -266,7 +535,7 @@
             this.tabHome.Location = new System.Drawing.Point(4, 25);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1147, 672);
+            this.tabHome.Size = new System.Drawing.Size(1131, 697);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Homepage";
             // 
@@ -279,10 +548,53 @@
             this.tabAddEmp.Location = new System.Drawing.Point(4, 25);
             this.tabAddEmp.Name = "tabAddEmp";
             this.tabAddEmp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddEmp.Size = new System.Drawing.Size(1147, 672);
+            this.tabAddEmp.Size = new System.Drawing.Size(1131, 697);
             this.tabAddEmp.TabIndex = 1;
             this.tabAddEmp.Text = "New Staff";
             this.tabAddEmp.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(672, 645);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(187, 35);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "NEW EMPLOYEE";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(672, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(453, 632);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnSPrint
+            // 
+            this.btnSPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnSPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
+            this.btnSPrint.Location = new System.Drawing.Point(1085, 645);
+            this.btnSPrint.Name = "btnSPrint";
+            this.btnSPrint.Size = new System.Drawing.Size(40, 39);
+            this.btnSPrint.TabIndex = 36;
+            this.btnSPrint.UseVisualStyleBackColor = true;
             // 
             // panelInfo
             // 
@@ -298,9 +610,9 @@
             this.panelInfo.Controls.Add(this.gBEmpAddOt);
             this.panelInfo.Controls.Add(this.pBEmpAdd);
             this.panelInfo.Controls.Add(this.gBEmpAddCont);
-            this.panelInfo.Location = new System.Drawing.Point(6, 7);
+            this.panelInfo.Location = new System.Drawing.Point(0, 7);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(654, 646);
+            this.panelInfo.Size = new System.Drawing.Size(660, 685);
             this.panelInfo.TabIndex = 35;
             // 
             // tBEmpAddId
@@ -311,6 +623,21 @@
             this.tBEmpAddId.Name = "tBEmpAddId";
             this.tBEmpAddId.Size = new System.Drawing.Size(118, 27);
             this.tBEmpAddId.TabIndex = 35;
+            // 
+            // btnEmpAddReg
+            // 
+            this.btnEmpAddReg.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEmpAddReg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEmpAddReg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpAddReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpAddReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpAddReg.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpAddReg.Image = global::admissionSystem.Properties.Resources.user_add_icon;
+            this.btnEmpAddReg.Location = new System.Drawing.Point(606, 592);
+            this.btnEmpAddReg.Name = "btnEmpAddReg";
+            this.btnEmpAddReg.Size = new System.Drawing.Size(37, 36);
+            this.btnEmpAddReg.TabIndex = 27;
+            this.btnEmpAddReg.UseVisualStyleBackColor = true;
             // 
             // label26
             // 
@@ -331,7 +658,7 @@
             this.btnEmpAddUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpAddUp.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpAddUp.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpAddUp.Location = new System.Drawing.Point(486, 5);
+            this.btnEmpAddUp.Location = new System.Drawing.Point(484, 3);
             this.btnEmpAddUp.Name = "btnEmpAddUp";
             this.btnEmpAddUp.Size = new System.Drawing.Size(71, 24);
             this.btnEmpAddUp.TabIndex = 22;
@@ -722,7 +1049,7 @@
             this.gBEmpAddEmp.Controls.Add(this.label27);
             this.gBEmpAddEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpAddEmp.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddEmp.Location = new System.Drawing.Point(322, 484);
+            this.gBEmpAddEmp.Location = new System.Drawing.Point(322, 495);
             this.gBEmpAddEmp.Name = "gBEmpAddEmp";
             this.gBEmpAddEmp.Size = new System.Drawing.Size(279, 133);
             this.gBEmpAddEmp.TabIndex = 25;
@@ -978,6 +1305,16 @@
             this.label24.TabIndex = 3;
             this.label24.Text = "SSS Number:";
             // 
+            // pBEmpAdd
+            // 
+            this.pBEmpAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEmpAdd.Location = new System.Drawing.Point(561, 3);
+            this.pBEmpAdd.Name = "pBEmpAdd";
+            this.pBEmpAdd.Size = new System.Drawing.Size(86, 80);
+            this.pBEmpAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmpAdd.TabIndex = 21;
+            this.pBEmpAdd.TabStop = false;
+            // 
             // gBEmpAddCont
             // 
             this.gBEmpAddCont.Controls.Add(this.tBEmpAddEmail);
@@ -1041,10 +1378,26 @@
             this.tabEmpInfo.Location = new System.Drawing.Point(4, 25);
             this.tabEmpInfo.Name = "tabEmpInfo";
             this.tabEmpInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEmpInfo.Size = new System.Drawing.Size(1147, 672);
+            this.tabEmpInfo.Size = new System.Drawing.Size(1131, 697);
             this.tabEmpInfo.TabIndex = 2;
             this.tabEmpInfo.Text = "Staff Info";
             this.tabEmpInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnVInfoPrint
+            // 
+            this.btnVInfoPrint.BackColor = System.Drawing.Color.White;
+            this.btnVInfoPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnVInfoPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnVInfoPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnVInfoPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVInfoPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVInfoPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnVInfoPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
+            this.btnVInfoPrint.Location = new System.Drawing.Point(390, 6);
+            this.btnVInfoPrint.Name = "btnVInfoPrint";
+            this.btnVInfoPrint.Size = new System.Drawing.Size(39, 38);
+            this.btnVInfoPrint.TabIndex = 68;
+            this.btnVInfoPrint.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -1053,9 +1406,9 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.DodgerBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 47);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 49);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(419, 619);
+            this.dataGridView1.Size = new System.Drawing.Size(423, 644);
             this.dataGridView1.TabIndex = 67;
             // 
             // panelUpSInfo
@@ -1072,9 +1425,9 @@
             this.panelUpSInfo.Controls.Add(this.gBEmpViewEmer);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewCont);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewInfo);
-            this.panelUpSInfo.Location = new System.Drawing.Point(440, 7);
+            this.panelUpSInfo.Location = new System.Drawing.Point(440, 1);
             this.panelUpSInfo.Name = "panelUpSInfo";
-            this.panelUpSInfo.Size = new System.Drawing.Size(696, 659);
+            this.panelUpSInfo.Size = new System.Drawing.Size(691, 692);
             this.panelUpSInfo.TabIndex = 66;
             // 
             // label58
@@ -1094,7 +1447,7 @@
             this.btnEmpViewUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpViewUp.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpViewUp.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpViewUp.Location = new System.Drawing.Point(521, 3);
+            this.btnEmpViewUp.Location = new System.Drawing.Point(513, 61);
             this.btnEmpViewUp.Name = "btnEmpViewUp";
             this.btnEmpViewUp.Size = new System.Drawing.Size(77, 24);
             this.btnEmpViewUp.TabIndex = 30;
@@ -1110,6 +1463,32 @@
             this.tBEmpViewId.Size = new System.Drawing.Size(118, 27);
             this.tBEmpViewId.TabIndex = 60;
             // 
+            // btnEmpViewSave
+            // 
+            this.btnEmpViewSave.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEmpViewSave.FlatAppearance.BorderSize = 0;
+            this.btnEmpViewSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEmpViewSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpViewSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpViewSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpViewSave.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpViewSave.Image = global::admissionSystem.Properties.Resources.Save_icon;
+            this.btnEmpViewSave.Location = new System.Drawing.Point(647, 633);
+            this.btnEmpViewSave.Name = "btnEmpViewSave";
+            this.btnEmpViewSave.Size = new System.Drawing.Size(35, 37);
+            this.btnEmpViewSave.TabIndex = 58;
+            this.btnEmpViewSave.UseVisualStyleBackColor = true;
+            // 
+            // pBEmpView
+            // 
+            this.pBEmpView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEmpView.Location = new System.Drawing.Point(596, 5);
+            this.pBEmpView.Name = "pBEmpView";
+            this.pBEmpView.Size = new System.Drawing.Size(86, 80);
+            this.pBEmpView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmpView.TabIndex = 19;
+            this.pBEmpView.TabStop = false;
+            // 
             // gBEmpViewEmp
             // 
             this.gBEmpViewEmp.Controls.Add(this.tBEmpViewStat);
@@ -1120,7 +1499,7 @@
             this.gBEmpViewEmp.Controls.Add(this.label57);
             this.gBEmpViewEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewEmp.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewEmp.Location = new System.Drawing.Point(324, 501);
+            this.gBEmpViewEmp.Location = new System.Drawing.Point(355, 539);
             this.gBEmpViewEmp.Name = "gBEmpViewEmp";
             this.gBEmpViewEmp.Size = new System.Drawing.Size(285, 131);
             this.gBEmpViewEmp.TabIndex = 27;
@@ -1434,7 +1813,7 @@
             this.gBEmpViewOt.Controls.Add(this.label54);
             this.gBEmpViewOt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewOt.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewOt.Location = new System.Drawing.Point(366, 361);
+            this.gBEmpViewOt.Location = new System.Drawing.Point(355, 375);
             this.gBEmpViewOt.Name = "gBEmpViewOt";
             this.gBEmpViewOt.Size = new System.Drawing.Size(325, 134);
             this.gBEmpViewOt.TabIndex = 26;
@@ -1523,7 +1902,7 @@
             this.gBEmpViewEmer.Controls.Add(this.label45);
             this.gBEmpViewEmer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewEmer.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewEmer.Location = new System.Drawing.Point(11, 395);
+            this.gBEmpViewEmer.Location = new System.Drawing.Point(11, 419);
             this.gBEmpViewEmer.Name = "gBEmpViewEmer";
             this.gBEmpViewEmer.Size = new System.Drawing.Size(313, 251);
             this.gBEmpViewEmer.TabIndex = 23;
@@ -1653,7 +2032,7 @@
             this.gBEmpViewCont.Controls.Add(this.label51);
             this.gBEmpViewCont.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewCont.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewCont.Location = new System.Drawing.Point(363, 258);
+            this.gBEmpViewCont.Location = new System.Drawing.Point(355, 272);
             this.gBEmpViewCont.Name = "gBEmpViewCont";
             this.gBEmpViewCont.Size = new System.Drawing.Size(327, 97);
             this.gBEmpViewCont.TabIndex = 25;
@@ -1710,7 +2089,7 @@
             this.gBEmpViewInfo.Controls.Add(this.label49);
             this.gBEmpViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewInfo.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewInfo.Location = new System.Drawing.Point(383, 89);
+            this.gBEmpViewInfo.Location = new System.Drawing.Point(375, 103);
             this.gBEmpViewInfo.Name = "gBEmpViewInfo";
             this.gBEmpViewInfo.Size = new System.Drawing.Size(307, 163);
             this.gBEmpViewInfo.TabIndex = 24;
@@ -1805,163 +2184,10 @@
             // tBEmpViewSer
             // 
             this.tBEmpViewSer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewSer.Location = new System.Drawing.Point(10, 11);
+            this.tBEmpViewSer.Location = new System.Drawing.Point(6, 11);
             this.tBEmpViewSer.Name = "tBEmpViewSer";
             this.tBEmpViewSer.Size = new System.Drawing.Size(173, 23);
             this.tBEmpViewSer.TabIndex = 64;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.label61);
-            this.panel2.Controls.Add(this.label60);
-            this.panel2.Controls.Add(this.label59);
-            this.panel2.Controls.Add(this.lblDate);
-            this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 143);
-            this.panel2.TabIndex = 8;
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(5, 92);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(97, 28);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "label59";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDate.Location = new System.Drawing.Point(9, 117);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(52, 16);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "label60";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(678, 618);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 35);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "NEW EMPLOYEE";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(678, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(464, 604);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnSPrint
-            // 
-            this.btnSPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnSPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnSPrint.Location = new System.Drawing.Point(1095, 619);
-            this.btnSPrint.Name = "btnSPrint";
-            this.btnSPrint.Size = new System.Drawing.Size(40, 39);
-            this.btnSPrint.TabIndex = 36;
-            this.btnSPrint.UseVisualStyleBackColor = true;
-            // 
-            // btnEmpAddReg
-            // 
-            this.btnEmpAddReg.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpAddReg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpAddReg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpAddReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpAddReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpAddReg.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpAddReg.Image = global::admissionSystem.Properties.Resources.user_add_icon;
-            this.btnEmpAddReg.Location = new System.Drawing.Point(607, 581);
-            this.btnEmpAddReg.Name = "btnEmpAddReg";
-            this.btnEmpAddReg.Size = new System.Drawing.Size(37, 36);
-            this.btnEmpAddReg.TabIndex = 27;
-            this.btnEmpAddReg.UseVisualStyleBackColor = true;
-            // 
-            // pBEmpAdd
-            // 
-            this.pBEmpAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpAdd.Location = new System.Drawing.Point(563, 5);
-            this.pBEmpAdd.Name = "pBEmpAdd";
-            this.pBEmpAdd.Size = new System.Drawing.Size(86, 80);
-            this.pBEmpAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBEmpAdd.TabIndex = 21;
-            this.pBEmpAdd.TabStop = false;
-            // 
-            // btnVInfoPrint
-            // 
-            this.btnVInfoPrint.BackColor = System.Drawing.Color.White;
-            this.btnVInfoPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnVInfoPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnVInfoPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnVInfoPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVInfoPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVInfoPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnVInfoPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnVInfoPrint.Location = new System.Drawing.Point(390, 7);
-            this.btnVInfoPrint.Name = "btnVInfoPrint";
-            this.btnVInfoPrint.Size = new System.Drawing.Size(39, 38);
-            this.btnVInfoPrint.TabIndex = 68;
-            this.btnVInfoPrint.UseVisualStyleBackColor = false;
-            // 
-            // btnEmpViewSave
-            // 
-            this.btnEmpViewSave.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpViewSave.FlatAppearance.BorderSize = 0;
-            this.btnEmpViewSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpViewSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpViewSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpViewSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpViewSave.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpViewSave.Image = global::admissionSystem.Properties.Resources.Save_icon;
-            this.btnEmpViewSave.Location = new System.Drawing.Point(615, 595);
-            this.btnEmpViewSave.Name = "btnEmpViewSave";
-            this.btnEmpViewSave.Size = new System.Drawing.Size(35, 37);
-            this.btnEmpViewSave.TabIndex = 58;
-            this.btnEmpViewSave.UseVisualStyleBackColor = true;
-            // 
-            // pBEmpView
-            // 
-            this.pBEmpView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpView.Location = new System.Drawing.Point(604, 3);
-            this.pBEmpView.Name = "pBEmpView";
-            this.pBEmpView.Size = new System.Drawing.Size(86, 80);
-            this.pBEmpView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBEmpView.TabIndex = 19;
-            this.pBEmpView.TabStop = false;
             // 
             // btnEmpViewSer
             // 
@@ -1977,195 +2203,17 @@
             this.btnEmpViewSer.TabIndex = 65;
             this.btnEmpViewSer.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // timer1
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
-            this.button1.Location = new System.Drawing.Point(175, 146);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 22);
-            this.button1.TabIndex = 9;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkGray;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::admissionSystem.Properties.Resources.spy;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnOut
-            // 
-            this.btnOut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOut.Image = global::admissionSystem.Properties.Resources.Log_Out_icon;
-            this.btnOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOut.Location = new System.Drawing.Point(3, 660);
-            this.btnOut.Name = "btnOut";
-            this.btnOut.Size = new System.Drawing.Size(41, 36);
-            this.btnOut.TabIndex = 7;
-            this.btnOut.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOut.UseVisualStyleBackColor = true;
-            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
-            // 
-            // btnAdInfo
-            // 
-            this.btnAdInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAdInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAdInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdInfo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdInfo.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
-            this.btnAdInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdInfo.Location = new System.Drawing.Point(19, 387);
-            this.btnAdInfo.Name = "btnAdInfo";
-            this.btnAdInfo.Size = new System.Drawing.Size(176, 36);
-            this.btnAdInfo.TabIndex = 6;
-            this.btnAdInfo.Text = "ADMISSION INFO";
-            this.btnAdInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdInfo.UseVisualStyleBackColor = true;
-            this.btnAdInfo.Click += new System.EventHandler(this.btnAdInfo_Click);
-            // 
-            // btnStudInfo
-            // 
-            this.btnStudInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnStudInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnStudInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnStudInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudInfo.Image = global::admissionSystem.Properties.Resources.Male_user_info_icon;
-            this.btnStudInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudInfo.Location = new System.Drawing.Point(19, 345);
-            this.btnStudInfo.Name = "btnStudInfo";
-            this.btnStudInfo.Size = new System.Drawing.Size(176, 36);
-            this.btnStudInfo.TabIndex = 5;
-            this.btnStudInfo.Text = "STUDENT INFO";
-            this.btnStudInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStudInfo.UseVisualStyleBackColor = true;
-            this.btnStudInfo.Click += new System.EventHandler(this.btnStudInfo_Click);
-            // 
-            // btnAddStud
-            // 
-            this.btnAddStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAddStud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAddStud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStud.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStud.Image = global::admissionSystem.Properties.Resources.Male_user_add_icon;
-            this.btnAddStud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStud.Location = new System.Drawing.Point(19, 303);
-            this.btnAddStud.Name = "btnAddStud";
-            this.btnAddStud.Size = new System.Drawing.Size(176, 36);
-            this.btnAddStud.TabIndex = 4;
-            this.btnAddStud.Text = "NEW STUDENT";
-            this.btnAddStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddStud.UseVisualStyleBackColor = true;
-            this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
-            // 
-            // btnEmpInfo
-            // 
-            this.btnEmpInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpInfo.Image = global::admissionSystem.Properties.Resources.user_info_icon__1_;
-            this.btnEmpInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpInfo.Location = new System.Drawing.Point(19, 261);
-            this.btnEmpInfo.Name = "btnEmpInfo";
-            this.btnEmpInfo.Size = new System.Drawing.Size(176, 36);
-            this.btnEmpInfo.TabIndex = 3;
-            this.btnEmpInfo.Text = "STAFF INFO";
-            this.btnEmpInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmpInfo.UseVisualStyleBackColor = true;
-            this.btnEmpInfo.Click += new System.EventHandler(this.btnEmpInfo_Click);
-            // 
-            // btnAddEmp
-            // 
-            this.btnAddEmp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAddEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAddEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmp.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmp.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
-            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(19, 219);
-            this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(176, 36);
-            this.btnAddEmp.TabIndex = 2;
-            this.btnAddEmp.Text = "NEW STAFF";
-            this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddEmp.UseVisualStyleBackColor = true;
-            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::admissionSystem.Properties.Resources.One_storied_house_icon__1_;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(19, 177);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(176, 36);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "HOMEPAGE";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(84, 16);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(74, 21);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "Welcome";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label60.Location = new System.Drawing.Point(85, 37);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(61, 16);
-            this.label60.TabIndex = 10;
-            this.label60.Text = "spyrax10";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.Color.Lime;
-            this.label61.Location = new System.Drawing.Point(85, 61);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(75, 15);
-            this.label61.TabIndex = 11;
-            this.label61.Text = "2019-00000";
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1360, 701);
+            this.ClientSize = new System.Drawing.Size(1344, 726);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2178,8 +2226,13 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
+            this.paneSet.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabAddEmp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
             this.gBEmpAddBasic.ResumeLayout(false);
@@ -2192,6 +2245,7 @@
             this.gBEmpAddInfo.PerformLayout();
             this.gBEmpAddOt.ResumeLayout(false);
             this.gBEmpAddOt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).EndInit();
             this.gBEmpAddCont.ResumeLayout(false);
             this.gBEmpAddCont.PerformLayout();
             this.tabEmpInfo.ResumeLayout(false);
@@ -2199,6 +2253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelUpSInfo.ResumeLayout(false);
             this.panelUpSInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).EndInit();
             this.gBEmpViewEmp.ResumeLayout(false);
             this.gBEmpViewEmp.PerformLayout();
             this.gBEmpViewBasic.ResumeLayout(false);
@@ -2211,12 +2266,6 @@
             this.gBEmpViewCont.PerformLayout();
             this.gBEmpViewInfo.ResumeLayout(false);
             this.gBEmpViewInfo.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2234,7 +2283,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabHome;
         private System.Windows.Forms.TabPage tabAddEmp;
-        private System.Windows.Forms.Button btnOut;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSPrint;
@@ -2382,9 +2430,13 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSet;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Panel paneSet;
+        private System.Windows.Forms.Button btnSetX;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

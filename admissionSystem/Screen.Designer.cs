@@ -98,8 +98,9 @@
             this.panel2.Controls.Add(this.paneLogo);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1336, 701);
+            this.panel2.Size = new System.Drawing.Size(1336, 736);
             this.panel2.TabIndex = 6;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // gBForgot
             // 
@@ -109,7 +110,7 @@
             this.gBForgot.Controls.Add(this.textBox1);
             this.gBForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gBForgot.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBForgot.Location = new System.Drawing.Point(251, 183);
+            this.gBForgot.Location = new System.Drawing.Point(494, 183);
             this.gBForgot.Name = "gBForgot";
             this.gBForgot.Size = new System.Drawing.Size(373, 214);
             this.gBForgot.TabIndex = 10;
@@ -190,7 +191,7 @@
             this.gBCreate.Controls.Add(this.pictureBox8);
             this.gBCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gBCreate.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBCreate.Location = new System.Drawing.Point(847, 183);
+            this.gBCreate.Location = new System.Drawing.Point(494, 183);
             this.gBCreate.Name = "gBCreate";
             this.gBCreate.Size = new System.Drawing.Size(373, 214);
             this.gBCreate.TabIndex = 5;
@@ -333,7 +334,7 @@
             this.gBLog.Controls.Add(this.pictureBox3);
             this.gBLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gBLog.Font = new System.Drawing.Font("Comic Sans MS", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBLog.Location = new System.Drawing.Point(494, 183);
+            this.gBLog.Location = new System.Drawing.Point(494, 179);
             this.gBLog.Name = "gBLog";
             this.gBLog.Size = new System.Drawing.Size(373, 214);
             this.gBLog.TabIndex = 0;
@@ -418,7 +419,7 @@
             this.paneLogo.Controls.Add(this.pictureBox4);
             this.paneLogo.Controls.Add(this.label1);
             this.paneLogo.Controls.Add(this.panel1);
-            this.paneLogo.Location = new System.Drawing.Point(753, 592);
+            this.paneLogo.Location = new System.Drawing.Point(761, 636);
             this.paneLogo.Name = "paneLogo";
             this.paneLogo.Size = new System.Drawing.Size(570, 95);
             this.paneLogo.TabIndex = 3;
@@ -479,7 +480,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1360, 725);
+            this.ClientSize = new System.Drawing.Size(1360, 760);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
