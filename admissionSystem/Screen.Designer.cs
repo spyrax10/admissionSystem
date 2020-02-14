@@ -33,11 +33,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.gBForgot = new System.Windows.Forms.GroupBox();
             this.pBForBack = new System.Windows.Forms.PictureBox();
-            this.btnForVer = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblWel = new System.Windows.Forms.Label();
             this.gBCreate = new System.Windows.Forms.GroupBox();
             this.pBCreBack = new System.Windows.Forms.PictureBox();
             this.btnCre = new System.Windows.Forms.Button();
@@ -47,7 +44,6 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.btnShut = new System.Windows.Forms.Button();
             this.gBId = new System.Windows.Forms.GroupBox();
-            this.btnIDVer = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tBId = new System.Windows.Forms.TextBox();
             this.gBLog = new System.Windows.Forms.GroupBox();
@@ -65,6 +61,7 @@
             this.paneSlide = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnForVer = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.gBForgot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).BeginInit();
@@ -88,19 +85,16 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.gBForgot);
-            this.panel2.Controls.Add(this.lblName);
-            this.panel2.Controls.Add(this.lblWel);
-            this.panel2.Controls.Add(this.gBCreate);
             this.panel2.Controls.Add(this.btnShut);
+            this.panel2.Controls.Add(this.paneLogo);
             this.panel2.Controls.Add(this.gBId);
             this.panel2.Controls.Add(this.gBLog);
-            this.panel2.Controls.Add(this.paneLogo);
+            this.panel2.Controls.Add(this.gBForgot);
+            this.panel2.Controls.Add(this.gBCreate);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1336, 736);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // gBForgot
             // 
@@ -127,20 +121,6 @@
             this.pBForBack.TabIndex = 8;
             this.pBForBack.TabStop = false;
             // 
-            // btnForVer
-            // 
-            this.btnForVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnForVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnForVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForVer.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForVer.ForeColor = System.Drawing.Color.Black;
-            this.btnForVer.Location = new System.Drawing.Point(77, 139);
-            this.btnForVer.Name = "btnForVer";
-            this.btnForVer.Size = new System.Drawing.Size(283, 35);
-            this.btnForVer.TabIndex = 7;
-            this.btnForVer.Text = "VERIFY";
-            this.btnForVer.UseVisualStyleBackColor = true;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
@@ -158,28 +138,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(283, 33);
             this.textBox1.TabIndex = 5;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.Lime;
-            this.lblName.Location = new System.Drawing.Point(593, 140);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(261, 27);
-            this.lblName.TabIndex = 9;
-            this.lblName.Text = "Rebaño, Emmanuel Salgado";
-            // 
-            // lblWel
-            // 
-            this.lblWel.AutoSize = true;
-            this.lblWel.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWel.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblWel.Location = new System.Drawing.Point(489, 138);
-            this.lblWel.Name = "lblWel";
-            this.lblWel.Size = new System.Drawing.Size(112, 30);
-            this.lblWel.TabIndex = 8;
-            this.lblWel.Text = "Welcome:";
             // 
             // gBCreate
             // 
@@ -278,7 +236,6 @@
             // 
             // gBId
             // 
-            this.gBId.Controls.Add(this.btnIDVer);
             this.gBId.Controls.Add(this.pictureBox1);
             this.gBId.Controls.Add(this.tBId);
             this.gBId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -289,21 +246,6 @@
             this.gBId.TabIndex = 6;
             this.gBId.TabStop = false;
             this.gBId.Text = "Enter ID Number:";
-            // 
-            // btnIDVer
-            // 
-            this.btnIDVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnIDVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnIDVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIDVer.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIDVer.ForeColor = System.Drawing.Color.Black;
-            this.btnIDVer.Location = new System.Drawing.Point(259, 139);
-            this.btnIDVer.Name = "btnIDVer";
-            this.btnIDVer.Size = new System.Drawing.Size(101, 35);
-            this.btnIDVer.TabIndex = 7;
-            this.btnIDVer.Text = "VERIFY";
-            this.btnIDVer.UseVisualStyleBackColor = true;
-            this.btnIDVer.Click += new System.EventHandler(this.btnIDVer_Click);
             // 
             // pictureBox1
             // 
@@ -322,6 +264,7 @@
             this.tBId.Name = "tBId";
             this.tBId.Size = new System.Drawing.Size(283, 33);
             this.tBId.TabIndex = 5;
+            this.tBId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBId_KeyPress);
             // 
             // gBLog
             // 
@@ -476,6 +419,20 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // btnForVer
+            // 
+            this.btnForVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnForVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnForVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForVer.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForVer.ForeColor = System.Drawing.Color.Black;
+            this.btnForVer.Location = new System.Drawing.Point(77, 139);
+            this.btnForVer.Name = "btnForVer";
+            this.btnForVer.Size = new System.Drawing.Size(283, 35);
+            this.btnForVer.TabIndex = 7;
+            this.btnForVer.Text = "VERIFY";
+            this.btnForVer.UseVisualStyleBackColor = true;
+            // 
             // Screen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -486,9 +443,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Screen_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.gBForgot.ResumeLayout(false);
             this.gBForgot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).EndInit();
@@ -519,11 +476,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gBForgot;
         private System.Windows.Forms.PictureBox pBForBack;
-        private System.Windows.Forms.Button btnForVer;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblWel;
         private System.Windows.Forms.GroupBox gBCreate;
         private System.Windows.Forms.PictureBox pBCreBack;
         private System.Windows.Forms.Button btnCre;
@@ -533,7 +487,6 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button btnShut;
         private System.Windows.Forms.GroupBox gBId;
-        private System.Windows.Forms.Button btnIDVer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tBId;
         private System.Windows.Forms.GroupBox gBLog;
@@ -551,6 +504,7 @@
         private System.Windows.Forms.Panel paneSlide;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Button btnForVer;
     }
 }
 

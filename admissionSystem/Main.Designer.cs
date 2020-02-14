@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.paneSet = new System.Windows.Forms.Panel();
-            this.btnSetX = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label61 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
@@ -50,11 +46,14 @@
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.paneSide = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
+            this.paneSet = new System.Windows.Forms.Panel();
+            this.btnSetX = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.tabAddEmp = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSPrint = new System.Windows.Forms.Button();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.tBEmpAddId = new System.Windows.Forms.TextBox();
@@ -108,15 +107,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cBEmpAddPro = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.cbEmpAddCoun = new System.Windows.Forms.ComboBox();
+            this.cBEmpAddCoun = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.gBEmpAddOt = new System.Windows.Forms.GroupBox();
-            this.tBEmpAddPAG = new System.Windows.Forms.ComboBox();
-            this.tBEmpAddTIN = new System.Windows.Forms.ComboBox();
-            this.tBEmpAddSSS = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.pBEmpAdd = new System.Windows.Forms.PictureBox();
             this.gBEmpAddCont = new System.Windows.Forms.GroupBox();
             this.tBEmpAddEmail = new System.Windows.Forms.TextBox();
@@ -159,13 +151,6 @@
             this.cBEmpViewStat = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.tBEmpViewMun = new System.Windows.Forms.TextBox();
-            this.gBEmpViewOt = new System.Windows.Forms.GroupBox();
-            this.cBEmpViewPAG = new System.Windows.Forms.ComboBox();
-            this.cBEmpViewTIN = new System.Windows.Forms.ComboBox();
-            this.cBEmpViewSSS = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
             this.gBEmpViewEmer = new System.Windows.Forms.GroupBox();
             this.label40 = new System.Windows.Forms.Label();
             this.tBEmpViewRel = new System.Windows.Forms.TextBox();
@@ -196,19 +181,27 @@
             this.tBEmpViewSer = new System.Windows.Forms.TextBox();
             this.btnEmpViewSer = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.gBEmpAddOt = new System.Windows.Forms.GroupBox();
+            this.tBEmpAddPAG = new System.Windows.Forms.ComboBox();
+            this.tBEmpAddTIN = new System.Windows.Forms.ComboBox();
+            this.tBEmpAddSSS = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cBEmpAddBar = new System.Windows.Forms.ComboBox();
+            this.label52 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.paneSet.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.paneSet.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabHome.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelInfo.SuspendLayout();
             this.gBEmpAddBasic.SuspendLayout();
             this.gBEmpAddEmer.SuspendLayout();
             this.gBEmpAddEmp.SuspendLayout();
             this.gBEmpAddInfo.SuspendLayout();
-            this.gBEmpAddOt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).BeginInit();
             this.gBEmpAddCont.SuspendLayout();
             this.tabEmpInfo.SuspendLayout();
@@ -217,10 +210,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).BeginInit();
             this.gBEmpViewEmp.SuspendLayout();
             this.gBEmpViewBasic.SuspendLayout();
-            this.gBEmpViewOt.SuspendLayout();
             this.gBEmpViewEmer.SuspendLayout();
             this.gBEmpViewCont.SuspendLayout();
             this.gBEmpViewInfo.SuspendLayout();
+            this.gBEmpAddOt.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -239,67 +232,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 726);
+            this.panel1.Size = new System.Drawing.Size(205, 741);
             this.panel1.TabIndex = 0;
-            // 
-            // paneSet
-            // 
-            this.paneSet.BackColor = System.Drawing.Color.Black;
-            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSet.Controls.Add(this.btnSetX);
-            this.paneSet.Controls.Add(this.button4);
-            this.paneSet.Controls.Add(this.button3);
-            this.paneSet.ForeColor = System.Drawing.Color.White;
-            this.paneSet.Location = new System.Drawing.Point(3, 174);
-            this.paneSet.Name = "paneSet";
-            this.paneSet.Size = new System.Drawing.Size(200, 116);
-            this.paneSet.TabIndex = 10;
-            this.paneSet.Enter += new System.EventHandler(this.paneSet_Enter);
-            this.paneSet.Leave += new System.EventHandler(this.paneSet_Leave);
-            // 
-            // btnSetX
-            // 
-            this.btnSetX.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnSetX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnSetX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.btnSetX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetX.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetX.ForeColor = System.Drawing.Color.Red;
-            this.btnSetX.Location = new System.Drawing.Point(167, 3);
-            this.btnSetX.Name = "btnSetX";
-            this.btnSetX.Size = new System.Drawing.Size(28, 26);
-            this.btnSetX.TabIndex = 11;
-            this.btnSetX.Text = "X";
-            this.btnSetX.UseVisualStyleBackColor = true;
-            this.btnSetX.Click += new System.EventHandler(this.btnSetX_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(3, 73);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 31);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "LOGOUT";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(3, 36);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 31);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Account Settings";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -403,10 +337,7 @@
             // 
             // btnSet
             // 
-            this.btnSet.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnSet.FlatAppearance.BorderSize = 0;
-            this.btnSet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSet.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
             this.btnSet.Location = new System.Drawing.Point(175, 146);
@@ -516,6 +447,59 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // paneSet
+            // 
+            this.paneSet.BackColor = System.Drawing.Color.White;
+            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSet.Controls.Add(this.btnSetX);
+            this.paneSet.Controls.Add(this.button4);
+            this.paneSet.Controls.Add(this.button3);
+            this.paneSet.ForeColor = System.Drawing.Color.White;
+            this.paneSet.Location = new System.Drawing.Point(3, 169);
+            this.paneSet.Name = "paneSet";
+            this.paneSet.Size = new System.Drawing.Size(200, 116);
+            this.paneSet.TabIndex = 10;
+            this.paneSet.Enter += new System.EventHandler(this.paneSet_Enter);
+            this.paneSet.Leave += new System.EventHandler(this.paneSet_Leave);
+            // 
+            // btnSetX
+            // 
+            this.btnSetX.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnSetX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetX.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetX.ForeColor = System.Drawing.Color.Red;
+            this.btnSetX.Location = new System.Drawing.Point(167, 3);
+            this.btnSetX.Name = "btnSetX";
+            this.btnSetX.Size = new System.Drawing.Size(28, 26);
+            this.btnSetX.TabIndex = 11;
+            this.btnSetX.Text = "X";
+            this.btnSetX.UseVisualStyleBackColor = true;
+            this.btnSetX.Click += new System.EventHandler(this.btnSetX_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(3, 73);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(192, 31);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "LOGOUT";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(3, 36);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(192, 31);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Account Settings";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabHome);
@@ -526,29 +510,27 @@
             this.tabControl1.Location = new System.Drawing.Point(205, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1139, 726);
+            this.tabControl1.Size = new System.Drawing.Size(1152, 741);
             this.tabControl1.TabIndex = 1;
             // 
             // tabHome
             // 
             this.tabHome.BackColor = System.Drawing.Color.White;
+            this.tabHome.Controls.Add(this.gBEmpAddOt);
             this.tabHome.Location = new System.Drawing.Point(4, 25);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1131, 697);
+            this.tabHome.Size = new System.Drawing.Size(1144, 712);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Homepage";
             // 
             // tabAddEmp
             // 
-            this.tabAddEmp.Controls.Add(this.button2);
-            this.tabAddEmp.Controls.Add(this.pictureBox1);
-            this.tabAddEmp.Controls.Add(this.btnSPrint);
             this.tabAddEmp.Controls.Add(this.panelInfo);
             this.tabAddEmp.Location = new System.Drawing.Point(4, 25);
             this.tabAddEmp.Name = "tabAddEmp";
             this.tabAddEmp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddEmp.Size = new System.Drawing.Size(1131, 697);
+            this.tabAddEmp.Size = new System.Drawing.Size(1144, 712);
             this.tabAddEmp.TabIndex = 1;
             this.tabAddEmp.Text = "New Staff";
             this.tabAddEmp.UseVisualStyleBackColor = true;
@@ -563,23 +545,13 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(672, 645);
+            this.button2.Location = new System.Drawing.Point(5, 644);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 35);
             this.button2.TabIndex = 38;
             this.button2.Text = "NEW EMPLOYEE";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(672, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(453, 632);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
             // 
             // btnSPrint
             // 
@@ -590,36 +562,38 @@
             this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSPrint.ForeColor = System.Drawing.Color.Black;
             this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnSPrint.Location = new System.Drawing.Point(1085, 645);
+            this.btnSPrint.Location = new System.Drawing.Point(198, 640);
             this.btnSPrint.Name = "btnSPrint";
             this.btnSPrint.Size = new System.Drawing.Size(40, 39);
             this.btnSPrint.TabIndex = 36;
             this.btnSPrint.UseVisualStyleBackColor = true;
+            this.btnSPrint.Click += new System.EventHandler(this.btnSPrint_Click);
             // 
             // panelInfo
             // 
             this.panelInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelInfo.Controls.Add(this.tBEmpAddId);
-            this.panelInfo.Controls.Add(this.btnEmpAddReg);
-            this.panelInfo.Controls.Add(this.label26);
             this.panelInfo.Controls.Add(this.btnEmpAddUp);
+            this.panelInfo.Controls.Add(this.pBEmpAdd);
+            this.panelInfo.Controls.Add(this.label26);
+            this.panelInfo.Controls.Add(this.btnSPrint);
+            this.panelInfo.Controls.Add(this.btnEmpAddReg);
+            this.panelInfo.Controls.Add(this.button2);
             this.panelInfo.Controls.Add(this.gBEmpAddBasic);
             this.panelInfo.Controls.Add(this.gBEmpAddEmer);
             this.panelInfo.Controls.Add(this.gBEmpAddEmp);
             this.panelInfo.Controls.Add(this.gBEmpAddInfo);
-            this.panelInfo.Controls.Add(this.gBEmpAddOt);
-            this.panelInfo.Controls.Add(this.pBEmpAdd);
             this.panelInfo.Controls.Add(this.gBEmpAddCont);
-            this.panelInfo.Location = new System.Drawing.Point(0, 7);
+            this.panelInfo.Location = new System.Drawing.Point(234, 7);
             this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(660, 685);
+            this.panelInfo.Size = new System.Drawing.Size(684, 685);
             this.panelInfo.TabIndex = 35;
             // 
             // tBEmpAddId
             // 
             this.tBEmpAddId.Enabled = false;
             this.tBEmpAddId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddId.Location = new System.Drawing.Point(112, 18);
+            this.tBEmpAddId.Location = new System.Drawing.Point(446, 613);
             this.tBEmpAddId.Name = "tBEmpAddId";
             this.tBEmpAddId.Size = new System.Drawing.Size(118, 27);
             this.tBEmpAddId.TabIndex = 35;
@@ -633,7 +607,7 @@
             this.btnEmpAddReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpAddReg.ForeColor = System.Drawing.Color.Black;
             this.btnEmpAddReg.Image = global::admissionSystem.Properties.Resources.user_add_icon;
-            this.btnEmpAddReg.Location = new System.Drawing.Point(606, 592);
+            this.btnEmpAddReg.Location = new System.Drawing.Point(628, 566);
             this.btnEmpAddReg.Name = "btnEmpAddReg";
             this.btnEmpAddReg.Size = new System.Drawing.Size(37, 36);
             this.btnEmpAddReg.TabIndex = 27;
@@ -644,7 +618,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label26.Location = new System.Drawing.Point(16, 24);
+            this.label26.Location = new System.Drawing.Point(350, 622);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(90, 18);
             this.label26.TabIndex = 34;
@@ -658,11 +632,11 @@
             this.btnEmpAddUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpAddUp.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpAddUp.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpAddUp.Location = new System.Drawing.Point(484, 3);
+            this.btnEmpAddUp.Location = new System.Drawing.Point(428, 99);
             this.btnEmpAddUp.Name = "btnEmpAddUp";
-            this.btnEmpAddUp.Size = new System.Drawing.Size(71, 24);
+            this.btnEmpAddUp.Size = new System.Drawing.Size(125, 24);
             this.btnEmpAddUp.TabIndex = 22;
-            this.btnEmpAddUp.Text = "UPLOAD";
+            this.btnEmpAddUp.Text = "TAKE A PHOTO";
             this.btnEmpAddUp.UseVisualStyleBackColor = true;
             this.btnEmpAddUp.Click += new System.EventHandler(this.btnEmpAddUp_Click);
             // 
@@ -689,7 +663,7 @@
             this.gBEmpAddBasic.Controls.Add(this.tBEmpAddMun);
             this.gBEmpAddBasic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpAddBasic.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddBasic.Location = new System.Drawing.Point(5, 66);
+            this.gBEmpAddBasic.Location = new System.Drawing.Point(11, 17);
             this.gBEmpAddBasic.Name = "gBEmpAddBasic";
             this.gBEmpAddBasic.Size = new System.Drawing.Size(311, 312);
             this.gBEmpAddBasic.TabIndex = 20;
@@ -917,7 +891,7 @@
             this.gBEmpAddEmer.Controls.Add(this.label13);
             this.gBEmpAddEmer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpAddEmer.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddEmer.Location = new System.Drawing.Point(3, 384);
+            this.gBEmpAddEmer.Location = new System.Drawing.Point(9, 336);
             this.gBEmpAddEmer.Name = "gBEmpAddEmer";
             this.gBEmpAddEmer.Size = new System.Drawing.Size(313, 244);
             this.gBEmpAddEmer.TabIndex = 22;
@@ -1049,7 +1023,7 @@
             this.gBEmpAddEmp.Controls.Add(this.label27);
             this.gBEmpAddEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpAddEmp.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddEmp.Location = new System.Drawing.Point(322, 495);
+            this.gBEmpAddEmp.Location = new System.Drawing.Point(344, 447);
             this.gBEmpAddEmp.Name = "gBEmpAddEmp";
             this.gBEmpAddEmp.Size = new System.Drawing.Size(279, 133);
             this.gBEmpAddEmp.TabIndex = 25;
@@ -1120,19 +1094,21 @@
             // 
             // gBEmpAddInfo
             // 
+            this.gBEmpAddInfo.Controls.Add(this.label52);
+            this.gBEmpAddInfo.Controls.Add(this.cBEmpAddBar);
             this.gBEmpAddInfo.Controls.Add(this.tBEmpAddPur);
             this.gBEmpAddInfo.Controls.Add(this.label12);
             this.gBEmpAddInfo.Controls.Add(this.cBEmpAddMun);
             this.gBEmpAddInfo.Controls.Add(this.label4);
             this.gBEmpAddInfo.Controls.Add(this.cBEmpAddPro);
             this.gBEmpAddInfo.Controls.Add(this.label17);
-            this.gBEmpAddInfo.Controls.Add(this.cbEmpAddCoun);
+            this.gBEmpAddInfo.Controls.Add(this.cBEmpAddCoun);
             this.gBEmpAddInfo.Controls.Add(this.label20);
             this.gBEmpAddInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpAddInfo.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddInfo.Location = new System.Drawing.Point(322, 86);
+            this.gBEmpAddInfo.Location = new System.Drawing.Point(344, 135);
             this.gBEmpAddInfo.Name = "gBEmpAddInfo";
-            this.gBEmpAddInfo.Size = new System.Drawing.Size(307, 157);
+            this.gBEmpAddInfo.Size = new System.Drawing.Size(307, 194);
             this.gBEmpAddInfo.TabIndex = 21;
             this.gBEmpAddInfo.TabStop = false;
             this.gBEmpAddInfo.Text = "Address Information:";
@@ -1140,7 +1116,7 @@
             // tBEmpAddPur
             // 
             this.tBEmpAddPur.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddPur.Location = new System.Drawing.Point(138, 127);
+            this.tBEmpAddPur.Location = new System.Drawing.Point(138, 157);
             this.tBEmpAddPur.Name = "tBEmpAddPur";
             this.tBEmpAddPur.Size = new System.Drawing.Size(152, 23);
             this.tBEmpAddPur.TabIndex = 14;
@@ -1150,7 +1126,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(6, 128);
+            this.label12.Location = new System.Drawing.Point(6, 158);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(126, 18);
             this.label12.TabIndex = 23;
@@ -1200,16 +1176,16 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Country:";
             // 
-            // cbEmpAddCoun
+            // cBEmpAddCoun
             // 
-            this.cbEmpAddCoun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmpAddCoun.FormattingEnabled = true;
-            this.cbEmpAddCoun.Items.AddRange(new object[] {
+            this.cBEmpAddCoun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBEmpAddCoun.FormattingEnabled = true;
+            this.cBEmpAddCoun.Items.AddRange(new object[] {
             "Philippines"});
-            this.cbEmpAddCoun.Location = new System.Drawing.Point(138, 37);
-            this.cbEmpAddCoun.Name = "cbEmpAddCoun";
-            this.cbEmpAddCoun.Size = new System.Drawing.Size(152, 24);
-            this.cbEmpAddCoun.TabIndex = 11;
+            this.cBEmpAddCoun.Location = new System.Drawing.Point(138, 37);
+            this.cBEmpAddCoun.Name = "cBEmpAddCoun";
+            this.cBEmpAddCoun.Size = new System.Drawing.Size(152, 24);
+            this.cBEmpAddCoun.TabIndex = 11;
             // 
             // label20
             // 
@@ -1222,95 +1198,13 @@
             this.label20.TabIndex = 2;
             this.label20.Text = "Province:";
             // 
-            // gBEmpAddOt
-            // 
-            this.gBEmpAddOt.Controls.Add(this.tBEmpAddPAG);
-            this.gBEmpAddOt.Controls.Add(this.tBEmpAddTIN);
-            this.gBEmpAddOt.Controls.Add(this.tBEmpAddSSS);
-            this.gBEmpAddOt.Controls.Add(this.label25);
-            this.gBEmpAddOt.Controls.Add(this.label23);
-            this.gBEmpAddOt.Controls.Add(this.label24);
-            this.gBEmpAddOt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddOt.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddOt.Location = new System.Drawing.Point(322, 349);
-            this.gBEmpAddOt.Name = "gBEmpAddOt";
-            this.gBEmpAddOt.Size = new System.Drawing.Size(325, 129);
-            this.gBEmpAddOt.TabIndex = 24;
-            this.gBEmpAddOt.TabStop = false;
-            this.gBEmpAddOt.Text = "Other Information:";
-            // 
-            // tBEmpAddPAG
-            // 
-            this.tBEmpAddPAG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddPAG.FormattingEnabled = true;
-            this.tBEmpAddPAG.Items.AddRange(new object[] {
-            "Philippines"});
-            this.tBEmpAddPAG.Location = new System.Drawing.Point(155, 99);
-            this.tBEmpAddPAG.Name = "tBEmpAddPAG";
-            this.tBEmpAddPAG.Size = new System.Drawing.Size(152, 24);
-            this.tBEmpAddPAG.TabIndex = 23;
-            // 
-            // tBEmpAddTIN
-            // 
-            this.tBEmpAddTIN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddTIN.FormattingEnabled = true;
-            this.tBEmpAddTIN.Items.AddRange(new object[] {
-            "Philippines"});
-            this.tBEmpAddTIN.Location = new System.Drawing.Point(155, 69);
-            this.tBEmpAddTIN.Name = "tBEmpAddTIN";
-            this.tBEmpAddTIN.Size = new System.Drawing.Size(152, 24);
-            this.tBEmpAddTIN.TabIndex = 22;
-            // 
-            // tBEmpAddSSS
-            // 
-            this.tBEmpAddSSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddSSS.FormattingEnabled = true;
-            this.tBEmpAddSSS.Items.AddRange(new object[] {
-            "Philippines"});
-            this.tBEmpAddSSS.Location = new System.Drawing.Point(155, 39);
-            this.tBEmpAddSSS.Name = "tBEmpAddSSS";
-            this.tBEmpAddSSS.Size = new System.Drawing.Size(152, 24);
-            this.tBEmpAddSSS.TabIndex = 21;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label25.Location = new System.Drawing.Point(6, 100);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(143, 18);
-            this.label25.TabIndex = 7;
-            this.label25.Text = "PAG-IBIG Number:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label23.Location = new System.Drawing.Point(53, 70);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(96, 18);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "TIN Number:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label24.Location = new System.Drawing.Point(50, 40);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(99, 18);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "SSS Number:";
-            // 
             // pBEmpAdd
             // 
             this.pBEmpAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpAdd.Location = new System.Drawing.Point(561, 3);
+            this.pBEmpAdd.Image = global::admissionSystem.Properties.Resources.download;
+            this.pBEmpAdd.Location = new System.Drawing.Point(559, 3);
             this.pBEmpAdd.Name = "pBEmpAdd";
-            this.pBEmpAdd.Size = new System.Drawing.Size(86, 80);
+            this.pBEmpAdd.Size = new System.Drawing.Size(120, 120);
             this.pBEmpAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBEmpAdd.TabIndex = 21;
             this.pBEmpAdd.TabStop = false;
@@ -1323,7 +1217,7 @@
             this.gBEmpAddCont.Controls.Add(this.label21);
             this.gBEmpAddCont.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpAddCont.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddCont.Location = new System.Drawing.Point(322, 249);
+            this.gBEmpAddCont.Location = new System.Drawing.Point(344, 347);
             this.gBEmpAddCont.Name = "gBEmpAddCont";
             this.gBEmpAddCont.Size = new System.Drawing.Size(327, 94);
             this.gBEmpAddCont.TabIndex = 23;
@@ -1378,7 +1272,7 @@
             this.tabEmpInfo.Location = new System.Drawing.Point(4, 25);
             this.tabEmpInfo.Name = "tabEmpInfo";
             this.tabEmpInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEmpInfo.Size = new System.Drawing.Size(1131, 697);
+            this.tabEmpInfo.Size = new System.Drawing.Size(1144, 712);
             this.tabEmpInfo.TabIndex = 2;
             this.tabEmpInfo.Text = "Staff Info";
             this.tabEmpInfo.UseVisualStyleBackColor = true;
@@ -1393,7 +1287,7 @@
             this.btnVInfoPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVInfoPrint.ForeColor = System.Drawing.Color.Black;
             this.btnVInfoPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnVInfoPrint.Location = new System.Drawing.Point(390, 6);
+            this.btnVInfoPrint.Location = new System.Drawing.Point(441, 6);
             this.btnVInfoPrint.Name = "btnVInfoPrint";
             this.btnVInfoPrint.Size = new System.Drawing.Size(39, 38);
             this.btnVInfoPrint.TabIndex = 68;
@@ -1408,7 +1302,7 @@
             this.dataGridView1.GridColor = System.Drawing.Color.DodgerBlue;
             this.dataGridView1.Location = new System.Drawing.Point(6, 49);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(423, 644);
+            this.dataGridView1.Size = new System.Drawing.Size(474, 644);
             this.dataGridView1.TabIndex = 67;
             // 
             // panelUpSInfo
@@ -1421,13 +1315,12 @@
             this.panelUpSInfo.Controls.Add(this.pBEmpView);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewEmp);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewBasic);
-            this.panelUpSInfo.Controls.Add(this.gBEmpViewOt);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewEmer);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewCont);
             this.panelUpSInfo.Controls.Add(this.gBEmpViewInfo);
-            this.panelUpSInfo.Location = new System.Drawing.Point(440, 1);
+            this.panelUpSInfo.Location = new System.Drawing.Point(486, 0);
             this.panelUpSInfo.Name = "panelUpSInfo";
-            this.panelUpSInfo.Size = new System.Drawing.Size(691, 692);
+            this.panelUpSInfo.Size = new System.Drawing.Size(658, 692);
             this.panelUpSInfo.TabIndex = 66;
             // 
             // label58
@@ -1447,7 +1340,7 @@
             this.btnEmpViewUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmpViewUp.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpViewUp.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpViewUp.Location = new System.Drawing.Point(513, 61);
+            this.btnEmpViewUp.Location = new System.Drawing.Point(406, 100);
             this.btnEmpViewUp.Name = "btnEmpViewUp";
             this.btnEmpViewUp.Size = new System.Drawing.Size(77, 24);
             this.btnEmpViewUp.TabIndex = 30;
@@ -1458,7 +1351,7 @@
             // 
             this.tBEmpViewId.Enabled = false;
             this.tBEmpViewId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewId.Location = new System.Drawing.Point(109, 10);
+            this.tBEmpViewId.Location = new System.Drawing.Point(114, 9);
             this.tBEmpViewId.Name = "tBEmpViewId";
             this.tBEmpViewId.Size = new System.Drawing.Size(118, 27);
             this.tBEmpViewId.TabIndex = 60;
@@ -1473,7 +1366,7 @@
             this.btnEmpViewSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmpViewSave.ForeColor = System.Drawing.Color.Black;
             this.btnEmpViewSave.Image = global::admissionSystem.Properties.Resources.Save_icon;
-            this.btnEmpViewSave.Location = new System.Drawing.Point(647, 633);
+            this.btnEmpViewSave.Location = new System.Drawing.Point(614, 517);
             this.btnEmpViewSave.Name = "btnEmpViewSave";
             this.btnEmpViewSave.Size = new System.Drawing.Size(35, 37);
             this.btnEmpViewSave.TabIndex = 58;
@@ -1482,9 +1375,9 @@
             // pBEmpView
             // 
             this.pBEmpView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpView.Location = new System.Drawing.Point(596, 5);
+            this.pBEmpView.Location = new System.Drawing.Point(509, 11);
             this.pBEmpView.Name = "pBEmpView";
-            this.pBEmpView.Size = new System.Drawing.Size(86, 80);
+            this.pBEmpView.Size = new System.Drawing.Size(120, 120);
             this.pBEmpView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBEmpView.TabIndex = 19;
             this.pBEmpView.TabStop = false;
@@ -1499,7 +1392,7 @@
             this.gBEmpViewEmp.Controls.Add(this.label57);
             this.gBEmpViewEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewEmp.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewEmp.Location = new System.Drawing.Point(355, 539);
+            this.gBEmpViewEmp.Location = new System.Drawing.Point(322, 427);
             this.gBEmpViewEmp.Name = "gBEmpViewEmp";
             this.gBEmpViewEmp.Size = new System.Drawing.Size(285, 131);
             this.gBEmpViewEmp.TabIndex = 27;
@@ -1591,7 +1484,7 @@
             this.gBEmpViewBasic.Controls.Add(this.tBEmpViewMun);
             this.gBEmpViewBasic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewBasic.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewBasic.Location = new System.Drawing.Point(11, 58);
+            this.gBEmpViewBasic.Location = new System.Drawing.Point(3, 50);
             this.gBEmpViewBasic.Name = "gBEmpViewBasic";
             this.gBEmpViewBasic.Size = new System.Drawing.Size(311, 331);
             this.gBEmpViewBasic.TabIndex = 21;
@@ -1803,89 +1696,6 @@
             this.tBEmpViewMun.Size = new System.Drawing.Size(173, 23);
             this.tBEmpViewMun.TabIndex = 38;
             // 
-            // gBEmpViewOt
-            // 
-            this.gBEmpViewOt.Controls.Add(this.cBEmpViewPAG);
-            this.gBEmpViewOt.Controls.Add(this.cBEmpViewTIN);
-            this.gBEmpViewOt.Controls.Add(this.cBEmpViewSSS);
-            this.gBEmpViewOt.Controls.Add(this.label52);
-            this.gBEmpViewOt.Controls.Add(this.label53);
-            this.gBEmpViewOt.Controls.Add(this.label54);
-            this.gBEmpViewOt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpViewOt.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewOt.Location = new System.Drawing.Point(355, 375);
-            this.gBEmpViewOt.Name = "gBEmpViewOt";
-            this.gBEmpViewOt.Size = new System.Drawing.Size(325, 134);
-            this.gBEmpViewOt.TabIndex = 26;
-            this.gBEmpViewOt.TabStop = false;
-            this.gBEmpViewOt.Text = "Other Information:";
-            // 
-            // cBEmpViewPAG
-            // 
-            this.cBEmpViewPAG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewPAG.FormattingEnabled = true;
-            this.cBEmpViewPAG.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpViewPAG.Location = new System.Drawing.Point(155, 99);
-            this.cBEmpViewPAG.Name = "cBEmpViewPAG";
-            this.cBEmpViewPAG.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpViewPAG.TabIndex = 54;
-            // 
-            // cBEmpViewTIN
-            // 
-            this.cBEmpViewTIN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewTIN.FormattingEnabled = true;
-            this.cBEmpViewTIN.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpViewTIN.Location = new System.Drawing.Point(155, 69);
-            this.cBEmpViewTIN.Name = "cBEmpViewTIN";
-            this.cBEmpViewTIN.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpViewTIN.TabIndex = 53;
-            // 
-            // cBEmpViewSSS
-            // 
-            this.cBEmpViewSSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewSSS.FormattingEnabled = true;
-            this.cBEmpViewSSS.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpViewSSS.Location = new System.Drawing.Point(155, 39);
-            this.cBEmpViewSSS.Name = "cBEmpViewSSS";
-            this.cBEmpViewSSS.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpViewSSS.TabIndex = 52;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label52.Location = new System.Drawing.Point(6, 100);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(143, 18);
-            this.label52.TabIndex = 7;
-            this.label52.Text = "PAG-IBIG Number:";
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label53.Location = new System.Drawing.Point(53, 70);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(96, 18);
-            this.label53.TabIndex = 5;
-            this.label53.Text = "TIN Number:";
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label54.Location = new System.Drawing.Point(50, 40);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(99, 18);
-            this.label54.TabIndex = 3;
-            this.label54.Text = "SSS Number:";
-            // 
             // gBEmpViewEmer
             // 
             this.gBEmpViewEmer.Controls.Add(this.label40);
@@ -1902,7 +1712,7 @@
             this.gBEmpViewEmer.Controls.Add(this.label45);
             this.gBEmpViewEmer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewEmer.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewEmer.Location = new System.Drawing.Point(11, 419);
+            this.gBEmpViewEmer.Location = new System.Drawing.Point(3, 387);
             this.gBEmpViewEmer.Name = "gBEmpViewEmer";
             this.gBEmpViewEmer.Size = new System.Drawing.Size(313, 251);
             this.gBEmpViewEmer.TabIndex = 23;
@@ -2032,7 +1842,7 @@
             this.gBEmpViewCont.Controls.Add(this.label51);
             this.gBEmpViewCont.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewCont.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewCont.Location = new System.Drawing.Point(355, 272);
+            this.gBEmpViewCont.Location = new System.Drawing.Point(322, 320);
             this.gBEmpViewCont.Name = "gBEmpViewCont";
             this.gBEmpViewCont.Size = new System.Drawing.Size(327, 97);
             this.gBEmpViewCont.TabIndex = 25;
@@ -2089,7 +1899,7 @@
             this.gBEmpViewInfo.Controls.Add(this.label49);
             this.gBEmpViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gBEmpViewInfo.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewInfo.Location = new System.Drawing.Point(375, 103);
+            this.gBEmpViewInfo.Location = new System.Drawing.Point(322, 151);
             this.gBEmpViewInfo.Name = "gBEmpViewInfo";
             this.gBEmpViewInfo.Size = new System.Drawing.Size(307, 163);
             this.gBEmpViewInfo.TabIndex = 24;
@@ -2209,30 +2019,138 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // gBEmpAddOt
+            // 
+            this.gBEmpAddOt.Controls.Add(this.tBEmpAddPAG);
+            this.gBEmpAddOt.Controls.Add(this.tBEmpAddTIN);
+            this.gBEmpAddOt.Controls.Add(this.tBEmpAddSSS);
+            this.gBEmpAddOt.Controls.Add(this.label25);
+            this.gBEmpAddOt.Controls.Add(this.label23);
+            this.gBEmpAddOt.Controls.Add(this.label24);
+            this.gBEmpAddOt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBEmpAddOt.ForeColor = System.Drawing.Color.Red;
+            this.gBEmpAddOt.Location = new System.Drawing.Point(410, 292);
+            this.gBEmpAddOt.Name = "gBEmpAddOt";
+            this.gBEmpAddOt.Size = new System.Drawing.Size(325, 129);
+            this.gBEmpAddOt.TabIndex = 25;
+            this.gBEmpAddOt.TabStop = false;
+            this.gBEmpAddOt.Text = "Other Information:";
+            // 
+            // tBEmpAddPAG
+            // 
+            this.tBEmpAddPAG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpAddPAG.FormattingEnabled = true;
+            this.tBEmpAddPAG.Items.AddRange(new object[] {
+            "Philippines"});
+            this.tBEmpAddPAG.Location = new System.Drawing.Point(155, 99);
+            this.tBEmpAddPAG.Name = "tBEmpAddPAG";
+            this.tBEmpAddPAG.Size = new System.Drawing.Size(152, 24);
+            this.tBEmpAddPAG.TabIndex = 23;
+            // 
+            // tBEmpAddTIN
+            // 
+            this.tBEmpAddTIN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpAddTIN.FormattingEnabled = true;
+            this.tBEmpAddTIN.Items.AddRange(new object[] {
+            "Philippines"});
+            this.tBEmpAddTIN.Location = new System.Drawing.Point(155, 69);
+            this.tBEmpAddTIN.Name = "tBEmpAddTIN";
+            this.tBEmpAddTIN.Size = new System.Drawing.Size(152, 24);
+            this.tBEmpAddTIN.TabIndex = 22;
+            // 
+            // tBEmpAddSSS
+            // 
+            this.tBEmpAddSSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpAddSSS.FormattingEnabled = true;
+            this.tBEmpAddSSS.Items.AddRange(new object[] {
+            "Philippines"});
+            this.tBEmpAddSSS.Location = new System.Drawing.Point(155, 39);
+            this.tBEmpAddSSS.Name = "tBEmpAddSSS";
+            this.tBEmpAddSSS.Size = new System.Drawing.Size(152, 24);
+            this.tBEmpAddSSS.TabIndex = 21;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label25.Location = new System.Drawing.Point(6, 100);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(143, 18);
+            this.label25.TabIndex = 7;
+            this.label25.Text = "PAG-IBIG Number:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label23.Location = new System.Drawing.Point(53, 70);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(96, 18);
+            this.label23.TabIndex = 5;
+            this.label23.Text = "TIN Number:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label24.Location = new System.Drawing.Point(50, 40);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(99, 18);
+            this.label24.TabIndex = 3;
+            this.label24.Text = "SSS Number:";
+            // 
+            // cBEmpAddBar
+            // 
+            this.cBEmpAddBar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBEmpAddBar.FormattingEnabled = true;
+            this.cBEmpAddBar.Items.AddRange(new object[] {
+            "Philippines"});
+            this.cBEmpAddBar.Location = new System.Drawing.Point(138, 127);
+            this.cBEmpAddBar.Name = "cBEmpAddBar";
+            this.cBEmpAddBar.Size = new System.Drawing.Size(152, 24);
+            this.cBEmpAddBar.TabIndex = 24;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label52.Location = new System.Drawing.Point(48, 128);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(84, 18);
+            this.label52.TabIndex = 25;
+            this.label52.Text = "Barangay:";
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1344, 726);
+            this.ClientSize = new System.Drawing.Size(1357, 741);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
-            this.paneSet.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.paneSet.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            this.tabHome.ResumeLayout(false);
             this.tabAddEmp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
             this.gBEmpAddBasic.ResumeLayout(false);
@@ -2243,8 +2161,6 @@
             this.gBEmpAddEmp.PerformLayout();
             this.gBEmpAddInfo.ResumeLayout(false);
             this.gBEmpAddInfo.PerformLayout();
-            this.gBEmpAddOt.ResumeLayout(false);
-            this.gBEmpAddOt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).EndInit();
             this.gBEmpAddCont.ResumeLayout(false);
             this.gBEmpAddCont.PerformLayout();
@@ -2258,14 +2174,14 @@
             this.gBEmpViewEmp.PerformLayout();
             this.gBEmpViewBasic.ResumeLayout(false);
             this.gBEmpViewBasic.PerformLayout();
-            this.gBEmpViewOt.ResumeLayout(false);
-            this.gBEmpViewOt.PerformLayout();
             this.gBEmpViewEmer.ResumeLayout(false);
             this.gBEmpViewEmer.PerformLayout();
             this.gBEmpViewCont.ResumeLayout(false);
             this.gBEmpViewCont.PerformLayout();
             this.gBEmpViewInfo.ResumeLayout(false);
             this.gBEmpViewInfo.PerformLayout();
+            this.gBEmpAddOt.ResumeLayout(false);
+            this.gBEmpAddOt.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2284,7 +2200,6 @@
         private System.Windows.Forms.TabPage tabHome;
         private System.Windows.Forms.TabPage tabAddEmp;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSPrint;
         private System.Windows.Forms.Panel panelInfo;
         private System.Windows.Forms.TextBox tBEmpAddId;
@@ -2338,15 +2253,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cBEmpAddPro;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cbEmpAddCoun;
+        private System.Windows.Forms.ComboBox cBEmpAddCoun;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.GroupBox gBEmpAddOt;
-        private System.Windows.Forms.ComboBox tBEmpAddPAG;
-        private System.Windows.Forms.ComboBox tBEmpAddTIN;
-        private System.Windows.Forms.ComboBox tBEmpAddSSS;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pBEmpAdd;
         private System.Windows.Forms.GroupBox gBEmpAddCont;
         private System.Windows.Forms.TextBox tBEmpAddEmail;
@@ -2389,13 +2297,6 @@
         private System.Windows.Forms.ComboBox cBEmpViewStat;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox tBEmpViewMun;
-        private System.Windows.Forms.GroupBox gBEmpViewOt;
-        private System.Windows.Forms.ComboBox cBEmpViewPAG;
-        private System.Windows.Forms.ComboBox cBEmpViewTIN;
-        private System.Windows.Forms.ComboBox cBEmpViewSSS;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.GroupBox gBEmpViewEmer;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox tBEmpViewRel;
@@ -2438,5 +2339,14 @@
         private System.Windows.Forms.Button btnSetX;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox gBEmpAddOt;
+        private System.Windows.Forms.ComboBox tBEmpAddPAG;
+        private System.Windows.Forms.ComboBox tBEmpAddTIN;
+        private System.Windows.Forms.ComboBox tBEmpAddSSS;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.ComboBox cBEmpAddBar;
     }
 }

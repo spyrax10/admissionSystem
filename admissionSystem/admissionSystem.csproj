@@ -113,6 +113,7 @@
     <None Include="Resources\pinion-icon.png" />
     <None Include="Resources\Settings-icon.png" />
     <None Include="Resources\Settings-L-icon.png" />
+    <None Include="Resources\download.png" />
     <Content Include="spy.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
