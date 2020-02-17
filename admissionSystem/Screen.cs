@@ -15,7 +15,7 @@ namespace admissionSystem
     {
         int move = 0;
         int left = 5;
-        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
 
         public static string id;
         public static string userId;

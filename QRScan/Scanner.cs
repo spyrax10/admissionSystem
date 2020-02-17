@@ -20,7 +20,7 @@ namespace QRScan
     {
         int move = 0;
         int left = 5;
-        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice FinalFrame;
@@ -655,7 +655,7 @@ namespace QRScan
                     }
                     else
                     {
-                        tBPassLock.Visible = true;
+                        tBPassLock.Visible = false;
                     }
                 }
               
@@ -670,7 +670,7 @@ namespace QRScan
             capCam();
             mornInTimer.Enabled = true;
             mornInTimer.Start();
-            MessageBox.Show("Started!", " Started", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           // MessageBox.Show("Started!", " Started", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public void capCam()
         {
@@ -925,27 +925,28 @@ namespace QRScan
 
         private void btnMornIn_Click(object sender, EventArgs e)
         {
-            if (lblEvtCode.Text != "0000000")
-            {
-                if (tBEvtAtt.Text == "ALL EMPLOYEES")
-                {
-                    empRegMornIn();
-                }
-                if (tBEvtAtt.Text == "ALL STUDENTS")
-                {
+            //if (lblEvtCode.Text != "0000000")
+            //{
+            //    if (tBEvtAtt.Text == "ALL EMPLOYEES")
+            //    {
+                   
+            //    }
+            //    if (tBEvtAtt.Text == "ALL STUDENTS")
+            //    {
 
-                }
-                if (tBEvtAtt.Text == "GENERAL")
-                {
+            //    }
+            //    if (tBEvtAtt.Text == "GENERAL")
+            //    {
 
-                }
+            //    }
                 
-            }
-            else
-            {
+            //}
+            //else
+            //{
 
-            }
-            
+            //}
+            empRegMornIn();
+
         }
 
         private void mornInTimer_Tick(object sender, EventArgs e)

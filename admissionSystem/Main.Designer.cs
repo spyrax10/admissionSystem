@@ -137,6 +137,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.gVEvent = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cBEvt = new System.Windows.Forms.ComboBox();
+            this.lblCode = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.tBEvtAtt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.paneSet.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1175,6 +1179,10 @@
             // paneLog
             // 
             this.paneLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneLog.Controls.Add(this.tBEvtAtt);
+            this.paneLog.Controls.Add(this.label29);
+            this.paneLog.Controls.Add(this.lblCode);
+            this.paneLog.Controls.Add(this.cBEvt);
             this.paneLog.Controls.Add(this.dataGridView1);
             this.paneLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneLog.Location = new System.Drawing.Point(3, 3);
@@ -1636,6 +1644,46 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cBEvt
+            // 
+            this.cBEvt.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBEvt.FormattingEnabled = true;
+            this.cBEvt.Location = new System.Drawing.Point(3, 4);
+            this.cBEvt.Name = "cBEvt";
+            this.cBEvt.Size = new System.Drawing.Size(355, 26);
+            this.cBEvt.TabIndex = 73;
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCode.Location = new System.Drawing.Point(364, 6);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(72, 19);
+            this.lblCode.TabIndex = 74;
+            this.lblCode.Text = "0000000";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label29.Location = new System.Drawing.Point(478, 6);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(90, 19);
+            this.label29.TabIndex = 75;
+            this.label29.Text = "Attendees:";
+            // 
+            // tBEvtAtt
+            // 
+            this.tBEvtAtt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBEvtAtt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEvtAtt.Location = new System.Drawing.Point(574, 3);
+            this.tBEvtAtt.Name = "tBEvtAtt";
+            this.tBEvtAtt.Size = new System.Drawing.Size(333, 27);
+            this.tBEvtAtt.TabIndex = 76;
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1680,6 +1728,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gVStud)).EndInit();
             this.tabLog.ResumeLayout(false);
             this.paneLog.ResumeLayout(false);
+            this.paneLog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabEvent.ResumeLayout(false);
             this.paneEvent.ResumeLayout(false);
@@ -1799,5 +1848,9 @@
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox cBEvt;
+        private System.Windows.Forms.Label lblCode;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox tBEvtAtt;
     }
 }

@@ -13,17 +13,61 @@ namespace admissionSystem
 {
     public partial class Main : Form
     {
-        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
 
         string imgLoc = "";
         SqlDataAdapter adapt;
 
         string loadId = Screen.id;
+        
         public Main()
         {
             InitializeComponent();
             paneSide.Height = btnHome.Height;
             paneSide.Top = btnHome.Top;
+        }
+
+        public void loadEvt()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            try
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from eventTB";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    string evtName = (dr["eventName"].ToString());
+
+                    if (!cBEvt.Items.Contains(evtName))
+                    {
+                        cBEvt.Items.Add(evtName);
+                    }
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void evtLog()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+
+            string code = lblCode.Text;
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select * ", con);
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void clrEvt()
         {
@@ -1019,6 +1063,7 @@ namespace admissionSystem
             this.TopMost = true;
             this.BringToFront();
             loadCre();
+            loadEvt();
             tabControl1.TabPages.Insert(0, tabHome);
         }
 
