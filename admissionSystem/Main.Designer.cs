@@ -31,264 +31,254 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.paneSet = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.btnAddEvent = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnAdInfo = new System.Windows.Forms.Button();
+            this.btnAttdLog = new System.Windows.Forms.Button();
             this.btnSet = new System.Windows.Forms.Button();
-            this.btnStudInfo = new System.Windows.Forms.Button();
             this.btnAddStud = new System.Windows.Forms.Button();
-            this.btnEmpInfo = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.paneSide = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
-            this.paneSet = new System.Windows.Forms.Panel();
-            this.btnSetX = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.tabAddEmp = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSPrint = new System.Windows.Forms.Button();
-            this.panelInfo = new System.Windows.Forms.Panel();
-            this.tBEmpAddId = new System.Windows.Forms.TextBox();
-            this.btnEmpAddReg = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.btnEmpAddUp = new System.Windows.Forms.Button();
-            this.gBEmpAddBasic = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tBEmpAddLast = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cBEmpAddRel = new System.Windows.Forms.ComboBox();
-            this.tBEmpAddPro = new System.Windows.Forms.TextBox();
-            this.tBEmpAddFirst = new System.Windows.Forms.TextBox();
-            this.tBEmpAddMid = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cBEmpAddSex = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dTEmpAdd = new System.Windows.Forms.DateTimePicker();
-            this.cbEmpAddStat = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tBEmpAddMun = new System.Windows.Forms.TextBox();
-            this.gBEmpAddEmer = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.tbEmpAddConRel = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.tBEmpAddConAdd = new System.Windows.Forms.TextBox();
-            this.tBEmpAddConMob = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.tBEmpAddConLast = new System.Windows.Forms.TextBox();
-            this.tBEmpAddConMid = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tBEmpAddConFirst = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.gBEmpAddEmp = new System.Windows.Forms.GroupBox();
-            this.tBEmpAddStat = new System.Windows.Forms.ComboBox();
-            this.tBEmpAddPos = new System.Windows.Forms.TextBox();
-            this.tBEmpAddDept = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
+            this.paneEmp = new System.Windows.Forms.Panel();
+            this.tBEmpViewSer = new System.Windows.Forms.TextBox();
+            this.gVEmp = new System.Windows.Forms.DataGridView();
+            this.gBEmp = new System.Windows.Forms.GroupBox();
+            this.lblRegEmp = new System.Windows.Forms.Label();
+            this.btnEmpGen = new System.Windows.Forms.Button();
+            this.pBEmpQR = new System.Windows.Forms.PictureBox();
+            this.bntEmpRe = new System.Windows.Forms.Button();
+            this.btnEmpPH = new System.Windows.Forms.Button();
+            this.pBEmp = new System.Windows.Forms.PictureBox();
+            this.tBEmpPos = new System.Windows.Forms.TextBox();
+            this.tBEmpDept = new System.Windows.Forms.TextBox();
+            this.btnEmpAdd = new System.Windows.Forms.Button();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.gBEmpAddInfo = new System.Windows.Forms.GroupBox();
-            this.tBEmpAddPur = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cBEmpAddMun = new System.Windows.Forms.ComboBox();
+            this.tBEmpId = new System.Windows.Forms.TextBox();
+            this.tBEmpLast = new System.Windows.Forms.TextBox();
+            this.tBEmpFirst = new System.Windows.Forms.TextBox();
+            this.tBEmpMid = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSPrint = new System.Windows.Forms.Button();
+            this.tabStud = new System.Windows.Forms.TabPage();
+            this.paneStud = new System.Windows.Forms.Panel();
+            this.gBStud = new System.Windows.Forms.GroupBox();
+            this.lblRegStud = new System.Windows.Forms.Label();
+            this.tBStudCour = new System.Windows.Forms.TextBox();
+            this.tBStudDept = new System.Windows.Forms.TextBox();
+            this.tBStudYr = new System.Windows.Forms.TextBox();
+            this.btnStudGen = new System.Windows.Forms.Button();
+            this.btnStudPH = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pBStud = new System.Windows.Forms.PictureBox();
+            this.cbStudSex = new System.Windows.Forms.ComboBox();
+            this.pBStudQR = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnStudRe = new System.Windows.Forms.Button();
+            this.btnStudAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.cBEmpAddPro = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cBEmpAddCoun = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.pBEmpAdd = new System.Windows.Forms.PictureBox();
-            this.gBEmpAddCont = new System.Windows.Forms.GroupBox();
-            this.tBEmpAddEmail = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.tBEmpAddMob = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.tabEmpInfo = new System.Windows.Forms.TabPage();
-            this.btnVInfoPrint = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tBStudId = new System.Windows.Forms.TextBox();
+            this.tBStudLast = new System.Windows.Forms.TextBox();
+            this.tBStudFirst = new System.Windows.Forms.TextBox();
+            this.tBStudMid = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.gVStud = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabLog = new System.Windows.Forms.TabPage();
+            this.paneLog = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panelUpSInfo = new System.Windows.Forms.Panel();
-            this.label58 = new System.Windows.Forms.Label();
-            this.btnEmpViewUp = new System.Windows.Forms.Button();
-            this.tBEmpViewId = new System.Windows.Forms.TextBox();
-            this.btnEmpViewSave = new System.Windows.Forms.Button();
-            this.pBEmpView = new System.Windows.Forms.PictureBox();
-            this.gBEmpViewEmp = new System.Windows.Forms.GroupBox();
-            this.tBEmpViewStat = new System.Windows.Forms.ComboBox();
-            this.tBEmpViewPos = new System.Windows.Forms.TextBox();
-            this.tBEmpViewDept = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.gBEmpViewBasic = new System.Windows.Forms.GroupBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.tBEmpViewLast = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.cBEmpViewRel = new System.Windows.Forms.ComboBox();
-            this.tBEmpViewPro = new System.Windows.Forms.TextBox();
-            this.tBEmpViewFirst = new System.Windows.Forms.TextBox();
-            this.tBEmpViewMid = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.cBEmpViewSex = new System.Windows.Forms.ComboBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.dTEmpView = new System.Windows.Forms.DateTimePicker();
-            this.cBEmpViewStat = new System.Windows.Forms.ComboBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.tBEmpViewMun = new System.Windows.Forms.TextBox();
-            this.gBEmpViewEmer = new System.Windows.Forms.GroupBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.tBEmpViewRel = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.tBEmpViewConAdd = new System.Windows.Forms.TextBox();
-            this.tBEmpViewConMob = new System.Windows.Forms.TextBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.tBEmpViewConLast = new System.Windows.Forms.TextBox();
-            this.tBEmpViewConMid = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.tBEmpViewConFirst = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.gBEmpViewCont = new System.Windows.Forms.GroupBox();
-            this.tBEmpViewEmail = new System.Windows.Forms.TextBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.tBEmpViewMob = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.gBEmpViewInfo = new System.Windows.Forms.GroupBox();
-            this.tBEmpViewPur = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.cBEmpViewMun = new System.Windows.Forms.ComboBox();
-            this.label47 = new System.Windows.Forms.Label();
-            this.cBEmpViewPro = new System.Windows.Forms.ComboBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.cBEmpViewCoun = new System.Windows.Forms.ComboBox();
-            this.label49 = new System.Windows.Forms.Label();
-            this.tBEmpViewSer = new System.Windows.Forms.TextBox();
-            this.btnEmpViewSer = new System.Windows.Forms.Button();
+            this.tabEvent = new System.Windows.Forms.TabPage();
+            this.paneEvent = new System.Windows.Forms.Panel();
+            this.btnCPEvt = new System.Windows.Forms.Button();
+            this.gBEvent = new System.Windows.Forms.GroupBox();
+            this.tBEventEveOut = new System.Windows.Forms.ComboBox();
+            this.tBEventEveIn = new System.Windows.Forms.ComboBox();
+            this.tBEventAftOut = new System.Windows.Forms.ComboBox();
+            this.tBEventAftIn = new System.Windows.Forms.ComboBox();
+            this.tBEventMorOut = new System.Windows.Forms.ComboBox();
+            this.tBEventMorIn = new System.Windows.Forms.ComboBox();
+            this.dTEventDate = new System.Windows.Forms.DateTimePicker();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.tBEventCode = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.rBNo = new System.Windows.Forms.RadioButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.rBYes = new System.Windows.Forms.RadioButton();
+            this.tBEventAtt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.btnEventRe = new System.Windows.Forms.Button();
+            this.btnEvtAdd = new System.Windows.Forms.Button();
+            this.tBEventName = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.gVEvent = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.gBEmpAddOt = new System.Windows.Forms.GroupBox();
-            this.tBEmpAddPAG = new System.Windows.Forms.ComboBox();
-            this.tBEmpAddTIN = new System.Windows.Forms.ComboBox();
-            this.tBEmpAddSSS = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cBEmpAddBar = new System.Windows.Forms.ComboBox();
-            this.label52 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.paneSet.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.tabHome.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
-            this.panelInfo.SuspendLayout();
-            this.gBEmpAddBasic.SuspendLayout();
-            this.gBEmpAddEmer.SuspendLayout();
-            this.gBEmpAddEmp.SuspendLayout();
-            this.gBEmpAddInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).BeginInit();
-            this.gBEmpAddCont.SuspendLayout();
-            this.tabEmpInfo.SuspendLayout();
+            this.paneEmp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gVEmp)).BeginInit();
+            this.gBEmp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmp)).BeginInit();
+            this.tabStud.SuspendLayout();
+            this.paneStud.SuspendLayout();
+            this.gBStud.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStudQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gVStud)).BeginInit();
+            this.tabLog.SuspendLayout();
+            this.paneLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelUpSInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).BeginInit();
-            this.gBEmpViewEmp.SuspendLayout();
-            this.gBEmpViewBasic.SuspendLayout();
-            this.gBEmpViewEmer.SuspendLayout();
-            this.gBEmpViewCont.SuspendLayout();
-            this.gBEmpViewInfo.SuspendLayout();
-            this.gBEmpAddOt.SuspendLayout();
+            this.tabEvent.SuspendLayout();
+            this.paneEvent.SuspendLayout();
+            this.gBEvent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gVEvent)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.paneSet);
+            this.panel1.Controls.Add(this.btnAddEvent);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.btnAdInfo);
+            this.panel1.Controls.Add(this.btnAttdLog);
             this.panel1.Controls.Add(this.btnSet);
-            this.panel1.Controls.Add(this.btnStudInfo);
             this.panel1.Controls.Add(this.btnAddStud);
-            this.panel1.Controls.Add(this.btnEmpInfo);
             this.panel1.Controls.Add(this.btnAddEmp);
             this.panel1.Controls.Add(this.paneSide);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.paneSet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 741);
             this.panel1.TabIndex = 0;
             // 
+            // paneSet
+            // 
+            this.paneSet.BackColor = System.Drawing.Color.White;
+            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSet.Controls.Add(this.button1);
+            this.paneSet.Controls.Add(this.tbUser);
+            this.paneSet.Controls.Add(this.tbPass);
+            this.paneSet.Controls.Add(this.label24);
+            this.paneSet.Controls.Add(this.label23);
+            this.paneSet.ForeColor = System.Drawing.Color.White;
+            this.paneSet.Location = new System.Drawing.Point(2, 144);
+            this.paneSet.Name = "paneSet";
+            this.paneSet.Size = new System.Drawing.Size(196, 154);
+            this.paneSet.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
+            this.button1.Location = new System.Drawing.Point(150, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 32);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tbUser
+            // 
+            this.tbUser.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.tbUser.Location = new System.Drawing.Point(11, 31);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(172, 27);
+            this.tbUser.TabIndex = 3;
+            // 
+            // tbPass
+            // 
+            this.tbPass.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.tbPass.Location = new System.Drawing.Point(11, 79);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.Size = new System.Drawing.Size(172, 27);
+            this.tbPass.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(8, 61);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 15);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Password:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(8, 13);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(73, 15);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Username:";
+            // 
+            // btnAddEvent
+            // 
+            this.btnAddEvent.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAddEvent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAddEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEvent.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEvent.Image = global::admissionSystem.Properties.Resources.checklist_icon1;
+            this.btnAddEvent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEvent.Location = new System.Drawing.Point(22, 273);
+            this.btnAddEvent.Name = "btnAddEvent";
+            this.btnAddEvent.Size = new System.Drawing.Size(176, 36);
+            this.btnAddEvent.TabIndex = 11;
+            this.btnAddEvent.Text = "CREATE AN EVENT";
+            this.btnAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddEvent.UseVisualStyleBackColor = true;
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.label61);
-            this.panel2.Controls.Add(this.label60);
-            this.panel2.Controls.Add(this.label59);
             this.panel2.Controls.Add(this.lblDate);
             this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 143);
+            this.panel2.Size = new System.Drawing.Size(203, 113);
             this.panel2.TabIndex = 8;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.ForeColor = System.Drawing.Color.Lime;
-            this.label61.Location = new System.Drawing.Point(85, 61);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(75, 15);
-            this.label61.TabIndex = 11;
-            this.label61.Text = "2019-00000";
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label60.Location = new System.Drawing.Point(85, 37);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(61, 16);
-            this.label60.TabIndex = 10;
-            this.label60.Text = "spyrax10";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.White;
-            this.label59.Location = new System.Drawing.Point(84, 16);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(74, 21);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "Welcome";
             // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDate.Location = new System.Drawing.Point(9, 117);
+            this.lblDate.Location = new System.Drawing.Point(5, 64);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(52, 16);
             this.lblDate.TabIndex = 2;
@@ -297,74 +287,44 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(5, 92);
+            this.lblTime.Location = new System.Drawing.Point(3, 34);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(97, 28);
+            this.lblTime.Size = new System.Drawing.Size(110, 32);
             this.lblTime.TabIndex = 1;
             this.lblTime.Text = "label59";
             // 
-            // pictureBox2
+            // btnAttdLog
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.DarkGray;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::admissionSystem.Properties.Resources.spy;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 60);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnAdInfo
-            // 
-            this.btnAdInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAdInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAdInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAdInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdInfo.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdInfo.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
-            this.btnAdInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdInfo.Location = new System.Drawing.Point(19, 387);
-            this.btnAdInfo.Name = "btnAdInfo";
-            this.btnAdInfo.Size = new System.Drawing.Size(176, 36);
-            this.btnAdInfo.TabIndex = 6;
-            this.btnAdInfo.Text = "ADMISSION INFO";
-            this.btnAdInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdInfo.UseVisualStyleBackColor = true;
-            this.btnAdInfo.Click += new System.EventHandler(this.btnAdInfo_Click);
+            this.btnAttdLog.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAttdLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAttdLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAttdLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttdLog.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttdLog.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
+            this.btnAttdLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttdLog.Location = new System.Drawing.Point(22, 315);
+            this.btnAttdLog.Name = "btnAttdLog";
+            this.btnAttdLog.Size = new System.Drawing.Size(176, 36);
+            this.btnAttdLog.TabIndex = 6;
+            this.btnAttdLog.Text = "ATTENDANCE LOG";
+            this.btnAttdLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAttdLog.UseVisualStyleBackColor = true;
+            this.btnAttdLog.Click += new System.EventHandler(this.btnAttdLog_Click);
             // 
             // btnSet
             // 
             this.btnSet.FlatAppearance.BorderSize = 0;
             this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSet.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
-            this.btnSet.Location = new System.Drawing.Point(175, 146);
+            this.btnSet.Location = new System.Drawing.Point(178, 119);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(25, 22);
             this.btnSet.TabIndex = 9;
             this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSet.UseVisualStyleBackColor = true;
             this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnStudInfo
-            // 
-            this.btnStudInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnStudInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnStudInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnStudInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudInfo.Image = global::admissionSystem.Properties.Resources.Male_user_info_icon;
-            this.btnStudInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStudInfo.Location = new System.Drawing.Point(19, 345);
-            this.btnStudInfo.Name = "btnStudInfo";
-            this.btnStudInfo.Size = new System.Drawing.Size(176, 36);
-            this.btnStudInfo.TabIndex = 5;
-            this.btnStudInfo.Text = "STUDENT INFO";
-            this.btnStudInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStudInfo.UseVisualStyleBackColor = true;
-            this.btnStudInfo.Click += new System.EventHandler(this.btnStudInfo_Click);
             // 
             // btnAddStud
             // 
@@ -375,32 +335,14 @@
             this.btnAddStud.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddStud.Image = global::admissionSystem.Properties.Resources.Male_user_add_icon;
             this.btnAddStud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStud.Location = new System.Drawing.Point(19, 303);
+            this.btnAddStud.Location = new System.Drawing.Point(22, 231);
             this.btnAddStud.Name = "btnAddStud";
             this.btnAddStud.Size = new System.Drawing.Size(176, 36);
             this.btnAddStud.TabIndex = 4;
-            this.btnAddStud.Text = "NEW STUDENT";
+            this.btnAddStud.Text = "STUDENT INFO";
             this.btnAddStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddStud.UseVisualStyleBackColor = true;
             this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
-            // 
-            // btnEmpInfo
-            // 
-            this.btnEmpInfo.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpInfo.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpInfo.Image = global::admissionSystem.Properties.Resources.user_info_icon__1_;
-            this.btnEmpInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpInfo.Location = new System.Drawing.Point(19, 261);
-            this.btnEmpInfo.Name = "btnEmpInfo";
-            this.btnEmpInfo.Size = new System.Drawing.Size(176, 36);
-            this.btnEmpInfo.TabIndex = 3;
-            this.btnEmpInfo.Text = "STAFF INFO";
-            this.btnEmpInfo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEmpInfo.UseVisualStyleBackColor = true;
-            this.btnEmpInfo.Click += new System.EventHandler(this.btnEmpInfo_Click);
             // 
             // btnAddEmp
             // 
@@ -411,11 +353,11 @@
             this.btnAddEmp.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmp.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
             this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(19, 219);
+            this.btnAddEmp.Location = new System.Drawing.Point(22, 189);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(176, 36);
             this.btnAddEmp.TabIndex = 2;
-            this.btnAddEmp.Text = "NEW STAFF";
+            this.btnAddEmp.Text = "EMPLOYEE INFO";
             this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddEmp.UseVisualStyleBackColor = true;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
@@ -424,7 +366,7 @@
             // 
             this.paneSide.BackColor = System.Drawing.Color.DodgerBlue;
             this.paneSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSide.Location = new System.Drawing.Point(7, 177);
+            this.paneSide.Location = new System.Drawing.Point(10, 147);
             this.paneSide.Name = "paneSide";
             this.paneSide.Size = new System.Drawing.Size(10, 36);
             this.paneSide.TabIndex = 1;
@@ -438,7 +380,7 @@
             this.btnHome.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Image = global::admissionSystem.Properties.Resources.One_storied_house_icon__1_;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(19, 177);
+            this.btnHome.Location = new System.Drawing.Point(22, 147);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(176, 36);
             this.btnHome.TabIndex = 0;
@@ -447,64 +389,13 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // paneSet
-            // 
-            this.paneSet.BackColor = System.Drawing.Color.White;
-            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSet.Controls.Add(this.btnSetX);
-            this.paneSet.Controls.Add(this.button4);
-            this.paneSet.Controls.Add(this.button3);
-            this.paneSet.ForeColor = System.Drawing.Color.White;
-            this.paneSet.Location = new System.Drawing.Point(3, 169);
-            this.paneSet.Name = "paneSet";
-            this.paneSet.Size = new System.Drawing.Size(200, 116);
-            this.paneSet.TabIndex = 10;
-            this.paneSet.Enter += new System.EventHandler(this.paneSet_Enter);
-            this.paneSet.Leave += new System.EventHandler(this.paneSet_Leave);
-            // 
-            // btnSetX
-            // 
-            this.btnSetX.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnSetX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetX.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSetX.ForeColor = System.Drawing.Color.Red;
-            this.btnSetX.Location = new System.Drawing.Point(167, 3);
-            this.btnSetX.Name = "btnSetX";
-            this.btnSetX.Size = new System.Drawing.Size(28, 26);
-            this.btnSetX.TabIndex = 11;
-            this.btnSetX.Text = "X";
-            this.btnSetX.UseVisualStyleBackColor = true;
-            this.btnSetX.Click += new System.EventHandler(this.btnSetX_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 2;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(3, 73);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(192, 31);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "LOGOUT";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 2;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(3, 36);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 31);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Account Settings";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabHome);
             this.tabControl1.Controls.Add(this.tabAddEmp);
-            this.tabControl1.Controls.Add(this.tabEmpInfo);
+            this.tabControl1.Controls.Add(this.tabStud);
+            this.tabControl1.Controls.Add(this.tabLog);
+            this.tabControl1.Controls.Add(this.tabEvent);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(205, 0);
@@ -516,7 +407,7 @@
             // tabHome
             // 
             this.tabHome.BackColor = System.Drawing.Color.White;
-            this.tabHome.Controls.Add(this.gBEmpAddOt);
+            this.tabHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabHome.Location = new System.Drawing.Point(4, 25);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
@@ -526,285 +417,271 @@
             // 
             // tabAddEmp
             // 
-            this.tabAddEmp.Controls.Add(this.panelInfo);
+            this.tabAddEmp.Controls.Add(this.paneEmp);
             this.tabAddEmp.Location = new System.Drawing.Point(4, 25);
             this.tabAddEmp.Name = "tabAddEmp";
             this.tabAddEmp.Padding = new System.Windows.Forms.Padding(3);
             this.tabAddEmp.Size = new System.Drawing.Size(1144, 712);
             this.tabAddEmp.TabIndex = 1;
-            this.tabAddEmp.Text = "New Staff";
+            this.tabAddEmp.Text = "Employee Information";
             this.tabAddEmp.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // paneEmp
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(5, 644);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 35);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "NEW EMPLOYEE";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this.paneEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneEmp.Controls.Add(this.tBEmpViewSer);
+            this.paneEmp.Controls.Add(this.gVEmp);
+            this.paneEmp.Controls.Add(this.gBEmp);
+            this.paneEmp.Controls.Add(this.btnSPrint);
+            this.paneEmp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneEmp.Location = new System.Drawing.Point(3, 3);
+            this.paneEmp.Name = "paneEmp";
+            this.paneEmp.Size = new System.Drawing.Size(1138, 706);
+            this.paneEmp.TabIndex = 35;
             // 
-            // btnSPrint
+            // tBEmpViewSer
             // 
-            this.btnSPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnSPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnSPrint.Location = new System.Drawing.Point(198, 640);
-            this.btnSPrint.Name = "btnSPrint";
-            this.btnSPrint.Size = new System.Drawing.Size(40, 39);
-            this.btnSPrint.TabIndex = 36;
-            this.btnSPrint.UseVisualStyleBackColor = true;
-            this.btnSPrint.Click += new System.EventHandler(this.btnSPrint_Click);
+            this.tBEmpViewSer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpViewSer.Location = new System.Drawing.Point(3, 6);
+            this.tBEmpViewSer.Name = "tBEmpViewSer";
+            this.tBEmpViewSer.Size = new System.Drawing.Size(173, 23);
+            this.tBEmpViewSer.TabIndex = 69;
             // 
-            // panelInfo
+            // gVEmp
             // 
-            this.panelInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelInfo.Controls.Add(this.tBEmpAddId);
-            this.panelInfo.Controls.Add(this.btnEmpAddUp);
-            this.panelInfo.Controls.Add(this.pBEmpAdd);
-            this.panelInfo.Controls.Add(this.label26);
-            this.panelInfo.Controls.Add(this.btnSPrint);
-            this.panelInfo.Controls.Add(this.btnEmpAddReg);
-            this.panelInfo.Controls.Add(this.button2);
-            this.panelInfo.Controls.Add(this.gBEmpAddBasic);
-            this.panelInfo.Controls.Add(this.gBEmpAddEmer);
-            this.panelInfo.Controls.Add(this.gBEmpAddEmp);
-            this.panelInfo.Controls.Add(this.gBEmpAddInfo);
-            this.panelInfo.Controls.Add(this.gBEmpAddCont);
-            this.panelInfo.Location = new System.Drawing.Point(234, 7);
-            this.panelInfo.Name = "panelInfo";
-            this.panelInfo.Size = new System.Drawing.Size(684, 685);
-            this.panelInfo.TabIndex = 35;
+            this.gVEmp.AllowUserToAddRows = false;
+            this.gVEmp.AllowUserToDeleteRows = false;
+            this.gVEmp.AllowUserToResizeRows = false;
+            this.gVEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gVEmp.BackgroundColor = System.Drawing.Color.White;
+            this.gVEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gVEmp.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVEmp.Location = new System.Drawing.Point(3, 35);
+            this.gVEmp.Name = "gVEmp";
+            this.gVEmp.RowHeadersVisible = false;
+            this.gVEmp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gVEmp.Size = new System.Drawing.Size(1129, 276);
+            this.gVEmp.TabIndex = 68;
+            this.gVEmp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVEmp_CellClick);
             // 
-            // tBEmpAddId
+            // gBEmp
             // 
-            this.tBEmpAddId.Enabled = false;
-            this.tBEmpAddId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddId.Location = new System.Drawing.Point(446, 613);
-            this.tBEmpAddId.Name = "tBEmpAddId";
-            this.tBEmpAddId.Size = new System.Drawing.Size(118, 27);
-            this.tBEmpAddId.TabIndex = 35;
+            this.gBEmp.Controls.Add(this.lblRegEmp);
+            this.gBEmp.Controls.Add(this.btnEmpGen);
+            this.gBEmp.Controls.Add(this.pBEmpQR);
+            this.gBEmp.Controls.Add(this.bntEmpRe);
+            this.gBEmp.Controls.Add(this.btnEmpPH);
+            this.gBEmp.Controls.Add(this.pBEmp);
+            this.gBEmp.Controls.Add(this.tBEmpPos);
+            this.gBEmp.Controls.Add(this.tBEmpDept);
+            this.gBEmp.Controls.Add(this.btnEmpAdd);
+            this.gBEmp.Controls.Add(this.label28);
+            this.gBEmp.Controls.Add(this.label27);
+            this.gBEmp.Controls.Add(this.tBEmpId);
+            this.gBEmp.Controls.Add(this.tBEmpLast);
+            this.gBEmp.Controls.Add(this.tBEmpFirst);
+            this.gBEmp.Controls.Add(this.tBEmpMid);
+            this.gBEmp.Controls.Add(this.label26);
+            this.gBEmp.Controls.Add(this.label1);
+            this.gBEmp.Controls.Add(this.label3);
+            this.gBEmp.Controls.Add(this.label2);
+            this.gBEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBEmp.ForeColor = System.Drawing.Color.Red;
+            this.gBEmp.Location = new System.Drawing.Point(348, 317);
+            this.gBEmp.Name = "gBEmp";
+            this.gBEmp.Size = new System.Drawing.Size(448, 298);
+            this.gBEmp.TabIndex = 20;
+            this.gBEmp.TabStop = false;
+            this.gBEmp.Text = "Employee Information:";
             // 
-            // btnEmpAddReg
+            // lblRegEmp
             // 
-            this.btnEmpAddReg.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpAddReg.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpAddReg.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpAddReg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpAddReg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpAddReg.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpAddReg.Image = global::admissionSystem.Properties.Resources.user_add_icon;
-            this.btnEmpAddReg.Location = new System.Drawing.Point(628, 566);
-            this.btnEmpAddReg.Name = "btnEmpAddReg";
-            this.btnEmpAddReg.Size = new System.Drawing.Size(37, 36);
-            this.btnEmpAddReg.TabIndex = 27;
-            this.btnEmpAddReg.UseVisualStyleBackColor = true;
+            this.lblRegEmp.AutoSize = true;
+            this.lblRegEmp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRegEmp.Location = new System.Drawing.Point(118, 272);
+            this.lblRegEmp.Name = "lblRegEmp";
+            this.lblRegEmp.Size = new System.Drawing.Size(43, 16);
+            this.lblRegEmp.TabIndex = 44;
+            this.lblRegEmp.Text = "00000";
+            // 
+            // btnEmpGen
+            // 
+            this.btnEmpGen.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEmpGen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEmpGen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpGen.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpGen.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpGen.Location = new System.Drawing.Point(357, 258);
+            this.btnEmpGen.Name = "btnEmpGen";
+            this.btnEmpGen.Size = new System.Drawing.Size(85, 27);
+            this.btnEmpGen.TabIndex = 43;
+            this.btnEmpGen.Text = "SAVE";
+            this.btnEmpGen.UseVisualStyleBackColor = true;
+            this.btnEmpGen.Click += new System.EventHandler(this.btnEmpGen_Click);
+            // 
+            // pBEmpQR
+            // 
+            this.pBEmpQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEmpQR.Location = new System.Drawing.Point(357, 167);
+            this.pBEmpQR.Name = "pBEmpQR";
+            this.pBEmpQR.Size = new System.Drawing.Size(85, 85);
+            this.pBEmpQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmpQR.TabIndex = 42;
+            this.pBEmpQR.TabStop = false;
+            // 
+            // bntEmpRe
+            // 
+            this.bntEmpRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.bntEmpRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntEmpRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntEmpRe.ForeColor = System.Drawing.Color.Black;
+            this.bntEmpRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.bntEmpRe.Location = new System.Drawing.Point(6, 266);
+            this.bntEmpRe.Name = "bntEmpRe";
+            this.bntEmpRe.Size = new System.Drawing.Size(25, 25);
+            this.bntEmpRe.TabIndex = 38;
+            this.bntEmpRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntEmpRe.UseVisualStyleBackColor = true;
+            this.bntEmpRe.Click += new System.EventHandler(this.bntEmpRe_Click);
+            // 
+            // btnEmpPH
+            // 
+            this.btnEmpPH.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEmpPH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEmpPH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpPH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpPH.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpPH.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpPH.Location = new System.Drawing.Point(357, 117);
+            this.btnEmpPH.Name = "btnEmpPH";
+            this.btnEmpPH.Size = new System.Drawing.Size(85, 27);
+            this.btnEmpPH.TabIndex = 22;
+            this.btnEmpPH.Text = "UPLOAD";
+            this.btnEmpPH.UseVisualStyleBackColor = true;
+            this.btnEmpPH.Click += new System.EventHandler(this.btnEmpPH_Click);
+            // 
+            // pBEmp
+            // 
+            this.pBEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEmp.Image = global::admissionSystem.Properties.Resources.download;
+            this.pBEmp.Location = new System.Drawing.Point(357, 26);
+            this.pBEmp.Name = "pBEmp";
+            this.pBEmp.Size = new System.Drawing.Size(85, 85);
+            this.pBEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmp.TabIndex = 21;
+            this.pBEmp.TabStop = false;
+            // 
+            // tBEmpPos
+            // 
+            this.tBEmpPos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpPos.Location = new System.Drawing.Point(121, 192);
+            this.tBEmpPos.Name = "tBEmpPos";
+            this.tBEmpPos.Size = new System.Drawing.Size(173, 23);
+            this.tBEmpPos.TabIndex = 40;
+            this.tBEmpPos.Leave += new System.EventHandler(this.tBEmpDept_Leave);
+            // 
+            // tBEmpDept
+            // 
+            this.tBEmpDept.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpDept.Location = new System.Drawing.Point(121, 163);
+            this.tBEmpDept.Name = "tBEmpDept";
+            this.tBEmpDept.Size = new System.Drawing.Size(173, 23);
+            this.tBEmpDept.TabIndex = 39;
+            this.tBEmpDept.Leave += new System.EventHandler(this.tBEmpDept_Leave);
+            // 
+            // btnEmpAdd
+            // 
+            this.btnEmpAdd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEmpAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEmpAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnEmpAdd.Location = new System.Drawing.Point(121, 221);
+            this.btnEmpAdd.Name = "btnEmpAdd";
+            this.btnEmpAdd.Size = new System.Drawing.Size(66, 31);
+            this.btnEmpAdd.TabIndex = 27;
+            this.btnEmpAdd.Text = "ADD";
+            this.btnEmpAdd.UseVisualStyleBackColor = true;
+            this.btnEmpAdd.Click += new System.EventHandler(this.btnEmpAdd_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label28.Location = new System.Drawing.Point(48, 193);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(67, 18);
+            this.label28.TabIndex = 37;
+            this.label28.Text = "Position:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label27.Location = new System.Drawing.Point(16, 164);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(99, 18);
+            this.label27.TabIndex = 36;
+            this.label27.Text = "Department:";
+            // 
+            // tBEmpId
+            // 
+            this.tBEmpId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBEmpId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpId.Location = new System.Drawing.Point(121, 43);
+            this.tBEmpId.Name = "tBEmpId";
+            this.tBEmpId.Size = new System.Drawing.Size(173, 27);
+            this.tBEmpId.TabIndex = 35;
+            // 
+            // tBEmpLast
+            // 
+            this.tBEmpLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpLast.Location = new System.Drawing.Point(121, 134);
+            this.tBEmpLast.Name = "tBEmpLast";
+            this.tBEmpLast.Size = new System.Drawing.Size(173, 23);
+            this.tBEmpLast.TabIndex = 2;
+            this.tBEmpLast.Leave += new System.EventHandler(this.tBEmpDept_Leave);
+            // 
+            // tBEmpFirst
+            // 
+            this.tBEmpFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpFirst.Location = new System.Drawing.Point(121, 76);
+            this.tBEmpFirst.Name = "tBEmpFirst";
+            this.tBEmpFirst.Size = new System.Drawing.Size(173, 23);
+            this.tBEmpFirst.TabIndex = 0;
+            this.tBEmpFirst.Leave += new System.EventHandler(this.tBEmpDept_Leave);
+            // 
+            // tBEmpMid
+            // 
+            this.tBEmpMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEmpMid.Location = new System.Drawing.Point(121, 105);
+            this.tBEmpMid.Name = "tBEmpMid";
+            this.tBEmpMid.Size = new System.Drawing.Size(173, 23);
+            this.tBEmpMid.TabIndex = 1;
+            this.tBEmpMid.Leave += new System.EventHandler(this.tBEmpDept_Leave);
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label26.Location = new System.Drawing.Point(350, 622);
+            this.label26.Location = new System.Drawing.Point(25, 47);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(90, 18);
             this.label26.TabIndex = 34;
             this.label26.Text = "ID Number:";
-            // 
-            // btnEmpAddUp
-            // 
-            this.btnEmpAddUp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpAddUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpAddUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpAddUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpAddUp.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpAddUp.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpAddUp.Location = new System.Drawing.Point(428, 99);
-            this.btnEmpAddUp.Name = "btnEmpAddUp";
-            this.btnEmpAddUp.Size = new System.Drawing.Size(125, 24);
-            this.btnEmpAddUp.TabIndex = 22;
-            this.btnEmpAddUp.Text = "TAKE A PHOTO";
-            this.btnEmpAddUp.UseVisualStyleBackColor = true;
-            this.btnEmpAddUp.Click += new System.EventHandler(this.btnEmpAddUp_Click);
-            // 
-            // gBEmpAddBasic
-            // 
-            this.gBEmpAddBasic.Controls.Add(this.label10);
-            this.gBEmpAddBasic.Controls.Add(this.tBEmpAddLast);
-            this.gBEmpAddBasic.Controls.Add(this.label9);
-            this.gBEmpAddBasic.Controls.Add(this.cBEmpAddRel);
-            this.gBEmpAddBasic.Controls.Add(this.tBEmpAddPro);
-            this.gBEmpAddBasic.Controls.Add(this.tBEmpAddFirst);
-            this.gBEmpAddBasic.Controls.Add(this.tBEmpAddMid);
-            this.gBEmpAddBasic.Controls.Add(this.label5);
-            this.gBEmpAddBasic.Controls.Add(this.label11);
-            this.gBEmpAddBasic.Controls.Add(this.cBEmpAddSex);
-            this.gBEmpAddBasic.Controls.Add(this.label7);
-            this.gBEmpAddBasic.Controls.Add(this.label8);
-            this.gBEmpAddBasic.Controls.Add(this.label1);
-            this.gBEmpAddBasic.Controls.Add(this.label3);
-            this.gBEmpAddBasic.Controls.Add(this.label6);
-            this.gBEmpAddBasic.Controls.Add(this.dTEmpAdd);
-            this.gBEmpAddBasic.Controls.Add(this.cbEmpAddStat);
-            this.gBEmpAddBasic.Controls.Add(this.label2);
-            this.gBEmpAddBasic.Controls.Add(this.tBEmpAddMun);
-            this.gBEmpAddBasic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddBasic.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddBasic.Location = new System.Drawing.Point(11, 17);
-            this.gBEmpAddBasic.Name = "gBEmpAddBasic";
-            this.gBEmpAddBasic.Size = new System.Drawing.Size(311, 312);
-            this.gBEmpAddBasic.TabIndex = 20;
-            this.gBEmpAddBasic.TabStop = false;
-            this.gBEmpAddBasic.Text = "Basic Information:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(117, 126);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 18);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Status:";
-            // 
-            // tBEmpAddLast
-            // 
-            this.tBEmpAddLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddLast.Location = new System.Drawing.Point(120, 92);
-            this.tBEmpAddLast.Name = "tBEmpAddLast";
-            this.tBEmpAddLast.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpAddLast.TabIndex = 2;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(33, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 18);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Sex:";
-            // 
-            // cBEmpAddRel
-            // 
-            this.cBEmpAddRel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpAddRel.FormattingEnabled = true;
-            this.cBEmpAddRel.Items.AddRange(new object[] {
-            "Roman Catholic",
-            "Islam",
-            "Evangicals",
-            "Iglesia ni Cristo",
-            "Protestant",
-            "Jehova\'s Witnesses",
-            "Seventh-day Adventist",
-            "Buddhist",
-            "Other"});
-            this.cBEmpAddRel.Location = new System.Drawing.Point(120, 155);
-            this.cBEmpAddRel.Name = "cBEmpAddRel";
-            this.cBEmpAddRel.Size = new System.Drawing.Size(173, 24);
-            this.cBEmpAddRel.TabIndex = 5;
-            // 
-            // tBEmpAddPro
-            // 
-            this.tBEmpAddPro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddPro.Location = new System.Drawing.Point(120, 280);
-            this.tBEmpAddPro.Name = "tBEmpAddPro";
-            this.tBEmpAddPro.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpAddPro.TabIndex = 8;
-            // 
-            // tBEmpAddFirst
-            // 
-            this.tBEmpAddFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddFirst.Location = new System.Drawing.Point(120, 34);
-            this.tBEmpAddFirst.Name = "tBEmpAddFirst";
-            this.tBEmpAddFirst.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpAddFirst.TabIndex = 0;
-            // 
-            // tBEmpAddMid
-            // 
-            this.tBEmpAddMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddMid.Location = new System.Drawing.Point(120, 63);
-            this.tBEmpAddMid.Name = "tBEmpAddMid";
-            this.tBEmpAddMid.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpAddMid.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(14, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 18);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Date of Birth:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label11.Location = new System.Drawing.Point(42, 156);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 18);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Religion:";
-            // 
-            // cBEmpAddSex
-            // 
-            this.cBEmpAddSex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpAddSex.FormattingEnabled = true;
-            this.cBEmpAddSex.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cBEmpAddSex.Location = new System.Drawing.Point(76, 125);
-            this.cBEmpAddSex.Name = "cBEmpAddSex";
-            this.cBEmpAddSex.Size = new System.Drawing.Size(35, 24);
-            this.cBEmpAddSex.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(11, 252);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 18);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Municipality:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Location = new System.Drawing.Point(38, 281);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 18);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Province:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(33, 37);
+            this.label1.Location = new System.Drawing.Point(34, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 18);
             this.label1.TabIndex = 1;
@@ -815,1314 +692,949 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(33, 93);
+            this.label3.Location = new System.Drawing.Point(34, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 18);
             this.label3.TabIndex = 3;
             this.label3.Text = "Lastname:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label6.Location = new System.Drawing.Point(7, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 18);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Place of Birth:";
-            // 
-            // dTEmpAdd
-            // 
-            this.dTEmpAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dTEmpAdd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dTEmpAdd.Location = new System.Drawing.Point(120, 186);
-            this.dTEmpAdd.Name = "dTEmpAdd";
-            this.dTEmpAdd.Size = new System.Drawing.Size(173, 23);
-            this.dTEmpAdd.TabIndex = 6;
-            this.dTEmpAdd.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            // 
-            // cbEmpAddStat
-            // 
-            this.cbEmpAddStat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEmpAddStat.FormattingEnabled = true;
-            this.cbEmpAddStat.Items.AddRange(new object[] {
-            "Single",
-            "Married",
-            "Separated",
-            "Widow"});
-            this.cbEmpAddStat.Location = new System.Drawing.Point(176, 125);
-            this.cbEmpAddStat.Name = "cbEmpAddStat";
-            this.cbEmpAddStat.Size = new System.Drawing.Size(117, 24);
-            this.cbEmpAddStat.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(7, 64);
+            this.label2.Location = new System.Drawing.Point(8, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 18);
             this.label2.TabIndex = 2;
             this.label2.Text = "Middlename:";
             // 
-            // tBEmpAddMun
+            // btnSPrint
             // 
-            this.tBEmpAddMun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddMun.Location = new System.Drawing.Point(120, 251);
-            this.tBEmpAddMun.Name = "tBEmpAddMun";
-            this.tBEmpAddMun.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpAddMun.TabIndex = 7;
+            this.btnSPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnSPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
+            this.btnSPrint.Location = new System.Drawing.Point(1092, 317);
+            this.btnSPrint.Name = "btnSPrint";
+            this.btnSPrint.Size = new System.Drawing.Size(40, 39);
+            this.btnSPrint.TabIndex = 36;
+            this.btnSPrint.UseVisualStyleBackColor = true;
             // 
-            // gBEmpAddEmer
+            // tabStud
             // 
-            this.gBEmpAddEmer.Controls.Add(this.label19);
-            this.gBEmpAddEmer.Controls.Add(this.tbEmpAddConRel);
-            this.gBEmpAddEmer.Controls.Add(this.label18);
-            this.gBEmpAddEmer.Controls.Add(this.label16);
-            this.gBEmpAddEmer.Controls.Add(this.tBEmpAddConAdd);
-            this.gBEmpAddEmer.Controls.Add(this.tBEmpAddConMob);
-            this.gBEmpAddEmer.Controls.Add(this.label15);
-            this.gBEmpAddEmer.Controls.Add(this.tBEmpAddConLast);
-            this.gBEmpAddEmer.Controls.Add(this.tBEmpAddConMid);
-            this.gBEmpAddEmer.Controls.Add(this.label14);
-            this.gBEmpAddEmer.Controls.Add(this.tBEmpAddConFirst);
-            this.gBEmpAddEmer.Controls.Add(this.label13);
-            this.gBEmpAddEmer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddEmer.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddEmer.Location = new System.Drawing.Point(9, 336);
-            this.gBEmpAddEmer.Name = "gBEmpAddEmer";
-            this.gBEmpAddEmer.Size = new System.Drawing.Size(313, 244);
-            this.gBEmpAddEmer.TabIndex = 22;
-            this.gBEmpAddEmer.TabStop = false;
-            this.gBEmpAddEmer.Text = "Emergency Information:";
+            this.tabStud.Controls.Add(this.paneStud);
+            this.tabStud.Location = new System.Drawing.Point(4, 25);
+            this.tabStud.Name = "tabStud";
+            this.tabStud.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStud.Size = new System.Drawing.Size(1144, 712);
+            this.tabStud.TabIndex = 2;
+            this.tabStud.Text = "Student Information";
+            this.tabStud.UseVisualStyleBackColor = true;
             // 
-            // label19
+            // paneStud
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label19.Location = new System.Drawing.Point(35, 216);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(97, 18);
-            this.label19.TabIndex = 13;
-            this.label19.Text = "Relationship";
+            this.paneStud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneStud.Controls.Add(this.gBStud);
+            this.paneStud.Controls.Add(this.textBox1);
+            this.paneStud.Controls.Add(this.gVStud);
+            this.paneStud.Controls.Add(this.button2);
+            this.paneStud.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneStud.Location = new System.Drawing.Point(3, 3);
+            this.paneStud.Name = "paneStud";
+            this.paneStud.Size = new System.Drawing.Size(1138, 706);
+            this.paneStud.TabIndex = 0;
             // 
-            // tbEmpAddConRel
+            // gBStud
             // 
-            this.tbEmpAddConRel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmpAddConRel.Location = new System.Drawing.Point(138, 215);
-            this.tbEmpAddConRel.Name = "tbEmpAddConRel";
-            this.tbEmpAddConRel.Size = new System.Drawing.Size(153, 23);
-            this.tbEmpAddConRel.TabIndex = 20;
+            this.gBStud.Controls.Add(this.lblRegStud);
+            this.gBStud.Controls.Add(this.tBStudCour);
+            this.gBStud.Controls.Add(this.tBStudDept);
+            this.gBStud.Controls.Add(this.tBStudYr);
+            this.gBStud.Controls.Add(this.btnStudGen);
+            this.gBStud.Controls.Add(this.btnStudPH);
+            this.gBStud.Controls.Add(this.label11);
+            this.gBStud.Controls.Add(this.pBStud);
+            this.gBStud.Controls.Add(this.cbStudSex);
+            this.gBStud.Controls.Add(this.pBStudQR);
+            this.gBStud.Controls.Add(this.label5);
+            this.gBStud.Controls.Add(this.btnStudRe);
+            this.gBStud.Controls.Add(this.btnStudAdd);
+            this.gBStud.Controls.Add(this.label4);
+            this.gBStud.Controls.Add(this.label6);
+            this.gBStud.Controls.Add(this.tBStudId);
+            this.gBStud.Controls.Add(this.tBStudLast);
+            this.gBStud.Controls.Add(this.tBStudFirst);
+            this.gBStud.Controls.Add(this.tBStudMid);
+            this.gBStud.Controls.Add(this.label7);
+            this.gBStud.Controls.Add(this.label8);
+            this.gBStud.Controls.Add(this.label9);
+            this.gBStud.Controls.Add(this.label10);
+            this.gBStud.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBStud.ForeColor = System.Drawing.Color.Red;
+            this.gBStud.Location = new System.Drawing.Point(327, 317);
+            this.gBStud.Name = "gBStud";
+            this.gBStud.Size = new System.Drawing.Size(491, 355);
+            this.gBStud.TabIndex = 73;
+            this.gBStud.TabStop = false;
+            this.gBStud.Text = "Student Information:";
             // 
-            // label18
+            // lblRegStud
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label18.Location = new System.Drawing.Point(6, 153);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(126, 18);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "Present Address:";
+            this.lblRegStud.AutoSize = true;
+            this.lblRegStud.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegStud.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRegStud.Location = new System.Drawing.Point(118, 330);
+            this.lblRegStud.Name = "lblRegStud";
+            this.lblRegStud.Size = new System.Drawing.Size(43, 16);
+            this.lblRegStud.TabIndex = 51;
+            this.lblRegStud.Text = "00000";
             // 
-            // label16
+            // tBStudCour
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label16.Location = new System.Drawing.Point(48, 124);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(84, 18);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "Contact #:";
+            this.tBStudCour.AutoCompleteCustomSource.AddRange(new string[] {
+            "BS in Computer Science",
+            "BS in Information Technology",
+            "BS in Industrial Technology",
+            "BS in Civil Engineering",
+            "BS in Computer Engineering",
+            "BS in Mechanical Engineering",
+            "BS in Electrical Engineering",
+            "BS in Electronics and Communication Engineering",
+            "Electrical and Automotive Technology",
+            "Associate in Computer Technology",
+            "Doctor of Philosophy",
+            "Master of Arts in Education",
+            "Master of Arts in Teaching Computer Science",
+            "Master in Public Administration",
+            "Master in Business Administration",
+            "Pre-school",
+            "Elementary",
+            "Junior High School",
+            "Senior High School",
+            "AB majors of Political Science and English",
+            "BS in Hotel and Restaurant Management",
+            "BS in Tourism Management",
+            "BS in Business Administration",
+            "BS in Accountancy",
+            "BS in Criminology",
+            "BS of Laws",
+            "BS in Marine Transportation",
+            "BS in Marine Engineering",
+            "BS in Physical Therapy",
+            "BS in Nursing",
+            "BS in Radiologic Technology",
+            "Midwifery",
+            "Bachelor of Secondary Education",
+            "Bachelor of Elementary Education",
+            "Agri Corps Production NC I",
+            "Agri Corps Production NC II",
+            "Animal Production NC II",
+            "Computer Hardware Servicing NCII",
+            "Driving NC II (118 hours)",
+            "Health Care Services NC II",
+            "Security Services NC II ",
+            "Security Services NC III ",
+            "Shielded Metal Arc Welding (SMAW) NC II"});
+            this.tBStudCour.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tBStudCour.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBStudCour.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudCour.Location = new System.Drawing.Point(121, 221);
+            this.tBStudCour.Name = "tBStudCour";
+            this.tBStudCour.Size = new System.Drawing.Size(355, 23);
+            this.tBStudCour.TabIndex = 50;
             // 
-            // tBEmpAddConAdd
+            // tBStudDept
             // 
-            this.tBEmpAddConAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddConAdd.Location = new System.Drawing.Point(138, 152);
-            this.tBEmpAddConAdd.Multiline = true;
-            this.tBEmpAddConAdd.Name = "tBEmpAddConAdd";
-            this.tBEmpAddConAdd.Size = new System.Drawing.Size(153, 57);
-            this.tBEmpAddConAdd.TabIndex = 19;
+            this.tBStudDept.AutoCompleteCustomSource.AddRange(new string[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS"});
+            this.tBStudDept.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tBStudDept.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBStudDept.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBStudDept.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudDept.Location = new System.Drawing.Point(121, 192);
+            this.tBStudDept.Name = "tBStudDept";
+            this.tBStudDept.Size = new System.Drawing.Size(355, 23);
+            this.tBStudDept.TabIndex = 49;
             // 
-            // tBEmpAddConMob
+            // tBStudYr
             // 
-            this.tBEmpAddConMob.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddConMob.Location = new System.Drawing.Point(138, 123);
-            this.tBEmpAddConMob.Name = "tBEmpAddConMob";
-            this.tBEmpAddConMob.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpAddConMob.TabIndex = 18;
+            this.tBStudYr.AutoCompleteCustomSource.AddRange(new string[] {
+            "Grade1",
+            "Grade2",
+            "Grade3",
+            "Grade4",
+            "Grade5",
+            "Grade6",
+            "Grade7",
+            "Grade8",
+            "Grade9",
+            "Grade10",
+            "Grade11",
+            "Grade12",
+            "SeniorHigh",
+            "JuniorHigh",
+            "1styear",
+            "2ndyear",
+            "3rdyear",
+            "4thyear",
+            "5thyear",
+            "6thyear",
+            "Other"});
+            this.tBStudYr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tBStudYr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBStudYr.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudYr.Location = new System.Drawing.Point(208, 163);
+            this.tBStudYr.Name = "tBStudYr";
+            this.tBStudYr.Size = new System.Drawing.Size(86, 23);
+            this.tBStudYr.TabIndex = 48;
             // 
-            // label15
+            // btnStudGen
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(50, 95);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(82, 18);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Lastname:";
+            this.btnStudGen.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStudGen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnStudGen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStudGen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudGen.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudGen.ForeColor = System.Drawing.Color.Black;
+            this.btnStudGen.Location = new System.Drawing.Point(330, 324);
+            this.btnStudGen.Name = "btnStudGen";
+            this.btnStudGen.Size = new System.Drawing.Size(64, 25);
+            this.btnStudGen.TabIndex = 43;
+            this.btnStudGen.Text = "SAVE";
+            this.btnStudGen.UseVisualStyleBackColor = true;
+            this.btnStudGen.Click += new System.EventHandler(this.btnStudGen_Click);
             // 
-            // tBEmpAddConLast
+            // btnStudPH
             // 
-            this.tBEmpAddConLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddConLast.Location = new System.Drawing.Point(138, 94);
-            this.tBEmpAddConLast.Name = "tBEmpAddConLast";
-            this.tBEmpAddConLast.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpAddConLast.TabIndex = 17;
+            this.btnStudPH.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStudPH.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnStudPH.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStudPH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudPH.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudPH.ForeColor = System.Drawing.Color.Black;
+            this.btnStudPH.Location = new System.Drawing.Point(400, 117);
+            this.btnStudPH.Name = "btnStudPH";
+            this.btnStudPH.Size = new System.Drawing.Size(85, 27);
+            this.btnStudPH.TabIndex = 22;
+            this.btnStudPH.Text = "UPLOAD";
+            this.btnStudPH.UseVisualStyleBackColor = true;
+            this.btnStudPH.Click += new System.EventHandler(this.btnStudPH_Click);
             // 
-            // tBEmpAddConMid
+            // label11
             // 
-            this.tBEmpAddConMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddConMid.Location = new System.Drawing.Point(138, 65);
-            this.tBEmpAddConMid.Name = "tBEmpAddConMid";
-            this.tBEmpAddConMid.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpAddConMid.TabIndex = 16;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label11.Location = new System.Drawing.Point(163, 164);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 18);
+            this.label11.TabIndex = 47;
+            this.label11.Text = "Year:";
             // 
-            // label14
+            // pBStud
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label14.Location = new System.Drawing.Point(25, 66);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(107, 18);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Middlename:";
+            this.pBStud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBStud.Image = global::admissionSystem.Properties.Resources.stud;
+            this.pBStud.Location = new System.Drawing.Point(400, 26);
+            this.pBStud.Name = "pBStud";
+            this.pBStud.Size = new System.Drawing.Size(85, 85);
+            this.pBStud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBStud.TabIndex = 21;
+            this.pBStud.TabStop = false;
             // 
-            // tBEmpAddConFirst
+            // cbStudSex
             // 
-            this.tBEmpAddConFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddConFirst.Location = new System.Drawing.Point(138, 36);
-            this.tBEmpAddConFirst.Name = "tBEmpAddConFirst";
-            this.tBEmpAddConFirst.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpAddConFirst.TabIndex = 15;
+            this.cbStudSex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStudSex.FormattingEnabled = true;
+            this.cbStudSex.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cbStudSex.Location = new System.Drawing.Point(121, 163);
+            this.cbStudSex.Name = "cbStudSex";
+            this.cbStudSex.Size = new System.Drawing.Size(36, 24);
+            this.cbStudSex.TabIndex = 46;
             // 
-            // label13
+            // pBStudQR
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(51, 37);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(81, 18);
-            this.label13.TabIndex = 2;
-            this.label13.Text = "Firstname:";
+            this.pBStudQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBStudQR.Location = new System.Drawing.Point(400, 264);
+            this.pBStudQR.Name = "pBStudQR";
+            this.pBStudQR.Size = new System.Drawing.Size(85, 85);
+            this.pBStudQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBStudQR.TabIndex = 42;
+            this.pBStudQR.TabStop = false;
             // 
-            // gBEmpAddEmp
+            // label5
             // 
-            this.gBEmpAddEmp.Controls.Add(this.tBEmpAddStat);
-            this.gBEmpAddEmp.Controls.Add(this.tBEmpAddPos);
-            this.gBEmpAddEmp.Controls.Add(this.tBEmpAddDept);
-            this.gBEmpAddEmp.Controls.Add(this.label29);
-            this.gBEmpAddEmp.Controls.Add(this.label28);
-            this.gBEmpAddEmp.Controls.Add(this.label27);
-            this.gBEmpAddEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddEmp.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddEmp.Location = new System.Drawing.Point(344, 447);
-            this.gBEmpAddEmp.Name = "gBEmpAddEmp";
-            this.gBEmpAddEmp.Size = new System.Drawing.Size(279, 133);
-            this.gBEmpAddEmp.TabIndex = 25;
-            this.gBEmpAddEmp.TabStop = false;
-            this.gBEmpAddEmp.Text = "Employment Information:";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.Location = new System.Drawing.Point(46, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 18);
+            this.label5.TabIndex = 45;
+            this.label5.Text = "Gender:";
             // 
-            // tBEmpAddStat
+            // btnStudRe
             // 
-            this.tBEmpAddStat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddStat.FormattingEnabled = true;
-            this.tBEmpAddStat.Items.AddRange(new object[] {
-            "Full Time",
-            "Part Time",
-            "Intern"});
-            this.tBEmpAddStat.Location = new System.Drawing.Point(111, 95);
-            this.tBEmpAddStat.Name = "tBEmpAddStat";
-            this.tBEmpAddStat.Size = new System.Drawing.Size(153, 24);
-            this.tBEmpAddStat.TabIndex = 26;
+            this.btnStudRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStudRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudRe.ForeColor = System.Drawing.Color.Black;
+            this.btnStudRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnStudRe.Location = new System.Drawing.Point(6, 324);
+            this.btnStudRe.Name = "btnStudRe";
+            this.btnStudRe.Size = new System.Drawing.Size(25, 25);
+            this.btnStudRe.TabIndex = 38;
+            this.btnStudRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStudRe.UseVisualStyleBackColor = true;
+            this.btnStudRe.Click += new System.EventHandler(this.btnStudRe_Click);
             // 
-            // tBEmpAddPos
+            // btnStudAdd
             // 
-            this.tBEmpAddPos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddPos.Location = new System.Drawing.Point(111, 66);
-            this.tBEmpAddPos.Name = "tBEmpAddPos";
-            this.tBEmpAddPos.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpAddPos.TabIndex = 25;
-            // 
-            // tBEmpAddDept
-            // 
-            this.tBEmpAddDept.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddDept.Location = new System.Drawing.Point(111, 37);
-            this.tBEmpAddDept.Name = "tBEmpAddDept";
-            this.tBEmpAddDept.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpAddDept.TabIndex = 24;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label29.Location = new System.Drawing.Point(52, 98);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(53, 18);
-            this.label29.TabIndex = 8;
-            this.label29.Text = "Status:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label28.Location = new System.Drawing.Point(38, 67);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(67, 18);
-            this.label28.TabIndex = 7;
-            this.label28.Text = "Position:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label27.Location = new System.Drawing.Point(6, 38);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(99, 18);
-            this.label27.TabIndex = 6;
-            this.label27.Text = "Department:";
-            // 
-            // gBEmpAddInfo
-            // 
-            this.gBEmpAddInfo.Controls.Add(this.label52);
-            this.gBEmpAddInfo.Controls.Add(this.cBEmpAddBar);
-            this.gBEmpAddInfo.Controls.Add(this.tBEmpAddPur);
-            this.gBEmpAddInfo.Controls.Add(this.label12);
-            this.gBEmpAddInfo.Controls.Add(this.cBEmpAddMun);
-            this.gBEmpAddInfo.Controls.Add(this.label4);
-            this.gBEmpAddInfo.Controls.Add(this.cBEmpAddPro);
-            this.gBEmpAddInfo.Controls.Add(this.label17);
-            this.gBEmpAddInfo.Controls.Add(this.cBEmpAddCoun);
-            this.gBEmpAddInfo.Controls.Add(this.label20);
-            this.gBEmpAddInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddInfo.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddInfo.Location = new System.Drawing.Point(344, 135);
-            this.gBEmpAddInfo.Name = "gBEmpAddInfo";
-            this.gBEmpAddInfo.Size = new System.Drawing.Size(307, 194);
-            this.gBEmpAddInfo.TabIndex = 21;
-            this.gBEmpAddInfo.TabStop = false;
-            this.gBEmpAddInfo.Text = "Address Information:";
-            // 
-            // tBEmpAddPur
-            // 
-            this.tBEmpAddPur.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddPur.Location = new System.Drawing.Point(138, 157);
-            this.tBEmpAddPur.Name = "tBEmpAddPur";
-            this.tBEmpAddPur.Size = new System.Drawing.Size(152, 23);
-            this.tBEmpAddPur.TabIndex = 14;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(6, 158);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(126, 18);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "House # / Purok:";
-            // 
-            // cBEmpAddMun
-            // 
-            this.cBEmpAddMun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpAddMun.FormattingEnabled = true;
-            this.cBEmpAddMun.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpAddMun.Location = new System.Drawing.Point(138, 97);
-            this.cBEmpAddMun.Name = "cBEmpAddMun";
-            this.cBEmpAddMun.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpAddMun.TabIndex = 13;
+            this.btnStudAdd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStudAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnStudAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnStudAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnStudAdd.Location = new System.Drawing.Point(121, 250);
+            this.btnStudAdd.Name = "btnStudAdd";
+            this.btnStudAdd.Size = new System.Drawing.Size(87, 31);
+            this.btnStudAdd.TabIndex = 27;
+            this.btnStudAdd.Text = "UPDATE";
+            this.btnStudAdd.UseVisualStyleBackColor = true;
+            this.btnStudAdd.Click += new System.EventHandler(this.btnStudAdd_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(29, 98);
+            this.label4.Location = new System.Drawing.Point(51, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 18);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Municipality:";
+            this.label4.Size = new System.Drawing.Size(64, 18);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Course:";
             // 
-            // cBEmpAddPro
+            // label6
             // 
-            this.cBEmpAddPro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpAddPro.FormattingEnabled = true;
-            this.cBEmpAddPro.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpAddPro.Location = new System.Drawing.Point(138, 67);
-            this.cBEmpAddPro.Name = "cBEmpAddPro";
-            this.cBEmpAddPro.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpAddPro.TabIndex = 12;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6.Location = new System.Drawing.Point(16, 193);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 18);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Department:";
             // 
-            // label17
+            // tBStudId
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label17.Location = new System.Drawing.Point(62, 38);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 18);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Country:";
+            this.tBStudId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBStudId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudId.Location = new System.Drawing.Point(121, 43);
+            this.tBStudId.Name = "tBStudId";
+            this.tBStudId.Size = new System.Drawing.Size(173, 27);
+            this.tBStudId.TabIndex = 35;
             // 
-            // cBEmpAddCoun
+            // tBStudLast
             // 
-            this.cBEmpAddCoun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpAddCoun.FormattingEnabled = true;
-            this.cBEmpAddCoun.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpAddCoun.Location = new System.Drawing.Point(138, 37);
-            this.cBEmpAddCoun.Name = "cBEmpAddCoun";
-            this.cBEmpAddCoun.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpAddCoun.TabIndex = 11;
+            this.tBStudLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudLast.Location = new System.Drawing.Point(121, 134);
+            this.tBStudLast.Name = "tBStudLast";
+            this.tBStudLast.Size = new System.Drawing.Size(173, 23);
+            this.tBStudLast.TabIndex = 2;
+            this.tBStudLast.Leave += new System.EventHandler(this.tBEmpDept_Leave);
             // 
-            // label20
+            // tBStudFirst
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label20.Location = new System.Drawing.Point(56, 68);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 18);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Province:";
+            this.tBStudFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudFirst.Location = new System.Drawing.Point(121, 76);
+            this.tBStudFirst.Name = "tBStudFirst";
+            this.tBStudFirst.Size = new System.Drawing.Size(173, 23);
+            this.tBStudFirst.TabIndex = 0;
+            this.tBStudFirst.Leave += new System.EventHandler(this.tBEmpDept_Leave);
             // 
-            // pBEmpAdd
+            // tBStudMid
             // 
-            this.pBEmpAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpAdd.Image = global::admissionSystem.Properties.Resources.download;
-            this.pBEmpAdd.Location = new System.Drawing.Point(559, 3);
-            this.pBEmpAdd.Name = "pBEmpAdd";
-            this.pBEmpAdd.Size = new System.Drawing.Size(120, 120);
-            this.pBEmpAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBEmpAdd.TabIndex = 21;
-            this.pBEmpAdd.TabStop = false;
+            this.tBStudMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBStudMid.Location = new System.Drawing.Point(121, 105);
+            this.tBStudMid.Name = "tBStudMid";
+            this.tBStudMid.Size = new System.Drawing.Size(173, 23);
+            this.tBStudMid.TabIndex = 1;
+            this.tBStudMid.Leave += new System.EventHandler(this.tBEmpDept_Leave);
             // 
-            // gBEmpAddCont
+            // label7
             // 
-            this.gBEmpAddCont.Controls.Add(this.tBEmpAddEmail);
-            this.gBEmpAddCont.Controls.Add(this.label22);
-            this.gBEmpAddCont.Controls.Add(this.tBEmpAddMob);
-            this.gBEmpAddCont.Controls.Add(this.label21);
-            this.gBEmpAddCont.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddCont.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddCont.Location = new System.Drawing.Point(344, 347);
-            this.gBEmpAddCont.Name = "gBEmpAddCont";
-            this.gBEmpAddCont.Size = new System.Drawing.Size(327, 94);
-            this.gBEmpAddCont.TabIndex = 23;
-            this.gBEmpAddCont.TabStop = false;
-            this.gBEmpAddCont.Text = "Contact Information:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(25, 47);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 18);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "ID Number:";
             // 
-            // tBEmpAddEmail
+            // label8
             // 
-            this.tBEmpAddEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddEmail.Location = new System.Drawing.Point(139, 65);
-            this.tBEmpAddEmail.Name = "tBEmpAddEmail";
-            this.tBEmpAddEmail.Size = new System.Drawing.Size(182, 23);
-            this.tBEmpAddEmail.TabIndex = 10;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label8.Location = new System.Drawing.Point(34, 77);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 18);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Firstname:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label9.Location = new System.Drawing.Point(34, 135);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 18);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "Lastname:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label10.Location = new System.Drawing.Point(8, 106);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 18);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Middlename:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(173, 23);
+            this.textBox1.TabIndex = 72;
+            // 
+            // gVStud
+            // 
+            this.gVStud.AllowUserToAddRows = false;
+            this.gVStud.AllowUserToResizeRows = false;
+            this.gVStud.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gVStud.BackgroundColor = System.Drawing.Color.White;
+            this.gVStud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gVStud.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVStud.Location = new System.Drawing.Point(3, 35);
+            this.gVStud.Name = "gVStud";
+            this.gVStud.RowHeadersVisible = false;
+            this.gVStud.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gVStud.Size = new System.Drawing.Size(1129, 276);
+            this.gVStud.TabIndex = 71;
+            this.gVStud.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVStud_CellClick);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
+            this.button2.Location = new System.Drawing.Point(1092, 317);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 39);
+            this.button2.TabIndex = 70;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // tabLog
+            // 
+            this.tabLog.Controls.Add(this.paneLog);
+            this.tabLog.Location = new System.Drawing.Point(4, 25);
+            this.tabLog.Name = "tabLog";
+            this.tabLog.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLog.Size = new System.Drawing.Size(1144, 712);
+            this.tabLog.TabIndex = 3;
+            this.tabLog.Text = "Attendance Log";
+            this.tabLog.UseVisualStyleBackColor = true;
+            // 
+            // paneLog
+            // 
+            this.paneLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneLog.Controls.Add(this.dataGridView1);
+            this.paneLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneLog.Location = new System.Drawing.Point(3, 3);
+            this.paneLog.Name = "paneLog";
+            this.paneLog.Size = new System.Drawing.Size(1138, 706);
+            this.paneLog.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.DodgerBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1129, 570);
+            this.dataGridView1.TabIndex = 72;
+            // 
+            // tabEvent
+            // 
+            this.tabEvent.Controls.Add(this.paneEvent);
+            this.tabEvent.Location = new System.Drawing.Point(4, 25);
+            this.tabEvent.Name = "tabEvent";
+            this.tabEvent.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEvent.Size = new System.Drawing.Size(1144, 712);
+            this.tabEvent.TabIndex = 4;
+            this.tabEvent.Text = "Event List";
+            this.tabEvent.UseVisualStyleBackColor = true;
+            // 
+            // paneEvent
+            // 
+            this.paneEvent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneEvent.Controls.Add(this.btnCPEvt);
+            this.paneEvent.Controls.Add(this.gBEvent);
+            this.paneEvent.Controls.Add(this.gVEvent);
+            this.paneEvent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneEvent.Location = new System.Drawing.Point(3, 3);
+            this.paneEvent.Name = "paneEvent";
+            this.paneEvent.Size = new System.Drawing.Size(1138, 706);
+            this.paneEvent.TabIndex = 0;
+            // 
+            // btnCPEvt
+            // 
+            this.btnCPEvt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCPEvt.Location = new System.Drawing.Point(3, 318);
+            this.btnCPEvt.Name = "btnCPEvt";
+            this.btnCPEvt.Size = new System.Drawing.Size(117, 32);
+            this.btnCPEvt.TabIndex = 75;
+            this.btnCPEvt.Text = "COPY EVENT";
+            this.btnCPEvt.UseVisualStyleBackColor = true;
+            this.btnCPEvt.Click += new System.EventHandler(this.btnCPEvt_Click);
+            // 
+            // gBEvent
+            // 
+            this.gBEvent.Controls.Add(this.tBEventEveOut);
+            this.gBEvent.Controls.Add(this.tBEventEveIn);
+            this.gBEvent.Controls.Add(this.tBEventAftOut);
+            this.gBEvent.Controls.Add(this.tBEventAftIn);
+            this.gBEvent.Controls.Add(this.tBEventMorOut);
+            this.gBEvent.Controls.Add(this.tBEventMorIn);
+            this.gBEvent.Controls.Add(this.dTEventDate);
+            this.gBEvent.Controls.Add(this.label22);
+            this.gBEvent.Controls.Add(this.label21);
+            this.gBEvent.Controls.Add(this.tBEventCode);
+            this.gBEvent.Controls.Add(this.label16);
+            this.gBEvent.Controls.Add(this.label20);
+            this.gBEvent.Controls.Add(this.label19);
+            this.gBEvent.Controls.Add(this.label18);
+            this.gBEvent.Controls.Add(this.label15);
+            this.gBEvent.Controls.Add(this.label14);
+            this.gBEvent.Controls.Add(this.rBNo);
+            this.gBEvent.Controls.Add(this.label13);
+            this.gBEvent.Controls.Add(this.rBYes);
+            this.gBEvent.Controls.Add(this.tBEventAtt);
+            this.gBEvent.Controls.Add(this.label12);
+            this.gBEvent.Controls.Add(this.btnEventRe);
+            this.gBEvent.Controls.Add(this.btnEvtAdd);
+            this.gBEvent.Controls.Add(this.tBEventName);
+            this.gBEvent.Controls.Add(this.label17);
+            this.gBEvent.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBEvent.ForeColor = System.Drawing.Color.Red;
+            this.gBEvent.Location = new System.Drawing.Point(317, 335);
+            this.gBEvent.Name = "gBEvent";
+            this.gBEvent.Size = new System.Drawing.Size(510, 334);
+            this.gBEvent.TabIndex = 74;
+            this.gBEvent.TabStop = false;
+            this.gBEvent.Text = "Create New Event:";
+            // 
+            // tBEventEveOut
+            // 
+            this.tBEventEveOut.FormattingEnabled = true;
+            this.tBEventEveOut.Items.AddRange(new object[] {
+            "8:00 PM",
+            "8:30 PM",
+            "9:00 PM",
+            "9:30 PM",
+            "10:00 PM",
+            "10:30 PM",
+            "11:00 PM",
+            "11:30 PM",
+            "12:00 AM",
+            "NONE"});
+            this.tBEventEveOut.Location = new System.Drawing.Point(412, 259);
+            this.tBEventEveOut.Name = "tBEventEveOut";
+            this.tBEventEveOut.Size = new System.Drawing.Size(92, 27);
+            this.tBEventEveOut.TabIndex = 80;
+            // 
+            // tBEventEveIn
+            // 
+            this.tBEventEveIn.FormattingEnabled = true;
+            this.tBEventEveIn.Items.AddRange(new object[] {
+            "5:00 PM",
+            "5:30 PM",
+            "6:00 PM",
+            "6:30 PM",
+            "7:00 PM",
+            "7:30 PM",
+            "8:00 PM",
+            "NONE"});
+            this.tBEventEveIn.Location = new System.Drawing.Point(149, 259);
+            this.tBEventEveIn.Name = "tBEventEveIn";
+            this.tBEventEveIn.Size = new System.Drawing.Size(92, 27);
+            this.tBEventEveIn.TabIndex = 79;
+            // 
+            // tBEventAftOut
+            // 
+            this.tBEventAftOut.FormattingEnabled = true;
+            this.tBEventAftOut.Items.AddRange(new object[] {
+            "2:00 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM",
+            "5:30 PM",
+            "6:00 PM",
+            "NONE"});
+            this.tBEventAftOut.Location = new System.Drawing.Point(412, 226);
+            this.tBEventAftOut.Name = "tBEventAftOut";
+            this.tBEventAftOut.Size = new System.Drawing.Size(92, 27);
+            this.tBEventAftOut.TabIndex = 78;
+            // 
+            // tBEventAftIn
+            // 
+            this.tBEventAftIn.FormattingEnabled = true;
+            this.tBEventAftIn.Items.AddRange(new object[] {
+            "12:00 PM",
+            "12:30 PM",
+            "1:00 PM",
+            "1:30 PM",
+            "2:00 PM",
+            "2:30 PM",
+            "3:00 PM",
+            "3:30 PM",
+            "4:00 PM",
+            "4:30 PM",
+            "5:00 PM",
+            "NONE"});
+            this.tBEventAftIn.Location = new System.Drawing.Point(149, 226);
+            this.tBEventAftIn.Name = "tBEventAftIn";
+            this.tBEventAftIn.Size = new System.Drawing.Size(92, 27);
+            this.tBEventAftIn.TabIndex = 77;
+            // 
+            // tBEventMorOut
+            // 
+            this.tBEventMorOut.FormattingEnabled = true;
+            this.tBEventMorOut.Items.AddRange(new object[] {
+            "11:00 AM",
+            "11:30 AM",
+            "12:00 PM",
+            "NONE"});
+            this.tBEventMorOut.Location = new System.Drawing.Point(412, 193);
+            this.tBEventMorOut.Name = "tBEventMorOut";
+            this.tBEventMorOut.Size = new System.Drawing.Size(92, 27);
+            this.tBEventMorOut.TabIndex = 76;
+            // 
+            // tBEventMorIn
+            // 
+            this.tBEventMorIn.FormattingEnabled = true;
+            this.tBEventMorIn.Items.AddRange(new object[] {
+            "4:00 AM",
+            "4:30 AM",
+            "5:00 AM",
+            "5:30 AM",
+            "6:00 AM",
+            "6:30 AM",
+            "7:00 AM",
+            "7:30 AM",
+            "8:00 AM",
+            "8:30 AM",
+            "9:00 AM",
+            "9:30 AM",
+            "10:00 AM",
+            "10:30 AM",
+            "11:00 AM",
+            "NONE"});
+            this.tBEventMorIn.Location = new System.Drawing.Point(149, 193);
+            this.tBEventMorIn.Name = "tBEventMorIn";
+            this.tBEventMorIn.Size = new System.Drawing.Size(92, 27);
+            this.tBEventMorIn.TabIndex = 75;
+            // 
+            // dTEventDate
+            // 
+            this.dTEventDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dTEventDate.Location = new System.Drawing.Point(149, 146);
+            this.dTEventDate.Name = "dTEventDate";
+            this.dTEventDate.Size = new System.Drawing.Size(121, 27);
+            this.dTEventDate.TabIndex = 67;
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label22.Location = new System.Drawing.Point(19, 66);
+            this.label22.Location = new System.Drawing.Point(96, 149);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(114, 18);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Email Address:";
-            // 
-            // tBEmpAddMob
-            // 
-            this.tBEmpAddMob.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddMob.Location = new System.Drawing.Point(139, 36);
-            this.tBEmpAddMob.Name = "tBEmpAddMob";
-            this.tBEmpAddMob.Size = new System.Drawing.Size(182, 23);
-            this.tBEmpAddMob.TabIndex = 9;
+            this.label22.Size = new System.Drawing.Size(47, 18);
+            this.label22.TabIndex = 66;
+            this.label22.Text = "Date:";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label21.Location = new System.Drawing.Point(6, 38);
+            this.label21.Location = new System.Drawing.Point(268, 263);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(127, 18);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Mobile Number:";
-            // 
-            // tabEmpInfo
-            // 
-            this.tabEmpInfo.Controls.Add(this.btnVInfoPrint);
-            this.tabEmpInfo.Controls.Add(this.dataGridView1);
-            this.tabEmpInfo.Controls.Add(this.panelUpSInfo);
-            this.tabEmpInfo.Controls.Add(this.tBEmpViewSer);
-            this.tabEmpInfo.Controls.Add(this.btnEmpViewSer);
-            this.tabEmpInfo.Location = new System.Drawing.Point(4, 25);
-            this.tabEmpInfo.Name = "tabEmpInfo";
-            this.tabEmpInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEmpInfo.Size = new System.Drawing.Size(1144, 712);
-            this.tabEmpInfo.TabIndex = 2;
-            this.tabEmpInfo.Text = "Staff Info";
-            this.tabEmpInfo.UseVisualStyleBackColor = true;
-            // 
-            // btnVInfoPrint
-            // 
-            this.btnVInfoPrint.BackColor = System.Drawing.Color.White;
-            this.btnVInfoPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnVInfoPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnVInfoPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnVInfoPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVInfoPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVInfoPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnVInfoPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnVInfoPrint.Location = new System.Drawing.Point(441, 6);
-            this.btnVInfoPrint.Name = "btnVInfoPrint";
-            this.btnVInfoPrint.Size = new System.Drawing.Size(39, 38);
-            this.btnVInfoPrint.TabIndex = 68;
-            this.btnVInfoPrint.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.DodgerBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(474, 644);
-            this.dataGridView1.TabIndex = 67;
-            // 
-            // panelUpSInfo
-            // 
-            this.panelUpSInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelUpSInfo.Controls.Add(this.label58);
-            this.panelUpSInfo.Controls.Add(this.btnEmpViewUp);
-            this.panelUpSInfo.Controls.Add(this.tBEmpViewId);
-            this.panelUpSInfo.Controls.Add(this.btnEmpViewSave);
-            this.panelUpSInfo.Controls.Add(this.pBEmpView);
-            this.panelUpSInfo.Controls.Add(this.gBEmpViewEmp);
-            this.panelUpSInfo.Controls.Add(this.gBEmpViewBasic);
-            this.panelUpSInfo.Controls.Add(this.gBEmpViewEmer);
-            this.panelUpSInfo.Controls.Add(this.gBEmpViewCont);
-            this.panelUpSInfo.Controls.Add(this.gBEmpViewInfo);
-            this.panelUpSInfo.Location = new System.Drawing.Point(486, 0);
-            this.panelUpSInfo.Name = "panelUpSInfo";
-            this.panelUpSInfo.Size = new System.Drawing.Size(658, 692);
-            this.panelUpSInfo.TabIndex = 66;
-            // 
-            // label58
-            // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label58.Location = new System.Drawing.Point(18, 14);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(90, 18);
-            this.label58.TabIndex = 59;
-            this.label58.Text = "ID Number:";
-            // 
-            // btnEmpViewUp
-            // 
-            this.btnEmpViewUp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpViewUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpViewUp.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpViewUp.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpViewUp.Location = new System.Drawing.Point(406, 100);
-            this.btnEmpViewUp.Name = "btnEmpViewUp";
-            this.btnEmpViewUp.Size = new System.Drawing.Size(77, 24);
-            this.btnEmpViewUp.TabIndex = 30;
-            this.btnEmpViewUp.Text = "UPDATE";
-            this.btnEmpViewUp.UseVisualStyleBackColor = true;
-            // 
-            // tBEmpViewId
-            // 
-            this.tBEmpViewId.Enabled = false;
-            this.tBEmpViewId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewId.Location = new System.Drawing.Point(114, 9);
-            this.tBEmpViewId.Name = "tBEmpViewId";
-            this.tBEmpViewId.Size = new System.Drawing.Size(118, 27);
-            this.tBEmpViewId.TabIndex = 60;
-            // 
-            // btnEmpViewSave
-            // 
-            this.btnEmpViewSave.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEmpViewSave.FlatAppearance.BorderSize = 0;
-            this.btnEmpViewSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpViewSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpViewSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpViewSave.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpViewSave.ForeColor = System.Drawing.Color.Black;
-            this.btnEmpViewSave.Image = global::admissionSystem.Properties.Resources.Save_icon;
-            this.btnEmpViewSave.Location = new System.Drawing.Point(614, 517);
-            this.btnEmpViewSave.Name = "btnEmpViewSave";
-            this.btnEmpViewSave.Size = new System.Drawing.Size(35, 37);
-            this.btnEmpViewSave.TabIndex = 58;
-            this.btnEmpViewSave.UseVisualStyleBackColor = true;
-            // 
-            // pBEmpView
-            // 
-            this.pBEmpView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpView.Location = new System.Drawing.Point(509, 11);
-            this.pBEmpView.Name = "pBEmpView";
-            this.pBEmpView.Size = new System.Drawing.Size(120, 120);
-            this.pBEmpView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBEmpView.TabIndex = 19;
-            this.pBEmpView.TabStop = false;
-            // 
-            // gBEmpViewEmp
-            // 
-            this.gBEmpViewEmp.Controls.Add(this.tBEmpViewStat);
-            this.gBEmpViewEmp.Controls.Add(this.tBEmpViewPos);
-            this.gBEmpViewEmp.Controls.Add(this.tBEmpViewDept);
-            this.gBEmpViewEmp.Controls.Add(this.label55);
-            this.gBEmpViewEmp.Controls.Add(this.label56);
-            this.gBEmpViewEmp.Controls.Add(this.label57);
-            this.gBEmpViewEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpViewEmp.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewEmp.Location = new System.Drawing.Point(322, 427);
-            this.gBEmpViewEmp.Name = "gBEmpViewEmp";
-            this.gBEmpViewEmp.Size = new System.Drawing.Size(285, 131);
-            this.gBEmpViewEmp.TabIndex = 27;
-            this.gBEmpViewEmp.TabStop = false;
-            this.gBEmpViewEmp.Text = "Employment Information:";
-            // 
-            // tBEmpViewStat
-            // 
-            this.tBEmpViewStat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewStat.FormattingEnabled = true;
-            this.tBEmpViewStat.Items.AddRange(new object[] {
-            "Full Time",
-            "Part Time",
-            "Intern"});
-            this.tBEmpViewStat.Location = new System.Drawing.Point(111, 95);
-            this.tBEmpViewStat.Name = "tBEmpViewStat";
-            this.tBEmpViewStat.Size = new System.Drawing.Size(153, 24);
-            this.tBEmpViewStat.TabIndex = 57;
-            // 
-            // tBEmpViewPos
-            // 
-            this.tBEmpViewPos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewPos.Location = new System.Drawing.Point(111, 66);
-            this.tBEmpViewPos.Name = "tBEmpViewPos";
-            this.tBEmpViewPos.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewPos.TabIndex = 56;
-            // 
-            // tBEmpViewDept
-            // 
-            this.tBEmpViewDept.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewDept.Location = new System.Drawing.Point(111, 37);
-            this.tBEmpViewDept.Name = "tBEmpViewDept";
-            this.tBEmpViewDept.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewDept.TabIndex = 55;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label55.Location = new System.Drawing.Point(52, 98);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(53, 18);
-            this.label55.TabIndex = 8;
-            this.label55.Text = "Status:";
-            // 
-            // label56
-            // 
-            this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label56.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label56.Location = new System.Drawing.Point(38, 67);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(67, 18);
-            this.label56.TabIndex = 7;
-            this.label56.Text = "Position:";
-            // 
-            // label57
-            // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label57.Location = new System.Drawing.Point(6, 38);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(99, 18);
-            this.label57.TabIndex = 6;
-            this.label57.Text = "Department:";
-            // 
-            // gBEmpViewBasic
-            // 
-            this.gBEmpViewBasic.Controls.Add(this.label30);
-            this.gBEmpViewBasic.Controls.Add(this.tBEmpViewLast);
-            this.gBEmpViewBasic.Controls.Add(this.label31);
-            this.gBEmpViewBasic.Controls.Add(this.cBEmpViewRel);
-            this.gBEmpViewBasic.Controls.Add(this.tBEmpViewPro);
-            this.gBEmpViewBasic.Controls.Add(this.tBEmpViewFirst);
-            this.gBEmpViewBasic.Controls.Add(this.tBEmpViewMid);
-            this.gBEmpViewBasic.Controls.Add(this.label32);
-            this.gBEmpViewBasic.Controls.Add(this.label33);
-            this.gBEmpViewBasic.Controls.Add(this.cBEmpViewSex);
-            this.gBEmpViewBasic.Controls.Add(this.label34);
-            this.gBEmpViewBasic.Controls.Add(this.label35);
-            this.gBEmpViewBasic.Controls.Add(this.label36);
-            this.gBEmpViewBasic.Controls.Add(this.label37);
-            this.gBEmpViewBasic.Controls.Add(this.label38);
-            this.gBEmpViewBasic.Controls.Add(this.dTEmpView);
-            this.gBEmpViewBasic.Controls.Add(this.cBEmpViewStat);
-            this.gBEmpViewBasic.Controls.Add(this.label39);
-            this.gBEmpViewBasic.Controls.Add(this.tBEmpViewMun);
-            this.gBEmpViewBasic.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpViewBasic.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewBasic.Location = new System.Drawing.Point(3, 50);
-            this.gBEmpViewBasic.Name = "gBEmpViewBasic";
-            this.gBEmpViewBasic.Size = new System.Drawing.Size(311, 331);
-            this.gBEmpViewBasic.TabIndex = 21;
-            this.gBEmpViewBasic.TabStop = false;
-            this.gBEmpViewBasic.Text = "Basic Information:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label30.Location = new System.Drawing.Point(117, 133);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 18);
-            this.label30.TabIndex = 16;
-            this.label30.Text = "Status:";
-            // 
-            // tBEmpViewLast
-            // 
-            this.tBEmpViewLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewLast.Location = new System.Drawing.Point(120, 99);
-            this.tBEmpViewLast.Name = "tBEmpViewLast";
-            this.tBEmpViewLast.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpViewLast.TabIndex = 33;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label31.Location = new System.Drawing.Point(33, 133);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(38, 18);
-            this.label31.TabIndex = 14;
-            this.label31.Text = "Sex:";
-            // 
-            // cBEmpViewRel
-            // 
-            this.cBEmpViewRel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewRel.FormattingEnabled = true;
-            this.cBEmpViewRel.Items.AddRange(new object[] {
-            "Roman Catholic",
-            "Islam",
-            "Evangicals",
-            "Iglesia ni Cristo",
-            "Protestant",
-            "Jehova\'s Witnesses",
-            "Seventh-day Adventist",
-            "Buddhist",
-            "Other"});
-            this.cBEmpViewRel.Location = new System.Drawing.Point(120, 162);
-            this.cBEmpViewRel.Name = "cBEmpViewRel";
-            this.cBEmpViewRel.Size = new System.Drawing.Size(173, 24);
-            this.cBEmpViewRel.TabIndex = 36;
-            // 
-            // tBEmpViewPro
-            // 
-            this.tBEmpViewPro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewPro.Location = new System.Drawing.Point(120, 293);
-            this.tBEmpViewPro.Name = "tBEmpViewPro";
-            this.tBEmpViewPro.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpViewPro.TabIndex = 39;
-            // 
-            // tBEmpViewFirst
-            // 
-            this.tBEmpViewFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewFirst.Location = new System.Drawing.Point(120, 41);
-            this.tBEmpViewFirst.Name = "tBEmpViewFirst";
-            this.tBEmpViewFirst.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpViewFirst.TabIndex = 31;
-            // 
-            // tBEmpViewMid
-            // 
-            this.tBEmpViewMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewMid.Location = new System.Drawing.Point(120, 70);
-            this.tBEmpViewMid.Name = "tBEmpViewMid";
-            this.tBEmpViewMid.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpViewMid.TabIndex = 32;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label32.Location = new System.Drawing.Point(14, 196);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(100, 18);
-            this.label32.TabIndex = 7;
-            this.label32.Text = "Date of Birth:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label33.Location = new System.Drawing.Point(42, 163);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(72, 18);
-            this.label33.TabIndex = 18;
-            this.label33.Text = "Religion:";
-            // 
-            // cBEmpViewSex
-            // 
-            this.cBEmpViewSex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewSex.FormattingEnabled = true;
-            this.cBEmpViewSex.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cBEmpViewSex.Location = new System.Drawing.Point(76, 132);
-            this.cBEmpViewSex.Name = "cBEmpViewSex";
-            this.cBEmpViewSex.Size = new System.Drawing.Size(35, 24);
-            this.cBEmpViewSex.TabIndex = 34;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label34.Location = new System.Drawing.Point(11, 265);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(103, 18);
-            this.label34.TabIndex = 10;
-            this.label34.Text = "Municipality:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label35.Location = new System.Drawing.Point(38, 294);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(76, 18);
-            this.label35.TabIndex = 12;
-            this.label35.Text = "Province:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label36.Location = new System.Drawing.Point(33, 44);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(81, 18);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "Firstname:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label37.Location = new System.Drawing.Point(33, 100);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(82, 18);
-            this.label37.TabIndex = 3;
-            this.label37.Text = "Lastname:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label38.Location = new System.Drawing.Point(7, 233);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(107, 18);
-            this.label38.TabIndex = 9;
-            this.label38.Text = "Place of Birth:";
-            // 
-            // dTEmpView
-            // 
-            this.dTEmpView.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dTEmpView.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dTEmpView.Location = new System.Drawing.Point(120, 193);
-            this.dTEmpView.Name = "dTEmpView";
-            this.dTEmpView.Size = new System.Drawing.Size(173, 23);
-            this.dTEmpView.TabIndex = 37;
-            this.dTEmpView.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
-            // 
-            // cBEmpViewStat
-            // 
-            this.cBEmpViewStat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewStat.FormattingEnabled = true;
-            this.cBEmpViewStat.Items.AddRange(new object[] {
-            "Single",
-            "Married",
-            "Separated",
-            "Widow"});
-            this.cBEmpViewStat.Location = new System.Drawing.Point(176, 132);
-            this.cBEmpViewStat.Name = "cBEmpViewStat";
-            this.cBEmpViewStat.Size = new System.Drawing.Size(117, 24);
-            this.cBEmpViewStat.TabIndex = 35;
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label39.Location = new System.Drawing.Point(7, 71);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(107, 18);
-            this.label39.TabIndex = 2;
-            this.label39.Text = "Middlename:";
-            // 
-            // tBEmpViewMun
-            // 
-            this.tBEmpViewMun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewMun.Location = new System.Drawing.Point(120, 264);
-            this.tBEmpViewMun.Name = "tBEmpViewMun";
-            this.tBEmpViewMun.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpViewMun.TabIndex = 38;
-            // 
-            // gBEmpViewEmer
-            // 
-            this.gBEmpViewEmer.Controls.Add(this.label40);
-            this.gBEmpViewEmer.Controls.Add(this.tBEmpViewRel);
-            this.gBEmpViewEmer.Controls.Add(this.label41);
-            this.gBEmpViewEmer.Controls.Add(this.label42);
-            this.gBEmpViewEmer.Controls.Add(this.tBEmpViewConAdd);
-            this.gBEmpViewEmer.Controls.Add(this.tBEmpViewConMob);
-            this.gBEmpViewEmer.Controls.Add(this.label43);
-            this.gBEmpViewEmer.Controls.Add(this.tBEmpViewConLast);
-            this.gBEmpViewEmer.Controls.Add(this.tBEmpViewConMid);
-            this.gBEmpViewEmer.Controls.Add(this.label44);
-            this.gBEmpViewEmer.Controls.Add(this.tBEmpViewConFirst);
-            this.gBEmpViewEmer.Controls.Add(this.label45);
-            this.gBEmpViewEmer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpViewEmer.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewEmer.Location = new System.Drawing.Point(3, 387);
-            this.gBEmpViewEmer.Name = "gBEmpViewEmer";
-            this.gBEmpViewEmer.Size = new System.Drawing.Size(313, 251);
-            this.gBEmpViewEmer.TabIndex = 23;
-            this.gBEmpViewEmer.TabStop = false;
-            this.gBEmpViewEmer.Text = "Emergency Information:";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label40.Location = new System.Drawing.Point(35, 216);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(97, 18);
-            this.label40.TabIndex = 13;
-            this.label40.Text = "Relationship";
-            // 
-            // tBEmpViewRel
-            // 
-            this.tBEmpViewRel.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewRel.Location = new System.Drawing.Point(138, 215);
-            this.tBEmpViewRel.Name = "tBEmpViewRel";
-            this.tBEmpViewRel.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewRel.TabIndex = 45;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label41.Location = new System.Drawing.Point(6, 153);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(126, 18);
-            this.label41.TabIndex = 11;
-            this.label41.Text = "Present Address:";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label42.Location = new System.Drawing.Point(48, 124);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(84, 18);
-            this.label42.TabIndex = 10;
-            this.label42.Text = "Contact #:";
-            // 
-            // tBEmpViewConAdd
-            // 
-            this.tBEmpViewConAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewConAdd.Location = new System.Drawing.Point(138, 152);
-            this.tBEmpViewConAdd.Multiline = true;
-            this.tBEmpViewConAdd.Name = "tBEmpViewConAdd";
-            this.tBEmpViewConAdd.Size = new System.Drawing.Size(153, 57);
-            this.tBEmpViewConAdd.TabIndex = 44;
-            // 
-            // tBEmpViewConMob
-            // 
-            this.tBEmpViewConMob.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewConMob.Location = new System.Drawing.Point(138, 123);
-            this.tBEmpViewConMob.Name = "tBEmpViewConMob";
-            this.tBEmpViewConMob.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewConMob.TabIndex = 43;
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label43.Location = new System.Drawing.Point(50, 95);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(82, 18);
-            this.label43.TabIndex = 7;
-            this.label43.Text = "Lastname:";
-            // 
-            // tBEmpViewConLast
-            // 
-            this.tBEmpViewConLast.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewConLast.Location = new System.Drawing.Point(138, 94);
-            this.tBEmpViewConLast.Name = "tBEmpViewConLast";
-            this.tBEmpViewConLast.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewConLast.TabIndex = 42;
-            // 
-            // tBEmpViewConMid
-            // 
-            this.tBEmpViewConMid.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewConMid.Location = new System.Drawing.Point(138, 65);
-            this.tBEmpViewConMid.Name = "tBEmpViewConMid";
-            this.tBEmpViewConMid.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewConMid.TabIndex = 41;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label44.Location = new System.Drawing.Point(25, 66);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(107, 18);
-            this.label44.TabIndex = 4;
-            this.label44.Text = "Middlename:";
-            // 
-            // tBEmpViewConFirst
-            // 
-            this.tBEmpViewConFirst.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewConFirst.Location = new System.Drawing.Point(138, 36);
-            this.tBEmpViewConFirst.Name = "tBEmpViewConFirst";
-            this.tBEmpViewConFirst.Size = new System.Drawing.Size(153, 23);
-            this.tBEmpViewConFirst.TabIndex = 40;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label45.Location = new System.Drawing.Point(51, 37);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(81, 18);
-            this.label45.TabIndex = 2;
-            this.label45.Text = "Firstname:";
-            // 
-            // gBEmpViewCont
-            // 
-            this.gBEmpViewCont.Controls.Add(this.tBEmpViewEmail);
-            this.gBEmpViewCont.Controls.Add(this.label50);
-            this.gBEmpViewCont.Controls.Add(this.tBEmpViewMob);
-            this.gBEmpViewCont.Controls.Add(this.label51);
-            this.gBEmpViewCont.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpViewCont.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewCont.Location = new System.Drawing.Point(322, 320);
-            this.gBEmpViewCont.Name = "gBEmpViewCont";
-            this.gBEmpViewCont.Size = new System.Drawing.Size(327, 97);
-            this.gBEmpViewCont.TabIndex = 25;
-            this.gBEmpViewCont.TabStop = false;
-            this.gBEmpViewCont.Text = "Contact Information:";
-            // 
-            // tBEmpViewEmail
-            // 
-            this.tBEmpViewEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewEmail.Location = new System.Drawing.Point(139, 65);
-            this.tBEmpViewEmail.Name = "tBEmpViewEmail";
-            this.tBEmpViewEmail.Size = new System.Drawing.Size(182, 23);
-            this.tBEmpViewEmail.TabIndex = 51;
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label50.Location = new System.Drawing.Point(19, 66);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(114, 18);
-            this.label50.TabIndex = 5;
-            this.label50.Text = "Email Address:";
-            // 
-            // tBEmpViewMob
-            // 
-            this.tBEmpViewMob.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewMob.Location = new System.Drawing.Point(139, 36);
-            this.tBEmpViewMob.Name = "tBEmpViewMob";
-            this.tBEmpViewMob.Size = new System.Drawing.Size(182, 23);
-            this.tBEmpViewMob.TabIndex = 50;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label51.Location = new System.Drawing.Point(6, 38);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(127, 18);
-            this.label51.TabIndex = 3;
-            this.label51.Text = "Mobile Number:";
-            // 
-            // gBEmpViewInfo
-            // 
-            this.gBEmpViewInfo.Controls.Add(this.tBEmpViewPur);
-            this.gBEmpViewInfo.Controls.Add(this.label46);
-            this.gBEmpViewInfo.Controls.Add(this.cBEmpViewMun);
-            this.gBEmpViewInfo.Controls.Add(this.label47);
-            this.gBEmpViewInfo.Controls.Add(this.cBEmpViewPro);
-            this.gBEmpViewInfo.Controls.Add(this.label48);
-            this.gBEmpViewInfo.Controls.Add(this.cBEmpViewCoun);
-            this.gBEmpViewInfo.Controls.Add(this.label49);
-            this.gBEmpViewInfo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpViewInfo.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpViewInfo.Location = new System.Drawing.Point(322, 151);
-            this.gBEmpViewInfo.Name = "gBEmpViewInfo";
-            this.gBEmpViewInfo.Size = new System.Drawing.Size(307, 163);
-            this.gBEmpViewInfo.TabIndex = 24;
-            this.gBEmpViewInfo.TabStop = false;
-            this.gBEmpViewInfo.Text = "Address Information:";
-            // 
-            // tBEmpViewPur
-            // 
-            this.tBEmpViewPur.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewPur.Location = new System.Drawing.Point(138, 127);
-            this.tBEmpViewPur.Name = "tBEmpViewPur";
-            this.tBEmpViewPur.Size = new System.Drawing.Size(152, 23);
-            this.tBEmpViewPur.TabIndex = 49;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label46.Location = new System.Drawing.Point(6, 128);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(126, 18);
-            this.label46.TabIndex = 23;
-            this.label46.Text = "House # / Purok:";
-            // 
-            // cBEmpViewMun
-            // 
-            this.cBEmpViewMun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewMun.FormattingEnabled = true;
-            this.cBEmpViewMun.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpViewMun.Location = new System.Drawing.Point(138, 97);
-            this.cBEmpViewMun.Name = "cBEmpViewMun";
-            this.cBEmpViewMun.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpViewMun.TabIndex = 48;
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label47.Location = new System.Drawing.Point(29, 98);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(103, 18);
-            this.label47.TabIndex = 21;
-            this.label47.Text = "Municipality:";
-            // 
-            // cBEmpViewPro
-            // 
-            this.cBEmpViewPro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewPro.FormattingEnabled = true;
-            this.cBEmpViewPro.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpViewPro.Location = new System.Drawing.Point(138, 67);
-            this.cBEmpViewPro.Name = "cBEmpViewPro";
-            this.cBEmpViewPro.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpViewPro.TabIndex = 47;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label48.Location = new System.Drawing.Point(62, 38);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(70, 18);
-            this.label48.TabIndex = 1;
-            this.label48.Text = "Country:";
-            // 
-            // cBEmpViewCoun
-            // 
-            this.cBEmpViewCoun.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpViewCoun.FormattingEnabled = true;
-            this.cBEmpViewCoun.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpViewCoun.Location = new System.Drawing.Point(138, 37);
-            this.cBEmpViewCoun.Name = "cBEmpViewCoun";
-            this.cBEmpViewCoun.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpViewCoun.TabIndex = 46;
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label49.Location = new System.Drawing.Point(56, 68);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(76, 18);
-            this.label49.TabIndex = 2;
-            this.label49.Text = "Province:";
-            // 
-            // tBEmpViewSer
-            // 
-            this.tBEmpViewSer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpViewSer.Location = new System.Drawing.Point(6, 11);
-            this.tBEmpViewSer.Name = "tBEmpViewSer";
-            this.tBEmpViewSer.Size = new System.Drawing.Size(173, 23);
-            this.tBEmpViewSer.TabIndex = 64;
-            // 
-            // btnEmpViewSer
-            // 
-            this.btnEmpViewSer.BackColor = System.Drawing.Color.White;
-            this.btnEmpViewSer.FlatAppearance.BorderSize = 0;
-            this.btnEmpViewSer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEmpViewSer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpViewSer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpViewSer.Image = global::admissionSystem.Properties.Resources.Zoom_icon;
-            this.btnEmpViewSer.Location = new System.Drawing.Point(189, 11);
-            this.btnEmpViewSer.Name = "btnEmpViewSer";
-            this.btnEmpViewSer.Size = new System.Drawing.Size(29, 23);
-            this.btnEmpViewSer.TabIndex = 65;
-            this.btnEmpViewSer.UseVisualStyleBackColor = false;
+            this.label21.Size = new System.Drawing.Size(138, 18);
+            this.label21.TabIndex = 65;
+            this.label21.Text = "Time Evening Out:";
+            // 
+            // tBEventCode
+            // 
+            this.tBEventCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBEventCode.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEventCode.Location = new System.Drawing.Point(412, 51);
+            this.tBEventCode.Name = "tBEventCode";
+            this.tBEventCode.Size = new System.Drawing.Size(92, 22);
+            this.tBEventCode.TabIndex = 35;
+            this.tBEventCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBEventCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBEventCode_KeyPress);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label16.Location = new System.Drawing.Point(309, 52);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(97, 18);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "Event Code:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label20.Location = new System.Drawing.Point(18, 263);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(125, 18);
+            this.label20.TabIndex = 62;
+            this.label20.Text = "Time Evening In:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label19.Location = new System.Drawing.Point(254, 230);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(152, 18);
+            this.label19.TabIndex = 61;
+            this.label19.Text = "Time Afternoon Out:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label18.Location = new System.Drawing.Point(4, 230);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(139, 18);
+            this.label18.TabIndex = 60;
+            this.label18.Text = "Time Afternoon In:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label15.Location = new System.Drawing.Point(265, 197);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(141, 18);
+            this.label15.TabIndex = 56;
+            this.label15.Text = "Time Morning Out:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label14.Location = new System.Drawing.Point(15, 197);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(128, 18);
+            this.label14.TabIndex = 54;
+            this.label14.Text = "Time Morning In:";
+            // 
+            // rBNo
+            // 
+            this.rBNo.AutoSize = true;
+            this.rBNo.ForeColor = System.Drawing.Color.Black;
+            this.rBNo.Location = new System.Drawing.Point(452, 150);
+            this.rBNo.Name = "rBNo";
+            this.rBNo.Size = new System.Drawing.Size(52, 23);
+            this.rBNo.TabIndex = 53;
+            this.rBNo.TabStop = true;
+            this.rBNo.Text = "NO";
+            this.rBNo.UseVisualStyleBackColor = true;
+            this.rBNo.CheckedChanged += new System.EventHandler(this.rBNo_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(309, 153);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 18);
+            this.label13.TabIndex = 52;
+            this.label13.Text = "Evening?:";
+            // 
+            // rBYes
+            // 
+            this.rBYes.AutoSize = true;
+            this.rBYes.ForeColor = System.Drawing.Color.Black;
+            this.rBYes.Location = new System.Drawing.Point(393, 150);
+            this.rBYes.Name = "rBYes";
+            this.rBYes.Size = new System.Drawing.Size(53, 23);
+            this.rBYes.TabIndex = 51;
+            this.rBYes.TabStop = true;
+            this.rBYes.Text = "YES";
+            this.rBYes.UseVisualStyleBackColor = true;
+            this.rBYes.CheckedChanged += new System.EventHandler(this.rBYes_CheckedChanged);
+            // 
+            // tBEventAtt
+            // 
+            this.tBEventAtt.AutoCompleteCustomSource.AddRange(new string[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS",
+            "ALL STUDENTS",
+            "ALL EMPLOYEES",
+            "GENERAL"});
+            this.tBEventAtt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tBEventAtt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBEventAtt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBEventAtt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEventAtt.Location = new System.Drawing.Point(149, 113);
+            this.tBEventAtt.Name = "tBEventAtt";
+            this.tBEventAtt.Size = new System.Drawing.Size(355, 27);
+            this.tBEventAtt.TabIndex = 50;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Location = new System.Drawing.Point(63, 117);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 18);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Attendee:";
+            // 
+            // btnEventRe
+            // 
+            this.btnEventRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEventRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventRe.ForeColor = System.Drawing.Color.Black;
+            this.btnEventRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnEventRe.Location = new System.Drawing.Point(479, 14);
+            this.btnEventRe.Name = "btnEventRe";
+            this.btnEventRe.Size = new System.Drawing.Size(25, 25);
+            this.btnEventRe.TabIndex = 38;
+            this.btnEventRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEventRe.UseVisualStyleBackColor = true;
+            this.btnEventRe.Click += new System.EventHandler(this.btnEventRe_Click);
+            // 
+            // btnEvtAdd
+            // 
+            this.btnEvtAdd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEvtAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEvtAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEvtAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEvtAdd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvtAdd.ForeColor = System.Drawing.Color.Black;
+            this.btnEvtAdd.Location = new System.Drawing.Point(412, 297);
+            this.btnEvtAdd.Name = "btnEvtAdd";
+            this.btnEvtAdd.Size = new System.Drawing.Size(92, 31);
+            this.btnEvtAdd.TabIndex = 27;
+            this.btnEvtAdd.Text = "UPDATE";
+            this.btnEvtAdd.UseVisualStyleBackColor = true;
+            this.btnEvtAdd.Click += new System.EventHandler(this.btnEvtAdd_Click);
+            // 
+            // tBEventName
+            // 
+            this.tBEventName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBEventName.Location = new System.Drawing.Point(149, 80);
+            this.tBEventName.Name = "tBEventName";
+            this.tBEventName.Size = new System.Drawing.Size(355, 27);
+            this.tBEventName.TabIndex = 0;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label17.Location = new System.Drawing.Point(43, 84);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(100, 18);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Event Name:";
+            // 
+            // gVEvent
+            // 
+            this.gVEvent.AllowUserToAddRows = false;
+            this.gVEvent.AllowUserToDeleteRows = false;
+            this.gVEvent.AllowUserToResizeRows = false;
+            this.gVEvent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gVEvent.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gVEvent.BackgroundColor = System.Drawing.Color.White;
+            this.gVEvent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gVEvent.GridColor = System.Drawing.Color.DodgerBlue;
+            this.gVEvent.Location = new System.Drawing.Point(3, 36);
+            this.gVEvent.Name = "gVEvent";
+            this.gVEvent.RowHeadersVisible = false;
+            this.gVEvent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gVEvent.Size = new System.Drawing.Size(1129, 276);
+            this.gVEvent.TabIndex = 69;
+            this.gVEvent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVEvent_CellClick);
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // gBEmpAddOt
-            // 
-            this.gBEmpAddOt.Controls.Add(this.tBEmpAddPAG);
-            this.gBEmpAddOt.Controls.Add(this.tBEmpAddTIN);
-            this.gBEmpAddOt.Controls.Add(this.tBEmpAddSSS);
-            this.gBEmpAddOt.Controls.Add(this.label25);
-            this.gBEmpAddOt.Controls.Add(this.label23);
-            this.gBEmpAddOt.Controls.Add(this.label24);
-            this.gBEmpAddOt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBEmpAddOt.ForeColor = System.Drawing.Color.Red;
-            this.gBEmpAddOt.Location = new System.Drawing.Point(410, 292);
-            this.gBEmpAddOt.Name = "gBEmpAddOt";
-            this.gBEmpAddOt.Size = new System.Drawing.Size(325, 129);
-            this.gBEmpAddOt.TabIndex = 25;
-            this.gBEmpAddOt.TabStop = false;
-            this.gBEmpAddOt.Text = "Other Information:";
-            // 
-            // tBEmpAddPAG
-            // 
-            this.tBEmpAddPAG.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddPAG.FormattingEnabled = true;
-            this.tBEmpAddPAG.Items.AddRange(new object[] {
-            "Philippines"});
-            this.tBEmpAddPAG.Location = new System.Drawing.Point(155, 99);
-            this.tBEmpAddPAG.Name = "tBEmpAddPAG";
-            this.tBEmpAddPAG.Size = new System.Drawing.Size(152, 24);
-            this.tBEmpAddPAG.TabIndex = 23;
-            // 
-            // tBEmpAddTIN
-            // 
-            this.tBEmpAddTIN.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddTIN.FormattingEnabled = true;
-            this.tBEmpAddTIN.Items.AddRange(new object[] {
-            "Philippines"});
-            this.tBEmpAddTIN.Location = new System.Drawing.Point(155, 69);
-            this.tBEmpAddTIN.Name = "tBEmpAddTIN";
-            this.tBEmpAddTIN.Size = new System.Drawing.Size(152, 24);
-            this.tBEmpAddTIN.TabIndex = 22;
-            // 
-            // tBEmpAddSSS
-            // 
-            this.tBEmpAddSSS.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEmpAddSSS.FormattingEnabled = true;
-            this.tBEmpAddSSS.Items.AddRange(new object[] {
-            "Philippines"});
-            this.tBEmpAddSSS.Location = new System.Drawing.Point(155, 39);
-            this.tBEmpAddSSS.Name = "tBEmpAddSSS";
-            this.tBEmpAddSSS.Size = new System.Drawing.Size(152, 24);
-            this.tBEmpAddSSS.TabIndex = 21;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label25.Location = new System.Drawing.Point(6, 100);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(143, 18);
-            this.label25.TabIndex = 7;
-            this.label25.Text = "PAG-IBIG Number:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label23.Location = new System.Drawing.Point(53, 70);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(96, 18);
-            this.label23.TabIndex = 5;
-            this.label23.Text = "TIN Number:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label24.Location = new System.Drawing.Point(50, 40);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(99, 18);
-            this.label24.TabIndex = 3;
-            this.label24.Text = "SSS Number:";
-            // 
-            // cBEmpAddBar
-            // 
-            this.cBEmpAddBar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEmpAddBar.FormattingEnabled = true;
-            this.cBEmpAddBar.Items.AddRange(new object[] {
-            "Philippines"});
-            this.cBEmpAddBar.Location = new System.Drawing.Point(138, 127);
-            this.cBEmpAddBar.Name = "cBEmpAddBar";
-            this.cBEmpAddBar.Size = new System.Drawing.Size(152, 24);
-            this.cBEmpAddBar.TabIndex = 24;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label52.Location = new System.Drawing.Point(48, 128);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(84, 18);
-            this.label52.TabIndex = 25;
-            this.label52.Text = "Barangay:";
             // 
             // Main
             // 
@@ -2137,6 +1649,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.Name = "Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.TopMost = true;
@@ -2144,44 +1657,35 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
+            this.paneSet.ResumeLayout(false);
+            this.paneSet.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.paneSet.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
-            this.tabHome.ResumeLayout(false);
             this.tabAddEmp.ResumeLayout(false);
-            this.panelInfo.ResumeLayout(false);
-            this.panelInfo.PerformLayout();
-            this.gBEmpAddBasic.ResumeLayout(false);
-            this.gBEmpAddBasic.PerformLayout();
-            this.gBEmpAddEmer.ResumeLayout(false);
-            this.gBEmpAddEmer.PerformLayout();
-            this.gBEmpAddEmp.ResumeLayout(false);
-            this.gBEmpAddEmp.PerformLayout();
-            this.gBEmpAddInfo.ResumeLayout(false);
-            this.gBEmpAddInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpAdd)).EndInit();
-            this.gBEmpAddCont.ResumeLayout(false);
-            this.gBEmpAddCont.PerformLayout();
-            this.tabEmpInfo.ResumeLayout(false);
-            this.tabEmpInfo.PerformLayout();
+            this.paneEmp.ResumeLayout(false);
+            this.paneEmp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gVEmp)).EndInit();
+            this.gBEmp.ResumeLayout(false);
+            this.gBEmp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmp)).EndInit();
+            this.tabStud.ResumeLayout(false);
+            this.paneStud.ResumeLayout(false);
+            this.paneStud.PerformLayout();
+            this.gBStud.ResumeLayout(false);
+            this.gBStud.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStudQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gVStud)).EndInit();
+            this.tabLog.ResumeLayout(false);
+            this.paneLog.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelUpSInfo.ResumeLayout(false);
-            this.panelUpSInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpView)).EndInit();
-            this.gBEmpViewEmp.ResumeLayout(false);
-            this.gBEmpViewEmp.PerformLayout();
-            this.gBEmpViewBasic.ResumeLayout(false);
-            this.gBEmpViewBasic.PerformLayout();
-            this.gBEmpViewEmer.ResumeLayout(false);
-            this.gBEmpViewEmer.PerformLayout();
-            this.gBEmpViewCont.ResumeLayout(false);
-            this.gBEmpViewCont.PerformLayout();
-            this.gBEmpViewInfo.ResumeLayout(false);
-            this.gBEmpViewInfo.PerformLayout();
-            this.gBEmpAddOt.ResumeLayout(false);
-            this.gBEmpAddOt.PerformLayout();
+            this.tabEvent.ResumeLayout(false);
+            this.paneEvent.ResumeLayout(false);
+            this.gBEvent.ResumeLayout(false);
+            this.gBEvent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gVEvent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2192,161 +1696,108 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel paneSide;
         private System.Windows.Forms.Button btnAddEmp;
-        private System.Windows.Forms.Button btnEmpInfo;
         private System.Windows.Forms.Button btnAddStud;
-        private System.Windows.Forms.Button btnStudInfo;
-        private System.Windows.Forms.Button btnAdInfo;
+        private System.Windows.Forms.Button btnAttdLog;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabHome;
         private System.Windows.Forms.TabPage tabAddEmp;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bntEmpRe;
         private System.Windows.Forms.Button btnSPrint;
-        private System.Windows.Forms.Panel panelInfo;
-        private System.Windows.Forms.TextBox tBEmpAddId;
-        private System.Windows.Forms.Button btnEmpAddReg;
+        private System.Windows.Forms.Panel paneEmp;
+        private System.Windows.Forms.TextBox tBEmpId;
+        private System.Windows.Forms.Button btnEmpAdd;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button btnEmpAddUp;
-        private System.Windows.Forms.GroupBox gBEmpAddBasic;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tBEmpAddLast;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cBEmpAddRel;
-        private System.Windows.Forms.TextBox tBEmpAddPro;
-        private System.Windows.Forms.TextBox tBEmpAddFirst;
-        private System.Windows.Forms.TextBox tBEmpAddMid;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cBEmpAddSex;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnEmpPH;
+        private System.Windows.Forms.GroupBox gBEmp;
+        private System.Windows.Forms.TextBox tBEmpLast;
+        private System.Windows.Forms.TextBox tBEmpFirst;
+        private System.Windows.Forms.TextBox tBEmpMid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dTEmpAdd;
-        private System.Windows.Forms.ComboBox cbEmpAddStat;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tBEmpAddMun;
-        private System.Windows.Forms.GroupBox gBEmpAddEmer;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox tbEmpAddConRel;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox tBEmpAddConAdd;
-        private System.Windows.Forms.TextBox tBEmpAddConMob;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox tBEmpAddConLast;
-        private System.Windows.Forms.TextBox tBEmpAddConMid;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tBEmpAddConFirst;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox gBEmpAddEmp;
-        private System.Windows.Forms.ComboBox tBEmpAddStat;
-        private System.Windows.Forms.TextBox tBEmpAddPos;
-        private System.Windows.Forms.TextBox tBEmpAddDept;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.GroupBox gBEmpAddInfo;
-        private System.Windows.Forms.TextBox tBEmpAddPur;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cBEmpAddMun;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cBEmpAddPro;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cBEmpAddCoun;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.PictureBox pBEmpAdd;
-        private System.Windows.Forms.GroupBox gBEmpAddCont;
-        private System.Windows.Forms.TextBox tBEmpAddEmail;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox tBEmpAddMob;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TabPage tabEmpInfo;
-        private System.Windows.Forms.Button btnVInfoPrint;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panelUpSInfo;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Button btnEmpViewUp;
-        private System.Windows.Forms.TextBox tBEmpViewId;
-        private System.Windows.Forms.Button btnEmpViewSave;
-        private System.Windows.Forms.PictureBox pBEmpView;
-        private System.Windows.Forms.GroupBox gBEmpViewEmp;
-        private System.Windows.Forms.ComboBox tBEmpViewStat;
-        private System.Windows.Forms.TextBox tBEmpViewPos;
-        private System.Windows.Forms.TextBox tBEmpViewDept;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.GroupBox gBEmpViewBasic;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox tBEmpViewLast;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.ComboBox cBEmpViewRel;
-        private System.Windows.Forms.TextBox tBEmpViewPro;
-        private System.Windows.Forms.TextBox tBEmpViewFirst;
-        private System.Windows.Forms.TextBox tBEmpViewMid;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.ComboBox cBEmpViewSex;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.DateTimePicker dTEmpView;
-        private System.Windows.Forms.ComboBox cBEmpViewStat;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox tBEmpViewMun;
-        private System.Windows.Forms.GroupBox gBEmpViewEmer;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox tBEmpViewRel;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox tBEmpViewConAdd;
-        private System.Windows.Forms.TextBox tBEmpViewConMob;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox tBEmpViewConLast;
-        private System.Windows.Forms.TextBox tBEmpViewConMid;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox tBEmpViewConFirst;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.GroupBox gBEmpViewCont;
-        private System.Windows.Forms.TextBox tBEmpViewEmail;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox tBEmpViewMob;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.GroupBox gBEmpViewInfo;
-        private System.Windows.Forms.TextBox tBEmpViewPur;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.ComboBox cBEmpViewMun;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.ComboBox cBEmpViewPro;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.ComboBox cBEmpViewCoun;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox tBEmpViewSer;
-        private System.Windows.Forms.Button btnEmpViewSer;
+        private System.Windows.Forms.PictureBox pBEmp;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnSet;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.Label label59;
         private System.Windows.Forms.Panel paneSet;
-        private System.Windows.Forms.Button btnSetX;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox gBEmpAddOt;
-        private System.Windows.Forms.ComboBox tBEmpAddPAG;
-        private System.Windows.Forms.ComboBox tBEmpAddTIN;
-        private System.Windows.Forms.ComboBox tBEmpAddSSS;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox tBEmpViewSer;
+        private System.Windows.Forms.DataGridView gVEmp;
+        private System.Windows.Forms.Button btnEmpGen;
+        private System.Windows.Forms.PictureBox pBEmpQR;
+        private System.Windows.Forms.TextBox tBEmpDept;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TabPage tabStud;
+        private System.Windows.Forms.Panel paneStud;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView gVStud;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox gBStud;
+        private System.Windows.Forms.Button btnStudGen;
+        private System.Windows.Forms.PictureBox pBStudQR;
+        private System.Windows.Forms.Button btnStudRe;
+        private System.Windows.Forms.Button btnStudPH;
+        private System.Windows.Forms.PictureBox pBStud;
+        private System.Windows.Forms.Button btnStudAdd;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tBStudId;
+        private System.Windows.Forms.TextBox tBStudLast;
+        private System.Windows.Forms.TextBox tBStudFirst;
+        private System.Windows.Forms.TextBox tBStudMid;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnAddEvent;
+        private System.Windows.Forms.TextBox tBStudYr;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbStudSex;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tBStudCour;
+        private System.Windows.Forms.TextBox tBStudDept;
+        private System.Windows.Forms.TextBox tBEmpPos;
+        private System.Windows.Forms.TabPage tabLog;
+        private System.Windows.Forms.Panel paneLog;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage tabEvent;
+        private System.Windows.Forms.Panel paneEvent;
+        private System.Windows.Forms.DataGridView gVEvent;
+        private System.Windows.Forms.GroupBox gBEvent;
+        private System.Windows.Forms.DateTimePicker dTEventDate;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox tBEventCode;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton rBNo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RadioButton rBYes;
+        private System.Windows.Forms.TextBox tBEventAtt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btnEventRe;
+        private System.Windows.Forms.Button btnEvtAdd;
+        private System.Windows.Forms.TextBox tBEventName;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblRegEmp;
+        private System.Windows.Forms.Label lblRegStud;
+        private System.Windows.Forms.ComboBox tBEventEveOut;
+        private System.Windows.Forms.ComboBox tBEventEveIn;
+        private System.Windows.Forms.ComboBox tBEventAftOut;
+        private System.Windows.Forms.ComboBox tBEventAftIn;
+        private System.Windows.Forms.ComboBox tBEventMorOut;
+        private System.Windows.Forms.ComboBox tBEventMorIn;
+        private System.Windows.Forms.Button btnCPEvt;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.ComboBox cBEmpAddBar;
+        private System.Windows.Forms.Label label23;
     }
 }

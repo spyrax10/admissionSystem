@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F3F7DDAE-C408-4EF3-A10E-EEB57164CD1E}</ProjectGuid>
+    <ProjectGuid>{D348BD5E-6FF1-4FF3-834B-ADE6055CC417}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>admissionSystem</RootNamespace>
-    <AssemblyName>admissionSystem</AssemblyName>
+    <RootNamespace>QRScan</RootNamespace>
+    <AssemblyName>QRScan</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>spy.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
@@ -70,25 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs">
+    <Compile Include="Scanner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screen.Designer.cs">
-      <DependentUpon>Screen.cs</DependentUpon>
+    <Compile Include="Scanner.Designer.cs">
+      <DependentUpon>Scanner.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screen.resx">
-      <DependentUpon>Screen.cs</DependentUpon>
+    <EmbeddedResource Include="Scanner.resx">
+      <DependentUpon>Scanner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,32 +103,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Apps-Dialog-Shutdown-icon.png" />
-    <None Include="Resources\One-storied-house-icon %281%29.png" />
-    <None Include="Resources\add-user-icon %281%29.png" />
-    <None Include="Resources\User-Group-icon %281%29.png" />
-    <None Include="Resources\user-info-icon.png" />
-    <None Include="Resources\user-info-icon %281%29.png" />
-    <None Include="Resources\Male-user-add-icon.png" />
-    <None Include="Resources\Male-user-info-icon.png" />
-    <None Include="Resources\Get-Info-icon.png" />
-    <None Include="Resources\Log-Out-icon.png" />
-    <None Include="Resources\Male-user-add-icon1.png" />
-    <None Include="Resources\user-add-icon.png" />
-    <None Include="Resources\Printer-blue-icon.png" />
-    <None Include="Resources\Search-icon.png" />
-    <None Include="Resources\Zoom-icon.png" />
-    <None Include="Resources\Save-icon.png" />
-    <None Include="Resources\spy.jpg" />
-    <None Include="Resources\pinion-icon.png" />
-    <None Include="Resources\Settings-icon.png" />
-    <None Include="Resources\Settings-L-icon.png" />
+    <None Include="Resources\kali.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-Lock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-Unlock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\download.png" />
-    <None Include="Resources\Button-Refresh-icon.png" />
-    <None Include="Resources\stud.png" />
-    <None Include="Resources\checklist-icon1.png" />
-    <None Include="Resources\Programming-Save-icon.png" />
-    <Content Include="spy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yeah.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\who-are-you.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\what-are-you-doing.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

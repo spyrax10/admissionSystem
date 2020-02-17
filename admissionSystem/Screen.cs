@@ -15,10 +15,123 @@ namespace admissionSystem
     {
         int move = 0;
         int left = 5;
-        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
+
+        public static string id;
+        public static string userId;
         public Screen()
         {
             InitializeComponent();
+        }
+        public void logID()
+        {
+            SqlConnection logcon = new SqlConnection(empcs);
+            
+            string username = tBUser.Text;
+            string pass = tBPass.Text;
+            string empId = tBId.Text;
+
+            try
+            {
+                if (username == "" || pass == "")
+                {
+                    MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    logcon.Open();
+                    SqlCommand cmd = logcon.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "Select * from setTB where empId = '" + empId + "' " +
+                        "and username = '" + username + "' " +
+                        "and password = '" + pass + "'";
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        string user = (dr["username"].ToString());
+
+                        MessageBox.Show("Welcome, " + user + "!", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Main ma = new Main();
+                        id = empId;
+                        userId = user;
+                        ma.Show();
+                        this.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect Combination!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    logcon.Close();
+                }
+               
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void creID()
+        {
+            SqlConnection crecon = new SqlConnection(empcs);
+            SqlConnection chkcon = new SqlConnection(empcs);
+
+            string username = tBCreID.Text;
+            string pass = tBCrePass.Text;
+            string empId = tBId.Text;
+
+            try
+            {
+                chkcon.Open();
+                SqlCommand cmd2 = chkcon.CreateCommand();
+                cmd2.CommandType = CommandType.Text;
+                cmd2.CommandText = "Select * from setTB where username = '" + username + "'";
+                SqlDataReader dr = cmd2.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    MessageBox.Show("Username is already taken!", " Duplicate", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                else
+                {
+                    if (username == "" || pass == "")
+                    {
+                        MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        crecon.Open();
+                        SqlCommand cmd = crecon.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "Insert into setTB Values ('" + empId + "', " +
+                            "'" + username + "', " +
+                            "'" + pass + "')";
+                        cmd.ExecuteNonQuery();
+                        crecon.Close();
+                        if (MessageBox.Show("Credentials successfully created!, Login Now?", " Success", 
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                        {
+                            gBLog.Visible = true;
+                            gBLog.BringToFront();
+                            tBUser.Focus();
+                        }
+                        else
+                        {
+                            gBId.Visible = true;
+                            gBId.BringToFront();
+                            tBCreID.Focus();
+                        }
+                    }
+                   
+                }
+                chkcon.Close();
+               
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         public void verID()
         {
@@ -31,7 +144,7 @@ namespace admissionSystem
                 vercon.Open();
                 SqlCommand cmd = vercon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + empId + "' and empStat = 'Admin'";
+                cmd.CommandText = "Select * from empTB where empId = '" + empId + "' and Pos = 'Admin'";
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
@@ -47,13 +160,14 @@ namespace admissionSystem
                         MessageBox.Show("Please LogIn to your Credentials", " Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         gBLog.Visible = true;
                         gBLog.BringToFront();
+                        tBUser.Focus();
                     }
                     else
                     {
                         MessageBox.Show("Create your LogIn Credentials", " Create", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         gBCreate.Visible = true;
                         gBCreate.BringToFront();
-
+                        tBCreID.Focus();
                     }
                     chkcon.Close();
 
@@ -88,7 +202,7 @@ namespace admissionSystem
         {
             paneSlide.Left += 2;
 
-            if (paneSlide.Left > 340)
+            if (paneSlide.Left > 355)
             {
                 paneSlide.Left = 0;
             }
@@ -147,6 +261,16 @@ namespace admissionSystem
                 }
                
             }
+        }
+
+        private void btnCre_Click(object sender, EventArgs e)
+        {
+            creID();
+        }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            logID();
         }
     }
 }
