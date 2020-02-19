@@ -20,594 +20,1706 @@ namespace QRScan
     {
         int move = 0;
         int left = 5;
-        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
+        string imgLoc = "";
+        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice FinalFrame;
-        string imgLoc = "";
+
         public Scanner()
         {
             InitializeComponent();
         }
-        
-        #region Regular Emp Attendance, with complete Sched
-        
-        //For regular Emp Attendance Morning Time In
-        public void mornInRegEmp()
+        public void wrap()
         {
-            SqlConnection mornIncon = new SqlConnection(empcs);
-            SqlConnection chkcon = new SqlConnection(empcs);
-            SqlConnection dispcon = new SqlConnection(empcs);
+            SqlConnection wcon = new SqlConnection(empcs);
 
-            string empId = tBId.Text;
-            string date = DateTime.Now.ToShortDateString();
-            string evtCode = lblEvtCode.Text;
-            string time = DateTime.Now.ToShortTimeString();
-
-            string mornOut = "00:00";
-            string aftIn = "00:00";
-            string aftOut = "00:00";
-            string eveIn = "00:00";
-            string eveOut = "00:00";
-            string totHours = "0";
-            string mornStat = "---";
-            string aftStat = "---";
-            string eveStat = "---";
+            string code = lblEvtCode.Text;
 
             try
             {
-                dispcon.Open();
-                SqlCommand cmd = dispcon.CreateCommand();
+                wcon.Open();
+                SqlCommand cmd = wcon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + tBId.Text + "'";
+                cmd.CommandText = "Update attendTB set mornStat = CASE WHEN mornTimeIn != '00:00' and mornTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END, " +
+                    "aftStat = CASE WHEN aftTimeIn != '00:00' and aftTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END, " +
+                    "eveStat = CASE WHEN eveTimeIn != '00:00' and eveTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END " +
+                    "where evtCode = '" + code + "'";
+                cmd.ExecuteNonQuery();
+                wcon.Close();
+
+                tBWPass.Visible = false;
+                tBWPass.Text = "";
+
+                eveOutTimer.Stop();
+                mornOutTimer.Stop();
+                aftOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.kali;
+                Application.Exit();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void logEveOut()
+        {
+            SqlConnection empmOut = new SqlConnection(empcs);
+            SqlConnection studmOut = new SqlConnection(empcs);
+            SqlConnection empcon = new SqlConnection(empcs);
+            SqlConnection studcon = new SqlConnection(empcs);
+            SqlConnection empchk = new SqlConnection(empcs);
+            SqlConnection studchk = new SqlConnection(empcs);
+            SqlConnection econ = new SqlConnection(empcs);
+            SqlConnection scon = new SqlConnection(empcs);
+            SqlConnection vercon = new SqlConnection(empcs);
+
+            string id = tBId.Text;
+            string time = DateTime.Now.ToShortTimeString();
+            string date = DateTime.Now.ToShortDateString();
+            string code = lblEvtCode.Text;
+            string att = tBEvtAtt.Text;
+
+            string mStat = "---";
+            string aStat = "---";
+            string eStat = "---";
+
+            try
+            {
+                empcon.Open();
+                SqlCommand cmd = empcon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from empTB where empId = '" + id + "'";
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 if (dr.Read())
                 {
-                    string first = (dr["Firstname"].ToString());
-                    string mid = (dr["Midname"].ToString());
-                    string last = (dr["Lastname"].ToString());
-                    string dept = (dr["Dept"].ToString());
+                    string efirst = (dr["Firstname"].ToString());
+                    string emid = (dr["Midname"].ToString());
+                    string elast = (dr["Lastname"].ToString());
 
-                    tBFirst.Text = first;
-                    tbMid.Text = mid;
-                    tBLast.Text = last;
+                    tBFirst.Text = efirst;
+                    tbMid.Text = emid;
+                    tBLast.Text = elast;
 
                     byte[] img = (byte[])(dr["empImg"]);
                     if (img == null)
                     {
                         pBImg.Image = null;
                     }
+
                     else
                     {
                         MemoryStream ms = new MemoryStream(img);
                         pBImg.Image = Image.FromStream(ms);
                     }
 
-                    chkcon.Open();
-                    SqlCommand cmd2 = chkcon.CreateCommand();
+
+                    empchk.Open();
+                    SqlCommand echk = empchk.CreateCommand();
+                    echk.CommandType = CommandType.Text;
+                    echk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                        "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                        "and eveTimeIn != ''";
+                    SqlDataReader edr = echk.ExecuteReader();
+
+                    if (edr.Read())
+                    {
+                        econ.Open();
+                        SqlCommand ecmd = econ.CreateCommand();
+                        ecmd.CommandType = CommandType.Text;
+                        ecmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and eveTimeOut = '00:00'";
+                        SqlDataReader dr2 = ecmd.ExecuteReader();
+
+                        if (dr2.Read())
+                        {
+                            if (att == "ALL EMPLOYEES" || att == "GENERAL")
+                            {
+                                empmOut.Open();
+                                SqlCommand eout = empmOut.CreateCommand();
+                                eout.CommandText = "Update attendTB set eveTimeOut = '" + time + "' " +
+                                    "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                    "and Id = '" + id + "'";
+                                eout.ExecuteNonQuery();
+                                empmOut.Close();
+
+                                lblStat.Text = "ID RECORDED!";
+                                tBId.Text = "";
+                                eveOutTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                eveOut();
+                            }
+
+                        }
+                        else
+                        {
+                            lblStat.Text = "ID HAS ALREADY LOGGED OUT!";
+                            tBId.Text = "";
+                            eveOutTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            eveOut();
+                        }
+                        econ.Close();
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID HAS NOT LOGGED IN!";
+                        tBId.Text = "";
+                        eveOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        eveOut();
+                    }
+                    empchk.Close();
+                }
+                else
+                {
+                    studcon.Open();
+                    SqlCommand cmd2 = studcon.CreateCommand();
                     cmd2.CommandType = CommandType.Text;
-                    cmd2.CommandText = "Select * from evtEmpTB where evtCode = '" + evtCode + "' " +
-                        "and evtDate = '" + date + "' " +
-                        "and mornTimeIn != '' " +
-                        "and empId = '" + empId + "'";
+                    cmd2.CommandText = "Select * from studTB where studId = '" + id + "'";
                     SqlDataReader dr2 = cmd2.ExecuteReader();
 
                     if (dr2.Read())
                     {
-                        lblStat.Text = "ID Already Logged IN!";
-                        SoundPlayer play = new SoundPlayer(Properties.Resources.what_are_you_doing);
-                        play.Play();
+                        string sfirst = (dr2["Firstname"].ToString());
+                        string smid = (dr2["Midname"].ToString());
+                        string slast = (dr2["Lastname"].ToString());
+                        string syear = (dr2["Year"].ToString());
+                        string sdept = (dr2["Dept"].ToString());
+                        string scourse = (dr2["Course"].ToString());
+                        string stype = "STUDENT";
+                        string smornIn = "00:00";
+                        string saftIn = "00:00";
+                        string smornOut = "00:00";
+                        string seveIn = "00:00";
+                        string saftOut = "00:00";
+                        string stotHrs = "0";
 
-                        mornInTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        empRegMornIn();
+                        tBFirst.Text = sfirst;
+                        tbMid.Text = smid;
+                        tBLast.Text = slast;
+
+                        byte[] img = (byte[])(dr2["studImg"]);
+                        if (img == null)
+                        {
+                            pBImg.Image = null;
+                        }
+
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pBImg.Image = Image.FromStream(ms);
+                        }
+
+                        studchk.Open();
+                        SqlCommand schk = studchk.CreateCommand();
+                        schk.CommandType = CommandType.Text;
+                        schk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and mornTimeIn = '' and mornTimeOut = '' and aftTimeIn = '' and eveTimeIn = ''";
+                        SqlDataReader sdr = schk.ExecuteReader();
+
+                        if (sdr.Read())
+                        {
+                            scon.Open();
+                            SqlCommand scmd = scon.CreateCommand();
+                            scmd.CommandType = CommandType.Text;
+                            scmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                  "'" + date + "', " +
+                                  "'" + stype + "', " +
+                                  "'" + id + "', " +
+                                  "'" + sfirst + "', " +
+                                  "'" + smid + "', " +
+                                  "'" + slast + "', " +
+                                  "'" + sdept + "', " +
+                                  "'" + scourse + "', " +
+                                  "'" + syear + "', " +
+                                  "'" + smornIn + "', " +
+                                  "'" + smornOut + "', " +
+                                  "'" + saftIn + "', " +
+                                  "'" + saftOut + "', " +
+                                  "'" + seveIn + "', " +
+                                  "'" + time + "', " +
+                                  "'" + mStat + "', " +
+                                  "'" + aStat + "', " +
+                                  "'" + eStat + "', " +
+                                  "'" + stotHrs + "')";
+                            scmd.ExecuteNonQuery();
+                            scon.Close();
+
+                            lblStat.Text = "ID RECORDED!";
+                            tBId.Text = "";
+                            eveOutTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            eveOut();
+
+                        }
+                        else
+                        {
+
+                            vercon.Open();
+                            SqlCommand vercmd = vercon.CreateCommand();
+                            vercmd.CommandType = CommandType.Text;
+                            vercmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and eveTimeOut != '00:00' and eveTimeIn != '00:00'";
+                            SqlDataReader vdr = vercmd.ExecuteReader();
+
+                            if (vdr.Read())
+                            {
+                                lblStat.Text = "ID HAS ALREADY LOGGED OUT!";
+                                tBId.Text = "";
+                                eveOutTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                eveOut();
+                            }
+                            else
+                            {
+
+                                if (att != "ALL EMPLOYEES" || att == "GENERAL")
+                                {
+                                    studmOut.Open();
+                                    SqlCommand sout = studmOut.CreateCommand();
+                                    sout.CommandType = CommandType.Text;
+                                    sout.CommandText = "Update attendTB set eveTimeOut = '" + time + "' " +
+                                        "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                        "and Id = '" + id + "'";
+                                    sout.ExecuteNonQuery();
+                                    studmOut.Close();
+
+                                    lblStat.Text = "ID RECORDED!";
+                                    tBId.Text = "";
+                                    eveOutTimer.Stop();
+                                    FinalFrame.Stop();
+                                    pBQR.Image = Properties.Resources.kali;
+                                    eveOut();
+                                }
+                            }
+
+                        }
+                        studchk.Close();
+
                     }
                     else
                     {
-                        mornIncon.Open();
-                        SqlCommand cmd3 = mornIncon.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "Insert into evtEmpTB Values ('" + evtCode + "', " +
-                            "'" + date + "', " +
-                            "'" + empId + "', " +
-                            "'" + first + "', " +
-                            "'" + mid + "', " +
-                            "'" + last + "', " +
-                            "'" + dept + "', " +
-                            "'" + time + "', " +
-                            "'" + mornOut + "', " +
-                            "'" + aftIn + "', " +
-                            "'" + aftOut + "', " +
-                            "'" + eveIn + "', " +
-                            "'" + eveOut + "', " +
-                            "'" + mornStat + "', " +
-                            "'" + aftStat + "', " +
-                            "'" + eveStat + "', " +
-                            "'" + totHours + "')";
-                        cmd3.ExecuteNonQuery();
-                        mornIncon.Close();
-                        lblStat.Text = "RECORDED!";
-                        SoundPlayer play = new SoundPlayer(Properties.Resources.yeah);
-                        play.Play();
-
+                        lblStat.Text = "ID NOT FOUND!";
                         tBId.Text = "";
-                        
+                        eveOutTimer.Stop();
                         FinalFrame.Stop();
                         pBQR.Image = Properties.Resources.kali;
-                        tBFirst.Text = "";
-                        tbMid.Text = "";
-                        tBLast.Text = "";
-                        pBImg.Image = Properties.Resources.kali;
-                        empRegMornIn();
+                        eveOut();
                     }
-                    chkcon.Close();
+                    studcon.Close();
                 }
-                else
-                {
-                    lblStat.Text = "ID NOT FOUND!";
-                    SoundPlayer play = new SoundPlayer(Properties.Resources.who_are_you);
-                    play.Play();
+                empcon.Close();
 
-                    FinalFrame.Stop();
-                    pBQR.Image = Properties.Resources.kali;
-                    empRegMornIn();
-                }
-                dispcon.Close();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        // For regular Emp Attendance Morning Time Out
-        public void mornOutRegEmp()
+        public void logEveIn()
         {
-            SqlConnection upcon = new SqlConnection(empcs);
-            SqlConnection chkcon = new SqlConnection(empcs);
-            SqlConnection dispcon = new SqlConnection(empcs);
+            SqlConnection empmOut = new SqlConnection(empcs);
+            SqlConnection studmOut = new SqlConnection(empcs);
+            SqlConnection empcon = new SqlConnection(empcs);
+            SqlConnection studcon = new SqlConnection(empcs);
+            SqlConnection empchk = new SqlConnection(empcs);
+            SqlConnection studchk = new SqlConnection(empcs);
+            SqlConnection econ = new SqlConnection(empcs);
+            SqlConnection scon = new SqlConnection(empcs);
+            SqlConnection vercon = new SqlConnection(empcs);
+            SqlConnection newemp = new SqlConnection(empcs);
 
-            string empId = tBId.Text;
-            string date = DateTime.Now.ToShortDateString();
-            string evtCode = lblEvtCode.Text;
-            string time = DateTime.Now.ToShortTimeString();
-
-            string mornOut = "00:00";
-
-            try
-            {
-                dispcon.Open();
-                SqlCommand cmd = dispcon.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + tBId.Text + "'";
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    string first = (dr["Firstname"].ToString());
-                    string mid = (dr["Midname"].ToString());
-                    string last = (dr["Lastname"].ToString());
-                    string dept = (dr["Dept"].ToString());
-
-                    chkcon.Open();
-                    SqlCommand cmd2 = chkcon.CreateCommand();
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.CommandText = "Select * from evtEmpTB where evtCode = '" + evtCode + "' " +
-                        "and evtDate = '" + date + "' " +
-                        "and mornTimeOut != '" + mornOut + "' " +
-                        "and empId = '" + empId + "'";
-                    SqlDataReader dr2 = cmd2.ExecuteReader();
-
-                    if (dr2.Read())
-                    {
-                        lblStat.Text = "ID Already Logged IN!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        capCam();
-                    }
-                    else
-                    {
-                        upcon.Open();
-                        SqlCommand cmd3 = upcon.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "Update eveEmpTB set mornTimeOut = '" + time + "' " +
-                            "where evtCode = '" + evtCode + "' " +
-                            "and evtDate = '" + date + "' " +
-                            "and empId = '" + empId + "'";
-                        cmd3.ExecuteNonQuery();
-                        upcon.Close();
-
-                        tBId.Text = "";
-                        lblStat.Text = "SUCCESS!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                       
-                    }
-                    chkcon.Close();
-                }
-                else
-                {
-                    lblStat.Text = "ID NOT FOUND!";
-                    
-                    FinalFrame.Stop();
-                    pBQR.Image = Properties.Resources.kali;
-                   
-                }
-                dispcon.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        // For regular Emp Attendance Afternoon Time In
-        public void aftInRegEmp()
-        {
-            SqlConnection upAftcon = new SqlConnection(empcs);
-            SqlConnection chkcon = new SqlConnection(empcs);
-            SqlConnection dispcon = new SqlConnection(empcs);
-
-            string empId = tBId.Text;
-            string date = DateTime.Now.ToShortDateString();
-            string evtCode = lblEvtCode.Text;
-            string time = DateTime.Now.ToShortTimeString();
-
-            string aftIn = "00:00";
-
-            try
-            {
-                dispcon.Open();
-                SqlCommand cmd = dispcon.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + tBId.Text + "'";
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    string first = (dr["Firstname"].ToString());
-                    string mid = (dr["Midname"].ToString());
-                    string last = (dr["Lastname"].ToString());
-                    string dept = (dr["Dept"].ToString());
-
-                    chkcon.Open();
-                    SqlCommand cmd2 = chkcon.CreateCommand();
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.CommandText = "Select * from evtEmpTB where evtCode = '" + evtCode + "' " +
-                        "and evtDate = '" + date + "' " +
-                        "and aftTimeIn != '" + aftIn + "' " +
-                        "and empId = '" + empId + "'";
-                    SqlDataReader dr2 = cmd2.ExecuteReader();
-
-                    if (dr2.Read())
-                    {
-                        lblStat.Text = "ID Already Logged IN!";
-                        
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        
-                    }
-                    else
-                    {
-                        upAftcon.Open();
-                        SqlCommand cmd3 = upAftcon.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "Update eveEmpTB set aftTimeIn = '" + time + "' " +
-                            "where evtCode = '" + evtCode + "' " +
-                            "and evtDate = '" + date + "' " +
-                            "and empId = '" + empId + "'";
-                        cmd3.ExecuteNonQuery();
-                        upAftcon.Close();
-
-                        tBId.Text = "";
-                        lblStat.Text = "SUCCESS!";
-                        
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                       
-                    }
-                    chkcon.Close();
-                }
-                else
-                {
-                    lblStat.Text = "ID NOT FOUND!";
-                   
-                    FinalFrame.Stop();
-                    pBQR.Image = Properties.Resources.kali;
-                    
-                }
-                dispcon.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // For regular Emp Attendance Afternoon Time out
-        public void aftOutRegEmp()
-        {
-            SqlConnection upAftcon = new SqlConnection(empcs);
-            SqlConnection chkcon = new SqlConnection(empcs);
-            SqlConnection dispcon = new SqlConnection(empcs);
-
-            string empId = tBId.Text;
-            string date = DateTime.Now.ToShortDateString();
-            string evtCode = lblEvtCode.Text;
-            string time = DateTime.Now.ToShortTimeString();
-
-            string aftOut = "00:00";
-
-            try
-            {
-                dispcon.Open();
-                SqlCommand cmd = dispcon.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + tBId.Text + "'";
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    string first = (dr["Firstname"].ToString());
-                    string mid = (dr["Midname"].ToString());
-                    string last = (dr["Lastname"].ToString());
-                    string dept = (dr["Dept"].ToString());
-
-                    chkcon.Open();
-                    SqlCommand cmd2 = chkcon.CreateCommand();
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.CommandText = "Select * from evtEmpTB where evtCode = '" + evtCode + "' " +
-                        "and evtDate = '" + date + "' " +
-                        "and aftTimeOut != '" + aftOut + "' " +
-                        "and empId = '" + empId + "'";
-                    SqlDataReader dr2 = cmd2.ExecuteReader();
-
-                    if (dr2.Read())
-                    {
-                        lblStat.Text = "ID Already Logged IN!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        
-                    }
-                    else
-                    {
-                        upAftcon.Open();
-                        SqlCommand cmd3 = upAftcon.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "Update eveEmpTB set aftTimeOut = '" + time + "' " +
-                            "where evtCode = '" + evtCode + "' " +
-                            "and evtDate = '" + date + "' " +
-                            "and empId = '" + empId + "'";
-                        cmd3.ExecuteNonQuery();
-                        upAftcon.Close();
-
-                        tBId.Text = "";
-                        lblStat.Text = "SUCCESS!";
-                        
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        
-                    }
-                    chkcon.Close();
-                }
-                else
-                {
-                    lblStat.Text = "ID NOT FOUND!";
-                    
-                    FinalFrame.Stop();
-                    pBQR.Image = Properties.Resources.kali;
-                    
-                }
-                dispcon.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        public void eveInRegEmp()
-        {
-            SqlConnection upAftcon = new SqlConnection(empcs);
-            SqlConnection chkcon = new SqlConnection(empcs);
-            SqlConnection dispcon = new SqlConnection(empcs);
-
-            string empId = tBId.Text;
-            string date = DateTime.Now.ToShortDateString();
-            string evtCode = lblEvtCode.Text;
-            string time = DateTime.Now.ToShortTimeString();
-
-            string eveIn = "00:00";
-
-            try
-            {
-                dispcon.Open();
-                SqlCommand cmd = dispcon.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + tBId.Text + "'";
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    string first = (dr["Firstname"].ToString());
-                    string mid = (dr["Midname"].ToString());
-                    string last = (dr["Lastname"].ToString());
-                    string dept = (dr["Dept"].ToString());
-
-                    chkcon.Open();
-                    SqlCommand cmd2 = chkcon.CreateCommand();
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.CommandText = "Select * from evtEmpTB where evtCode = '" + evtCode + "' " +
-                        "and evtDate = '" + date + "' " +
-                        "and eveTimeIn != '" + eveIn + "' " +
-                        "and empId = '" + empId + "'";
-                    SqlDataReader dr2 = cmd2.ExecuteReader();
-
-                    if (dr2.Read())
-                    {
-                        lblStat.Text = "ID Already Logged IN!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        
-                    }
-                    else
-                    {
-                        upAftcon.Open();
-                        SqlCommand cmd3 = upAftcon.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "Update eveEmpTB set eveTimeIn = '" + time + "' " +
-                            "where evtCode = '" + evtCode + "' " +
-                            "and evtDate = '" + date + "' " +
-                            "and empId = '" + empId + "'";
-                        cmd3.ExecuteNonQuery();
-                        upAftcon.Close();
-
-                        tBId.Text = "";
-                        lblStat.Text = "SUCCESS!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        
-                    }
-                    chkcon.Close();
-                }
-                else
-                {
-                    lblStat.Text = "ID NOT FOUND!";
-                   
-                    FinalFrame.Stop();
-                    pBQR.Image = Properties.Resources.kali;
-                    
-                }
-                dispcon.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        public void eveOutRegEmp()
-        {
-            SqlConnection upAftcon = new SqlConnection(empcs);
-            SqlConnection chkcon = new SqlConnection(empcs);
-            SqlConnection dispcon = new SqlConnection(empcs);
-
-            string empId = tBId.Text;
-            string date = DateTime.Now.ToShortDateString();
-            string evtCode = lblEvtCode.Text;
-            string time = DateTime.Now.ToShortTimeString();
-
-            string eveOut = "00:00";
-
-            try
-            {
-                dispcon.Open();
-                SqlCommand cmd = dispcon.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from empTB where empId = '" + tBId.Text + "'";
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
-                {
-                    string first = (dr["Firstname"].ToString());
-                    string mid = (dr["Midname"].ToString());
-                    string last = (dr["Lastname"].ToString());
-                    string dept = (dr["Dept"].ToString());
-
-                    chkcon.Open();
-                    SqlCommand cmd2 = chkcon.CreateCommand();
-                    cmd2.CommandType = CommandType.Text;
-                    cmd2.CommandText = "Select * from evtEmpTB where evtCode = '" + evtCode + "' " +
-                        "and evtDate = '" + date + "' " +
-                        "and eveTimeOut != '" + eveOut + "' " +
-                        "and empId = '" + empId + "'";
-                    SqlDataReader dr2 = cmd2.ExecuteReader();
-
-                    if (dr2.Read())
-                    {
-                        lblStat.Text = "ID Already Logged IN!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                       
-                    }
-                    else
-                    {
-                        upAftcon.Open();
-                        SqlCommand cmd3 = upAftcon.CreateCommand();
-                        cmd3.CommandType = CommandType.Text;
-                        cmd3.CommandText = "Update eveEmpTB set eveTimeOut = '" + time + "' " +
-                            "where evtCode = '" + evtCode + "' " +
-                            "and evtDate = '" + date + "' " +
-                            "and empId = '" + empId + "'";
-                        cmd3.ExecuteNonQuery();
-                        upAftcon.Close();
-
-                        tBId.Text = "";
-                        lblStat.Text = "SUCCESS!";
-                       
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        
-                    }
-                    chkcon.Close();
-                }
-                else
-                {
-                    lblStat.Text = "ID NOT FOUND!";
-                    
-                    FinalFrame.Stop();
-                    pBQR.Image = Properties.Resources.kali;
-                   
-                }
-                dispcon.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        #endregion
-
-        public void showOut()
-        {
-            SqlConnection con = new SqlConnection(empcs);
+            string id = tBId.Text;
             string time = DateTime.Now.ToShortTimeString();
             string date = DateTime.Now.ToShortDateString();
             string code = lblEvtCode.Text;
+            string att = tBEvtAtt.Text;
+
+            string mStat = "---";
+            string aStat = "---";
+            string eStat = "---";
+
             try
             {
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
+                empcon.Open();
+                SqlCommand cmd = empcon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from eventTB where evtCode = '" + code + "' " +
-                    "and eventDate = '" + date + "'";
+                cmd.CommandText = "Select * from empTB where empId = '" + id + "'";
                 SqlDataReader dr = cmd.ExecuteReader();
+
                 if (dr.Read())
                 {
-                    string mornOut = (dr["MorningOut"].ToString());
-                    string aftOut = (dr["AftOut"].ToString());
-                    string eveOut = (dr["EveOut"].ToString());
+                    string efirst = (dr["Firstname"].ToString());
+                    string emid = (dr["Midname"].ToString());
+                    string elast = (dr["Lastname"].ToString());
+                    string edept = (dr["Dept"].ToString());
+                    string ecourse = "NA";
+                    string eyear = "NA";
+                    string etype = "EMPLOYEE";
+                    string emornOut = "00:00";
+                    string emornIn = "00:00";
+                    string eaftIn = "00:00";
+                    string eeveIn = "00:00";
+                    string eeveOut = "00:00";
+                    string etotHrs = "0";
 
-                    if (mornOut == time)
+                    tBFirst.Text = efirst;
+                    tbMid.Text = emid;
+                    tBLast.Text = elast;
+
+                    byte[] img = (byte[])(dr["empImg"]);
+                    if (img == null)
                     {
-                        btnMornOut.Enabled = true;
-                        btnMornIn.Enabled = false;
+                        pBImg.Image = null;
                     }
-                    if (aftOut == time)
+
+                    else
                     {
-                        btnAftOut.Enabled = true;
-                        btnMornIn.Enabled = false;
+                        MemoryStream ms = new MemoryStream(img);
+                        pBImg.Image = Image.FromStream(ms);
                     }
-                    if (eveOut == time)
+                    empchk.Open();
+                    SqlCommand echk = empchk.CreateCommand();
+                    echk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                        "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                        "and mornTimeIn = '' and mornTimeOut = '' and aftTimeIn = '' and aftTimeOut = ''";
+                    SqlDataReader edr = echk.ExecuteReader();
+
+                    if (edr.Read())
                     {
-                        btnEveOut.Enabled = true;
-                        btnMornIn.Enabled = false;
+                        //Insert
+                        newemp.Open();
+                        SqlCommand ncmd = newemp.CreateCommand();
+                        ncmd.CommandType = CommandType.Text;
+                        ncmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                               "'" + date + "', " +
+                               "'" + etype + "', " +
+                               "'" + id + "', " +
+                               "'" + efirst + "', " +
+                               "'" + emid + "', " +
+                               "'" + elast + "', " +
+                               "'" + edept + "', " +
+                               "'" + ecourse + "', " +
+                               "'" + eyear + "', " +
+                               "'" + emornIn + "', " +
+                               "'" + emornOut + "', " +
+                               "'" + eaftIn + "', " +
+                               "'" + time + "', " +
+                               "'" + eeveIn + "', " +
+                               "'" + eeveOut + "', " +
+                               "'" + mStat + "', " +
+                               "'" + aStat + "', " +
+                               "'" + eStat + "', " +
+                               "'" + etotHrs + "')";
+                        ncmd.ExecuteNonQuery();
+
+                        lblStat.Text = "ID RECORDED!";
+                        tBId.Text = "";
+                        eveInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        eveIn();
+                    }
+                    else
+                    {
+
+                        econ.Open();
+                        SqlCommand ecmd = econ.CreateCommand();
+                        ecmd.CommandType = CommandType.Text;
+                        ecmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and eveTimeIn = '00:00'";
+                        SqlDataReader dr2 = ecmd.ExecuteReader();
+
+                        if (dr2.Read())
+                        {
+                            if (att == "ALL EMPLOYEES" || att == "GENERAL")
+                            {
+                                empmOut.Open();
+                                SqlCommand eout = empmOut.CreateCommand();
+                                eout.CommandText = "Update attendTB set eveTimeIn = '" + time + "' " +
+                                    "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                    "and Id = '" + id + "'";
+                                eout.ExecuteNonQuery();
+                                empmOut.Close();
+
+                                lblStat.Text = "ID RECORDED!";
+                                tBId.Text = "";
+                                eveInTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                eveIn();
+                            }
+
+                        }
+                        else
+                        {
+                            lblStat.Text = "ID HAS ALREADY LOGGED IN!";
+                            tBId.Text = "";
+                            eveInTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            eveIn();
+                        }
+                        econ.Close();
+                    }
+                    empchk.Close();
+                }
+                else
+                {
+                    studcon.Open();
+                    SqlCommand cmd2 = studcon.CreateCommand();
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.CommandText = "Select * from studTB where studId = '" + id + "'";
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        string sfirst = (dr2["Firstname"].ToString());
+                        string smid = (dr2["Midname"].ToString());
+                        string slast = (dr2["Lastname"].ToString());
+                        string syear = (dr2["Year"].ToString());
+                        string sdept = (dr2["Dept"].ToString());
+                        string scourse = (dr2["Course"].ToString());
+                        string stype = "STUDENT";
+                        string smornIn = "00:00";
+                        string smornOut = "00:00";
+                        string saftOut = "00:00";
+                        string saftIn = "00:00";
+                        string seveOut = "00:00";
+                        string stotHrs = "0";
+
+                        tBFirst.Text = sfirst;
+                        tbMid.Text = smid;
+                        tBLast.Text = slast;
+
+                        byte[] img = (byte[])(dr2["studImg"]);
+                        if (img == null)
+                        {
+                            pBImg.Image = null;
+                        }
+
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pBImg.Image = Image.FromStream(ms);
+                        }
+
+                        studchk.Open();
+                        SqlCommand schk = studchk.CreateCommand();
+                        schk.CommandType = CommandType.Text;
+                        schk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                             "and mornTimeIn = '' and mornTimeOut = '' and aftTimeIn = '' and aftTimeOut = ''";
+                        SqlDataReader sdr = schk.ExecuteReader();
+
+                        if (sdr.Read())
+                        {
+                            scon.Open();
+                            SqlCommand scmd = scon.CreateCommand();
+                            scmd.CommandType = CommandType.Text;
+                            scmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                  "'" + date + "', " +
+                                  "'" + stype + "', " +
+                                  "'" + id + "', " +
+                                  "'" + sfirst + "', " +
+                                  "'" + smid + "', " +
+                                  "'" + slast + "', " +
+                                  "'" + sdept + "', " +
+                                  "'" + scourse + "', " +
+                                  "'" + syear + "', " +
+                                  "'" + smornIn + "', " +
+                                  "'" + smornOut + "', " +
+                                  "'" + saftIn + "', " +
+                                  "'" + saftOut + "', " +
+                                  "'" + time + "', " +
+                                  "'" + seveOut + "', " +
+                                  "'" + mStat + "', " +
+                                  "'" + aStat + "', " +
+                                  "'" + eStat + "', " +
+                                  "'" + stotHrs + "')";
+                            scmd.ExecuteNonQuery();
+                            scon.Close();
+
+                            lblStat.Text = "ID RECORDED!";
+                            tBId.Text = "";
+                            eveInTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            eveIn();
+
+                        }
+                        else
+                        {
+
+                            vercon.Open();
+                            SqlCommand vercmd = vercon.CreateCommand();
+                            vercmd.CommandType = CommandType.Text;
+                            vercmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and eveTimeIn = '00:00'";
+                            SqlDataReader vdr = vercmd.ExecuteReader();
+
+                            if (vdr.Read())
+                            {
+                                if (att != "ALL EMPLOYEES" || att == "GENERAL")
+                                {
+                                    studmOut.Open();
+                                    SqlCommand sout = studmOut.CreateCommand();
+                                    sout.CommandType = CommandType.Text;
+                                    sout.CommandText = "Update attendTB set eveTimein = '" + time + "' " +
+                                        "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                        "and Id = '" + id + "'";
+                                    sout.ExecuteNonQuery();
+                                    studmOut.Close();
+
+                                    lblStat.Text = "ID RECORDED!";
+                                    tBId.Text = "";
+                                    eveInTimer.Stop();
+                                    FinalFrame.Stop();
+                                    pBQR.Image = Properties.Resources.kali;
+                                    eveIn();
+                                }
+                            }
+                            else
+                            {
+                                lblStat.Text = "ID HAS ALREADY LOGGED IN!";
+                                tBId.Text = "";
+                                eveInTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                eveIn();
+
+                            }
+                        }
+                        studchk.Close();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID NOT FOUND!";
+                        tBId.Text = "";
+                        eveInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        eveIn();
+                    }
+                    studcon.Close();
+                }
+                empcon.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void logAftOut()
+        {
+            SqlConnection empmOut = new SqlConnection(empcs);
+            SqlConnection studmOut = new SqlConnection(empcs);
+            SqlConnection empcon = new SqlConnection(empcs);
+            SqlConnection studcon = new SqlConnection(empcs);
+            SqlConnection empchk = new SqlConnection(empcs);
+            SqlConnection studchk = new SqlConnection(empcs);
+            SqlConnection econ = new SqlConnection(empcs);
+            SqlConnection scon = new SqlConnection(empcs);
+            SqlConnection vercon = new SqlConnection(empcs);
+
+            string id = tBId.Text;
+            string time = DateTime.Now.ToShortTimeString();
+            string date = DateTime.Now.ToShortDateString();
+            string code = lblEvtCode.Text;
+            string att = tBEvtAtt.Text;
+
+            string mStat = "---";
+            string aStat = "---";
+            string eStat = "---";
+
+            try
+            {
+                empcon.Open();
+                SqlCommand cmd = empcon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from empTB where empId = '" + id + "'";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    string efirst = (dr["Firstname"].ToString());
+                    string emid = (dr["Midname"].ToString());
+                    string elast = (dr["Lastname"].ToString());
+
+                    tBFirst.Text = efirst;
+                    tbMid.Text = emid;
+                    tBLast.Text = elast;
+
+                    byte[] img = (byte[])(dr["empImg"]);
+                    if (img == null)
+                    {
+                        pBImg.Image = null;
+                    }
+
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pBImg.Image = Image.FromStream(ms);
+                    }
+
+
+                    empchk.Open();
+                    SqlCommand echk = empchk.CreateCommand();
+                    echk.CommandType = CommandType.Text;
+                    echk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                        "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                        "and aftTimeIn != ''";
+                    SqlDataReader edr = echk.ExecuteReader();
+
+                    if (edr.Read())
+                    {
+                        econ.Open();
+                        SqlCommand ecmd = econ.CreateCommand();
+                        ecmd.CommandType = CommandType.Text;
+                        ecmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and aftTimeOut = '00:00'";
+                        SqlDataReader dr2 = ecmd.ExecuteReader();
+
+                        if (dr2.Read())
+                        {
+                            if (att == "ALL EMPLOYEES" || att == "GENERAL")
+                            {
+                                empmOut.Open();
+                                SqlCommand eout = empmOut.CreateCommand();
+                                eout.CommandText = "Update attendTB set aftTimeOut = '" + time + "' " +
+                                    "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                    "and Id = '" + id + "'";
+                                eout.ExecuteNonQuery();
+                                empmOut.Close();
+
+                                lblStat.Text = "ID RECORDED!";
+                                tBId.Text = "";
+                                aftOutTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                aftOut();
+                            }
+
+                        }
+                        else
+                        {
+                            lblStat.Text = "ID HAS ALREADY LOGGED OUT!";
+                            tBId.Text = "";
+                            aftOutTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            aftOut();
+                        }
+                        econ.Close();
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID HAS NOT LOGGED IN!";
+                        tBId.Text = "";
+                        aftOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        aftOut();
+                    }
+                    empchk.Close();
+                }
+                else
+                {
+                    studcon.Open();
+                    SqlCommand cmd2 = studcon.CreateCommand();
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.CommandText = "Select * from studTB where studId = '" + id + "'";
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        string sfirst = (dr2["Firstname"].ToString());
+                        string smid = (dr2["Midname"].ToString());
+                        string slast = (dr2["Lastname"].ToString());
+                        string syear = (dr2["Year"].ToString());
+                        string sdept = (dr2["Dept"].ToString());
+                        string scourse = (dr2["Course"].ToString());
+                        string stype = "STUDENT";
+                        string smornIn = "00:00";
+                        string saftIn = "00:00";
+                        string smornOut = "00:00";
+                        string seveIn = "00:00";
+                        string seveOut = "00:00";
+                        string stotHrs = "0";
+
+                        tBFirst.Text = sfirst;
+                        tbMid.Text = smid;
+                        tBLast.Text = slast;
+
+                        byte[] img = (byte[])(dr2["studImg"]);
+                        if (img == null)
+                        {
+                            pBImg.Image = null;
+                        }
+
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pBImg.Image = Image.FromStream(ms);
+                        }
+
+                        studchk.Open();
+                        SqlCommand schk = studchk.CreateCommand();
+                        schk.CommandType = CommandType.Text;
+                        schk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and mornTimeIn = '' and mornTimeOut = '' and aftTimeIn = ''";
+                        SqlDataReader sdr = schk.ExecuteReader();
+
+                        if (sdr.Read())
+                        {
+                            scon.Open();
+                            SqlCommand scmd = scon.CreateCommand();
+                            scmd.CommandType = CommandType.Text;
+                            scmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                  "'" + date + "', " +
+                                  "'" + stype + "', " +
+                                  "'" + id + "', " +
+                                  "'" + sfirst + "', " +
+                                  "'" + smid + "', " +
+                                  "'" + slast + "', " +
+                                  "'" + sdept + "', " +
+                                  "'" + scourse + "', " +
+                                  "'" + syear + "', " +
+                                  "'" + smornIn + "', " +
+                                  "'" + smornOut + "', " +
+                                  "'" + saftIn + "', " +
+                                  "'" + time + "', " +
+                                  "'" + seveIn + "', " +
+                                  "'" + seveOut + "', " +
+                                  "'" + mStat + "', " +
+                                  "'" + aStat + "', " +
+                                  "'" + eStat + "', " +
+                                  "'" + stotHrs + "')";
+                            scmd.ExecuteNonQuery();
+                            scon.Close();
+
+                            lblStat.Text = "ID RECORDED!";
+                            tBId.Text = "";
+                            aftOutTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            aftOut();
+
+                        }
+                        else
+                        {
+
+                            vercon.Open();
+                            SqlCommand vercmd = vercon.CreateCommand();
+                            vercmd.CommandType = CommandType.Text;
+                            vercmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and aftTimeOut != '00:00' and aftTimeIn != '00:00'";
+                            SqlDataReader vdr = vercmd.ExecuteReader();
+
+                            if (vdr.Read())
+                            {
+                                lblStat.Text = "ID HAS ALREADY LOGGED OUT!";
+                                tBId.Text = "";
+                                aftOutTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                aftOut();
+                            }
+                            else
+                            {
+
+                                if (att != "ALL EMPLOYEES" || att == "GENERAL")
+                                {
+                                    studmOut.Open();
+                                    SqlCommand sout = studmOut.CreateCommand();
+                                    sout.CommandType = CommandType.Text;
+                                    sout.CommandText = "Update attendTB set aftTimeOut = '" + time + "' " +
+                                        "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                        "and Id = '" + id + "'";
+                                    sout.ExecuteNonQuery();
+                                    studmOut.Close();
+
+                                    lblStat.Text = "ID RECORDED!";
+                                    tBId.Text = "";
+                                    aftOutTimer.Stop();
+                                    FinalFrame.Stop();
+                                    pBQR.Image = Properties.Resources.kali;
+                                    aftOut();
+                                }
+                            }
+
+                        }
+                        studchk.Close();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID NOT FOUND!";
+                        tBId.Text = "";
+                        aftOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        aftOut();
+                    }
+                    studcon.Close();
+                }
+                empcon.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void logAftIn()
+        {
+            SqlConnection empmOut = new SqlConnection(empcs);
+            SqlConnection studmOut = new SqlConnection(empcs);
+            SqlConnection empcon = new SqlConnection(empcs);
+            SqlConnection studcon = new SqlConnection(empcs);
+            SqlConnection empchk = new SqlConnection(empcs);
+            SqlConnection studchk = new SqlConnection(empcs);
+            SqlConnection econ = new SqlConnection(empcs);
+            SqlConnection scon = new SqlConnection(empcs);
+            SqlConnection vercon = new SqlConnection(empcs);
+            SqlConnection newemp = new SqlConnection(empcs);
+
+            string id = tBId.Text;
+            string time = DateTime.Now.ToShortTimeString();
+            string date = DateTime.Now.ToShortDateString();
+            string code = lblEvtCode.Text;
+            string att = tBEvtAtt.Text;
+
+            string mStat = "---";
+            string aStat = "---";
+            string eStat = "---";
+
+            try
+            {
+                empcon.Open();
+                SqlCommand cmd = empcon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from empTB where empId = '" + id + "'";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    string efirst = (dr["Firstname"].ToString());
+                    string emid = (dr["Midname"].ToString());
+                    string elast = (dr["Lastname"].ToString());
+                    string edept = (dr["Dept"].ToString());
+                    string ecourse = "NA";
+                    string eyear = "NA";
+                    string etype = "EMPLOYEE";
+                    string emornOut = "00:00";
+                    string emornIn = "00:00";
+                    string eaftOut = "00:00";
+                    string eeveIn = "00:00";
+                    string eeveOut = "00:00";
+                    string etotHrs = "0";
+
+                    tBFirst.Text = efirst;
+                    tbMid.Text = emid;
+                    tBLast.Text = elast;
+
+                    byte[] img = (byte[])(dr["empImg"]);
+                    if (img == null)
+                    {
+                        pBImg.Image = null;
+                    }
+
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pBImg.Image = Image.FromStream(ms);
+                    }
+                    empchk.Open();
+                    SqlCommand echk = empchk.CreateCommand();
+                    echk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                        "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                        "and mornTimeIn = '' and mornTimeOut = '' and aftTimeIn = ''";
+                    SqlDataReader edr = echk.ExecuteReader();
+
+                    if (edr.Read())
+                    {
+                        //Insert
+                        newemp.Open();
+                        SqlCommand ncmd = newemp.CreateCommand();
+                        ncmd.CommandType = CommandType.Text;
+                        ncmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                               "'" + date + "', " +
+                               "'" + etype + "', " +
+                               "'" + id + "', " +
+                               "'" + efirst + "', " +
+                               "'" + emid + "', " +
+                               "'" + elast + "', " +
+                               "'" + edept + "', " +
+                               "'" + ecourse + "', " +
+                               "'" + eyear + "', " +
+                               "'" + emornIn + "', " +
+                               "'" + emornOut + "', " +
+                               "'" + time + "', " +
+                               "'" + eaftOut + "', " +
+                               "'" + eeveIn + "', " +
+                               "'" + eeveOut + "', " +
+                               "'" + mStat + "', " +
+                               "'" + aStat + "', " +
+                               "'" + eStat + "', " +
+                               "'" + etotHrs + "')";
+                        ncmd.ExecuteNonQuery();
+
+                        lblStat.Text = "ID RECORDED!";
+                        tBId.Text = "";
+                        aftInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        aftIn();
+                    }
+                    else
+                    {
+
+                        econ.Open();
+                        SqlCommand ecmd = econ.CreateCommand();
+                        ecmd.CommandType = CommandType.Text;
+                        ecmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and aftTimeIn = '00:00'";
+                        SqlDataReader dr2 = ecmd.ExecuteReader();
+
+                        if (dr2.Read())
+                        {
+                            if (att == "ALL EMPLOYEES" || att == "GENERAL")
+                            {
+                                empmOut.Open();
+                                SqlCommand eout = empmOut.CreateCommand();
+                                eout.CommandText = "Update attendTB set aftTimeIn = '" + time + "' " +
+                                    "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                    "and Id = '" + id + "'";
+                                eout.ExecuteNonQuery();
+                                empmOut.Close();
+
+                                lblStat.Text = "ID RECORDED!";
+                                tBId.Text = "";
+                                aftInTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                aftIn();
+                            }
+
+                        }
+                        else
+                        {
+                            lblStat.Text = "ID HAS ALREADY LOGGED IN!";
+                            tBId.Text = "";
+                            aftInTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            aftIn();
+                        }
+                        econ.Close();
+                    }
+                    empchk.Close();
+                }
+                else
+                {
+                    studcon.Open();
+                    SqlCommand cmd2 = studcon.CreateCommand();
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.CommandText = "Select * from studTB where studId = '" + id + "'";
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        string sfirst = (dr2["Firstname"].ToString());
+                        string smid = (dr2["Midname"].ToString());
+                        string slast = (dr2["Lastname"].ToString());
+                        string syear = (dr2["Year"].ToString());
+                        string sdept = (dr2["Dept"].ToString());
+                        string scourse = (dr2["Course"].ToString());
+                        string stype = "STUDENT";
+                        string smornIn = "00:00";
+                        string smornOut = "00:00";
+                        string saftOut = "00:00";
+                        string seveIn = "00:00";
+                        string seveOut = "00:00";
+                        string stotHrs = "0";
+
+                        tBFirst.Text = sfirst;
+                        tbMid.Text = smid;
+                        tBLast.Text = slast;
+
+                        byte[] img = (byte[])(dr2["studImg"]);
+                        if (img == null)
+                        {
+                            pBImg.Image = null;
+                        }
+
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pBImg.Image = Image.FromStream(ms);
+                        }
+
+                        studchk.Open();
+                        SqlCommand schk = studchk.CreateCommand();
+                        schk.CommandType = CommandType.Text;
+                        schk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                             "and mornTimeIn = '' and mornTimeOut = '' and aftTimeIn = ''";
+                        SqlDataReader sdr = schk.ExecuteReader();
+
+                        if (sdr.Read())
+                        {
+                            scon.Open();
+                            SqlCommand scmd = scon.CreateCommand();
+                            scmd.CommandType = CommandType.Text;
+                            scmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                  "'" + date + "', " +
+                                  "'" + stype + "', " +
+                                  "'" + id + "', " +
+                                  "'" + sfirst + "', " +
+                                  "'" + smid + "', " +
+                                  "'" + slast + "', " +
+                                  "'" + sdept + "', " +
+                                  "'" + scourse + "', " +
+                                  "'" + syear + "', " +
+                                  "'" + smornIn + "', " +
+                                  "'" + smornOut + "', " +
+                                  "'" + time + "', " +
+                                  "'" + saftOut + "', " +
+                                  "'" + seveIn + "', " +
+                                  "'" + seveOut + "', " +
+                                  "'" + mStat + "', " +
+                                  "'" + aStat + "', " +
+                                  "'" + eStat + "', " +
+                                  "'" + stotHrs + "')";
+                            scmd.ExecuteNonQuery();
+                            scon.Close();
+
+                            lblStat.Text = "ID RECORDED!";
+                            tBId.Text = "";
+                            aftInTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            aftIn();
+
+                        }
+                        else
+                        {
+
+                            vercon.Open();
+                            SqlCommand vercmd = vercon.CreateCommand();
+                            vercmd.CommandType = CommandType.Text;
+                            vercmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and aftTimeIn = '00:00'";
+                            SqlDataReader vdr = vercmd.ExecuteReader();
+
+                            if (vdr.Read())
+                            {
+                                if (att != "ALL EMPLOYEES" || att == "GENERAL")
+                                {
+                                    studmOut.Open();
+                                    SqlCommand sout = studmOut.CreateCommand();
+                                    sout.CommandType = CommandType.Text;
+                                    sout.CommandText = "Update attendTB set aftTimein = '" + time + "' " +
+                                        "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                        "and Id = '" + id + "'";
+                                    sout.ExecuteNonQuery();
+                                    studmOut.Close();
+
+                                    lblStat.Text = "ID RECORDED!";
+                                    tBId.Text = "";
+                                    aftInTimer.Stop();
+                                    FinalFrame.Stop();
+                                    pBQR.Image = Properties.Resources.kali;
+                                    aftIn();
+                                }
+                            }
+                            else
+                            {
+                                lblStat.Text = "ID HAS ALREADY LOGGED IN!";
+                                tBId.Text = "";
+                                aftInTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                aftIn();
+
+                            }
+                        }
+                        studchk.Close();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID NOT FOUND!";
+                        tBId.Text = "";
+                        aftInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        aftIn();
+                    }
+                    studcon.Close();
+                }
+                empcon.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void logMornOut()
+        {
+            SqlConnection empmOut = new SqlConnection(empcs);
+            SqlConnection studmOut = new SqlConnection(empcs);
+            SqlConnection empcon = new SqlConnection(empcs);
+            SqlConnection studcon = new SqlConnection(empcs);
+            SqlConnection empchk = new SqlConnection(empcs);
+            SqlConnection studchk = new SqlConnection(empcs);
+            SqlConnection econ = new SqlConnection(empcs);
+            SqlConnection scon = new SqlConnection(empcs);
+            SqlConnection vercon = new SqlConnection(empcs);
+
+            string id = tBId.Text;
+            string time = DateTime.Now.ToShortTimeString();
+            string date = DateTime.Now.ToShortDateString();
+            string code = lblEvtCode.Text;
+            string att = tBEvtAtt.Text;
+
+            string mStat = "---";
+            string aStat = "---";
+            string eStat = "---";
+
+            try
+            {
+                empcon.Open();
+                SqlCommand cmd = empcon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from empTB where empId = '" + id + "'";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    string efirst = (dr["Firstname"].ToString());
+                    string emid = (dr["Midname"].ToString());
+                    string elast = (dr["Lastname"].ToString());
+
+                    tBFirst.Text = efirst;
+                    tbMid.Text = emid;
+                    tBLast.Text = elast;
+
+                    byte[] img = (byte[])(dr["empImg"]);
+                    if (img == null)
+                    {
+                        pBImg.Image = null;
+                    }
+
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pBImg.Image = Image.FromStream(ms);
+                    }
+
+
+                    empchk.Open();
+                    SqlCommand echk = empchk.CreateCommand();
+                    echk.CommandType = CommandType.Text;
+                    echk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                        "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                        "and mornTimeIn != ''";
+                    SqlDataReader edr = echk.ExecuteReader();
+
+                    if (edr.Read())
+                    {
+                        econ.Open();
+                        SqlCommand ecmd = econ.CreateCommand();
+                        ecmd.CommandType = CommandType.Text;
+                        ecmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and mornTimeOut = '00:00'";
+                        SqlDataReader dr2 = ecmd.ExecuteReader();
+
+                        if (dr2.Read())
+                        {
+                            if (att == "ALL EMPLOYEES" || att == "GENERAL")
+                            {
+                                empmOut.Open();
+                                SqlCommand eout = empmOut.CreateCommand();
+                                eout.CommandText = "Update attendTB set mornTimeOut = '" + time + "' " +
+                                    "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                    "and Id = '" + id + "'";
+                                eout.ExecuteNonQuery();
+                                empmOut.Close();
+
+                                lblStat.Text = "ID RECORDED!";
+                                tBId.Text = "";
+                                mornOutTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                morningOut();
+                            }
+
+                        }
+                        else
+                        {
+                            lblStat.Text = "ID HAS ALREADY LOGGED OUT!";
+                            tBId.Text = "";
+                            mornOutTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            morningOut();
+                        }
+                        econ.Close();
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID HAS NOT LOGGED IN!";
+                        tBId.Text = "";
+                        mornOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        morningOut();
+                    }
+                    empchk.Close();
+                }
+                else
+                {
+                    studcon.Open();
+                    SqlCommand cmd2 = studcon.CreateCommand();
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.CommandText = "Select * from studTB where studId = '" + id + "'";
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        string sfirst = (dr2["Firstname"].ToString());
+                        string smid = (dr2["Midname"].ToString());
+                        string slast = (dr2["Lastname"].ToString());
+                        string syear = (dr2["Year"].ToString());
+                        string sdept = (dr2["Dept"].ToString());
+                        string scourse = (dr2["Course"].ToString());
+                        string stype = "STUDENT";
+                        string smornIn = "00:00";
+                        string saftIn = "00:00";
+                        string saftOut = "00:00";
+                        string seveIn = "00:00";
+                        string seveOut = "00:00";
+                        string stotHrs = "0";
+
+                        tBFirst.Text = sfirst;
+                        tbMid.Text = smid;
+                        tBLast.Text = slast;
+
+                        byte[] img = (byte[])(dr2["studImg"]);
+                        if (img == null)
+                        {
+                            pBImg.Image = null;
+                        }
+
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pBImg.Image = Image.FromStream(ms);
+                        }
+
+                        studchk.Open();
+                        SqlCommand schk = studchk.CreateCommand();
+                        schk.CommandType = CommandType.Text;
+                        schk.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and mornTimeIn = '' and mornTimeOut = ''";
+                        SqlDataReader sdr = schk.ExecuteReader();
+
+                        if (sdr.Read())
+                        {
+                            scon.Open();
+                            SqlCommand scmd = scon.CreateCommand();
+                            scmd.CommandType = CommandType.Text;
+                            scmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                  "'" + date + "', " +
+                                  "'" + stype + "', " +
+                                  "'" + id + "', " +
+                                  "'" + sfirst + "', " +
+                                  "'" + smid + "', " +
+                                  "'" + slast + "', " +
+                                  "'" + sdept + "', " +
+                                  "'" + scourse + "', " +
+                                  "'" + syear + "', " +
+                                  "'" + smornIn + "', " +
+                                  "'" + time + "', " +
+                                  "'" + saftIn + "', " +
+                                  "'" + saftOut + "', " +
+                                  "'" + seveIn + "', " +
+                                  "'" + seveOut + "', " +
+                                  "'" + mStat + "', " +
+                                  "'" + aStat + "', " +
+                                  "'" + eStat + "', " +
+                                  "'" + stotHrs + "')";
+                            scmd.ExecuteNonQuery();
+                            scon.Close();
+
+                            lblStat.Text = "ID RECORDED!";
+                            tBId.Text = "";
+                            mornOutTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            morningOut();
+
+                        }
+                        else
+                        {
+
+                            vercon.Open();
+                            SqlCommand vercmd = vercon.CreateCommand();
+                            vercmd.CommandType = CommandType.Text;
+                            vercmd.CommandText = "Select * from attendTB where evtCode = '" + code + "' " +
+                            "and evtDate = '" + date + "' and Id = '" + id + "' " +
+                            "and mornTimeOut != '00:00' and mornTimeIn != ''";
+                            SqlDataReader vdr = vercmd.ExecuteReader();
+
+                            if (vdr.Read())
+                            {
+                                lblStat.Text = "ID HAS ALREADY LOGGED OUT!";
+                                tBId.Text = "";
+                                mornOutTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                morningOut();
+                            }
+                            else
+                            {
+
+                                if (att != "ALL EMPLOYEES" || att == "GENERAL")
+                                {
+                                    studmOut.Open();
+                                    SqlCommand sout = studmOut.CreateCommand();
+                                    sout.CommandType = CommandType.Text;
+                                    sout.CommandText = "Update attendTB set mornTimeOut = '" + time + "' " +
+                                        "where evtCode = '" + code + "' and evtDate = '" + date + "' " +
+                                        "and Id = '" + id + "' and mornTimeIn != ''";
+                                    sout.ExecuteNonQuery();
+                                    studmOut.Close();
+
+                                    lblStat.Text = "ID RECORDED!";
+                                    tBId.Text = "";
+                                    mornOutTimer.Stop();
+                                    FinalFrame.Stop();
+                                    pBQR.Image = Properties.Resources.kali;
+                                    morningOut();
+                                }
+                            }
+
+                        }
+                        studchk.Close();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID NOT FOUND!";
+                        tBId.Text = "";
+                        mornOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        morningOut();
+                    }
+                    studcon.Close();
+                }
+                empcon.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void logMornIn()
+        {
+            SqlConnection empcon = new SqlConnection(empcs);
+            SqlConnection studcon = new SqlConnection(empcs);
+            SqlConnection studins = new SqlConnection(empcs);
+            SqlConnection empins = new SqlConnection(empcs);
+            SqlConnection empchk = new SqlConnection(empcs);
+            SqlConnection studchk = new SqlConnection(empcs);
+
+
+            string id = tBId.Text;
+            string time = DateTime.Now.ToShortTimeString();
+            string date = DateTime.Now.ToShortDateString();
+            string code = lblEvtCode.Text;
+            string att = tBEvtAtt.Text;
+
+            string mStat = "---";
+            string aStat = "---";
+            string eStat = "---";
+
+            try
+            {
+                empcon.Open();
+                SqlCommand cmd = empcon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from empTB where empId = '" + id + "'";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    string efirst = (dr["Firstname"].ToString());
+                    string emid = (dr["Midname"].ToString());
+                    string elast = (dr["Lastname"].ToString());
+                    string edept = (dr["Dept"].ToString());
+                    string ecourse = "NA";
+                    string eyear = "NA";
+                    string etype = "EMPLOYEE";
+                    string emornOut = "00:00";
+                    string eaftIn = "00:00";
+                    string eaftOut = "00:00";
+                    string eeveIn = "00:00";
+                    string eeveOut = "00:00";
+                    string etotHrs = "0";
+
+                    tBFirst.Text = efirst;
+                    tbMid.Text = emid;
+                    tBLast.Text = elast;
+
+                    byte[] img = (byte[])(dr["empImg"]);
+                    if (img == null)
+                    {
+                        pBImg.Image = null;
+                    }
+
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(img);
+                        pBImg.Image = Image.FromStream(ms);
+                    }
+
+                    empchk.Open();
+                    SqlCommand echk = empchk.CreateCommand();
+                    echk.CommandType = CommandType.Text;
+                    echk.CommandText = "Select * from attendTB where Id = '" + id + "' " +
+                        "and evtCode = '" + code + "' and evtDate = '" + date + "'";
+                    SqlDataReader edr = echk.ExecuteReader();
+
+                    if (edr.Read())
+                    {
+                        lblStat.Text = "ID ALREADY LOGGED IN";
+                        mornInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        morningIn();
+                    }
+                    else
+                    {
+
+                        if (att == "ALL EMPLOYESS" || att == "GENERAL")
+                        {
+                            empins.Open();
+                            SqlCommand ecmd = empins.CreateCommand();
+                            ecmd.CommandType = CommandType.Text;
+                            ecmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                "'" + date + "', " +
+                                "'" + etype + "', " +
+                                "'" + id + "', " +
+                                "'" + efirst + "', " +
+                                "'" + emid + "', " +
+                                "'" + elast + "', " +
+                                "'" + edept + "', " +
+                                "'" + ecourse + "', " +
+                                "'" + eyear + "', " +
+                                "'" + time + "', " +
+                                "'" + emornOut + "', " +
+                                "'" + eaftIn + "', " +
+                                "'" + eaftOut + "', " +
+                                "'" + eeveIn + "', " +
+                                "'" + eeveOut + "', " +
+                                "'" + mStat + "', " +
+                                "'" + aStat + "', " +
+                                "'" + eStat + "', " +
+                                "'" + etotHrs + "')";
+                            ecmd.ExecuteNonQuery();
+                            empins.Close();
+
+                            lblStat.Text = "ID RECORDED";
+                            mornInTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            morningIn();
+                        }
+                    }
+                    empchk.Close();
+                }
+                else
+                {
+                    studcon.Open();
+                    SqlCommand cmd2 = studcon.CreateCommand();
+                    cmd2.CommandType = CommandType.Text;
+                    cmd2.CommandText = "Select * from studTB where studId = '" + id + "'";
+                    SqlDataReader dr2 = cmd2.ExecuteReader();
+
+                    if (dr2.Read())
+                    {
+                        string sfirst = (dr2["Firstname"].ToString());
+                        string smid = (dr2["Midname"].ToString());
+                        string slast = (dr2["Lastname"].ToString());
+                        string syear = (dr2["Year"].ToString());
+                        string sdept = (dr2["Dept"].ToString());
+                        string scourse = (dr2["Course"].ToString());
+                        string stype = "STUDENT";
+                        string smornOut = "00:00";
+                        string saftIn = "00:00";
+                        string saftOut = "00:00";
+                        string seveIn = "00:00";
+                        string seveOut = "00:00";
+                        string stotHrs = "0";
+
+                        tBFirst.Text = sfirst;
+                        tbMid.Text = smid;
+                        tBLast.Text = slast;
+
+                        byte[] img = (byte[])(dr2["studImg"]);
+                        if (img == null)
+                        {
+                            pBImg.Image = null;
+                        }
+
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            pBImg.Image = Image.FromStream(ms);
+                        }
+
+                        studchk.Open();
+                        SqlCommand schk = studchk.CreateCommand();
+                        schk.CommandType = CommandType.Text;
+                        schk.CommandText = "Select * from attendTB where Id = '" + id + "' " +
+                            "and evtCode = '" + code + "' and evtDate = '" + date + "'";
+                        SqlDataReader sdr = schk.ExecuteReader();
+
+                        if (sdr.Read())
+                        {
+                            lblStat.Text = "ID ALREADY LOGGED IN";
+                            mornInTimer.Stop();
+                            FinalFrame.Stop();
+                            pBQR.Image = Properties.Resources.kali;
+                            morningIn();
+                        }
+                        else
+                        {
+                            if (att != "ALL EMPLOYEES" || att == "GENERAL")
+                            {
+                                studins.Open();
+                                SqlCommand scmd = studins.CreateCommand();
+                                scmd.CommandType = CommandType.Text;
+                                scmd.CommandText = "Insert into attendTB values ('" + code + "', " +
+                                 "'" + date + "', " +
+                                 "'" + stype + "', " +
+                                 "'" + id + "', " +
+                                 "'" + sfirst + "', " +
+                                 "'" + smid + "', " +
+                                 "'" + slast + "', " +
+                                 "'" + sdept + "', " +
+                                 "'" + scourse + "', " +
+                                 "'" + syear + "', " +
+                                 "'" + time + "', " +
+                                 "'" + smornOut + "', " +
+                                 "'" + saftIn + "', " +
+                                 "'" + saftOut + "', " +
+                                 "'" + seveIn + "', " +
+                                 "'" + seveOut + "', " +
+                                 "'" + mStat + "', " +
+                                 "'" + aStat + "', " +
+                                 "'" + eStat + "', " +
+                                 "'" + stotHrs + "')";
+                                scmd.ExecuteNonQuery();
+                                studins.Close();
+
+                                lblStat.Text = "ID RECORDED";
+                                mornInTimer.Stop();
+                                FinalFrame.Stop();
+                                pBQR.Image = Properties.Resources.kali;
+                                morningIn();
+                            }
+                        }
+                        studchk.Close();
+                    }
+                    else
+                    {
+                        lblStat.Text = "ID NOT FOUND!";
+                        tBId.Text = "";
+                        mornInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        morningIn();
+                    }
+                    studcon.Close();
+                }
+                empcon.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + " MornIn", " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void wrapPass()
+        {
+            SqlConnection vercon = new SqlConnection(empcs);
+            string pass = tBWPass.Text;
+            string user = tBUser.Text;
+
+            try
+            {
+                if (pass == "")
+                {
+                    tBWPass.Visible = false;
+                }
+                else
+                {
+                    vercon.Open();
+                    SqlCommand cmd = vercon.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "Select * from setTB where username = '" + user + "' " +
+                        "and password = '" + pass + "'";
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        if (MessageBox.Show("Are you sure to wrap the attendance?", " Verify", 
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            wrap();
+                        }
+                        else
+                        {
+                            tBWPass.Visible = false;
+                            tBWPass.Text = "";
+                        }
+                    }
+                    else
+                    {
+                        tBWPass.Visible = false;
+                        tBWPass.Text = "";
                     }
                 }
+
             }
             catch (Exception e)
             {
@@ -658,19 +1770,51 @@ namespace QRScan
                         tBPassLock.Visible = false;
                     }
                 }
-              
+
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void empRegMornIn()
+
+        public void eveOut()
+        {
+            capCam();
+            eveOutTimer.Enabled = true;
+            eveOutTimer.Start();
+        }
+        public void eveIn()
+        {
+            capCam();
+            eveInTimer.Enabled = true;
+            eveInTimer.Start();
+        }
+        public void aftOut()
+        {
+            capCam();
+            aftOutTimer.Enabled = true;
+            aftOutTimer.Start();
+        }
+        public void aftIn()
+        {
+            capCam();
+            aftInTimer.Enabled = true;
+            aftInTimer.Start();
+
+        }
+        public void morningIn()
         {
             capCam();
             mornInTimer.Enabled = true;
             mornInTimer.Start();
-           // MessageBox.Show("Started!", " Started", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        public void morningOut()
+        {
+            capCam();
+            mornOutTimer.Enabled = true;
+            mornOutTimer.Start();
         }
         public void capCam()
         {
@@ -681,7 +1825,7 @@ namespace QRScan
                 FinalFrame.NewFrame += new NewFrameEventHandler(FinalFrame_NewFrame);
                 FinalFrame.Start();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -689,7 +1833,7 @@ namespace QRScan
 
         private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-           
+
             pBQR.Image = (Bitmap)eventArgs.Frame.Clone();
         }
 
@@ -719,13 +1863,13 @@ namespace QRScan
 
                     if (tBMornIn.Text != "NONE")
                     {
-                        btnMornIn.Enabled = true;       
+                        btnMornIn.Enabled = true;
                     }
                     if (tBAftIn.Text != "NONE" && tBMornIn.Text == "NONE")
                     {
                         btnAftIn.Enabled = true;
                     }
-                    if(tBEveIn.Text != "NONE" && tBMornIn.Text == "NONE" && tBAftIn.Text == "NONE")
+                    if (tBEveIn.Text != "NONE" && tBMornIn.Text == "NONE" && tBAftIn.Text == "NONE")
                     {
                         btnEveIn.Enabled = true;
                     }
@@ -746,16 +1890,21 @@ namespace QRScan
                 evtcon.Open();
                 SqlCommand cmd = evtcon.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Select * from eventTB order by evtCode DESC";
+                cmd.CommandText = "Select * from eventTB where eventDate = '" + date + "' order by evtCode DESC";
                 SqlDataReader dr = cmd.ExecuteReader();
 
                 while (dr.Read())
                 {
                     string name = (dr["eventName"].ToString());
-                    
+                    string att = "Regular Employee LogIn";
+
                     if (!cBEvt.Items.Contains(name))
                     {
                         cBEvt.Items.Add(name);
+                    }
+                    if (!cBEvt.Items.Contains(att))
+                    {
+                        cBEvt.Items.Add(att);
                     }
                 }
             }
@@ -775,7 +1924,7 @@ namespace QRScan
                 }
                 cBCamera.SelectedIndex = 0;
                 FinalFrame = new VideoCaptureDevice();
-                
+
             }
             catch (Exception e)
             {
@@ -788,7 +1937,7 @@ namespace QRScan
 
             string username = tBUser.Text;
             string pass = tBPass.Text;
-          
+
 
             try
             {
@@ -830,13 +1979,9 @@ namespace QRScan
 
         public void disbutt()
         {
-            btnMornIn.Enabled = false;
             btnMornOut.Enabled = false;
-            btnAftIn.Enabled = false;
             btnAftOut.Enabled = false;
-            btnEveIn.Enabled = false;
             btnEveOut.Enabled = false;
-            
         }
         private void Scanner_Load(object sender, EventArgs e)
         {
@@ -848,6 +1993,7 @@ namespace QRScan
             loadEvt();
             disbutt();
             tBPassLock.Visible = false;
+            tBWPass.Visible = false;
             timer1.Start();
             timer2.Start();
             timer3.Start();
@@ -896,10 +2042,51 @@ namespace QRScan
         private void timer3_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
+            string time = DateTime.Now.ToShortTimeString();
 
-            if (lblEvtCode.Text != "0000000")
+            try
             {
-                showOut();
+
+                string mOut = tBMornOut.Text;
+                string aOut = tBAftOut.Text;
+                string eOut = tBEveOut.Text;
+
+                string mIn = tBMornIn.Text;
+                string aIn = tBAftIn.Text;
+                string eIn = tBAftIn.Text;
+
+
+                if (lblEvtCode.Text != "0000000")
+                {
+                    // Morning Out
+                    if (time == mOut && mOut != "NONE" && aIn != "NONE" && eIn != "NONE")
+                    {
+                        btnMornIn.Enabled = false;
+                        btnMornOut.Enabled = true;
+                    }
+                    // Afternoon Out
+                    if (time == aOut && aOut != "NONE" && mIn != "NONE" && aIn != "NONE" && eIn != "NONE")
+                    {
+                        btnMornIn.Enabled = false;
+                        btnMornOut.Enabled = false;
+                        btnAftIn.Enabled = false;
+                        btnAftOut.Enabled = true;
+                    }
+                    // Evening Out
+                    if (time == eOut && eOut != "NONE" && mIn != "NONE" && aIn != "NONE" && eIn != "NONE")
+                    {
+                        btnMornIn.Enabled = false;
+                        btnMornOut.Enabled = false;
+                        btnAftIn.Enabled = false;
+                        btnAftOut.Enabled = false;
+                        btnEveIn.Enabled = false;
+                        btnEveOut.Enabled = true;
+                    }
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = f.Message;
             }
         }
 
@@ -907,7 +2094,23 @@ namespace QRScan
         {
             if (cBEvt.Text != null)
             {
-                cbEvt();
+                if (cBEvt.Text == "Regular Employee LogIn")
+                {
+                    lblEvtCode.Text = "REG0001";
+                    tBEvtAtt.Text = "ALL EMPLOYEES";
+                    tBMornIn.Text = "8:00 AM";
+                    tBMornOut.Text = "12:00 PM";
+                    tBAftIn.Text = "1:00 PM";
+                    tBAftOut.Text = "5:00 PM";
+                    tBEveIn.Text = "6:00 PM";
+                    tBEveOut.Text = "9:00 PM";
+                    disbutt();
+                    btnMornIn.Enabled = true;
+                }
+                else
+                {
+                    cbEvt();
+                }
             }
         }
 
@@ -915,7 +2118,6 @@ namespace QRScan
         {
             e.Handled = true;
         }
-
 
         private void Scanner_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -925,27 +2127,41 @@ namespace QRScan
 
         private void btnMornIn_Click(object sender, EventArgs e)
         {
-            //if (lblEvtCode.Text != "0000000")
-            //{
-            //    if (tBEvtAtt.Text == "ALL EMPLOYEES")
-            //    {
-                   
-            //    }
-            //    if (tBEvtAtt.Text == "ALL STUDENTS")
-            //    {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
+                        DateTime mOut = DateTime.Parse(tBMornOut.Text);
+                        DateTime time = DateTime.Parse(ntime);
 
-            //    }
-            //    if (tBEvtAtt.Text == "GENERAL")
-            //    {
-
-            //    }
-                
-            //}
-            //else
-            //{
-
-            //}
-            empRegMornIn();
+                        if (time >= mIn && time < mOut)
+                        {
+                            morningIn();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
 
         }
 
@@ -963,16 +2179,17 @@ namespace QRScan
                     {
                         string decoded = result.ToString().Trim();
                         tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";       
+                        lblStat.Text = "QR Decoded!";
                         mornInTimer.Stop();
                         FinalFrame.Stop();
                         pBQR.Image = Properties.Resources.kali;
-                        mornInRegEmp();             
+                        logMornIn();
+
                     }
                     else
                     {
                         lblStat.Text = "Verifying...";
-                        pBImg.Image = Properties.Resources.download;
+
                     }
                 }
 
@@ -999,8 +2216,401 @@ namespace QRScan
 
         private void btnWrap_Click(object sender, EventArgs e)
         {
-            SoundPlayer play = new SoundPlayer(Properties.Resources.ding);
-            play.Play();
+            if (btnMornOut.Enabled == true || 
+                btnAftIn.Enabled == true || 
+                btnEveOut.Enabled == true)
+            {
+                tBWPass.Visible = true;
+                tBWPass.Focus();
+            }
+        }
+
+        private void btnMornOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
+                        DateTime mOut = DateTime.Parse(tBMornOut.Text);
+                        DateTime aIn = DateTime.Parse(tBAftIn.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time < aIn && time >= mOut )
+                        {
+                            mornInTimer.Stop();
+                            FinalFrame.Stop();
+                            morningOut();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch(Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+        }
+
+        private void mornOutTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        mornOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logMornOut();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnAftIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBAftIn.Text);
+                        DateTime mOut = DateTime.Parse(tBAftOut.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= mIn && time < mOut)
+                        {
+                            aftIn();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+
+        }
+
+        private void aftInTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        aftInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logAftIn();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnAftOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
+                        DateTime mOut = DateTime.Parse(tBAftOut.Text);
+                        DateTime aIn = DateTime.Parse(tBEveIn.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time < aIn && time >= mOut)
+                        {
+                            aftInTimer.Stop();
+                            FinalFrame.Stop();
+                            aftOut();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+        }
+
+        private void aftOutTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        aftOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logAftOut();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void eveInTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        aftInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logEveIn();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEveIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBEveIn.Text);
+                        DateTime mOut = DateTime.Parse(tBEveOut.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= mIn && time < mOut)
+                        {
+                            eveIn();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+
+        }
+
+        private void eveOutTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        eveOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logEveOut();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEveOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+
+                        DateTime eIn = DateTime.Parse(tBEveIn.Text);
+                        DateTime eOut = DateTime.Parse(tBEveOut.Text);
+                        
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= eOut)
+                        {
+                            eveOutTimer.Stop();
+                            FinalFrame.Stop();
+                            eveOut();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+        }
+
+        private void tBWPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                wrapPass();
+            }
         }
     }
 }

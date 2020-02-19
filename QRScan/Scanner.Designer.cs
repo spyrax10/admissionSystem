@@ -32,10 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scanner));
             this.paneMain = new System.Windows.Forms.Panel();
             this.paneHome = new System.Windows.Forms.Panel();
+            this.tBWPass = new System.Windows.Forms.TextBox();
+            this.btnWrap = new System.Windows.Forms.Button();
+            this.tBPassLock = new System.Windows.Forms.TextBox();
+            this.btnLock = new System.Windows.Forms.Button();
             this.lblStat = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.pBImg = new System.Windows.Forms.PictureBox();
             this.tBLast = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tbMid = new System.Windows.Forms.TextBox();
@@ -45,6 +50,7 @@
             this.tBId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pBQR = new System.Windows.Forms.PictureBox();
             this.paneSet = new System.Windows.Forms.Panel();
             this.btnEveOut = new System.Windows.Forms.Button();
             this.btnAftOut = new System.Windows.Forms.Button();
@@ -76,38 +82,37 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.paneLogo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneSlide = new System.Windows.Forms.Panel();
             this.gBLog = new System.Windows.Forms.GroupBox();
+            this.pBLogBack = new System.Windows.Forms.PictureBox();
             this.lblForgot = new System.Windows.Forms.LinkLabel();
             this.btnLog = new System.Windows.Forms.Button();
             this.tBUser = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tBPass = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.mornInTimer = new System.Windows.Forms.Timer(this.components);
-            this.tBPassLock = new System.Windows.Forms.TextBox();
-            this.btnLock = new System.Windows.Forms.Button();
-            this.pBImg = new System.Windows.Forms.PictureBox();
-            this.pBQR = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pBLogBack = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnWrap = new System.Windows.Forms.Button();
-            this.tBWPass = new System.Windows.Forms.TextBox();
+            this.mornOutTimer = new System.Windows.Forms.Timer(this.components);
+            this.aftInTimer = new System.Windows.Forms.Timer(this.components);
+            this.aftOutTimer = new System.Windows.Forms.Timer(this.components);
+            this.eveInTimer = new System.Windows.Forms.Timer(this.components);
+            this.eveOutTimer = new System.Windows.Forms.Timer(this.components);
             this.paneMain.SuspendLayout();
             this.paneHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).BeginInit();
             this.paneSet.SuspendLayout();
             this.panel3.SuspendLayout();
             this.paneLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.gBLog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -153,12 +158,55 @@
             this.paneHome.Size = new System.Drawing.Size(1178, 661);
             this.paneHome.TabIndex = 5;
             // 
+            // tBWPass
+            // 
+            this.tBWPass.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBWPass.Location = new System.Drawing.Point(903, 624);
+            this.tBWPass.Name = "tBWPass";
+            this.tBWPass.PasswordChar = '*';
+            this.tBWPass.Size = new System.Drawing.Size(162, 27);
+            this.tBWPass.TabIndex = 107;
+            this.tBWPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBWPass_KeyPress);
+            // 
+            // btnWrap
+            // 
+            this.btnWrap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnWrap.Location = new System.Drawing.Point(1071, 625);
+            this.btnWrap.Name = "btnWrap";
+            this.btnWrap.Size = new System.Drawing.Size(96, 27);
+            this.btnWrap.TabIndex = 106;
+            this.btnWrap.Text = "WRAP UP";
+            this.btnWrap.UseVisualStyleBackColor = true;
+            this.btnWrap.Click += new System.EventHandler(this.btnWrap_Click);
+            // 
+            // tBPassLock
+            // 
+            this.tBPassLock.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBPassLock.Location = new System.Drawing.Point(410, 624);
+            this.tBPassLock.Name = "tBPassLock";
+            this.tBPassLock.PasswordChar = '*';
+            this.tBPassLock.Size = new System.Drawing.Size(162, 27);
+            this.tBPassLock.TabIndex = 105;
+            this.tBPassLock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBPassLock_KeyPress);
+            // 
+            // btnLock
+            // 
+            this.btnLock.FlatAppearance.BorderSize = 0;
+            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLock.Image = global::QRScan.Properties.Resources.Lock_Lock_icon;
+            this.btnLock.Location = new System.Drawing.Point(369, 621);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(35, 35);
+            this.btnLock.TabIndex = 104;
+            this.btnLock.UseVisualStyleBackColor = true;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            // 
             // lblStat
             // 
             this.lblStat.AutoSize = true;
             this.lblStat.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStat.ForeColor = System.Drawing.Color.Lime;
-            this.lblStat.Location = new System.Drawing.Point(568, 535);
+            this.lblStat.Location = new System.Drawing.Point(459, 535);
             this.lblStat.Name = "lblStat";
             this.lblStat.Size = new System.Drawing.Size(35, 23);
             this.lblStat.TabIndex = 66;
@@ -171,9 +219,9 @@
             this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label19.Location = new System.Drawing.Point(384, 535);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(184, 23);
+            this.label19.Size = new System.Drawing.Size(69, 23);
             this.label19.TabIndex = 65;
-            this.label19.Text = "Attendance Status:";
+            this.label19.Text = "Status:";
             // 
             // label18
             // 
@@ -196,6 +244,17 @@
             this.label17.Size = new System.Drawing.Size(177, 23);
             this.label17.TabIndex = 63;
             this.label17.Text = "Holder\'s QR Code:";
+            // 
+            // pBImg
+            // 
+            this.pBImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBImg.Image = global::QRScan.Properties.Resources.download;
+            this.pBImg.Location = new System.Drawing.Point(903, 221);
+            this.pBImg.Name = "pBImg";
+            this.pBImg.Size = new System.Drawing.Size(245, 245);
+            this.pBImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBImg.TabIndex = 62;
+            this.pBImg.TabStop = false;
             // 
             // tBLast
             // 
@@ -222,7 +281,6 @@
             this.tBLast.Name = "tBLast";
             this.tBLast.Size = new System.Drawing.Size(247, 31);
             this.tBLast.TabIndex = 61;
-            this.tBLast.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tBLast.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cBEvt_KeyPress);
             // 
             // label15
@@ -261,7 +319,6 @@
             this.tbMid.Name = "tbMid";
             this.tbMid.Size = new System.Drawing.Size(247, 31);
             this.tbMid.TabIndex = 59;
-            this.tbMid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbMid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cBEvt_KeyPress);
             // 
             // tBFirst
@@ -289,7 +346,6 @@
             this.tBFirst.Name = "tBFirst";
             this.tBFirst.Size = new System.Drawing.Size(247, 31);
             this.tBFirst.TabIndex = 58;
-            this.tBFirst.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tBFirst.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cBEvt_KeyPress);
             // 
             // label13
@@ -363,6 +419,17 @@
             this.label10.TabIndex = 53;
             this.label10.Text = "Please face the QR Code in front of Camera:";
             // 
+            // pBQR
+            // 
+            this.pBQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBQR.Image = global::QRScan.Properties.Resources.kali;
+            this.pBQR.Location = new System.Drawing.Point(388, 221);
+            this.pBQR.Name = "pBQR";
+            this.pBQR.Size = new System.Drawing.Size(245, 245);
+            this.pBQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBQR.TabIndex = 1;
+            this.pBQR.TabStop = false;
+            // 
             // paneSet
             // 
             this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -408,6 +475,7 @@
             this.btnEveOut.TabIndex = 103;
             this.btnEveOut.Text = "OUT";
             this.btnEveOut.UseVisualStyleBackColor = true;
+            this.btnEveOut.Click += new System.EventHandler(this.btnEveOut_Click);
             // 
             // btnAftOut
             // 
@@ -418,6 +486,7 @@
             this.btnAftOut.TabIndex = 102;
             this.btnAftOut.Text = "OUT";
             this.btnAftOut.UseVisualStyleBackColor = true;
+            this.btnAftOut.Click += new System.EventHandler(this.btnAftOut_Click);
             // 
             // btnMornOut
             // 
@@ -428,10 +497,10 @@
             this.btnMornOut.TabIndex = 101;
             this.btnMornOut.Text = "OUT";
             this.btnMornOut.UseVisualStyleBackColor = true;
+            this.btnMornOut.Click += new System.EventHandler(this.btnMornOut_Click);
             // 
             // btnEveIn
             // 
-            this.btnEveIn.Enabled = false;
             this.btnEveIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEveIn.Location = new System.Drawing.Point(7, 557);
             this.btnEveIn.Name = "btnEveIn";
@@ -439,10 +508,10 @@
             this.btnEveIn.TabIndex = 100;
             this.btnEveIn.Text = "EVENING TIME IN";
             this.btnEveIn.UseVisualStyleBackColor = true;
+            this.btnEveIn.Click += new System.EventHandler(this.btnEveIn_Click);
             // 
             // btnAftIn
             // 
-            this.btnAftIn.Enabled = false;
             this.btnAftIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAftIn.Location = new System.Drawing.Point(7, 523);
             this.btnAftIn.Name = "btnAftIn";
@@ -450,6 +519,7 @@
             this.btnAftIn.TabIndex = 99;
             this.btnAftIn.Text = "AFTERNOON TIME IN";
             this.btnAftIn.UseVisualStyleBackColor = true;
+            this.btnAftIn.Click += new System.EventHandler(this.btnAftIn_Click);
             // 
             // lblEvtCode
             // 
@@ -820,6 +890,16 @@
             this.paneLogo.Size = new System.Drawing.Size(593, 95);
             this.paneLogo.TabIndex = 8;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -868,6 +948,16 @@
             this.gBLog.TabStop = false;
             this.gBLog.Text = "LOGIN";
             // 
+            // pBLogBack
+            // 
+            this.pBLogBack.Image = ((System.Drawing.Image)(resources.GetObject("pBLogBack.Image")));
+            this.pBLogBack.Location = new System.Drawing.Point(299, 22);
+            this.pBLogBack.Name = "pBLogBack";
+            this.pBLogBack.Size = new System.Drawing.Size(30, 28);
+            this.pBLogBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBLogBack.TabIndex = 6;
+            this.pBLogBack.TabStop = false;
+            // 
             // lblForgot
             // 
             this.lblForgot.AutoSize = true;
@@ -903,6 +993,16 @@
             this.tBUser.Size = new System.Drawing.Size(225, 31);
             this.tBUser.TabIndex = 1;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(34, 81);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // tBPass
             // 
             this.tBPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -911,6 +1011,16 @@
             this.tBPass.PasswordChar = '*';
             this.tBPass.Size = new System.Drawing.Size(225, 31);
             this.tBPass.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(34, 134);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // timer1
             // 
@@ -935,109 +1045,30 @@
             this.mornInTimer.Interval = 3000;
             this.mornInTimer.Tick += new System.EventHandler(this.mornInTimer_Tick);
             // 
-            // tBPassLock
+            // mornOutTimer
             // 
-            this.tBPassLock.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBPassLock.Location = new System.Drawing.Point(410, 624);
-            this.tBPassLock.Name = "tBPassLock";
-            this.tBPassLock.PasswordChar = '*';
-            this.tBPassLock.Size = new System.Drawing.Size(162, 27);
-            this.tBPassLock.TabIndex = 105;
-            this.tBPassLock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBPassLock_KeyPress);
+            this.mornOutTimer.Interval = 3000;
+            this.mornOutTimer.Tick += new System.EventHandler(this.mornOutTimer_Tick);
             // 
-            // btnLock
+            // aftInTimer
             // 
-            this.btnLock.FlatAppearance.BorderSize = 0;
-            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLock.Image = global::QRScan.Properties.Resources.Lock_Lock_icon;
-            this.btnLock.Location = new System.Drawing.Point(369, 621);
-            this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(35, 35);
-            this.btnLock.TabIndex = 104;
-            this.btnLock.UseVisualStyleBackColor = true;
-            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            this.aftInTimer.Interval = 3000;
+            this.aftInTimer.Tick += new System.EventHandler(this.aftInTimer_Tick);
             // 
-            // pBImg
+            // aftOutTimer
             // 
-            this.pBImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBImg.Image = global::QRScan.Properties.Resources.download;
-            this.pBImg.Location = new System.Drawing.Point(903, 221);
-            this.pBImg.Name = "pBImg";
-            this.pBImg.Size = new System.Drawing.Size(245, 245);
-            this.pBImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBImg.TabIndex = 62;
-            this.pBImg.TabStop = false;
+            this.aftOutTimer.Interval = 3000;
+            this.aftOutTimer.Tick += new System.EventHandler(this.aftOutTimer_Tick);
             // 
-            // pBQR
+            // eveInTimer
             // 
-            this.pBQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBQR.Image = global::QRScan.Properties.Resources.kali;
-            this.pBQR.Location = new System.Drawing.Point(388, 221);
-            this.pBQR.Name = "pBQR";
-            this.pBQR.Size = new System.Drawing.Size(245, 245);
-            this.pBQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBQR.TabIndex = 1;
-            this.pBQR.TabStop = false;
+            this.eveInTimer.Interval = 3000;
+            this.eveInTimer.Tick += new System.EventHandler(this.eveInTimer_Tick);
             // 
-            // pictureBox4
+            // eveOutTimer
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pBLogBack
-            // 
-            this.pBLogBack.Image = ((System.Drawing.Image)(resources.GetObject("pBLogBack.Image")));
-            this.pBLogBack.Location = new System.Drawing.Point(299, 22);
-            this.pBLogBack.Name = "pBLogBack";
-            this.pBLogBack.Size = new System.Drawing.Size(30, 28);
-            this.pBLogBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBLogBack.TabIndex = 6;
-            this.pBLogBack.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 81);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(34, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // btnWrap
-            // 
-            this.btnWrap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWrap.Location = new System.Drawing.Point(1071, 625);
-            this.btnWrap.Name = "btnWrap";
-            this.btnWrap.Size = new System.Drawing.Size(96, 27);
-            this.btnWrap.TabIndex = 106;
-            this.btnWrap.Text = "WRAP UP";
-            this.btnWrap.UseVisualStyleBackColor = true;
-            this.btnWrap.Click += new System.EventHandler(this.btnWrap_Click);
-            // 
-            // tBWPass
-            // 
-            this.tBWPass.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBWPass.Location = new System.Drawing.Point(903, 624);
-            this.tBWPass.Name = "tBWPass";
-            this.tBWPass.PasswordChar = '*';
-            this.tBWPass.Size = new System.Drawing.Size(162, 27);
-            this.tBWPass.TabIndex = 107;
+            this.eveOutTimer.Interval = 3000;
+            this.eveOutTimer.Tick += new System.EventHandler(this.eveOutTimer_Tick);
             // 
             // Scanner
             // 
@@ -1056,18 +1087,18 @@
             this.paneMain.ResumeLayout(false);
             this.paneHome.ResumeLayout(false);
             this.paneHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).EndInit();
             this.paneSet.ResumeLayout(false);
             this.paneSet.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.paneLogo.ResumeLayout(false);
             this.paneLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.gBLog.ResumeLayout(false);
             this.gBLog.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1145,6 +1176,11 @@
         private System.Windows.Forms.TextBox tBPassLock;
         private System.Windows.Forms.Button btnWrap;
         private System.Windows.Forms.TextBox tBWPass;
+        private System.Windows.Forms.Timer mornOutTimer;
+        private System.Windows.Forms.Timer aftInTimer;
+        private System.Windows.Forms.Timer aftOutTimer;
+        private System.Windows.Forms.Timer eveInTimer;
+        private System.Windows.Forms.Timer eveOutTimer;
     }
 }
 

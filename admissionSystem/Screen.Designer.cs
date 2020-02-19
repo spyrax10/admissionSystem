@@ -37,8 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneSlide = new System.Windows.Forms.Panel();
-            this.gBId = new System.Windows.Forms.GroupBox();
-            this.tBId = new System.Windows.Forms.TextBox();
             this.gBLog = new System.Windows.Forms.GroupBox();
             this.pBLogBack = new System.Windows.Forms.PictureBox();
             this.lblForgot = new System.Windows.Forms.LinkLabel();
@@ -59,13 +57,14 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tBCrePass = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.gBId = new System.Windows.Forms.GroupBox();
+            this.tBId = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.paneLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            this.gBId.SuspendLayout();
             this.gBLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.gBId.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -160,28 +160,6 @@
             this.paneSlide.Name = "paneSlide";
             this.paneSlide.Size = new System.Drawing.Size(114, 15);
             this.paneSlide.TabIndex = 3;
-            // 
-            // gBId
-            // 
-            this.gBId.Controls.Add(this.tBId);
-            this.gBId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBId.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBId.Location = new System.Drawing.Point(515, 273);
-            this.gBId.Name = "gBId";
-            this.gBId.Size = new System.Drawing.Size(331, 214);
-            this.gBId.TabIndex = 6;
-            this.gBId.TabStop = false;
-            this.gBId.Text = "Enter ID Number:";
-            // 
-            // tBId
-            // 
-            this.tBId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tBId.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBId.Location = new System.Drawing.Point(64, 100);
-            this.tBId.Name = "tBId";
-            this.tBId.Size = new System.Drawing.Size(225, 33);
-            this.tBId.TabIndex = 5;
-            this.tBId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBId_KeyPress);
             // 
             // gBLog
             // 
@@ -411,6 +389,28 @@
             this.pictureBox8.TabIndex = 2;
             this.pictureBox8.TabStop = false;
             // 
+            // gBId
+            // 
+            this.gBId.Controls.Add(this.tBId);
+            this.gBId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gBId.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBId.Location = new System.Drawing.Point(515, 273);
+            this.gBId.Name = "gBId";
+            this.gBId.Size = new System.Drawing.Size(331, 214);
+            this.gBId.TabIndex = 6;
+            this.gBId.TabStop = false;
+            this.gBId.Text = "Enter ID Number:";
+            // 
+            // tBId
+            // 
+            this.tBId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBId.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBId.Location = new System.Drawing.Point(64, 100);
+            this.tBId.Name = "tBId";
+            this.tBId.Size = new System.Drawing.Size(225, 33);
+            this.tBId.TabIndex = 5;
+            this.tBId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBId_KeyPress);
+            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -433,6 +433,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Screen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Screen_Load);
             this.panel2.ResumeLayout(false);
@@ -440,8 +441,6 @@
             this.paneLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.gBId.ResumeLayout(false);
-            this.gBId.PerformLayout();
             this.gBLog.ResumeLayout(false);
             this.gBLog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).EndInit();
@@ -456,6 +455,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.gBId.ResumeLayout(false);
+            this.gBId.PerformLayout();
             this.ResumeLayout(false);
 
         }

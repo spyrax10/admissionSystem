@@ -13,7 +13,7 @@ namespace admissionSystem
 {
     public partial class Main : Form
     {
-        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
 
         string imgLoc = "";
         SqlDataAdapter adapt;
@@ -26,7 +26,53 @@ namespace admissionSystem
             paneSide.Height = btnHome.Height;
             paneSide.Top = btnHome.Top;
         }
+        public void delEvt()
+        {
+            SqlConnection delcon = new SqlConnection(empcs);
 
+            string code = gVEvent.CurrentRow.Cells[0].Value.ToString();
+            try
+            {
+                delcon.Open();
+                SqlCommand cmd = delcon.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Delete from eventTB where evtCode = '" + code + "'";
+                cmd.ExecuteNonQuery();
+                delcon.Close();
+                clrEvt();
+                dispEvt();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void cbMainEvt()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            string name = cBEvt.Text;
+            try
+            {
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "Select * from eventTB where eventName = '" + name + "'";
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    tBAtt.Text = (dr["Attendee"].ToString());
+                    lblCode.Text = (dr["evtCode"].ToString());     
+                }
+                con.Close();
+                
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void loadEvt()
         {
             SqlConnection con = new SqlConnection(empcs);
@@ -41,10 +87,15 @@ namespace admissionSystem
                 while (dr.Read())
                 {
                     string evtName = (dr["eventName"].ToString());
+                    string att = "Regular Employee LogIn";
 
                     if (!cBEvt.Items.Contains(evtName))
                     {
                         cBEvt.Items.Add(evtName);
+                    }
+                    if (!cBEvt.Items.Contains(att))
+                    {
+                        cBEvt.Items.Add(att);
                     }
                 }
             }
@@ -87,8 +138,6 @@ namespace admissionSystem
                     c.Text = "";
                 }
             }
-            rBYes.Checked = false;
-            rBNo.Checked = false;
             btnEvtAdd.Text = "ADD";
         }
         public void clrStud()
@@ -409,20 +458,9 @@ namespace admissionSystem
                     tBEventMorOut.Text = (dr["MorningOut"].ToString());
                     tBEventAftIn.Text = (dr["AftIn"].ToString());
                     tBEventAftOut.Text = (dr["AftOut"].ToString());
-                    string eveIn = (dr["EveIn"].ToString());
-                    string eveOut = (dr["EveOut"].ToString());
+                    tBEventEveIn.Text = (dr["EveIn"].ToString());
+                    tBEventEveOut.Text = (dr["EveOut"].ToString());
 
-                    if (eveIn != "NONE" || eveOut == "NONE")
-                    {
-                        rBYes.Checked = true;
-                        tBEventEveIn.Text = eveIn;
-                        tBEventEveOut.Text = eveOut;
-                    }
-                    else
-                    {
-                        tBEventEveIn.Text = eveIn;
-                        tBEventEveOut.Text = eveOut;
-                    }
                     btnEvtAdd.Text = "ADD";
                 }
             }
@@ -454,20 +492,9 @@ namespace admissionSystem
                     tBEventMorOut.Text = (dr["MorningOut"].ToString());
                     tBEventAftIn.Text = (dr["AftIn"].ToString());
                     tBEventAftOut.Text = (dr["AftOut"].ToString());
-                    string eveIn = (dr["EveIn"].ToString());
-                    string eveOut = (dr["EveOut"].ToString());
+                    tBEventEveIn.Text = (dr["EveIn"].ToString());
+                    tBEventEveOut.Text = (dr["EveOut"].ToString());
 
-                    if (eveIn != "NONE" || eveOut == "NONE")
-                    {
-                        rBYes.Checked = true;
-                        tBEventEveIn.Text = eveIn;
-                        tBEventEveOut.Text = eveOut;
-                    }
-                    else
-                    {
-                        tBEventEveIn.Text = eveIn;
-                        tBEventEveOut.Text = eveOut;
-                    }
                     btnEvtAdd.Text = "UPDATE";
                 }
 
@@ -582,15 +609,13 @@ namespace admissionSystem
 
             try
             {
-                if (name == "" || att == "" || date == "")
+                if (name == "" || att == "" || date == "" || 
+                    mornIn == "" || mornOut == "" || 
+                    aftIn == "" || aftOut == "" || eveIn == "" || eveOut == "")
                 {
                     MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (mornIn == "" && mornOut == ""
-                     && aftIn == "" && aftOut == "" && eveIn == "" && eveOut == "")
-                {
-                    MessageBox.Show("There's must be at least one Schedule!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                
                 else
                 {
                     upcon.Open();
@@ -746,11 +771,6 @@ namespace admissionSystem
                 {
                     MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (mornIn == "" && mornOut == ""
-                     && aftIn == "" && aftOut == "" && eveIn == "" && eveOut == "")
-                {
-                    MessageBox.Show("There's must be at least one Schedule!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
                 else
                 {
                     chkcon.Open();
@@ -775,10 +795,6 @@ namespace admissionSystem
                         tBEventEveIn.Text = (dr["EveIn"].ToString());
                         tBEventEveOut.Text = (dr["EveOut"].ToString());
 
-                        if (tBEventEveIn.Text != "NONE" || tBEventEveOut.Text == "NONE")
-                        {
-                            rBYes.Checked = true;
-                        }
                         btnEvtAdd.Text = "UPDATE";
                     }
                     else
@@ -1342,33 +1358,6 @@ namespace admissionSystem
             }
         }
 
-        private void rBNo_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rBNo.Checked == true)
-            {
-                tBEventEveIn.Text = "NONE";
-                tBEventEveOut.Text = "NONE";
-            }
-            else
-            {
-                tBEventEveIn.Text = "";
-                tBEventEveOut.Text = "";
-            }       
-        }
-
-        private void rBYes_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rBYes.Checked == true)
-            {
-                tBEventEveIn.Text = "";
-                tBEventEveOut.Text = "";
-            }
-            else
-            {
-                tBEventEveIn.Text = "NONE";
-                tBEventEveOut.Text = "NONE";
-            }     
-        }
 
         private void btnStudRe_Click(object sender, EventArgs e)
         {
@@ -1389,6 +1378,35 @@ namespace admissionSystem
             else
             {
                 MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cBEvt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cBEvt.Text != "")
+            {
+                tBAtt.Text = "";
+                if (cBEvt.Text == "Regular Employee LogIn")
+                {
+                    lblCode.Text = "REG0001";
+                    tBAtt.Text = "ALL EMPLOYEES";
+                }
+                else
+                {
+                    cbMainEvt();
+                }
+            }
+        }
+
+        private void btnDelEvt_Click(object sender, EventArgs e)
+        {
+            if (gVEvent.Rows.Count > 0)
+            {
+                if (MessageBox.Show ("Are you sure?", " Verify", MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    delEvt();
+                }
             }
         }
     }

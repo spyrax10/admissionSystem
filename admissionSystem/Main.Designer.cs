@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.paneSet = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tbUser = new System.Windows.Forms.TextBox();
-            this.tbPass = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.btnAddEvent = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
@@ -47,6 +41,12 @@
             this.btnAddEmp = new System.Windows.Forms.Button();
             this.paneSide = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
+            this.paneSet = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbUser = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
             this.tabAddEmp = new System.Windows.Forms.TabPage();
@@ -105,9 +105,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabLog = new System.Windows.Forms.TabPage();
             this.paneLog = new System.Windows.Forms.Panel();
+            this.tBAtt = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.lblCode = new System.Windows.Forms.Label();
+            this.cBEvt = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabEvent = new System.Windows.Forms.TabPage();
             this.paneEvent = new System.Windows.Forms.Panel();
+            this.btnDelEvt = new System.Windows.Forms.Button();
             this.btnCPEvt = new System.Windows.Forms.Button();
             this.gBEvent = new System.Windows.Forms.GroupBox();
             this.tBEventEveOut = new System.Windows.Forms.ComboBox();
@@ -126,10 +132,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.rBNo = new System.Windows.Forms.RadioButton();
-            this.label13 = new System.Windows.Forms.Label();
-            this.rBYes = new System.Windows.Forms.RadioButton();
-            this.tBEventAtt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnEventRe = new System.Windows.Forms.Button();
             this.btnEvtAdd = new System.Windows.Forms.Button();
@@ -137,13 +139,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.gVEvent = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.cBEvt = new System.Windows.Forms.ComboBox();
-            this.lblCode = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.tBEvtAtt = new System.Windows.Forms.TextBox();
+            this.tBEventAtt = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.paneSet.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.paneSet.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabAddEmp.SuspendLayout();
             this.paneEmp.SuspendLayout();
@@ -169,7 +168,6 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.paneSet);
             this.panel1.Controls.Add(this.btnAddEvent);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAttdLog);
@@ -178,75 +176,12 @@
             this.panel1.Controls.Add(this.btnAddEmp);
             this.panel1.Controls.Add(this.paneSide);
             this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.paneSet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(205, 741);
             this.panel1.TabIndex = 0;
-            // 
-            // paneSet
-            // 
-            this.paneSet.BackColor = System.Drawing.Color.White;
-            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSet.Controls.Add(this.button1);
-            this.paneSet.Controls.Add(this.tbUser);
-            this.paneSet.Controls.Add(this.tbPass);
-            this.paneSet.Controls.Add(this.label24);
-            this.paneSet.Controls.Add(this.label23);
-            this.paneSet.ForeColor = System.Drawing.Color.White;
-            this.paneSet.Location = new System.Drawing.Point(2, 144);
-            this.paneSet.Name = "paneSet";
-            this.paneSet.Size = new System.Drawing.Size(196, 154);
-            this.paneSet.TabIndex = 10;
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
-            this.button1.Location = new System.Drawing.Point(150, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 32);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tbUser
-            // 
-            this.tbUser.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tbUser.Location = new System.Drawing.Point(11, 31);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(172, 27);
-            this.tbUser.TabIndex = 3;
-            // 
-            // tbPass
-            // 
-            this.tbPass.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.tbPass.Location = new System.Drawing.Point(11, 79);
-            this.tbPass.Name = "tbPass";
-            this.tbPass.Size = new System.Drawing.Size(172, 27);
-            this.tbPass.TabIndex = 2;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(8, 61);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 15);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Password:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(8, 13);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(73, 15);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Username:";
             // 
             // btnAddEvent
             // 
@@ -254,14 +189,14 @@
             this.btnAddEvent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnAddEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
             this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEvent.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEvent.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEvent.Image = global::admissionSystem.Properties.Resources.checklist_icon1;
             this.btnAddEvent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddEvent.Location = new System.Drawing.Point(22, 273);
             this.btnAddEvent.Name = "btnAddEvent";
             this.btnAddEvent.Size = new System.Drawing.Size(176, 36);
             this.btnAddEvent.TabIndex = 11;
-            this.btnAddEvent.Text = "CREATE AN EVENT";
+            this.btnAddEvent.Text = "EVENT LIST";
             this.btnAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddEvent.UseVisualStyleBackColor = true;
             this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
@@ -392,6 +327,70 @@
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // paneSet
+            // 
+            this.paneSet.BackColor = System.Drawing.Color.White;
+            this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSet.Controls.Add(this.button1);
+            this.paneSet.Controls.Add(this.tbUser);
+            this.paneSet.Controls.Add(this.tbPass);
+            this.paneSet.Controls.Add(this.label24);
+            this.paneSet.Controls.Add(this.label23);
+            this.paneSet.ForeColor = System.Drawing.Color.White;
+            this.paneSet.Location = new System.Drawing.Point(2, 144);
+            this.paneSet.Name = "paneSet";
+            this.paneSet.Size = new System.Drawing.Size(196, 154);
+            this.paneSet.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
+            this.button1.Location = new System.Drawing.Point(150, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 32);
+            this.button1.TabIndex = 4;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tbUser
+            // 
+            this.tbUser.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.tbUser.Location = new System.Drawing.Point(11, 31);
+            this.tbUser.Name = "tbUser";
+            this.tbUser.Size = new System.Drawing.Size(172, 27);
+            this.tbUser.TabIndex = 3;
+            // 
+            // tbPass
+            // 
+            this.tbPass.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.tbPass.Location = new System.Drawing.Point(11, 79);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.Size = new System.Drawing.Size(172, 27);
+            this.tbPass.TabIndex = 2;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(8, 61);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 15);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Password:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(8, 13);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(73, 15);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Username:";
             // 
             // tabControl1
             // 
@@ -1179,7 +1178,8 @@
             // paneLog
             // 
             this.paneLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneLog.Controls.Add(this.tBEvtAtt);
+            this.paneLog.Controls.Add(this.tBAtt);
+            this.paneLog.Controls.Add(this.label25);
             this.paneLog.Controls.Add(this.label29);
             this.paneLog.Controls.Add(this.lblCode);
             this.paneLog.Controls.Add(this.cBEvt);
@@ -1189,6 +1189,75 @@
             this.paneLog.Name = "paneLog";
             this.paneLog.Size = new System.Drawing.Size(1138, 706);
             this.paneLog.TabIndex = 0;
+            // 
+            // tBAtt
+            // 
+            this.tBAtt.AutoCompleteCustomSource.AddRange(new string[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS",
+            "ALL STUDENTS",
+            "ALL EMPLOYEES",
+            "GENERAL"});
+            this.tBAtt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tBAtt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBAtt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBAtt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBAtt.Location = new System.Drawing.Point(574, 3);
+            this.tBAtt.Name = "tBAtt";
+            this.tBAtt.Size = new System.Drawing.Size(355, 27);
+            this.tBAtt.TabIndex = 78;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label25.Location = new System.Drawing.Point(-1, 6);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(107, 19);
+            this.label25.TabIndex = 77;
+            this.label25.Text = "Event Name:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label29.Location = new System.Drawing.Point(478, 6);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(90, 19);
+            this.label29.TabIndex = 75;
+            this.label29.Text = "Attendees:";
+            // 
+            // lblCode
+            // 
+            this.lblCode.AutoSize = true;
+            this.lblCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblCode.Location = new System.Drawing.Point(1060, 6);
+            this.lblCode.Name = "lblCode";
+            this.lblCode.Size = new System.Drawing.Size(72, 19);
+            this.lblCode.TabIndex = 74;
+            this.lblCode.Text = "0000000";
+            // 
+            // cBEvt
+            // 
+            this.cBEvt.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cBEvt.FormattingEnabled = true;
+            this.cBEvt.Location = new System.Drawing.Point(112, 4);
+            this.cBEvt.Name = "cBEvt";
+            this.cBEvt.Size = new System.Drawing.Size(355, 26);
+            this.cBEvt.TabIndex = 73;
+            this.cBEvt.SelectedIndexChanged += new System.EventHandler(this.cBEvt_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -1219,6 +1288,7 @@
             // paneEvent
             // 
             this.paneEvent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneEvent.Controls.Add(this.btnDelEvt);
             this.paneEvent.Controls.Add(this.btnCPEvt);
             this.paneEvent.Controls.Add(this.gBEvent);
             this.paneEvent.Controls.Add(this.gVEvent);
@@ -1227,6 +1297,17 @@
             this.paneEvent.Name = "paneEvent";
             this.paneEvent.Size = new System.Drawing.Size(1138, 706);
             this.paneEvent.TabIndex = 0;
+            // 
+            // btnDelEvt
+            // 
+            this.btnDelEvt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelEvt.Location = new System.Drawing.Point(991, 318);
+            this.btnDelEvt.Name = "btnDelEvt";
+            this.btnDelEvt.Size = new System.Drawing.Size(141, 32);
+            this.btnDelEvt.TabIndex = 76;
+            this.btnDelEvt.Text = "DELETE EVENT";
+            this.btnDelEvt.UseVisualStyleBackColor = true;
+            this.btnDelEvt.Click += new System.EventHandler(this.btnDelEvt_Click);
             // 
             // btnCPEvt
             // 
@@ -1241,6 +1322,7 @@
             // 
             // gBEvent
             // 
+            this.gBEvent.Controls.Add(this.tBEventAtt);
             this.gBEvent.Controls.Add(this.tBEventEveOut);
             this.gBEvent.Controls.Add(this.tBEventEveIn);
             this.gBEvent.Controls.Add(this.tBEventAftOut);
@@ -1257,10 +1339,6 @@
             this.gBEvent.Controls.Add(this.label18);
             this.gBEvent.Controls.Add(this.label15);
             this.gBEvent.Controls.Add(this.label14);
-            this.gBEvent.Controls.Add(this.rBNo);
-            this.gBEvent.Controls.Add(this.label13);
-            this.gBEvent.Controls.Add(this.rBYes);
-            this.gBEvent.Controls.Add(this.tBEventAtt);
             this.gBEvent.Controls.Add(this.label12);
             this.gBEvent.Controls.Add(this.btnEventRe);
             this.gBEvent.Controls.Add(this.btnEvtAdd);
@@ -1392,7 +1470,7 @@
             // dTEventDate
             // 
             this.dTEventDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dTEventDate.Location = new System.Drawing.Point(149, 146);
+            this.dTEventDate.Location = new System.Drawing.Point(383, 146);
             this.dTEventDate.Name = "dTEventDate";
             this.dTEventDate.Size = new System.Drawing.Size(121, 27);
             this.dTEventDate.TabIndex = 67;
@@ -1402,7 +1480,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label22.Location = new System.Drawing.Point(96, 149);
+            this.label22.Location = new System.Drawing.Point(330, 153);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(47, 18);
             this.label22.TabIndex = 66;
@@ -1496,69 +1574,6 @@
             this.label14.TabIndex = 54;
             this.label14.Text = "Time Morning In:";
             // 
-            // rBNo
-            // 
-            this.rBNo.AutoSize = true;
-            this.rBNo.ForeColor = System.Drawing.Color.Black;
-            this.rBNo.Location = new System.Drawing.Point(452, 150);
-            this.rBNo.Name = "rBNo";
-            this.rBNo.Size = new System.Drawing.Size(52, 23);
-            this.rBNo.TabIndex = 53;
-            this.rBNo.TabStop = true;
-            this.rBNo.Text = "NO";
-            this.rBNo.UseVisualStyleBackColor = true;
-            this.rBNo.CheckedChanged += new System.EventHandler(this.rBNo_CheckedChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(309, 153);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(78, 18);
-            this.label13.TabIndex = 52;
-            this.label13.Text = "Evening?:";
-            // 
-            // rBYes
-            // 
-            this.rBYes.AutoSize = true;
-            this.rBYes.ForeColor = System.Drawing.Color.Black;
-            this.rBYes.Location = new System.Drawing.Point(393, 150);
-            this.rBYes.Name = "rBYes";
-            this.rBYes.Size = new System.Drawing.Size(53, 23);
-            this.rBYes.TabIndex = 51;
-            this.rBYes.TabStop = true;
-            this.rBYes.Text = "YES";
-            this.rBYes.UseVisualStyleBackColor = true;
-            this.rBYes.CheckedChanged += new System.EventHandler(this.rBYes_CheckedChanged);
-            // 
-            // tBEventAtt
-            // 
-            this.tBEventAtt.AutoCompleteCustomSource.AddRange(new string[] {
-            "GRADUATE SCHOOL",
-            "BASIC EDUCATION DEPARTMENT",
-            "COLLEGE OF ARTS AND SCIENCES",
-            "COLLEGE OF BUSINESS EDUCATION",
-            "COLLEGE OF CRIMINAL JUSTICE",
-            "COLLEGE OF LAW",
-            "COLLEGE OF MARITIME EDUCATION",
-            "COLLEGE OF PARAMEDICS",
-            "COLLEGE OF TEACHER EDUCATION",
-            "COLLEGE OF TECHNOLOGY",
-            "TVET PROGRAMS",
-            "ALL STUDENTS",
-            "ALL EMPLOYEES",
-            "GENERAL"});
-            this.tBEventAtt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.tBEventAtt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tBEventAtt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tBEventAtt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEventAtt.Location = new System.Drawing.Point(149, 113);
-            this.tBEventAtt.Name = "tBEventAtt";
-            this.tBEventAtt.Size = new System.Drawing.Size(355, 27);
-            this.tBEventAtt.TabIndex = 50;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1644,45 +1659,28 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // cBEvt
+            // tBEventAtt
             // 
-            this.cBEvt.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cBEvt.FormattingEnabled = true;
-            this.cBEvt.Location = new System.Drawing.Point(3, 4);
-            this.cBEvt.Name = "cBEvt";
-            this.cBEvt.Size = new System.Drawing.Size(355, 26);
-            this.cBEvt.TabIndex = 73;
-            // 
-            // lblCode
-            // 
-            this.lblCode.AutoSize = true;
-            this.lblCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblCode.Location = new System.Drawing.Point(364, 6);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(72, 19);
-            this.lblCode.TabIndex = 74;
-            this.lblCode.Text = "0000000";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label29.Location = new System.Drawing.Point(478, 6);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(90, 19);
-            this.label29.TabIndex = 75;
-            this.label29.Text = "Attendees:";
-            // 
-            // tBEvtAtt
-            // 
-            this.tBEvtAtt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tBEvtAtt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBEvtAtt.Location = new System.Drawing.Point(574, 3);
-            this.tBEvtAtt.Name = "tBEvtAtt";
-            this.tBEvtAtt.Size = new System.Drawing.Size(333, 27);
-            this.tBEvtAtt.TabIndex = 76;
+            this.tBEventAtt.FormattingEnabled = true;
+            this.tBEventAtt.Items.AddRange(new object[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS",
+            "ALL STUDENTS",
+            "ALL EMPLOYEES",
+            "GENERAL"});
+            this.tBEventAtt.Location = new System.Drawing.Point(149, 113);
+            this.tBEventAtt.Name = "tBEventAtt";
+            this.tBEventAtt.Size = new System.Drawing.Size(355, 27);
+            this.tBEventAtt.TabIndex = 81;
             // 
             // Main
             // 
@@ -1705,10 +1703,10 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
-            this.paneSet.ResumeLayout(false);
-            this.paneSet.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.paneSet.ResumeLayout(false);
+            this.paneSet.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabAddEmp.ResumeLayout(false);
             this.paneEmp.ResumeLayout(false);
@@ -1825,10 +1823,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.RadioButton rBNo;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton rBYes;
-        private System.Windows.Forms.TextBox tBEventAtt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnEventRe;
         private System.Windows.Forms.Button btnEvtAdd;
@@ -1851,6 +1845,9 @@
         private System.Windows.Forms.ComboBox cBEvt;
         private System.Windows.Forms.Label lblCode;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox tBEvtAtt;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox tBAtt;
+        private System.Windows.Forms.Button btnDelEvt;
+        private System.Windows.Forms.ComboBox tBEventAtt;
     }
 }
