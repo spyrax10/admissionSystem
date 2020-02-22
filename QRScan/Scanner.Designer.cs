@@ -103,6 +103,7 @@
             this.aftOutTimer = new System.Windows.Forms.Timer(this.components);
             this.eveInTimer = new System.Windows.Forms.Timer(this.components);
             this.eveOutTimer = new System.Windows.Forms.Timer(this.components);
+            this.sinMornInTimer = new System.Windows.Forms.Timer(this.components);
             this.paneMain.SuspendLayout();
             this.paneHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBImg)).BeginInit();
@@ -1070,6 +1071,11 @@
             this.eveOutTimer.Interval = 3000;
             this.eveOutTimer.Tick += new System.EventHandler(this.eveOutTimer_Tick);
             // 
+            // sinMornInTimer
+            // 
+            this.sinMornInTimer.Interval = 3000;
+            this.sinMornInTimer.Tick += new System.EventHandler(this.sinMornInTimer_Tick);
+            // 
             // Scanner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1181,6 +1187,7 @@
         private System.Windows.Forms.Timer aftOutTimer;
         private System.Windows.Forms.Timer eveInTimer;
         private System.Windows.Forms.Timer eveOutTimer;
+        private System.Windows.Forms.Timer sinMornInTimer;
     }
 }
 
