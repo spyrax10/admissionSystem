@@ -63,6 +63,9 @@ namespace QRScan
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #region Complete Attendance Schedule
+        
         public void logEveOut()
         {
             SqlConnection empmOut = new SqlConnection(empcs);
@@ -326,7 +329,7 @@ namespace QRScan
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }        
         public void logEveIn()
         {
             SqlConnection empmOut = new SqlConnection(empcs);
@@ -624,7 +627,7 @@ namespace QRScan
             {
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
+        }        
         public void logAftOut()
         {
             SqlConnection empmOut = new SqlConnection(empcs);
@@ -1679,6 +1682,501 @@ namespace QRScan
             }
         }
 
+
+        public void eveOut()
+        {
+            capCam();
+            eveOutTimer.Enabled = true;
+            eveOutTimer.Start();
+        }
+        public void eveIn()
+        {
+            capCam();
+            eveInTimer.Enabled = true;
+            eveInTimer.Start();
+        }
+        public void aftOut()
+        {
+            capCam();
+            aftOutTimer.Enabled = true;
+            aftOutTimer.Start();
+        }
+        public void aftIn()
+        {
+            capCam();
+            aftInTimer.Enabled = true;
+            aftInTimer.Start();
+
+        }
+        public void morningIn()
+        {
+            capCam();
+            mornInTimer.Enabled = true;
+            mornInTimer.Start();
+
+        }
+        public void morningOut()
+        {
+            capCam();
+            mornOutTimer.Enabled = true;
+            mornOutTimer.Start();
+        }
+
+
+
+
+        private void btnMornIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
+                        DateTime mOut = DateTime.Parse(tBMornOut.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= mIn && time < mOut)
+                        {
+                            morningIn();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+
+        }
+        private void mornInTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        mornInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logMornIn();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnMornOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
+                        DateTime mOut = DateTime.Parse(tBMornOut.Text);
+                        DateTime aIn = DateTime.Parse(tBAftIn.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time < aIn && time >= mOut)
+                        {
+                            mornInTimer.Stop();
+                            FinalFrame.Stop();
+                            morningOut();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+        }
+        private void mornOutTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        mornOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logMornOut();
+
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void btnAftIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBAftIn.Text);
+                        DateTime mOut = DateTime.Parse(tBAftOut.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= mIn && time < mOut)
+                        {
+                            aftIn();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+
+        }
+        private void aftInTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        aftInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logAftIn();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        private void btnAftOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
+                        DateTime mOut = DateTime.Parse(tBAftOut.Text);
+                        DateTime aIn = DateTime.Parse(tBEveIn.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time < aIn && time >= mOut)
+                        {
+                            aftInTimer.Stop();
+                            FinalFrame.Stop();
+                            aftOut();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+        }
+        private void aftOutTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        aftOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logAftOut();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void eveInTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        aftInTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logEveIn();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnEveIn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+                        DateTime mIn = DateTime.Parse(tBEveIn.Text);
+                        DateTime mOut = DateTime.Parse(tBEveOut.Text);
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= mIn && time < mOut)
+                        {
+                            eveIn();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+
+        }
+        private void eveOutTimer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (pBQR.Image != null)
+                {
+                    BarcodeReader Reader = new BarcodeReader();
+                    Result result = Reader.Decode((Bitmap)pBQR.Image);
+
+                    if (result != null)
+                    {
+                        string decoded = result.ToString().Trim();
+                        tBId.Text = decoded;
+                        lblStat.Text = "QR Decoded!";
+                        eveOutTimer.Stop();
+                        FinalFrame.Stop();
+                        pBQR.Image = Properties.Resources.kali;
+                        logEveOut();
+                    }
+                    else
+                    {
+                        lblStat.Text = "Verifying...";
+
+                    }
+                }
+
+            }
+            catch (Exception f)
+            {
+                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void btnEveOut_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblEvtCode.Text != "0000000")
+                {
+                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
+                    {
+                        lblStat.Text = "Starting...";
+                        string ntime = DateTime.Now.ToShortTimeString();
+
+                        DateTime eIn = DateTime.Parse(tBEveIn.Text);
+                        DateTime eOut = DateTime.Parse(tBEveOut.Text);
+
+                        DateTime time = DateTime.Parse(ntime);
+
+                        if (time >= eOut)
+                        {
+                            eveOutTimer.Stop();
+                            FinalFrame.Stop();
+                            eveOut();
+                        }
+                        else
+                        {
+                            lblStat.Text = "TIME NOT MEET!";
+                        }
+                    }
+                    else
+                    {
+                        lblStat.Text = "ERROR!";
+                    }
+                }
+                else
+                {
+                    lblStat.Text = "EVENT EMPTY!";
+                }
+            }
+            catch (Exception f)
+            {
+                lblStat.Text = "ERROR!";
+            }
+        }
+
+        #endregion
+
+
+        #region Single Schedule Attendance
+        #endregion
+
+        #region Misc
+
         public void wrapPass()
         {
             SqlConnection vercon = new SqlConnection(empcs);
@@ -1777,45 +2275,6 @@ namespace QRScan
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        public void eveOut()
-        {
-            capCam();
-            eveOutTimer.Enabled = true;
-            eveOutTimer.Start();
-        }
-        public void eveIn()
-        {
-            capCam();
-            eveInTimer.Enabled = true;
-            eveInTimer.Start();
-        }
-        public void aftOut()
-        {
-            capCam();
-            aftOutTimer.Enabled = true;
-            aftOutTimer.Start();
-        }
-        public void aftIn()
-        {
-            capCam();
-            aftInTimer.Enabled = true;
-            aftInTimer.Start();
-
-        }
-        public void morningIn()
-        {
-            capCam();
-            mornInTimer.Enabled = true;
-            mornInTimer.Start();
-
-        }
-        public void morningOut()
-        {
-            capCam();
-            mornOutTimer.Enabled = true;
-            mornOutTimer.Start();
-        }
         public void capCam()
         {
             try
@@ -1830,13 +2289,11 @@ namespace QRScan
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
 
             pBQR.Image = (Bitmap)eventArgs.Frame.Clone();
         }
-
         public void cbEvt()
         {
             SqlConnection evtcon = new SqlConnection(empcs);
@@ -1976,7 +2433,6 @@ namespace QRScan
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         public void disbutt()
         {
             btnMornOut.Enabled = false;
@@ -1998,7 +2454,6 @@ namespace QRScan
             timer2.Start();
             timer3.Start();
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             paneSlide.Left += 2;
@@ -2012,7 +2467,6 @@ namespace QRScan
                 move = 2;
             }
         }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             try
@@ -2033,12 +2487,10 @@ namespace QRScan
                 MessageBox.Show(f.Message);
             }
         }
-
         private void btnLog_Click(object sender, EventArgs e)
         {
             logID();
         }
-
         private void timer3_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
@@ -2089,7 +2541,6 @@ namespace QRScan
                 lblStat.Text = f.Message;
             }
         }
-
         private void cBEvt_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cBEvt.Text != null)
@@ -2113,99 +2564,20 @@ namespace QRScan
                 }
             }
         }
-
         private void cBEvt_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
-
         private void Scanner_FormClosing(object sender, FormClosingEventArgs e)
         {
             FinalFrame.Stop();
             Application.Exit();
         }
-
-        private void btnMornIn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lblEvtCode.Text != "0000000")
-                {
-                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
-                    {
-                        lblStat.Text = "Starting...";
-                        string ntime = DateTime.Now.ToShortTimeString();
-                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
-                        DateTime mOut = DateTime.Parse(tBMornOut.Text);
-                        DateTime time = DateTime.Parse(ntime);
-
-                        if (time >= mIn && time < mOut)
-                        {
-                            morningIn();
-                        }
-                        else
-                        {
-                            lblStat.Text = "TIME NOT MEET!";
-                        }
-                    }
-                    else
-                    {
-                        lblStat.Text = "ERROR!";
-                    }
-                }
-                else
-                {
-                    lblStat.Text = "EVENT EMPTY!";
-                }
-            }
-            catch (Exception f)
-            {
-                lblStat.Text = "ERROR!";
-            }
-
-        }
-
-        private void mornInTimer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (pBQR.Image != null)
-                {
-                    BarcodeReader Reader = new BarcodeReader();
-                    Result result = Reader.Decode((Bitmap)pBQR.Image);
-
-                    if (result != null)
-                    {
-                        string decoded = result.ToString().Trim();
-                        tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";
-                        mornInTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        logMornIn();
-
-                    }
-                    else
-                    {
-                        lblStat.Text = "Verifying...";
-
-                    }
-                }
-
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void btnLock_Click(object sender, EventArgs e)
         {
             tBPassLock.Visible = true;
             tBPassLock.Focus();
         }
-
         private void tBPassLock_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -2213,398 +2585,16 @@ namespace QRScan
                 verPass();
             }
         }
-
         private void btnWrap_Click(object sender, EventArgs e)
         {
-            if (btnMornOut.Enabled == true || 
-                btnAftIn.Enabled == true || 
+            if (btnMornOut.Enabled == true ||
+                btnAftIn.Enabled == true ||
                 btnEveOut.Enabled == true)
             {
                 tBWPass.Visible = true;
                 tBWPass.Focus();
             }
         }
-
-        private void btnMornOut_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lblEvtCode.Text != "0000000")
-                {
-                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
-                    {
-                        lblStat.Text = "Starting...";
-                        string ntime = DateTime.Now.ToShortTimeString();
-                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
-                        DateTime mOut = DateTime.Parse(tBMornOut.Text);
-                        DateTime aIn = DateTime.Parse(tBAftIn.Text);
-                        DateTime time = DateTime.Parse(ntime);
-
-                        if (time < aIn && time >= mOut )
-                        {
-                            mornInTimer.Stop();
-                            FinalFrame.Stop();
-                            morningOut();
-                        }
-                        else
-                        {
-                            lblStat.Text = "TIME NOT MEET!";
-                        }
-                    }
-                    else
-                    {
-                        lblStat.Text = "ERROR!";
-                    }
-                }
-                else
-                {
-                    lblStat.Text = "EVENT EMPTY!";
-                }
-            }
-            catch(Exception f)
-            {
-                lblStat.Text = "ERROR!";
-            }
-        }
-
-        private void mornOutTimer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (pBQR.Image != null)
-                {
-                    BarcodeReader Reader = new BarcodeReader();
-                    Result result = Reader.Decode((Bitmap)pBQR.Image);
-
-                    if (result != null)
-                    {
-                        string decoded = result.ToString().Trim();
-                        tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";
-                        mornOutTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        logMornOut();
-
-                    }
-                    else
-                    {
-                        lblStat.Text = "Verifying...";
-
-                    }
-                }
-
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void btnAftIn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lblEvtCode.Text != "0000000")
-                {
-                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
-                    {
-                        lblStat.Text = "Starting...";
-                        string ntime = DateTime.Now.ToShortTimeString();
-                        DateTime mIn = DateTime.Parse(tBAftIn.Text);
-                        DateTime mOut = DateTime.Parse(tBAftOut.Text);
-                        DateTime time = DateTime.Parse(ntime);
-
-                        if (time >= mIn && time < mOut)
-                        {
-                            aftIn();
-                        }
-                        else
-                        {
-                            lblStat.Text = "TIME NOT MEET!";
-                        }
-                    }
-                    else
-                    {
-                        lblStat.Text = "ERROR!";
-                    }
-                }
-                else
-                {
-                    lblStat.Text = "EVENT EMPTY!";
-                }
-            }
-            catch (Exception f)
-            {
-                lblStat.Text = "ERROR!";
-            }
-
-        }
-
-        private void aftInTimer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (pBQR.Image != null)
-                {
-                    BarcodeReader Reader = new BarcodeReader();
-                    Result result = Reader.Decode((Bitmap)pBQR.Image);
-
-                    if (result != null)
-                    {
-                        string decoded = result.ToString().Trim();
-                        tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";
-                        aftInTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        logAftIn();
-                    }
-                    else
-                    {
-                        lblStat.Text = "Verifying...";
-
-                    }
-                }
-
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        private void btnAftOut_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lblEvtCode.Text != "0000000")
-                {
-                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
-                    {
-                        lblStat.Text = "Starting...";
-                        string ntime = DateTime.Now.ToShortTimeString();
-                        DateTime mIn = DateTime.Parse(tBMornIn.Text);
-                        DateTime mOut = DateTime.Parse(tBAftOut.Text);
-                        DateTime aIn = DateTime.Parse(tBEveIn.Text);
-                        DateTime time = DateTime.Parse(ntime);
-
-                        if (time < aIn && time >= mOut)
-                        {
-                            aftInTimer.Stop();
-                            FinalFrame.Stop();
-                            aftOut();
-                        }
-                        else
-                        {
-                            lblStat.Text = "TIME NOT MEET!";
-                        }
-                    }
-                    else
-                    {
-                        lblStat.Text = "ERROR!";
-                    }
-                }
-                else
-                {
-                    lblStat.Text = "EVENT EMPTY!";
-                }
-            }
-            catch (Exception f)
-            {
-                lblStat.Text = "ERROR!";
-            }
-        }
-
-        private void aftOutTimer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (pBQR.Image != null)
-                {
-                    BarcodeReader Reader = new BarcodeReader();
-                    Result result = Reader.Decode((Bitmap)pBQR.Image);
-
-                    if (result != null)
-                    {
-                        string decoded = result.ToString().Trim();
-                        tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";
-                        aftOutTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        logAftOut();
-                    }
-                    else
-                    {
-                        lblStat.Text = "Verifying...";
-
-                    }
-                }
-
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void eveInTimer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (pBQR.Image != null)
-                {
-                    BarcodeReader Reader = new BarcodeReader();
-                    Result result = Reader.Decode((Bitmap)pBQR.Image);
-
-                    if (result != null)
-                    {
-                        string decoded = result.ToString().Trim();
-                        tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";
-                        aftInTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        logEveIn();
-                    }
-                    else
-                    {
-                        lblStat.Text = "Verifying...";
-
-                    }
-                }
-
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnEveIn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lblEvtCode.Text != "0000000")
-                {
-                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
-                    {
-                        lblStat.Text = "Starting...";
-                        string ntime = DateTime.Now.ToShortTimeString();
-                        DateTime mIn = DateTime.Parse(tBEveIn.Text);
-                        DateTime mOut = DateTime.Parse(tBEveOut.Text);
-                        DateTime time = DateTime.Parse(ntime);
-
-                        if (time >= mIn && time < mOut)
-                        {
-                            eveIn();
-                        }
-                        else
-                        {
-                            lblStat.Text = "TIME NOT MEET!";
-                        }
-                    }
-                    else
-                    {
-                        lblStat.Text = "ERROR!";
-                    }
-                }
-                else
-                {
-                    lblStat.Text = "EVENT EMPTY!";
-                }
-            }
-            catch (Exception f)
-            {
-                lblStat.Text = "ERROR!";
-            }
-
-        }
-
-        private void eveOutTimer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                if (pBQR.Image != null)
-                {
-                    BarcodeReader Reader = new BarcodeReader();
-                    Result result = Reader.Decode((Bitmap)pBQR.Image);
-
-                    if (result != null)
-                    {
-                        string decoded = result.ToString().Trim();
-                        tBId.Text = decoded;
-                        lblStat.Text = "QR Decoded!";
-                        eveOutTimer.Stop();
-                        FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
-                        logEveOut();
-                    }
-                    else
-                    {
-                        lblStat.Text = "Verifying...";
-
-                    }
-                }
-
-            }
-            catch (Exception f)
-            {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnEveOut_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (lblEvtCode.Text != "0000000")
-                {
-                    if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
-                    {
-                        lblStat.Text = "Starting...";
-                        string ntime = DateTime.Now.ToShortTimeString();
-
-                        DateTime eIn = DateTime.Parse(tBEveIn.Text);
-                        DateTime eOut = DateTime.Parse(tBEveOut.Text);
-                        
-                        DateTime time = DateTime.Parse(ntime);
-
-                        if (time >= eOut)
-                        {
-                            eveOutTimer.Stop();
-                            FinalFrame.Stop();
-                            eveOut();
-                        }
-                        else
-                        {
-                            lblStat.Text = "TIME NOT MEET!";
-                        }
-                    }
-                    else
-                    {
-                        lblStat.Text = "ERROR!";
-                    }
-                }
-                else
-                {
-                    lblStat.Text = "EVENT EMPTY!";
-                }
-            }
-            catch (Exception f)
-            {
-                lblStat.Text = "ERROR!";
-            }
-        }
-
         private void tBWPass_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -2612,5 +2602,6 @@ namespace QRScan
                 wrapPass();
             }
         }
+        #endregion
     }
 }

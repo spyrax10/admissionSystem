@@ -116,6 +116,7 @@
             this.btnDelEvt = new System.Windows.Forms.Button();
             this.btnCPEvt = new System.Windows.Forms.Button();
             this.gBEvent = new System.Windows.Forms.GroupBox();
+            this.tBEventAtt = new System.Windows.Forms.ComboBox();
             this.tBEventEveOut = new System.Windows.Forms.ComboBox();
             this.tBEventEveIn = new System.Windows.Forms.ComboBox();
             this.tBEventAftOut = new System.Windows.Forms.ComboBox();
@@ -139,7 +140,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.gVEvent = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tBEventAtt = new System.Windows.Forms.ComboBox();
+            this.btnStudAb = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.paneSet.SuspendLayout();
@@ -1178,6 +1182,10 @@
             // paneLog
             // 
             this.paneLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneLog.Controls.Add(this.button4);
+            this.paneLog.Controls.Add(this.button3);
+            this.paneLog.Controls.Add(this.label13);
+            this.paneLog.Controls.Add(this.btnStudAb);
             this.paneLog.Controls.Add(this.tBAtt);
             this.paneLog.Controls.Add(this.label25);
             this.paneLog.Controls.Add(this.label29);
@@ -1352,6 +1360,29 @@
             this.gBEvent.TabIndex = 74;
             this.gBEvent.TabStop = false;
             this.gBEvent.Text = "Create New Event:";
+            // 
+            // tBEventAtt
+            // 
+            this.tBEventAtt.FormattingEnabled = true;
+            this.tBEventAtt.Items.AddRange(new object[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS",
+            "ALL STUDENTS",
+            "ALL EMPLOYEES",
+            "GENERAL"});
+            this.tBEventAtt.Location = new System.Drawing.Point(149, 113);
+            this.tBEventAtt.Name = "tBEventAtt";
+            this.tBEventAtt.Size = new System.Drawing.Size(355, 27);
+            this.tBEventAtt.TabIndex = 81;
             // 
             // tBEventEveOut
             // 
@@ -1659,28 +1690,46 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tBEventAtt
+            // btnStudAb
             // 
-            this.tBEventAtt.FormattingEnabled = true;
-            this.tBEventAtt.Items.AddRange(new object[] {
-            "GRADUATE SCHOOL",
-            "BASIC EDUCATION DEPARTMENT",
-            "COLLEGE OF ARTS AND SCIENCES",
-            "COLLEGE OF BUSINESS EDUCATION",
-            "COLLEGE OF CRIMINAL JUSTICE",
-            "COLLEGE OF LAW",
-            "COLLEGE OF MARITIME EDUCATION",
-            "COLLEGE OF PARAMEDICS",
-            "COLLEGE OF TEACHER EDUCATION",
-            "COLLEGE OF TECHNOLOGY",
-            "TVET PROGRAMS",
-            "ALL STUDENTS",
-            "ALL EMPLOYEES",
-            "GENERAL"});
-            this.tBEventAtt.Location = new System.Drawing.Point(149, 113);
-            this.tBEventAtt.Name = "tBEventAtt";
-            this.tBEventAtt.Size = new System.Drawing.Size(355, 27);
-            this.tBEventAtt.TabIndex = 81;
+            this.btnStudAb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudAb.Location = new System.Drawing.Point(3, 631);
+            this.btnStudAb.Name = "btnStudAb";
+            this.btnStudAb.Size = new System.Drawing.Size(175, 28);
+            this.btnStudAb.TabIndex = 79;
+            this.btnStudAb.Text = "ABSENT STUDENTS";
+            this.btnStudAb.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(-1, 609);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 19);
+            this.label13.TabIndex = 80;
+            this.label13.Text = "Filter:";
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(184, 631);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 28);
+            this.button3.TabIndex = 81;
+            this.button3.Text = " STUDENTS";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(304, 631);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 28);
+            this.button4.TabIndex = 82;
+            this.button4.Text = "EMPLOYEES";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -1849,5 +1898,9 @@
         private System.Windows.Forms.TextBox tBAtt;
         private System.Windows.Forms.Button btnDelEvt;
         private System.Windows.Forms.ComboBox tBEventAtt;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnStudAb;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }
