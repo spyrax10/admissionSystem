@@ -42,7 +42,7 @@
             this.paneSide = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
             this.paneSet = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSetSave = new System.Windows.Forms.Button();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -105,6 +105,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabLog = new System.Windows.Forms.TabPage();
             this.paneLog = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnStudAb = new System.Windows.Forms.Button();
             this.tBAtt = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -140,10 +144,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.gVEvent = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnStudAb = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.paneSet.SuspendLayout();
@@ -172,6 +173,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.paneSet);
             this.panel1.Controls.Add(this.btnAddEvent);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnAttdLog);
@@ -180,7 +182,6 @@
             this.panel1.Controls.Add(this.btnAddEmp);
             this.panel1.Controls.Add(this.paneSide);
             this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Controls.Add(this.paneSet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -336,7 +337,8 @@
             // 
             this.paneSet.BackColor = System.Drawing.Color.White;
             this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSet.Controls.Add(this.button1);
+            this.paneSet.Controls.Add(this.lblId);
+            this.paneSet.Controls.Add(this.btnSetSave);
             this.paneSet.Controls.Add(this.tbUser);
             this.paneSet.Controls.Add(this.tbPass);
             this.paneSet.Controls.Add(this.label24);
@@ -347,16 +349,17 @@
             this.paneSet.Size = new System.Drawing.Size(196, 154);
             this.paneSet.TabIndex = 10;
             // 
-            // button1
+            // btnSetSave
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
-            this.button1.Location = new System.Drawing.Point(150, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 32);
-            this.button1.TabIndex = 4;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSetSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSetSave.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
+            this.btnSetSave.Location = new System.Drawing.Point(150, 112);
+            this.btnSetSave.Name = "btnSetSave";
+            this.btnSetSave.Size = new System.Drawing.Size(33, 32);
+            this.btnSetSave.TabIndex = 4;
+            this.btnSetSave.UseVisualStyleBackColor = true;
+            this.btnSetSave.Click += new System.EventHandler(this.btnSetSave_Click);
             // 
             // tbUser
             // 
@@ -1198,6 +1201,47 @@
             this.paneLog.Size = new System.Drawing.Size(1138, 706);
             this.paneLog.TabIndex = 0;
             // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(304, 631);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 28);
+            this.button4.TabIndex = 82;
+            this.button4.Text = "EMPLOYEES";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(184, 631);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 28);
+            this.button3.TabIndex = 81;
+            this.button3.Text = " STUDENTS";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(-1, 609);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(48, 19);
+            this.label13.TabIndex = 80;
+            this.label13.Text = "Filter:";
+            // 
+            // btnStudAb
+            // 
+            this.btnStudAb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudAb.Location = new System.Drawing.Point(3, 631);
+            this.btnStudAb.Name = "btnStudAb";
+            this.btnStudAb.Size = new System.Drawing.Size(175, 28);
+            this.btnStudAb.TabIndex = 79;
+            this.btnStudAb.Text = "ABSENT STUDENTS";
+            this.btnStudAb.UseVisualStyleBackColor = true;
+            // 
             // tBAtt
             // 
             this.tBAtt.AutoCompleteCustomSource.AddRange(new string[] {
@@ -1690,46 +1734,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnStudAb
+            // lblId
             // 
-            this.btnStudAb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudAb.Location = new System.Drawing.Point(3, 631);
-            this.btnStudAb.Name = "btnStudAb";
-            this.btnStudAb.Size = new System.Drawing.Size(175, 28);
-            this.btnStudAb.TabIndex = 79;
-            this.btnStudAb.Text = "ABSENT STUDENTS";
-            this.btnStudAb.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(-1, 609);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 19);
-            this.label13.TabIndex = 80;
-            this.label13.Text = "Filter:";
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(184, 631);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 28);
-            this.button3.TabIndex = 81;
-            this.button3.Text = " STUDENTS";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(304, 631);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 28);
-            this.button4.TabIndex = 82;
-            this.button4.Text = "EMPLOYEES";
-            this.button4.UseVisualStyleBackColor = true;
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblId.Location = new System.Drawing.Point(8, 109);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(42, 15);
+            this.lblId.TabIndex = 5;
+            this.lblId.Text = "00000";
             // 
             // Main
             // 
@@ -1886,7 +1900,7 @@
         private System.Windows.Forms.ComboBox tBEventMorOut;
         private System.Windows.Forms.ComboBox tBEventMorIn;
         private System.Windows.Forms.Button btnCPEvt;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSetSave;
         private System.Windows.Forms.TextBox tbUser;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.Label label24;
@@ -1902,5 +1916,6 @@
         private System.Windows.Forms.Button btnStudAb;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label lblId;
     }
 }

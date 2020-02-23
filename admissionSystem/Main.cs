@@ -26,6 +26,55 @@ namespace admissionSystem
             paneSide.Height = btnHome.Height;
             paneSide.Top = btnHome.Top;
         }
+        public void upSet()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            SqlConnection chk = new SqlConnection(empcs);
+
+            string user = tbUser.Text;
+            string pass = tbPass.Text;
+            string id = lblId.Text;
+
+            try
+            {
+                if (tbUser.Text == "" || tbPass.Text == "")
+                {
+                    MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    chk.Open();
+                    SqlCommand chkcmd = chk.CreateCommand();
+                    chkcmd.CommandType = CommandType.Text;
+                    chkcmd.CommandText = "Select * from setTB where username = '" + user + "' "+
+                        "and empId != '" + id + "'";
+                    SqlDataReader dr = chkcmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        MessageBox.Show("Username already taken!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);            
+                    }
+                    else
+                    {
+                        con.Open();
+                        SqlCommand cmd = con.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "Update setTB set username = '" + user + "', " +
+                            "password = '" + pass + "' where empId = '" + id + "'";
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                        paneSet.Visible = false;
+                        MessageBox.Show("Successfully Updated!", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                    }
+                    chk.Close();
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void delEvt()
         {
             SqlConnection delcon = new SqlConnection(empcs);
@@ -51,6 +100,7 @@ namespace admissionSystem
         {
             SqlConnection con = new SqlConnection(empcs);
             string name = cBEvt.Text;
+            
             try
             {
 
@@ -212,6 +262,7 @@ namespace admissionSystem
                 {
                     tbUser.Text = (dr["username"].ToString());
                     tbPass.Text = (dr["password"].ToString());
+                    lblId.Text = (dr["empId"].ToString());
                 }
                 loadcon.Close();
             }
@@ -1408,6 +1459,11 @@ namespace admissionSystem
                     delEvt();
                 }
             }
+        }
+
+        private void btnSetSave_Click(object sender, EventArgs e)
+        {
+            upSet();
         }
     }
 }

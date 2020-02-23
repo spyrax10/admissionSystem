@@ -85,10 +85,10 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btnShut);
             this.panel2.Controls.Add(this.paneLogo);
-            this.panel2.Controls.Add(this.gBLog);
-            this.panel2.Controls.Add(this.gBForgot);
             this.panel2.Controls.Add(this.gBCreate);
             this.panel2.Controls.Add(this.gBId);
+            this.panel2.Controls.Add(this.gBLog);
+            this.panel2.Controls.Add(this.gBForgot);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1336, 736);

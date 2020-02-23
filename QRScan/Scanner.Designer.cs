@@ -105,6 +105,10 @@
             this.eveOutTimer = new System.Windows.Forms.Timer(this.components);
             this.sinMornInTimer = new System.Windows.Forms.Timer(this.components);
             this.sinMornOutTimer = new System.Windows.Forms.Timer(this.components);
+            this.sinAftInTimer = new System.Windows.Forms.Timer(this.components);
+            this.sinAftOutTimer = new System.Windows.Forms.Timer(this.components);
+            this.sinEveInTimer = new System.Windows.Forms.Timer(this.components);
+            this.sinEveOutTimer = new System.Windows.Forms.Timer(this.components);
             this.paneMain.SuspendLayout();
             this.paneHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBImg)).BeginInit();
@@ -547,6 +551,7 @@
             // 
             // cBCamera
             // 
+            this.cBCamera.Enabled = false;
             this.cBCamera.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBCamera.FormattingEnabled = true;
             this.cBCamera.Location = new System.Drawing.Point(7, 441);
@@ -1044,43 +1049,63 @@
             // 
             // mornInTimer
             // 
-            this.mornInTimer.Interval = 3000;
+            this.mornInTimer.Interval = 2000;
             this.mornInTimer.Tick += new System.EventHandler(this.mornInTimer_Tick);
             // 
             // mornOutTimer
             // 
-            this.mornOutTimer.Interval = 3000;
+            this.mornOutTimer.Interval = 2000;
             this.mornOutTimer.Tick += new System.EventHandler(this.mornOutTimer_Tick);
             // 
             // aftInTimer
             // 
-            this.aftInTimer.Interval = 3000;
+            this.aftInTimer.Interval = 2000;
             this.aftInTimer.Tick += new System.EventHandler(this.aftInTimer_Tick);
             // 
             // aftOutTimer
             // 
-            this.aftOutTimer.Interval = 3000;
+            this.aftOutTimer.Interval = 2000;
             this.aftOutTimer.Tick += new System.EventHandler(this.aftOutTimer_Tick);
             // 
             // eveInTimer
             // 
-            this.eveInTimer.Interval = 3000;
+            this.eveInTimer.Interval = 2000;
             this.eveInTimer.Tick += new System.EventHandler(this.eveInTimer_Tick);
             // 
             // eveOutTimer
             // 
-            this.eveOutTimer.Interval = 3000;
+            this.eveOutTimer.Interval = 2000;
             this.eveOutTimer.Tick += new System.EventHandler(this.eveOutTimer_Tick);
             // 
             // sinMornInTimer
             // 
-            this.sinMornInTimer.Interval = 3000;
+            this.sinMornInTimer.Interval = 2000;
             this.sinMornInTimer.Tick += new System.EventHandler(this.sinMornInTimer_Tick);
             // 
             // sinMornOutTimer
             // 
-            this.sinMornOutTimer.Interval = 3000;
+            this.sinMornOutTimer.Interval = 2000;
             this.sinMornOutTimer.Tick += new System.EventHandler(this.sinMornOutTimer_Tick);
+            // 
+            // sinAftInTimer
+            // 
+            this.sinAftInTimer.Interval = 2000;
+            this.sinAftInTimer.Tick += new System.EventHandler(this.sinAftInTimer_Tick);
+            // 
+            // sinAftOutTimer
+            // 
+            this.sinAftOutTimer.Interval = 2000;
+            this.sinAftOutTimer.Tick += new System.EventHandler(this.sinAftOutTimer_Tick);
+            // 
+            // sinEveInTimer
+            // 
+            this.sinEveInTimer.Interval = 2000;
+            this.sinEveInTimer.Tick += new System.EventHandler(this.sinEveInTimer_Tick);
+            // 
+            // sinEveOutTimer
+            // 
+            this.sinEveOutTimer.Interval = 2000;
+            this.sinEveOutTimer.Tick += new System.EventHandler(this.sinEveOutTimer_Tick);
             // 
             // Scanner
             // 
@@ -1195,6 +1220,10 @@
         private System.Windows.Forms.Timer eveOutTimer;
         private System.Windows.Forms.Timer sinMornInTimer;
         private System.Windows.Forms.Timer sinMornOutTimer;
+        private System.Windows.Forms.Timer sinAftInTimer;
+        private System.Windows.Forms.Timer sinAftOutTimer;
+        private System.Windows.Forms.Timer sinEveInTimer;
+        private System.Windows.Forms.Timer sinEveOutTimer;
     }
 }
 

@@ -244,11 +244,6 @@ namespace admissionSystem
             Application.Exit();
         }
 
-        private void btnIDVer_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void tBId_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
