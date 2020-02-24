@@ -61,6 +61,36 @@ namespace QRScan.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _null {
+            get {
+                object obj = ResourceManager.GetObject("null", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abc {
+            get {
+                object obj = ResourceManager.GetObject("abc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Checklist_icon {
+            get {
+                object obj = ResourceManager.GetObject("Checklist-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream ding {
@@ -105,6 +135,16 @@ namespace QRScan.Properties {
         internal static System.Drawing.Bitmap Lock_Unlock_icon {
             get {
                 object obj = ResourceManager.GetObject("Lock-Unlock-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap null1 {
+            get {
+                object obj = ResourceManager.GetObject("null1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

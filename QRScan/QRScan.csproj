@@ -123,5 +123,17 @@
   <ItemGroup>
     <None Include="Resources\what-are-you-doing.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checklist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\null1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

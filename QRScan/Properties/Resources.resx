@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="kali" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kali.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="null" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\null.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="who_are_you" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\who-are-you.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Lock-Unlock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock-Unlock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,19 +130,28 @@
   <data name="Lock-Lock-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Lock-Lock-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ding.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="null1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\null1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kali" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kali.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeah" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeah.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Checklist-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checklist-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="what_are_you_doing" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\what-are-you-doing.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="who_are_you" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\who-are-you.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="yeah" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\yeah.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="abc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -8,6 +8,7 @@ using System.IO;
 using QRCoder;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using DGVPrinterHelper;
 
 namespace admissionSystem
 {
@@ -25,6 +26,151 @@ namespace admissionSystem
             InitializeComponent();
             paneSide.Height = btnHome.Height;
             paneSide.Top = btnHome.Top;
+            this.TopMost = true;
+            this.BringToFront();
+        }
+        public void findEvt()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            string value = tBSerEvt.Text;
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select evtCode as Code, " +
+                    "eventName as Name, " +
+                    "Attendee, " +
+                    "eventDate as Date, " +
+                    "eventStat as Status from eventTB " +
+                    "where evtCode LIKE '%" + value + "%'  OR Attendee LIKE '%" + value + "%' ", con);
+                adapt.Fill(dt);
+                gVEvent.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void findStud()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            string value = tbStudSer.Text;
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select studId as StudId, Lastname, Firstname, Midname, Year, Dept as Department, Course from studTB " +
+                    "where studId LIKE '%" + value + "%' OR Lastname LIKE '%" + value + "%'", con);
+                adapt.Fill(dt);
+                gVStud.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void findEmp()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            string value = tBEmpSer.Text;
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select empId as EmpId, Lastname, Firstname, Midname, Dept as Department, Pos as Position from empTB " +
+                    "where empId LIKE '%" + value + "%' OR Lastname LIKE '%" + value + "%'", con);
+                adapt.Fill(dt);
+                gVEmp.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void printStud()
+        {
+            string date = DateTime.Now.ToLongDateString();
+            string time = DateTime.Now.ToLongTimeString();
+            string rep = "STUDENT LIST";
+
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = rep + Environment.NewLine;
+            printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Time Printed: " + time;
+            printer.PageSettings.Landscape = true;
+            printer.FooterSpacing = 15;
+            printer.PrintSettings.PrintToFile = true;
+            printer.PrintDataGridView(gVStud);
+
+            MessageBox.Show("Printing Done!", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.TopMost = true;
+            this.BringToFront();
+        }
+        public void printEmp()
+        {
+            string date = DateTime.Now.ToLongDateString();
+            string time = DateTime.Now.ToLongTimeString();
+            string rep = "EMPLOYEE LIST";
+
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = rep + Environment.NewLine;
+            printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Time Printed: " + time;
+            printer.PageSettings.Landscape = true;
+            printer.FooterSpacing = 15;
+            printer.PrintSettings.PrintToFile = true;
+            printer.PrintDataGridView(gVEmp);
+
+            MessageBox.Show("Printing Done!", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.TopMost = true;
+            this.BringToFront();
+        }
+        public void printLog()
+        {
+            string date = DateTime.Now.ToLongDateString();
+            string time = DateTime.Now.ToLongTimeString();
+            string rep = tBTit.Text;
+
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = rep + Environment.NewLine;
+            printer.SubTitle = "Date Printed: " + date + Environment.NewLine + Environment.NewLine + Environment.NewLine;
+                
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Time Printed: " + time;
+            printer.PageSettings.Landscape = true;
+            printer.FooterSpacing = 15;
+            printer.PrintSettings.PrintToFile = true;
+            printer.PrintDataGridView(gVLog);
+
+            MessageBox.Show("Printing Done!", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            tBTit.Visible = false;
+            tBTit.ForeColor = Color.Gray;
+            tBTit.Text = "REPORT TITTLE";
+            this.TopMost = true;
+            this.BringToFront();
+
         }
         public void upSet()
         {
@@ -96,9 +242,101 @@ namespace admissionSystem
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void abEmp()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select empId as EmpID, Lastname, Firstname, Midname, " +
+                    "Dept as Department, Pos as Position from empTB where NOT EXISTS (Select Id from attendTB " +
+                    "where Id = CAST (empId as varchar) and evtCode = '" + lblCode.Text + "') order by empId DESC", con);
+                adapt.Fill(dt);
+                gVLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                gVLog.DataSource = dt;
+                con.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void abStud()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+            
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select studId as StudID, Lastname, Firstname, Midname, " +
+                    "Year, Dept as Department, Course from studTB where NOT EXISTS (Select Id from attendTB " +
+                    "where Id = CAST (studId as varchar) and evtCode = '" + lblCode.Text + "') order by studId DESC", con);
+                adapt.Fill(dt);
+                gVLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                gVLog.DataSource = dt;
+                con.Close();
+                
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void filStud()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select Id, Last as Lastname, First as Firstname, Mid as Midname, " +
+                    "Dept as Department, Course, Year, mornTimeIn as MorningIn, mornTimeOut as MorningOut, " +
+                    "aftTimeIn as AfternoonIn, aftTimeout as AfternoonOut, eveTimeIn as EveningIn, eveTimeOut as EveningOut, totHours as TotalHrs" +
+                    " from attendTB where evtCode = '" + lblCode.Text + "' and type = 'STUDENT'", con);
+                adapt.Fill(dt);
+                gVLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                gVLog.DataSource = dt;
+                con.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void filEmp()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select Id, Last as Lastname, First as Firstname, Mid as Midname, " +
+                    "Dept as Department, Course, Year, mornTimeIn as MorningIn, mornTimeOut as MorningOut, " +
+                    "aftTimeIn as AfternoonIn, aftTimeout as AfternoonOut, eveTimeIn as EveningIn, eveTimeOut as EveningOut, totHours as TotalHrs" +
+                    " from attendTB where evtCode = '" + lblCode.Text + "' and type = 'EMPLOYEE'", con);
+                adapt.Fill(dt);
+                gVLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                gVLog.DataSource = dt;
+                con.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void cbMainEvt()
         {
             SqlConnection con = new SqlConnection(empcs);
+            SqlConnection disp = new SqlConnection(empcs);
+
             string name = cBEvt.Text;
             
             try
@@ -115,7 +353,23 @@ namespace admissionSystem
                     tBAtt.Text = (dr["Attendee"].ToString());
                     lblCode.Text = (dr["evtCode"].ToString());     
                 }
+                else
+                {
+                    gVLog.DataSource = null;
+                    lblCode.Text = "0000000";
+                }
                 con.Close();
+
+                disp.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select Id, Last as Lastname, First as Firstname, Mid as Midname, " +
+                    "Dept as Department, Course, Year, mornTimeIn as MorningIn, mornTimeOut as MorningOut, " +
+                    "aftTimeIn as AfternoonIn, aftTimeout as AfternoonOut, eveTimeIn as EveningIn, eveTimeOut as EveningOut, totHours as TotalHrs" +
+                    " from attendTB where evtCode = '" + lblCode.Text + "'", disp);
+                adapt.Fill(dt);
+                gVLog.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                gVLog.DataSource = dt;
+                disp.Close();
                 
             }
             catch (Exception e)
@@ -189,6 +443,8 @@ namespace admissionSystem
                 }
             }
             btnEvtAdd.Text = "ADD";
+            tBSerEvt.ForeColor = Color.Gray;
+            tBEmpSer.Text = "Search Here";
         }
         public void clrStud()
         {
@@ -209,6 +465,8 @@ namespace admissionSystem
             pBStud.Image = Properties.Resources.stud;
             pBStudQR.Image = null;
             lblRegStud.Text = "00000";
+            tbStudSer.ForeColor = Color.Gray;
+            tbStudSer.Text = "Search Here";
         }
         public void clrEmp()
         {
@@ -229,6 +487,8 @@ namespace admissionSystem
             pBEmp.Image = Properties.Resources.download;
             pBEmpQR.Image = null;
             lblRegEmp.Text = "00000";
+            tBEmpSer.ForeColor = Color.Gray;
+            tBEmpSer.Text = "Search Here";
         }
         public void empQR()
         {
@@ -287,7 +547,16 @@ namespace admissionSystem
         }
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("This would make the application close, Continue?", " Verify", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {           
+                this.FormClosing -= Main_FormClosing;
+                Application.Exit();
+            }         
         }
         public void upStudPH()
         {
@@ -666,7 +935,35 @@ namespace admissionSystem
                 {
                     MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                
+                else if (mornOut == "NONE" || aftOut == "NONE" || eveOut == "NONE" ||
+                       mornIn == "NONE" || aftIn == "NONE" || eveIn == "NONE")
+                {
+                    MessageBox.Show("There's must be at least one shedule!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornIn == mornOut || aftIn == aftOut || eveIn == eveOut ||
+                        mornOut == aftOut || mornOut == eveOut ||
+                        aftOut == mornOut || aftOut == eveOut ||
+                        eveOut == mornOut || eveOut == aftOut ||
+                        mornIn == aftIn || mornIn == eveIn || aftIn == eveIn ||
+                        mornIn == aftOut || mornIn == eveOut ||
+                        aftIn == mornOut || aftIn == eveOut ||
+                        eveIn == mornOut || eveIn == aftOut)
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornOut != "NONE" && aftOut != "NONE" && eveOut == "NONE")
+                {
+                    MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (aftOut != "NONE" && eveOut != "NONE" && mornOut == "NONE")
+                {
+                    MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (eveOut != "NONE" && mornOut != "NONE" && aftOut == "NONE")
+                {
+                    MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
                 else
                 {
                     upcon.Open();
@@ -821,6 +1118,34 @@ namespace admissionSystem
                     eveIn == "" || eveOut == "")
                 {
                     MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornOut == "NONE" || aftOut == "NONE" || eveOut == "NONE" ||
+                        mornIn == "NONE" || aftIn == "NONE" || eveIn == "NONE")
+                {
+                    MessageBox.Show("There's must be at least one shedule!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornIn == mornOut || aftIn == aftOut || eveIn == eveOut ||
+                        mornOut == aftOut || mornOut == eveOut || 
+                        aftOut == mornOut || aftOut == eveOut ||
+                        eveOut == mornOut || eveOut == aftOut ||
+                        mornIn == aftIn || mornIn == eveIn ||aftIn == eveIn ||
+                        mornIn == aftOut || mornIn == eveOut ||
+                        aftIn == mornOut || aftIn == eveOut ||
+                        eveIn == mornOut || eveIn == aftOut)
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornOut != "NONE" && aftOut != "NONE" && eveOut == "NONE")
+                {
+                    MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (aftOut != "NONE" && eveOut != "NONE" && mornOut == "NONE")
+                {
+                    MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (eveOut != "NONE" && mornOut != "NONE" && aftOut == "NONE")
+                {
+                    MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -1127,11 +1452,11 @@ namespace admissionSystem
             tabControl1.TabPages.Clear();
             timer1.Start();
             lblDate.Text = DateTime.Now.ToLongDateString();
-            this.TopMost = true;
-            this.BringToFront();
             loadCre();
             loadEvt();
             tabControl1.TabPages.Insert(0, tabHome);
+            this.TopMost = true;
+            this.BringToFront();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -1166,7 +1491,14 @@ namespace admissionSystem
             paneSide.Height = btnAttdLog.Height;
             paneSide.Top = btnAttdLog.Top;
             tabControl1.TabPages.Clear();
-
+            cBEvt.Text = "";
+            tBAtt.Text = "";
+            lblCode.Text = "000000";
+            gVLog.DataSource = null;
+            tBTit.Visible = false;
+          
+            tBTit.ForeColor = Color.Gray;
+            tBTit.Text = "REPORT TITTLE";
             tabControl1.TabPages.Insert(3, tabLog);
         }
         private void btnAddEvent_Click(object sender, EventArgs e)
@@ -1176,6 +1508,8 @@ namespace admissionSystem
             tabControl1.TabPages.Clear();
             clrEvt();
             dispEvt();
+            tBSerEvt.ForeColor = Color.Gray;
+            tBSerEvt.Text = "Search Here";
             tabControl1.TabPages.Insert(4, tabEvent);
         }
  
@@ -1437,15 +1771,7 @@ namespace admissionSystem
             if (cBEvt.Text != "")
             {
                 tBAtt.Text = "";
-                if (cBEvt.Text == "Regular Employee LogIn")
-                {
-                    lblCode.Text = "REG0001";
-                    tBAtt.Text = "ALL EMPLOYEES";
-                }
-                else
-                {
-                    cbMainEvt();
-                }
+                cbMainEvt();
             }
         }
 
@@ -1464,6 +1790,233 @@ namespace admissionSystem
         private void btnSetSave_Click(object sender, EventArgs e)
         {
             upSet();
+        }
+
+        private void btnStudAb_Click(object sender, EventArgs e)
+        {
+            if (gVLog.Rows.Count > 0)
+            {
+                abStud();
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
+
+        private void btnEmpAb_Click(object sender, EventArgs e)
+        {
+            if (gVLog.Rows.Count > 0)
+            {
+                abEmp();
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnStud_Click(object sender, EventArgs e)
+        {
+            if (gVLog.Rows.Count > 0)
+            {
+                filStud();
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEmp_Click(object sender, EventArgs e)
+        {
+            if (gVLog.Rows.Count > 0)
+            {
+                filEmp();
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (gVLog.Rows.Count > 0)
+            {
+               
+                tBTit.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tBTit_MouseClick(object sender, MouseEventArgs e)
+        {
+            tBTit.ForeColor = Color.Black;
+            tBTit.Text = "";
+        }
+
+        private void tBTit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (gVLog.Rows.Count > 0)
+                {
+                    if (tBTit.Text != "")
+                    {
+                        if (MessageBox.Show("Continue printing?", " Verify", MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            this.TopMost = false;
+                            printLog();
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Report Tittle Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void tBEmpSer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (tBEmpSer.Text != "")
+                {
+                    findEmp();
+                }
+                else
+                {
+                    MessageBox.Show("Missing Fields!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
+            }
+        }
+
+        private void tBEmpSer_MouseClick(object sender, MouseEventArgs e)
+        {
+            tBEmpSer.ForeColor = Color.Black;
+            tBEmpSer.Text = "";
+        }
+
+        private void tbStudSer_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbStudSer.ForeColor = Color.Black;
+            tbStudSer.Text = "";
+        }
+
+        private void tbStudSer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (tBEmpSer.Text != "")
+                {
+                    findStud();
+                }
+                else
+                {
+                    MessageBox.Show("Missing Fields!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void btnReStud_Click(object sender, EventArgs e)
+        {
+            tbStudSer.ForeColor = Color.Gray;
+            tbStudSer.Text = "Search Here";
+            dispStud();
+        }
+
+        private void btnReEmp_Click(object sender, EventArgs e)
+        {
+            tBEmpSer.ForeColor = Color.Gray;
+            tBEmpSer.Text = "Search Here";
+            dispEmp();
+        }
+
+        private void btnEPrint_Click(object sender, EventArgs e)
+        {
+            if (gVEmp.Rows.Count > 0)
+            {
+                this.TopMost = false;
+                printEmp();
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSPrint_Click(object sender, EventArgs e)
+        {
+            if (gVStud.Rows.Count > 0)
+            {
+                this.TopMost = false;
+                printStud();
+            }
+            else
+            {
+                MessageBox.Show("Data Empty!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Logout?", " Verify", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Screen sc = new Screen();
+                sc.ShowDialog();
+                this.FormClosing -= Main_FormClosing;
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void tBSerEvt_MouseClick(object sender, MouseEventArgs e)
+        {
+            tBSerEvt.ForeColor = Color.Black;
+            tBSerEvt.Text = "";
+        }
+
+        private void tBSerEvt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                if (tBSerEvt.Text != "")
+                {
+                    findEvt();
+                }
+                else
+                {
+                    MessageBox.Show("Missing Fields!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
+
+        private void btnReEvt_Click(object sender, EventArgs e)
+        {
+            tBSerEvt.ForeColor = Color.Gray;
+            tBSerEvt.Text = "Search Here";
+            dispEvt();
         }
     }
 }

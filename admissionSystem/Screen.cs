@@ -193,11 +193,9 @@ namespace admissionSystem
             gBId.Visible = false;
             gBForgot.Visible = false;
             gBCreate.Visible = false;
-            btnShut.Visible = false;
-            
+            btnShut.Visible = false;         
             timer1.Start();
             timer2.Start();
-
             this.TopMost = true;
             this.BringToFront();
         }

@@ -55,7 +55,7 @@ namespace QRScan
                 mornOutTimer.Stop();
                 aftOutTimer.Stop();
                 FinalFrame.Stop();
-                pBQR.Image = Properties.Resources.kali;
+                pBQR.Image = Properties.Resources.abc;
                 Application.Exit();
             }
             catch (Exception e)
@@ -153,7 +153,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveOut();
                             }
                             else
@@ -162,7 +162,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveOut();
                             }
 
@@ -175,7 +175,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveOut();
                             }
                             else
@@ -184,7 +184,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveOut();
                             }
                           
@@ -199,7 +199,7 @@ namespace QRScan
                             tBId.Text = "";
                             eveOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             eveOut();
                         }
                         else
@@ -208,7 +208,7 @@ namespace QRScan
                             tBId.Text = "";
                             eveOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             eveOut();
                         }
                        
@@ -297,7 +297,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveOut();
 
                             }
@@ -307,7 +307,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveOut();
                             }
                            
@@ -331,7 +331,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveOut();
                                 }
                                 else
@@ -340,7 +340,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveOut();
                                 }
                              
@@ -363,7 +363,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveOut();
                                 }
                                 else
@@ -372,7 +372,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveOut();
                                 }
                             }
@@ -387,7 +387,7 @@ namespace QRScan
                         tBId.Text = "";
                         eveOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         eveOut();
                     }
                     studcon.Close();
@@ -503,7 +503,7 @@ namespace QRScan
                             tBId.Text = "";
                             eveInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             eveIn();
                         }
                         else
@@ -512,7 +512,7 @@ namespace QRScan
                             tBId.Text = "";
                             eveInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             eveIn();
                         }
                         
@@ -544,7 +544,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveIn();
                             }
                             else
@@ -553,7 +553,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveIn();
                             }
 
@@ -566,7 +566,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveIn();
                             }
                             else
@@ -575,7 +575,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveIn();
                             }
                             
@@ -666,7 +666,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveIn();
 
                             }
@@ -676,7 +676,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 eveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 eveIn();
                             }
                            
@@ -709,7 +709,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveIn();
                                 }
                                 else
@@ -718,7 +718,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveIn();
                                 }
                             }
@@ -730,7 +730,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveIn();
                                 }
                                 else
@@ -739,7 +739,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     eveInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     eveIn();
                                 }
                                
@@ -755,7 +755,7 @@ namespace QRScan
                         tBId.Text = "";
                         eveInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         eveIn();
                     }
                     studcon.Close();
@@ -855,7 +855,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftOut();
                             }
                             else
@@ -864,7 +864,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftOut();
                             }
 
@@ -875,7 +875,7 @@ namespace QRScan
                             tBId.Text = "";
                             aftOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             aftOut();
                         }
                         econ.Close();
@@ -888,7 +888,7 @@ namespace QRScan
                             tBId.Text = "";
                             aftOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             aftOut();
                         }
                         else
@@ -897,7 +897,7 @@ namespace QRScan
                             tBId.Text = "";
                             aftOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             aftOut();
                         }
                     }
@@ -985,7 +985,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftOut();
                             }
                             else
@@ -994,7 +994,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftOut();
 
                             }
@@ -1018,7 +1018,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftOut();
                             }
                             else
@@ -1039,7 +1039,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     aftOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     aftOut();
                                 }
                                 else
@@ -1048,7 +1048,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     aftOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     aftOut();
                                 }
                             }
@@ -1063,7 +1063,7 @@ namespace QRScan
                         tBId.Text = "";
                         aftOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         aftOut();
                     }
                     studcon.Close();
@@ -1179,7 +1179,7 @@ namespace QRScan
                             tBId.Text = "";
                             aftInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             aftIn();
                         }
                         else
@@ -1188,7 +1188,7 @@ namespace QRScan
                             tBId.Text = "";
                             aftInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             aftIn();
                         }
                         
@@ -1220,7 +1220,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftIn();
                             }
                             else
@@ -1229,7 +1229,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftIn();
                             }
 
@@ -1242,7 +1242,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftIn();
                             }
                             else
@@ -1251,7 +1251,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftIn();
                             }
                            
@@ -1342,7 +1342,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftIn();
 
                             }
@@ -1352,7 +1352,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 aftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 aftIn();
 
                             }
@@ -1386,7 +1386,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     aftInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     aftIn();
                                 }
                                 else
@@ -1395,7 +1395,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     aftInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     aftIn();
                                 }
                             }
@@ -1407,7 +1407,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     aftInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     aftIn();
                                 }
                                 else
@@ -1416,7 +1416,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     aftInTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     aftIn();
                                 }
                                
@@ -1432,7 +1432,7 @@ namespace QRScan
                         tBId.Text = "";
                         aftInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         aftIn();
                     }
                     studcon.Close();
@@ -1532,7 +1532,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
                             else
@@ -1541,7 +1541,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
 
@@ -1554,7 +1554,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
                             else
@@ -1563,7 +1563,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
 
@@ -1578,7 +1578,7 @@ namespace QRScan
                             tBId.Text = "";
                             mornOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             morningOut();
                         }
                         else
@@ -1587,7 +1587,7 @@ namespace QRScan
                             tBId.Text = "";
                             mornOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             morningOut();
 
                         }
@@ -1676,7 +1676,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
                             else
@@ -1685,7 +1685,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
                            
@@ -1708,7 +1708,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningOut();
                             }
                             else
@@ -1729,7 +1729,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     mornOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     morningOut();
                                 }
                                 else
@@ -1738,7 +1738,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     mornOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     morningOut();
                                 }
                             }
@@ -1753,7 +1753,7 @@ namespace QRScan
                         tBId.Text = "";
                         mornOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         morningOut();
                     }
                     studcon.Close();
@@ -1841,7 +1841,7 @@ namespace QRScan
                             tBId.Text = "";
                             mornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             morningIn();
                         }
                         else
@@ -1850,7 +1850,7 @@ namespace QRScan
                             tBId.Text = "";
                             mornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             morningIn();
                         }
                         
@@ -1890,7 +1890,7 @@ namespace QRScan
                             tBId.Text = "";
                             mornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             morningIn();
                         }
                         else
@@ -1899,7 +1899,7 @@ namespace QRScan
                             tBId.Text = "";
                             mornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             morningIn();
                         }
                     }
@@ -1959,7 +1959,7 @@ namespace QRScan
                                 lblStat.Text = "ID ALREADY LOGGED IN";
                                 mornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningIn();
                             }
                             else
@@ -1967,7 +1967,7 @@ namespace QRScan
                                 lblStat.Text = "You are not allowed to login!";
                                 mornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningIn();
                             }
                            
@@ -2006,7 +2006,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningIn();
                             }
                             else
@@ -2015,7 +2015,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 mornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 morningIn();
                             }
                         }
@@ -2027,7 +2027,7 @@ namespace QRScan
                         tBId.Text = "";
                         mornInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         morningIn();
                     }
                     studcon.Close();
@@ -2102,7 +2102,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         mornInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         logMornIn();
 
                     }
@@ -2195,7 +2195,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         mornOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         logMornOut();
 
                     }
@@ -2383,7 +2383,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         aftOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         logAftOut();
                     }
                     else
@@ -2416,7 +2416,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         aftInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         logEveIn();
                     }
                     else
@@ -2508,7 +2508,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         eveOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         logEveOut();
                     }
                     else
@@ -2706,7 +2706,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveOut();
                             }
                             else
@@ -2715,7 +2715,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveOut();
                             }
 
@@ -2728,7 +2728,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveOut();
                             }
                             else
@@ -2737,7 +2737,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveOut();
                             }
 
@@ -2752,7 +2752,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveOut();
                         }
                         else
@@ -2761,7 +2761,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveOut();
 
                         }
@@ -2834,7 +2834,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     sinEveOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     sinEveOut();
                                 }
                                 else
@@ -2843,7 +2843,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     sinEveOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     sinEveOut();
 
                                 }
@@ -2856,7 +2856,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveOut();
                             }
                             studchk.Close();
@@ -2867,7 +2867,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveOut();
                         }
                     }
@@ -2877,7 +2877,7 @@ namespace QRScan
                         tBId.Text = "";
                         sinEveOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         sinEveOut();
                     }
                     studcon.Close();
@@ -2971,7 +2971,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftOut();
                             }
                             else
@@ -2980,7 +2980,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftOut();
                             }
 
@@ -2993,7 +2993,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftOut();
                             }
                             else
@@ -3002,7 +3002,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftOut();
                             }
 
@@ -3017,7 +3017,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftOut();
                         }
                         else
@@ -3026,7 +3026,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftOut();
 
                         }
@@ -3099,7 +3099,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     sinAftOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     sinAftOut();
                                 }
                                 else
@@ -3108,7 +3108,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     sinAftOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     sinAftOut();
 
                                 }
@@ -3121,7 +3121,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftOut();
                             }
                             studchk.Close();
@@ -3132,7 +3132,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftOut();
                         }
                     }
@@ -3142,7 +3142,7 @@ namespace QRScan
                         tBId.Text = "";
                         sinAftOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         sinAftOut();
                     }
                     studcon.Close();
@@ -3237,7 +3237,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornOut();
                             }
                             else
@@ -3246,7 +3246,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornOut();
                             }
 
@@ -3259,7 +3259,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornOut();
                             }
                             else
@@ -3268,7 +3268,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornOut();
                             }
 
@@ -3283,7 +3283,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornOut();
                         }
                         else
@@ -3292,7 +3292,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornOut();
 
                         }
@@ -3365,7 +3365,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     sinMornOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     sinMornOut();
                                 }
                                 else
@@ -3374,7 +3374,7 @@ namespace QRScan
                                     tBId.Text = "";
                                     sinMornOutTimer.Stop();
                                     FinalFrame.Stop();
-                                    pBQR.Image = Properties.Resources.kali;
+                                    pBQR.Image = Properties.Resources.abc;
                                     sinMornOut();
 
                                 }
@@ -3387,7 +3387,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornOutTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornOut();
                             }
                             studchk.Close();
@@ -3398,7 +3398,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornOutTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornOut();
                         }
                     }
@@ -3408,7 +3408,7 @@ namespace QRScan
                         tBId.Text = "";
                         sinMornOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         sinMornOut();
                     }
                     studcon.Close();
@@ -3495,7 +3495,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveIn();
 
                         }
@@ -3505,7 +3505,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveIn();
                         }
                     }
@@ -3543,7 +3543,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveIn();
                         }
                         else
@@ -3552,7 +3552,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinEveInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinEveIn();
                         }
                     }
@@ -3613,7 +3613,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveIn();
                             }
                             else
@@ -3622,7 +3622,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveIn();
                             }
                         }
@@ -3660,7 +3660,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveIn();
 
                             }
@@ -3670,7 +3670,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinEveInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinEveIn();
                             }
                         }
@@ -3682,7 +3682,7 @@ namespace QRScan
                         tBId.Text = "";
                         sinEveInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         sinEveIn();
                     }
                     studcon.Close();
@@ -3768,7 +3768,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftIn();
 
                         }
@@ -3778,7 +3778,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftIn();
                         }
                     }
@@ -3816,7 +3816,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftIn();
                         }
                         else
@@ -3825,7 +3825,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinAftInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinAftIn();
                         }
                     }
@@ -3886,7 +3886,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftIn();
                             }
                             else
@@ -3895,7 +3895,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftIn();
                             }
                         }
@@ -3933,7 +3933,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftIn();
 
                             }
@@ -3943,7 +3943,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinAftInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinAftIn();
                             }
                         }
@@ -3955,7 +3955,7 @@ namespace QRScan
                         tBId.Text = "";
                         sinAftInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         sinAftIn();
                     }
                     studcon.Close();
@@ -4041,7 +4041,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornIn();
 
                         }
@@ -4051,7 +4051,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornIn();
                         }
                     }
@@ -4089,7 +4089,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornIn();
                         }
                         else
@@ -4098,7 +4098,7 @@ namespace QRScan
                             tBId.Text = "";
                             sinMornInTimer.Stop();
                             FinalFrame.Stop();
-                            pBQR.Image = Properties.Resources.kali;
+                            pBQR.Image = Properties.Resources.abc;
                             sinMornIn();
                         }
                     }
@@ -4159,7 +4159,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornIn();
                             }
                             else
@@ -4168,7 +4168,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornIn();
                             }
                         }
@@ -4206,7 +4206,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornIn();
 
                             }
@@ -4216,7 +4216,7 @@ namespace QRScan
                                 tBId.Text = "";
                                 sinMornInTimer.Stop();
                                 FinalFrame.Stop();
-                                pBQR.Image = Properties.Resources.kali;
+                                pBQR.Image = Properties.Resources.abc;
                                 sinMornIn();
                             }
                         }
@@ -4228,7 +4228,7 @@ namespace QRScan
                         tBId.Text = "";
                         sinMornInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         sinMornIn();
                     }
                     studcon.Close();
@@ -4779,7 +4779,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         sinMornInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         snLogMornIn();
 
                     }
@@ -4815,7 +4815,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         sinMornOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         snLogMornOut();
 
                     }
@@ -4850,7 +4850,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         sinAftInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         snLogAftIn();
                     }
                     else
@@ -4885,7 +4885,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         sinAftOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         snLogAftOut();
 
                     }
@@ -4920,7 +4920,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         sinEveInTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         snLogEveIn();
                     }
                     else
@@ -4955,7 +4955,7 @@ namespace QRScan
                         lblStat.Text = "QR Decoded!";
                         sinEveOutTimer.Stop();
                         FinalFrame.Stop();
-                        pBQR.Image = Properties.Resources.kali;
+                        pBQR.Image = Properties.Resources.abc;
                         snLogEveOut();
 
                     }

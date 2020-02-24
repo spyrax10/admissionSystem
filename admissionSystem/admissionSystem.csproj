@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +141,11 @@
     <None Include="Resources\stud.png" />
     <None Include="Resources\checklist-icon1.png" />
     <None Include="Resources\Programming-Save-icon.png" />
+    <None Include="Resources\Printer-blue-icon1.png" />
+    <None Include="Resources\print-icon.png" />
+    <None Include="Resources\attendance-management-system.jpg" />
+    <None Include="Resources\Checklist-icon.png" />
+    <None Include="Resources\Checklist-icon %281%29.png" />
     <Content Include="spy.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

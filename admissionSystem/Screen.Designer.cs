@@ -37,6 +37,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneSlide = new System.Windows.Forms.Panel();
+            this.gBCreate = new System.Windows.Forms.GroupBox();
+            this.pBCreBack = new System.Windows.Forms.PictureBox();
+            this.btnCre = new System.Windows.Forms.Button();
+            this.tBCreID = new System.Windows.Forms.TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.tBCrePass = new System.Windows.Forms.TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.gBId = new System.Windows.Forms.GroupBox();
+            this.tBId = new System.Windows.Forms.TextBox();
             this.gBLog = new System.Windows.Forms.GroupBox();
             this.pBLogBack = new System.Windows.Forms.PictureBox();
             this.lblForgot = new System.Windows.Forms.LinkLabel();
@@ -50,21 +59,17 @@
             this.btnForVer = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.gBCreate = new System.Windows.Forms.GroupBox();
-            this.pBCreBack = new System.Windows.Forms.PictureBox();
-            this.btnCre = new System.Windows.Forms.Button();
-            this.tBCreID = new System.Windows.Forms.TextBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.tBCrePass = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.gBId = new System.Windows.Forms.GroupBox();
-            this.tBId = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.paneLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            this.gBCreate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.gBId.SuspendLayout();
             this.gBLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,11 +77,6 @@
             this.gBForgot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.gBCreate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.gBId.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -123,7 +123,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Image = global::admissionSystem.Properties.Resources.Checklist_icon;
             this.pictureBox4.Location = new System.Drawing.Point(6, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(89, 86);
@@ -160,6 +160,107 @@
             this.paneSlide.Name = "paneSlide";
             this.paneSlide.Size = new System.Drawing.Size(114, 15);
             this.paneSlide.TabIndex = 3;
+            // 
+            // gBCreate
+            // 
+            this.gBCreate.Controls.Add(this.pBCreBack);
+            this.gBCreate.Controls.Add(this.btnCre);
+            this.gBCreate.Controls.Add(this.tBCreID);
+            this.gBCreate.Controls.Add(this.pictureBox7);
+            this.gBCreate.Controls.Add(this.tBCrePass);
+            this.gBCreate.Controls.Add(this.pictureBox8);
+            this.gBCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gBCreate.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBCreate.Location = new System.Drawing.Point(515, 273);
+            this.gBCreate.Name = "gBCreate";
+            this.gBCreate.Size = new System.Drawing.Size(331, 214);
+            this.gBCreate.TabIndex = 5;
+            this.gBCreate.TabStop = false;
+            this.gBCreate.Text = "Create User LogIn:";
+            // 
+            // pBCreBack
+            // 
+            this.pBCreBack.Image = ((System.Drawing.Image)(resources.GetObject("pBCreBack.Image")));
+            this.pBCreBack.Location = new System.Drawing.Point(299, 21);
+            this.pBCreBack.Name = "pBCreBack";
+            this.pBCreBack.Size = new System.Drawing.Size(30, 28);
+            this.pBCreBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBCreBack.TabIndex = 6;
+            this.pBCreBack.TabStop = false;
+            // 
+            // btnCre
+            // 
+            this.btnCre.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnCre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCre.ForeColor = System.Drawing.Color.Black;
+            this.btnCre.Location = new System.Drawing.Point(204, 171);
+            this.btnCre.Name = "btnCre";
+            this.btnCre.Size = new System.Drawing.Size(98, 30);
+            this.btnCre.TabIndex = 4;
+            this.btnCre.Text = "CREATE";
+            this.btnCre.UseVisualStyleBackColor = true;
+            this.btnCre.Click += new System.EventHandler(this.btnCre_Click);
+            // 
+            // tBCreID
+            // 
+            this.tBCreID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBCreID.Location = new System.Drawing.Point(77, 81);
+            this.tBCreID.Name = "tBCreID";
+            this.tBCreID.Size = new System.Drawing.Size(225, 31);
+            this.tBCreID.TabIndex = 1;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(34, 81);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // tBCrePass
+            // 
+            this.tBCrePass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBCrePass.Location = new System.Drawing.Point(77, 134);
+            this.tBCrePass.Name = "tBCrePass";
+            this.tBCrePass.PasswordChar = '*';
+            this.tBCrePass.Size = new System.Drawing.Size(225, 31);
+            this.tBCrePass.TabIndex = 3;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(34, 134);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            // 
+            // gBId
+            // 
+            this.gBId.Controls.Add(this.tBId);
+            this.gBId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gBId.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBId.Location = new System.Drawing.Point(515, 273);
+            this.gBId.Name = "gBId";
+            this.gBId.Size = new System.Drawing.Size(331, 214);
+            this.gBId.TabIndex = 6;
+            this.gBId.TabStop = false;
+            this.gBId.Text = "Enter ID Number:";
+            // 
+            // tBId
+            // 
+            this.tBId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBId.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBId.Location = new System.Drawing.Point(64, 100);
+            this.tBId.Name = "tBId";
+            this.tBId.Size = new System.Drawing.Size(225, 33);
+            this.tBId.TabIndex = 5;
+            this.tBId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBId_KeyPress);
             // 
             // gBLog
             // 
@@ -310,107 +411,6 @@
             this.textBox1.Size = new System.Drawing.Size(225, 33);
             this.textBox1.TabIndex = 5;
             // 
-            // gBCreate
-            // 
-            this.gBCreate.Controls.Add(this.pBCreBack);
-            this.gBCreate.Controls.Add(this.btnCre);
-            this.gBCreate.Controls.Add(this.tBCreID);
-            this.gBCreate.Controls.Add(this.pictureBox7);
-            this.gBCreate.Controls.Add(this.tBCrePass);
-            this.gBCreate.Controls.Add(this.pictureBox8);
-            this.gBCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBCreate.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBCreate.Location = new System.Drawing.Point(515, 273);
-            this.gBCreate.Name = "gBCreate";
-            this.gBCreate.Size = new System.Drawing.Size(331, 214);
-            this.gBCreate.TabIndex = 5;
-            this.gBCreate.TabStop = false;
-            this.gBCreate.Text = "Create User LogIn:";
-            // 
-            // pBCreBack
-            // 
-            this.pBCreBack.Image = ((System.Drawing.Image)(resources.GetObject("pBCreBack.Image")));
-            this.pBCreBack.Location = new System.Drawing.Point(299, 21);
-            this.pBCreBack.Name = "pBCreBack";
-            this.pBCreBack.Size = new System.Drawing.Size(30, 28);
-            this.pBCreBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBCreBack.TabIndex = 6;
-            this.pBCreBack.TabStop = false;
-            // 
-            // btnCre
-            // 
-            this.btnCre.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnCre.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCre.ForeColor = System.Drawing.Color.Black;
-            this.btnCre.Location = new System.Drawing.Point(204, 171);
-            this.btnCre.Name = "btnCre";
-            this.btnCre.Size = new System.Drawing.Size(98, 30);
-            this.btnCre.TabIndex = 4;
-            this.btnCre.Text = "CREATE";
-            this.btnCre.UseVisualStyleBackColor = true;
-            this.btnCre.Click += new System.EventHandler(this.btnCre_Click);
-            // 
-            // tBCreID
-            // 
-            this.tBCreID.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBCreID.Location = new System.Drawing.Point(77, 81);
-            this.tBCreID.Name = "tBCreID";
-            this.tBCreID.Size = new System.Drawing.Size(225, 31);
-            this.tBCreID.TabIndex = 1;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(34, 81);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
-            // tBCrePass
-            // 
-            this.tBCrePass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBCrePass.Location = new System.Drawing.Point(77, 134);
-            this.tBCrePass.Name = "tBCrePass";
-            this.tBCrePass.PasswordChar = '*';
-            this.tBCrePass.Size = new System.Drawing.Size(225, 31);
-            this.tBCrePass.TabIndex = 3;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(34, 134);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
-            // 
-            // gBId
-            // 
-            this.gBId.Controls.Add(this.tBId);
-            this.gBId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBId.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBId.Location = new System.Drawing.Point(515, 273);
-            this.gBId.Name = "gBId";
-            this.gBId.Size = new System.Drawing.Size(331, 214);
-            this.gBId.TabIndex = 6;
-            this.gBId.TabStop = false;
-            this.gBId.Text = "Enter ID Number:";
-            // 
-            // tBId
-            // 
-            this.tBId.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tBId.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBId.Location = new System.Drawing.Point(64, 100);
-            this.tBId.Name = "tBId";
-            this.tBId.Size = new System.Drawing.Size(225, 33);
-            this.tBId.TabIndex = 5;
-            this.tBId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBId_KeyPress);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -432,6 +432,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Screen";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -441,6 +442,13 @@
             this.paneLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.gBCreate.ResumeLayout(false);
+            this.gBCreate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.gBId.ResumeLayout(false);
+            this.gBId.PerformLayout();
             this.gBLog.ResumeLayout(false);
             this.gBLog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).EndInit();
@@ -450,13 +458,6 @@
             this.gBForgot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.gBCreate.ResumeLayout(false);
-            this.gBCreate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.gBId.ResumeLayout(false);
-            this.gBId.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -83,9 +83,39 @@ namespace admissionSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap attendance_management_system {
+            get {
+                object obj = ResourceManager.GetObject("attendance-management-system", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Refresh_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Refresh-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Checklist_icon {
+            get {
+                object obj = ResourceManager.GetObject("Checklist-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Checklist_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Checklist-icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +213,29 @@ namespace admissionSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap print_icon {
+            get {
+                object obj = ResourceManager.GetObject("print-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Printer_blue_icon {
             get {
                 object obj = ResourceManager.GetObject("Printer-blue-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Printer_blue_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Printer-blue-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
