@@ -1304,10 +1304,8 @@ namespace admissionSystem
                     chkcon.Open();
                     SqlCommand cmd = chkcon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "Select * from studTB where Firstname = '" + first + "' " +
-                        "and Midname = '" + mid + "' " +
-                        "and Lastname = '" + last + "' " +
-                        "and studId = '" + studId + "'";
+                    cmd.CommandText = "Select * from studTB where studId = '" + studId + "' ";
+                        
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.Read())
@@ -1421,10 +1419,8 @@ namespace admissionSystem
                     chkcon.Open();
                     SqlCommand cmd = chkcon.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "Select * from empTB where Firstname = '" + first + "' " +
-                        "and Midname = '" + mid + "' " +
-                        "and Lastname = '" + last + "' " +
-                        "and empId = '" + empId + "'";
+                    cmd.CommandText = "Select * from empTB where empId = '" + empId + "' ";
+                    
                     SqlDataReader dr = cmd.ExecuteReader();
 
                     if (dr.Read())
