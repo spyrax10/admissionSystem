@@ -31,105 +31,78 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Screen));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnShut = new System.Windows.Forms.Button();
             this.paneLogo = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.paneSlide = new System.Windows.Forms.Panel();
+            this.gBForgot = new System.Windows.Forms.GroupBox();
+            this.btnForVer = new System.Windows.Forms.Button();
+            this.tbCode = new System.Windows.Forms.TextBox();
             this.gBCreate = new System.Windows.Forms.GroupBox();
-            this.pBCreBack = new System.Windows.Forms.PictureBox();
             this.btnCre = new System.Windows.Forms.Button();
             this.tBCreID = new System.Windows.Forms.TextBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.tBCrePass = new System.Windows.Forms.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.gBId = new System.Windows.Forms.GroupBox();
             this.tBId = new System.Windows.Forms.TextBox();
             this.gBLog = new System.Windows.Forms.GroupBox();
-            this.pBLogBack = new System.Windows.Forms.PictureBox();
             this.lblForgot = new System.Windows.Forms.LinkLabel();
             this.btnLog = new System.Windows.Forms.Button();
             this.tBUser = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tBPass = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.gBForgot = new System.Windows.Forms.GroupBox();
-            this.pBForBack = new System.Windows.Forms.PictureBox();
-            this.btnForVer = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnMin = new System.Windows.Forms.Button();
+            this.btnShut = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pBForBack = new System.Windows.Forms.PictureBox();
+            this.pBCreBack = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pBLogBack = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.paneLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
+            this.gBForgot.SuspendLayout();
             this.gBCreate.SuspendLayout();
+            this.gBId.SuspendLayout();
+            this.gBLog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.gBId.SuspendLayout();
-            this.gBLog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.gBForgot.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnMin);
             this.panel2.Controls.Add(this.btnShut);
             this.panel2.Controls.Add(this.paneLogo);
-            this.panel2.Controls.Add(this.gBCreate);
-            this.panel2.Controls.Add(this.gBId);
             this.panel2.Controls.Add(this.gBLog);
             this.panel2.Controls.Add(this.gBForgot);
+            this.panel2.Controls.Add(this.gBCreate);
+            this.panel2.Controls.Add(this.gBId);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1336, 736);
+            this.panel2.Size = new System.Drawing.Size(1336, 740);
             this.panel2.TabIndex = 6;
-            // 
-            // btnShut
-            // 
-            this.btnShut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnShut.FlatAppearance.BorderSize = 0;
-            this.btnShut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnShut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnShut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShut.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShut.ForeColor = System.Drawing.Color.Red;
-            this.btnShut.Image = global::admissionSystem.Properties.Resources.Apps_Dialog_Shutdown_icon;
-            this.btnShut.Location = new System.Drawing.Point(1291, 3);
-            this.btnShut.Name = "btnShut";
-            this.btnShut.Size = new System.Drawing.Size(40, 39);
-            this.btnShut.TabIndex = 7;
-            this.btnShut.UseVisualStyleBackColor = true;
-            this.btnShut.Click += new System.EventHandler(this.btnShut_Click);
             // 
             // paneLogo
             // 
             this.paneLogo.Controls.Add(this.pictureBox4);
             this.paneLogo.Controls.Add(this.label1);
             this.paneLogo.Controls.Add(this.panel1);
-            this.paneLogo.Location = new System.Drawing.Point(738, 636);
+            this.paneLogo.Location = new System.Drawing.Point(738, 629);
             this.paneLogo.Name = "paneLogo";
             this.paneLogo.Size = new System.Drawing.Size(593, 95);
             this.paneLogo.TabIndex = 3;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::admissionSystem.Properties.Resources.Checklist_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
             // 
             // label1
             // 
@@ -161,6 +134,44 @@
             this.paneSlide.Size = new System.Drawing.Size(114, 15);
             this.paneSlide.TabIndex = 3;
             // 
+            // gBForgot
+            // 
+            this.gBForgot.Controls.Add(this.pBForBack);
+            this.gBForgot.Controls.Add(this.btnForVer);
+            this.gBForgot.Controls.Add(this.tbCode);
+            this.gBForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gBForgot.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBForgot.Location = new System.Drawing.Point(515, 273);
+            this.gBForgot.Name = "gBForgot";
+            this.gBForgot.Size = new System.Drawing.Size(331, 214);
+            this.gBForgot.TabIndex = 10;
+            this.gBForgot.TabStop = false;
+            this.gBForgot.Text = "Forgot Passsword:";
+            // 
+            // btnForVer
+            // 
+            this.btnForVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnForVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnForVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnForVer.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForVer.ForeColor = System.Drawing.Color.Black;
+            this.btnForVer.Location = new System.Drawing.Point(34, 139);
+            this.btnForVer.Name = "btnForVer";
+            this.btnForVer.Size = new System.Drawing.Size(268, 40);
+            this.btnForVer.TabIndex = 7;
+            this.btnForVer.Text = "VERIFY CODE";
+            this.btnForVer.UseVisualStyleBackColor = true;
+            this.btnForVer.Click += new System.EventHandler(this.btnForVer_Click);
+            // 
+            // tbCode
+            // 
+            this.tbCode.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCode.Location = new System.Drawing.Point(34, 100);
+            this.tbCode.Name = "tbCode";
+            this.tbCode.Size = new System.Drawing.Size(268, 33);
+            this.tbCode.TabIndex = 5;
+            this.tbCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // gBCreate
             // 
             this.gBCreate.Controls.Add(this.pBCreBack);
@@ -177,16 +188,6 @@
             this.gBCreate.TabIndex = 5;
             this.gBCreate.TabStop = false;
             this.gBCreate.Text = "Create User LogIn:";
-            // 
-            // pBCreBack
-            // 
-            this.pBCreBack.Image = ((System.Drawing.Image)(resources.GetObject("pBCreBack.Image")));
-            this.pBCreBack.Location = new System.Drawing.Point(299, 21);
-            this.pBCreBack.Name = "pBCreBack";
-            this.pBCreBack.Size = new System.Drawing.Size(30, 28);
-            this.pBCreBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBCreBack.TabIndex = 6;
-            this.pBCreBack.TabStop = false;
             // 
             // btnCre
             // 
@@ -211,16 +212,6 @@
             this.tBCreID.Size = new System.Drawing.Size(225, 31);
             this.tBCreID.TabIndex = 1;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(34, 81);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
             // tBCrePass
             // 
             this.tBCrePass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -229,16 +220,6 @@
             this.tBCrePass.PasswordChar = '*';
             this.tBCrePass.Size = new System.Drawing.Size(225, 31);
             this.tBCrePass.TabIndex = 3;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(34, 134);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 2;
-            this.pictureBox8.TabStop = false;
             // 
             // gBId
             // 
@@ -280,16 +261,6 @@
             this.gBLog.TabStop = false;
             this.gBLog.Text = "LOGIN";
             // 
-            // pBLogBack
-            // 
-            this.pBLogBack.Image = ((System.Drawing.Image)(resources.GetObject("pBLogBack.Image")));
-            this.pBLogBack.Location = new System.Drawing.Point(299, 22);
-            this.pBLogBack.Name = "pBLogBack";
-            this.pBLogBack.Size = new System.Drawing.Size(30, 28);
-            this.pBLogBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBLogBack.TabIndex = 6;
-            this.pBLogBack.TabStop = false;
-            // 
             // lblForgot
             // 
             this.lblForgot.AutoSize = true;
@@ -297,10 +268,11 @@
             this.lblForgot.LinkColor = System.Drawing.Color.Red;
             this.lblForgot.Location = new System.Drawing.Point(74, 171);
             this.lblForgot.Name = "lblForgot";
-            this.lblForgot.Size = new System.Drawing.Size(109, 16);
+            this.lblForgot.Size = new System.Drawing.Size(92, 16);
             this.lblForgot.TabIndex = 5;
             this.lblForgot.TabStop = true;
-            this.lblForgot.Text = "Fogot Password?";
+            this.lblForgot.Text = "Request Code";
+            this.lblForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblForgot_LinkClicked);
             // 
             // btnLog
             // 
@@ -325,16 +297,6 @@
             this.tBUser.Size = new System.Drawing.Size(225, 31);
             this.tBUser.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 81);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // tBPass
             // 
             this.tBPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,73 +305,6 @@
             this.tBPass.PasswordChar = '*';
             this.tBPass.Size = new System.Drawing.Size(225, 31);
             this.tBPass.TabIndex = 3;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(34, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // gBForgot
-            // 
-            this.gBForgot.Controls.Add(this.pBForBack);
-            this.gBForgot.Controls.Add(this.btnForVer);
-            this.gBForgot.Controls.Add(this.pictureBox5);
-            this.gBForgot.Controls.Add(this.textBox1);
-            this.gBForgot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBForgot.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBForgot.Location = new System.Drawing.Point(515, 273);
-            this.gBForgot.Name = "gBForgot";
-            this.gBForgot.Size = new System.Drawing.Size(331, 214);
-            this.gBForgot.TabIndex = 10;
-            this.gBForgot.TabStop = false;
-            this.gBForgot.Text = "Forgot Passsword:";
-            // 
-            // pBForBack
-            // 
-            this.pBForBack.Image = ((System.Drawing.Image)(resources.GetObject("pBForBack.Image")));
-            this.pBForBack.Location = new System.Drawing.Point(299, 22);
-            this.pBForBack.Name = "pBForBack";
-            this.pBForBack.Size = new System.Drawing.Size(30, 28);
-            this.pBForBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBForBack.TabIndex = 8;
-            this.pBForBack.TabStop = false;
-            // 
-            // btnForVer
-            // 
-            this.btnForVer.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnForVer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnForVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForVer.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForVer.ForeColor = System.Drawing.Color.Black;
-            this.btnForVer.Location = new System.Drawing.Point(77, 139);
-            this.btnForVer.Name = "btnForVer";
-            this.btnForVer.Size = new System.Drawing.Size(225, 37);
-            this.btnForVer.TabIndex = 7;
-            this.btnForVer.Text = "VERIFY";
-            this.btnForVer.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(6, 83);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(65, 60);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(77, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 33);
-            this.textBox1.TabIndex = 5;
             // 
             // timer1
             // 
@@ -423,11 +318,123 @@
             this.timer2.Interval = 1000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // btnMin
+            // 
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMin.ForeColor = System.Drawing.Color.Red;
+            this.btnMin.Image = global::admissionSystem.Properties.Resources.Programming_Minimize_Window_icon;
+            this.btnMin.Location = new System.Drawing.Point(1254, 7);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(36, 30);
+            this.btnMin.TabIndex = 11;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnShut
+            // 
+            this.btnShut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnShut.FlatAppearance.BorderSize = 0;
+            this.btnShut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnShut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnShut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShut.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShut.ForeColor = System.Drawing.Color.Red;
+            this.btnShut.Image = global::admissionSystem.Properties.Resources.Apps_Dialog_Shutdown_icon;
+            this.btnShut.Location = new System.Drawing.Point(1291, 3);
+            this.btnShut.Name = "btnShut";
+            this.btnShut.Size = new System.Drawing.Size(40, 39);
+            this.btnShut.TabIndex = 7;
+            this.btnShut.UseVisualStyleBackColor = true;
+            this.btnShut.Click += new System.EventHandler(this.btnShut_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::admissionSystem.Properties.Resources.Checklist_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pBForBack
+            // 
+            this.pBForBack.Image = ((System.Drawing.Image)(resources.GetObject("pBForBack.Image")));
+            this.pBForBack.Location = new System.Drawing.Point(299, 22);
+            this.pBForBack.Name = "pBForBack";
+            this.pBForBack.Size = new System.Drawing.Size(30, 28);
+            this.pBForBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBForBack.TabIndex = 8;
+            this.pBForBack.TabStop = false;
+            this.pBForBack.Click += new System.EventHandler(this.pBForBack_Click);
+            // 
+            // pBCreBack
+            // 
+            this.pBCreBack.Image = ((System.Drawing.Image)(resources.GetObject("pBCreBack.Image")));
+            this.pBCreBack.Location = new System.Drawing.Point(299, 21);
+            this.pBCreBack.Name = "pBCreBack";
+            this.pBCreBack.Size = new System.Drawing.Size(30, 28);
+            this.pBCreBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBCreBack.TabIndex = 6;
+            this.pBCreBack.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(34, 81);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(34, 134);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 2;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pBLogBack
+            // 
+            this.pBLogBack.Image = ((System.Drawing.Image)(resources.GetObject("pBLogBack.Image")));
+            this.pBLogBack.Location = new System.Drawing.Point(299, 22);
+            this.pBLogBack.Name = "pBLogBack";
+            this.pBLogBack.Size = new System.Drawing.Size(30, 28);
+            this.pBLogBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBLogBack.TabIndex = 6;
+            this.pBLogBack.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(34, 81);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(34, 134);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
             // Screen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1360, 760);
+            this.ClientSize = new System.Drawing.Size(1360, 749);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -440,24 +447,23 @@
             this.panel2.ResumeLayout(false);
             this.paneLogo.ResumeLayout(false);
             this.paneLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.gBForgot.ResumeLayout(false);
+            this.gBForgot.PerformLayout();
             this.gBCreate.ResumeLayout(false);
             this.gBCreate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.gBId.ResumeLayout(false);
             this.gBId.PerformLayout();
             this.gBLog.ResumeLayout(false);
             this.gBLog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBCreBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.gBForgot.ResumeLayout(false);
-            this.gBForgot.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBForBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -467,8 +473,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox gBForgot;
         private System.Windows.Forms.PictureBox pBForBack;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbCode;
         private System.Windows.Forms.GroupBox gBCreate;
         private System.Windows.Forms.PictureBox pBCreBack;
         private System.Windows.Forms.Button btnCre;
@@ -491,10 +496,11 @@
         private System.Windows.Forms.Panel paneSlide;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.Button btnForVer;
         public System.Windows.Forms.TextBox tBId;
         public System.Windows.Forms.TextBox tBUser;
         public System.Windows.Forms.TextBox tBPass;
+        private System.Windows.Forms.Button btnForVer;
+        private System.Windows.Forms.Button btnMin;
     }
 }
 

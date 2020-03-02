@@ -242,6 +242,54 @@ namespace admissionSystem
                 MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public void filDept()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+
+            string code = lblCode.Text;
+            string dept = cbDept.Text;
+            string date = DateTime.Now.ToShortDateString();
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select Id, Last as Lastname, First as Firstname, Mid as Midname, " +
+                    "Dept as Department, Course, Year, mornTimeIn as MorningIn, mornTimeOut as MorningOut, " +
+                    "aftTimeIn as AfternoonIn, aftTimeout as AfternoonOut, eveTimeIn as EveningIn, eveTimeOut as EveningOut, totHours as TotalHrs" +
+                    " from attendTB where evtCode = '" + code + "' and evtDate = '" + date + "' and Dept = '" + dept + "'", con);
+                adapt.Fill(dt);
+                gVLog.DataSource = dt;
+                con.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void filCour()
+        {
+            SqlConnection con = new SqlConnection(empcs);
+
+            string code = lblCode.Text;
+            string cour = cbCour.Text;
+            string date = DateTime.Now.ToShortDateString();
+            try
+            {
+                con.Open();
+                DataTable dt = new DataTable();
+                adapt = new SqlDataAdapter("Select Id, Last as Lastname, First as Firstname, Mid as Midname, " +
+                    "Dept as Department, Course, Year, mornTimeIn as MorningIn, mornTimeOut as MorningOut, " +
+                    "aftTimeIn as AfternoonIn, aftTimeout as AfternoonOut, eveTimeIn as EveningIn, eveTimeOut as EveningOut, totHours as TotalHrs" +
+                    " from attendTB where evtCode = '" + code + "' and evtDate = '" + date + "' and Course = '" + cour + "'", con);
+                adapt.Fill(dt);
+                gVLog.DataSource = dt;
+                con.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         public void abEmp()
         {
             SqlConnection con = new SqlConnection(empcs);
@@ -935,22 +983,28 @@ namespace admissionSystem
                 {
                     MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (mornOut == "NONE" || aftOut == "NONE" || eveOut == "NONE" ||
-                       mornIn == "NONE" || aftIn == "NONE" || eveIn == "NONE")
-                {
-                    MessageBox.Show("There's must be at least one shedule!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else if (mornIn == mornOut || aftIn == aftOut || eveIn == eveOut ||
-                        mornOut == aftOut || mornOut == eveOut ||
-                        aftOut == mornOut || aftOut == eveOut ||
-                        eveOut == mornOut || eveOut == aftOut ||
-                        mornIn == aftIn || mornIn == eveIn || aftIn == eveIn ||
-                        mornIn == aftOut || mornIn == eveOut ||
-                        aftIn == mornOut || aftIn == eveOut ||
-                        eveIn == mornOut || eveIn == aftOut)
+                else if (mornOut == aftIn && aftOut == eveIn)
                 {
                     MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+                else if (mornIn != "NONE" && mornOut == "NONE")
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (aftIn != "NONE" && aftOut == "NONE")
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (eveIn != "NONE" && eveOut == "NONE")
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornIn == "NONE" && mornOut == "NONE" && aftIn == "NONE" && aftOut == "NONE" &&
+                        eveIn == "NONE" && eveOut == "NONE")
+                {
+                    MessageBox.Show("There's must be at least one shedule!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+               
                 else if (mornOut != "NONE" && aftOut != "NONE" && eveOut == "NONE")
                 {
                     MessageBox.Show("Not yet supported!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -1112,6 +1166,7 @@ namespace admissionSystem
 
             try
             {
+                
                 if (name == "" || att == "" || date == "" || 
                     mornIn == "" || mornOut == "" || 
                     aftIn == "" || aftOut == "" || 
@@ -1119,21 +1174,26 @@ namespace admissionSystem
                 {
                     MessageBox.Show("Missing Fields!", " Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else if (mornOut == "NONE" || aftOut == "NONE" || eveOut == "NONE" ||
-                        mornIn == "NONE" || aftIn == "NONE" || eveIn == "NONE")
-                {
-                    MessageBox.Show("There's must be at least one shedule!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else if (mornIn == mornOut || aftIn == aftOut || eveIn == eveOut ||
-                        mornOut == aftOut || mornOut == eveOut || 
-                        aftOut == mornOut || aftOut == eveOut ||
-                        eveOut == mornOut || eveOut == aftOut ||
-                        mornIn == aftIn || mornIn == eveIn ||aftIn == eveIn ||
-                        mornIn == aftOut || mornIn == eveOut ||
-                        aftIn == mornOut || aftIn == eveOut ||
-                        eveIn == mornOut || eveIn == aftOut)
+                else if (mornOut == aftIn  && aftOut == eveIn)
                 {
                     MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornIn != "NONE" && mornOut == "NONE")
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (aftIn != "NONE" && aftOut == "NONE")
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (eveIn != "NONE" && eveOut == "NONE")
+                {
+                    MessageBox.Show("Invalid Time!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (mornIn == "NONE" && mornOut == "NONE" && aftIn == "NONE" && aftOut == "NONE" &&
+                         eveIn == "NONE" && eveOut == "NONE")
+                {
+                    MessageBox.Show("There's must be at least one shedule!", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else if (mornOut != "NONE" && aftOut != "NONE" && eveOut == "NONE")
                 {
@@ -1455,8 +1515,6 @@ namespace admissionSystem
             loadCre();
             loadEvt();
             tabControl1.TabPages.Insert(0, tabHome);
-            this.TopMost = true;
-            this.BringToFront();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -1493,6 +1551,8 @@ namespace admissionSystem
             tabControl1.TabPages.Clear();
             cBEvt.Text = "";
             tBAtt.Text = "";
+            cbDept.Text = "";
+            cbCour.Text = "";
             lblCode.Text = "000000";
             gVLog.DataSource = null;
             tBTit.Visible = false;
@@ -1771,6 +1831,8 @@ namespace admissionSystem
             if (cBEvt.Text != "")
             {
                 tBAtt.Text = "";
+                cbDept.Text = "";
+                cbCour.Text = "";
                 cbMainEvt();
             }
         }
@@ -1796,6 +1858,8 @@ namespace admissionSystem
         {
             if (gVLog.Rows.Count > 0)
             {
+                cbDept.Text = "";
+                cbCour.Text = "";
                 abStud();
             }
             else
@@ -1809,6 +1873,8 @@ namespace admissionSystem
         {
             if (gVLog.Rows.Count > 0)
             {
+                cbDept.Text = "";
+                cbCour.Text = "";
                 abEmp();
             }
             else
@@ -1821,6 +1887,8 @@ namespace admissionSystem
         {
             if (gVLog.Rows.Count > 0)
             {
+                cbDept.Text = "";
+                cbCour.Text = "";
                 filStud();
             }
             else
@@ -1833,6 +1901,8 @@ namespace admissionSystem
         {
             if (gVLog.Rows.Count > 0)
             {
+                cbDept.Text = "";
+                cbCour.Text = "";
                 filEmp();
             }
             else
@@ -1845,7 +1915,8 @@ namespace admissionSystem
         {
             if (gVLog.Rows.Count > 0)
             {
-               
+                cbDept.Text = "";
+                cbCour.Text = "";
                 tBTit.Visible = true;
             }
             else
@@ -1871,6 +1942,8 @@ namespace admissionSystem
                         if (MessageBox.Show("Continue printing?", " Verify", MessageBoxButtons.YesNo,
                             MessageBoxIcon.Question) == DialogResult.Yes)
                         {
+                            cbDept.Text = "";
+                            cbCour.Text = "";
                             this.TopMost = false;
                             printLog();
                         }
@@ -1898,6 +1971,7 @@ namespace admissionSystem
                 if (tBEmpSer.Text != "")
                 {
                     findEmp();
+
                 }
                 else
                 {
@@ -1981,8 +2055,8 @@ namespace admissionSystem
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Screen sc = new Screen();
-                sc.ShowDialog();
-                this.FormClosing -= Main_FormClosing;
+                sc.Show();
+                this.Hide();           
             }
             else
             {
@@ -2017,6 +2091,30 @@ namespace admissionSystem
             tBSerEvt.ForeColor = Color.Gray;
             tBSerEvt.Text = "Search Here";
             dispEvt();
+        }
+
+        private void cbCour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lblCode.Text != "0000000")
+            {
+                filCour();
+            }
+            else
+            {
+                MessageBox.Show("Select an event!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cbDept_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lblCode.Text != "0000000")
+            {
+                filDept();
+            }
+            else
+            {
+                MessageBox.Show("Select an event!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

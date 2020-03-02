@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,9 @@ namespace admissionSystem
 {
     public partial class Screen : Form
     {
+        [DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+
         int move = 0;
         int left = 5;
         string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
@@ -23,6 +28,153 @@ namespace admissionSystem
         {
             InitializeComponent();
         }
+        private static string RandomString(int length)
+        {
+            Random random = new Random();
+            const string pool = "abcdefghijklmnopqrstuvwxyz0123456789";
+            var builder = new StringBuilder();
+
+            for (var i = 0; i < length; i++)
+            {
+                var c = pool[random.Next(0, pool.Length)];
+                builder.Append(c);
+            }
+
+            return builder.ToString();
+        }
+        public void chk()
+        {
+            int Desc;
+            String chk = InternetGetConnectedState(out Desc, 0).ToString();
+
+            if (chk == "True")
+            {
+                codeReq();
+            }
+            else if (chk == "False")
+            {
+                MessageBox.Show("Please check your network and try again.. ", " No Connection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Fatal Error!", " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        public void codeLog()
+        {
+            SqlConnection verCon = new SqlConnection(empcs);
+            SqlConnection upCon = new SqlConnection(empcs);
+
+            string code = tbCode.Text;
+            string date = DateTime.Now.ToShortDateString();
+            string user = tBUser.Text;
+            string time = DateTime.Now.ToShortTimeString();
+            string stat = "USED";
+            string empId = tBId.Text;
+
+            try
+            {
+                verCon.Open();
+                SqlCommand verCmd = verCon.CreateCommand();
+                verCmd.CommandType = CommandType.Text;
+                verCmd.CommandText = "Select * from codeTB where code = '" + code + "' " +
+                    "and DateReq = '" + date + "' " +
+                    // "and user = '" + user + "' " +
+                    "and status = 'ACTIVE'";
+                SqlDataReader dr = verCmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    upCon.Open();
+                    SqlCommand upCmd = upCon.CreateCommand();
+                    upCmd.CommandType = CommandType.Text;
+                    upCmd.CommandText = "Update codeTB set TimeLog = '" + time + "', " +
+                        "status = '" + stat + "'" +
+                        "where code = '" + code + "' " +
+                        "and DateReq = '" + date + "'";
+
+                    upCmd.ExecuteNonQuery();
+                    upCon.Close();
+                    id = empId;
+                    userId = user;
+
+                    MessageBox.Show("Login Successful!", " Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Main ma = new Main();
+                    ma.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Code Error!", " Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                verCon.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void codeReq()
+        {
+            SqlConnection codeCon = new SqlConnection(empcs);
+
+            string code = RandomString(5);
+            string user = tBUser.Text;
+            string date = DateTime.Now.ToShortDateString();
+            string time = "-----";
+            string stat = "ACTIVE";
+            string email = "smarteman10@gmail.com";
+
+            try
+            {
+                if (tBUser.Text == "")
+                {
+                    MessageBox.Show("Username required...", " Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tBUser.Focus();
+                }
+                else
+                {
+                   
+                    gBForgot.Visible = true;
+                    gBForgot.BringToFront();
+
+
+                    codeCon.Open();
+                    SqlCommand cmd = codeCon.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "Insert into codeTB Values('" + code + "', " +
+                        "'" + stat + "', " +
+                        "'" + date + "', " +
+                        "'" + time + "', " +
+                        "'" + user + "')";
+                    cmd.ExecuteNonQuery();
+                    codeCon.Close();
+
+                    // Sending Email
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                    MailMessage mail = new MailMessage();
+                    mail.From = new MailAddress("sistemoquizo@gmail.com");
+                    mail.To.Add(email);
+                    mail.Subject = "Recovery Code: " + date + "";
+                    mail.Body = "Username: " + user + "" + Environment.NewLine + "Code: " + code + "";
+
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential("sistemoquizo@gmail.com", "qUizandexamsystem101");
+                    SmtpServer.EnableSsl = true;
+                    SmtpServer.Send(mail);
+
+                    tbCode.Focus();
+                }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         public void logID()
         {
@@ -193,7 +345,8 @@ namespace admissionSystem
             gBId.Visible = false;
             gBForgot.Visible = false;
             gBCreate.Visible = false;
-            btnShut.Visible = false;         
+            btnShut.Visible = false;
+            btnMin.Visible = false;
             timer1.Start();
             timer2.Start();
             this.TopMost = true;
@@ -228,6 +381,7 @@ namespace admissionSystem
                     paneLogo.Visible = false;
                     gBId.Visible = true;
                     btnShut.Visible = true;
+                    btnMin.Visible = true;
                     tBId.Focus();
                 }
             }
@@ -268,6 +422,34 @@ namespace admissionSystem
         private void btnLog_Click(object sender, EventArgs e)
         {
             logID();
+        }
+
+        private void lblForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            chk();
+        }
+
+        private void pBForBack_Click(object sender, EventArgs e)
+        {
+            gBLog.Visible = true;
+            gBLog.BringToFront();
+        }
+
+        private void btnForVer_Click(object sender, EventArgs e)
+        {
+            if (tbCode.Text != "")
+            {
+                codeLog();
+            }
+            else
+            {
+                MessageBox.Show("Missing Fields!", " Empty", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

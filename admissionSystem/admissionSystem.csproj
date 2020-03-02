@@ -146,6 +146,7 @@
     <None Include="Resources\attendance-management-system.jpg" />
     <None Include="Resources\Checklist-icon.png" />
     <None Include="Resources\Checklist-icon %281%29.png" />
+    <None Include="Resources\Programming-Minimize-Window-icon.png" />
     <Content Include="spy.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

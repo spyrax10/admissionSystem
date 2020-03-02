@@ -243,6 +243,16 @@ namespace admissionSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Programming_Minimize_Window_icon {
+            get {
+                object obj = ResourceManager.GetObject("Programming-Minimize-Window-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Programming_Save_icon {
             get {
                 object obj = ResourceManager.GetObject("Programming-Save-icon", resourceCulture);

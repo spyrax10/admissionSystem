@@ -397,7 +397,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                eveOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                eveOut();
             }
         }        
         public void logEveIn()
@@ -765,7 +770,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                eveInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                eveIn();
             }
         }        
         public void logAftOut()
@@ -1073,7 +1083,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                aftOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                aftOut();
             }
         }
         public void logAftIn()
@@ -1442,7 +1457,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                aftInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                aftIn();
             }
         }         
         public void logMornOut()
@@ -1763,7 +1783,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                mornOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                morningOut();
             }
         } 
         public void logMornIn()
@@ -2036,12 +2061,25 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message + " MornIn", " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                mornInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                morningIn();
             }
         }
        
         
-        
+        public void clear()
+        {
+            pBQR.Image = Properties.Resources.abc;
+            pBImg.Image = Properties.Resources.download;
+            tBId.Text = "";
+            tBFirst.Text = "";
+            tbMid.Text = "";
+            FinalFrame.Stop();
+        }
         public void eveOut()
         {
             capCam();
@@ -2116,7 +2154,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                mornInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                logMornIn();
             }
         }
         private void btnMornOut_Click(object sender, EventArgs e)
@@ -2143,6 +2186,8 @@ namespace QRScan
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            mornInTimer.Stop();
+                            clear();
                         }
                     }
                     else if (tBMornIn.Text != "NONE" && tBAftIn.Text == "NONE" && tBEveIn.Text == "NONE")
@@ -2161,21 +2206,27 @@ namespace QRScan
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            sinMornInTimer.Stop();
+                            clear();
                         }
                     }
                     else
                     {
                         lblStat.Text = "ERROR!";
+                        clear();
                     }
                 }
                 else
                 {
                     lblStat.Text = "EVENT EMPTY!";
+                    clear();
                 }
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message);
+                lblStat.Text = f.Message;
+                clear();
+
             }
         }
         private void mornOutTimer_Tick(object sender, EventArgs e)
@@ -2209,7 +2260,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                mornOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                logMornOut();
             }
 
         }
@@ -2219,6 +2275,7 @@ namespace QRScan
             {
                 if (lblEvtCode.Text != "0000000")
                 {
+                    cBEvt.Enabled = false;
                     if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
                     {
                         lblStat.Text = "Starting...";
@@ -2232,10 +2289,13 @@ namespace QRScan
                             mornOutTimer.Stop();
                             FinalFrame.Stop();
                             aftIn();
+                            cBEvt.Enabled = false;
                         }
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            mornOutTimer.Stop();
+                            clear();
                         }
                     }
                     else if (tBAftIn.Text != "NONE" && tBMornIn.Text == "NONE" && tBEveIn.Text == "NONE")
@@ -2251,25 +2311,32 @@ namespace QRScan
                             sinMornOutTimer.Stop();
                             FinalFrame.Stop();
                             sinAftIn();
+                            cBEvt.Enabled = false;
+
                         }
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            sinMornOutTimer.Stop();
+                            clear();
                         }
                     }
                     else
                     {
                         lblStat.Text = "ERROR!";
+                        clear();
                     }
                 }
                 else
                 {
                     lblStat.Text = "EVENT EMPTY!";
+                    clear();
                 }
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message);
+                lblStat.Text = f.Message;
+                clear();
             }
 
         }
@@ -2303,7 +2370,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                aftInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.kali;
+                logAftIn();
             }
 
         }
@@ -2331,6 +2403,8 @@ namespace QRScan
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            aftInTimer.Stop();
+                            clear();
                         }
                     }
                     else if (tBAftIn.Text != "NONE" && tBMornIn.Text == "NONE" && tBEveIn.Text == "NONE")
@@ -2349,21 +2423,26 @@ namespace QRScan
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            sinAftInTimer.Stop();
+                            clear();
                         }
                     }
                     else
                     {
                         lblStat.Text = "ERROR!";
+                        clear();
                     }
                 }
                 else
                 {
                     lblStat.Text = "EVENT EMPTY!";
+                    clear();
                 }
             }
             catch (Exception f)
             {
                 lblStat.Text = "ERROR!";
+                clear();
             }
         }
         private void aftOutTimer_Tick(object sender, EventArgs e)
@@ -2396,7 +2475,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                aftOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                logAftOut();
             }
         }
         private void eveInTimer_Tick(object sender, EventArgs e)
@@ -2414,7 +2498,7 @@ namespace QRScan
                         string decoded = result.ToString().Trim();
                         tBId.Text = decoded;
                         lblStat.Text = "QR Decoded!";
-                        aftInTimer.Stop();
+                        eveInTimer.Stop();
                         FinalFrame.Stop();
                         pBQR.Image = Properties.Resources.abc;
                         logEveIn();
@@ -2429,7 +2513,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                aftInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                logEveIn();
             }
         }
         private void btnEveIn_Click(object sender, EventArgs e)
@@ -2438,6 +2527,7 @@ namespace QRScan
             {
                 if (lblEvtCode.Text != "0000000")
                 {
+                    cBEvt.Enabled = false;
                     if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
                     {
                         lblStat.Text = "Starting...";
@@ -2451,10 +2541,14 @@ namespace QRScan
                             aftInTimer.Stop();
                             FinalFrame.Stop();
                             eveIn();
+                            cBEvt.Enabled = false;
+
                         }
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            aftInTimer.Stop();
+                            clear();
                         }
                     }
                     else if (tBMornIn.Text == "NONE" && tBAftIn.Text == "NONE" && tBEveIn.Text != "NONE")
@@ -2469,25 +2563,32 @@ namespace QRScan
                             sinEveInTimer.Stop();
                             FinalFrame.Stop();
                             sinEveIn();
+                            cBEvt.Enabled = false;
+
                         }
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            sinEveInTimer.Stop();
+                            clear();
                         }
                     }
                     else
                     {
                         lblStat.Text = "ERROR!";
+                        clear();
                     }
                 }
                 else
                 {
                     lblStat.Text = "EVENT EMPTY!";
+                    clear();
                 }
             }
             catch (Exception f)
             {
                 lblStat.Text = "ERROR!";
+                clear();
             }
 
         }
@@ -2521,7 +2622,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                eveOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                logEveOut();
             }
         }
         private void btnEveOut_Click(object sender, EventArgs e)
@@ -2549,6 +2655,8 @@ namespace QRScan
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            eveInTimer.Stop();
+                            clear();
                         }
                     }
                     else if (tBEveIn.Text != "NONE" && tBMornIn.Text == "NONE" && tBAftIn.Text == "NONE")
@@ -2567,27 +2675,33 @@ namespace QRScan
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            sinEveInTimer.Stop();
+                            clear();
                         }
                     }
                     else
                     {
                         lblStat.Text = "ERROR!";
+                        clear();
                     }
                 }
                 else
                 {
                     lblStat.Text = "EVENT EMPTY!";
+                    clear();
                 }
             }
             catch (Exception f)
             {
                 lblStat.Text = "ERROR!";
+                clear();
             }
         }
 
         #endregion
 
         #region Single Schedule Attendance
+        
         public void sinEveIn()
         {
             capCam();
@@ -2886,7 +3000,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                sinEveOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                sinEveOut();
             }
         }
         public void snLogAftOut()
@@ -3151,7 +3270,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                sinAftOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                sinAftOut();
             }
 
         }
@@ -3417,7 +3541,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                sinMornOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                sinMornOut();
             }
 
         }
@@ -3691,7 +3820,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                sinEveInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                sinEveIn();
             }
         }
         public void snLogAftIn()
@@ -3964,7 +4098,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                sinAftInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                sinAftIn();
             }
         }
         public void snLogMornIn()
@@ -4237,7 +4376,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblStat.Text = e.Message;
+                tBId.Text = "";
+                sinMornInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                sinMornIn();
             }
         }
         #endregion
@@ -4249,6 +4393,7 @@ namespace QRScan
             {
                 if (lblEvtCode.Text != "0000000")
                 {
+                    cBEvt.Enabled = false;
                     if (tBMornIn.Text != "NONE" && tBAftIn.Text != "NONE" && tBEveIn.Text != "NONE")
                     {
                         lblStat.Text = "Starting...";
@@ -4261,10 +4406,13 @@ namespace QRScan
                         {
                             FinalFrame.Stop();
                             morningIn();
+                            cBEvt.Enabled = false;
                         }
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            mornInTimer.Stop();
+                            clear();
                         }
                     }
                     else if (tBMornIn.Text != "NONE" && tBAftIn.Text == "NONE" && tBEveIn.Text == "NONE")
@@ -4279,25 +4427,31 @@ namespace QRScan
                         {
                             //FinalFrame.Stop();
                             sinMornIn();
+                            cBEvt.Enabled = false;
                         }
                         else
                         {
                             lblStat.Text = "TIME NOT MEET!";
+                            sinMornInTimer.Stop();
+                            clear();
                         }
                     }
                     else
                     {
                         lblStat.Text = "ERROR!";
+                        clear();
                     }
                 }
                 else
                 {
                     lblStat.Text = "EVENT EMPTY!";
+                    clear();
                 }
             }
             catch (Exception f)
             {
                 lblStat.Text = "ERROR!";
+                clear();
             }
 
         }
@@ -4324,7 +4478,7 @@ namespace QRScan
 
                     if (dr.Read())
                     {
-                        if (MessageBox.Show("Are you sure to wrap the attendance?", " Verify", 
+                        if (MessageBox.Show("Are you sure to end the attendance?", " Verify", 
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             wrap();
@@ -4345,7 +4499,7 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
             }
         }
         public void verPass()
@@ -4396,7 +4550,7 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
             }
         }
         public void capCam()
@@ -4410,12 +4564,12 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
+                capCam();
             }
         }
         private void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-
             pBQR.Image = (Bitmap)eventArgs.Frame.Clone();
         }
         public void cbEvt()
@@ -4458,7 +4612,7 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
             }
         }
         public void loadEvt()
@@ -4492,7 +4646,7 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
             }
         }
         public void loadCam()
@@ -4510,7 +4664,7 @@ namespace QRScan
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = e.Message;
             }
         }
         public void logID()
@@ -4656,42 +4810,7 @@ namespace QRScan
                         btnEveIn.Enabled = false;
                         btnEveOut.Enabled = true;
                     }
-                    //// Morning Out
-                    //if (time == mOut && mOut != "NONE" && aIn != "NONE" && eIn != "NONE")
-                    //{
-                    //    btnMornIn.Enabled = false;
-                    //    btnMornOut.Enabled = true;
-                    //}
-                    //if (time == mOut && mOut != "NONE" && aIn == "NONE" && eIn == "NONE")
-                    //{
-                    //    btnMornIn.Enabled = false;
-                    //    btnMornOut.Enabled = true;
-                    //}
-                    //// Afternoon Out
-                    //if (time == aOut && aOut != "NONE" && mIn != "NONE" && aIn != "NONE" && eIn != "NONE")
-                    //{
-                    //    btnMornIn.Enabled = false;
-                    //    btnMornOut.Enabled = false;
-                    //    btnAftIn.Enabled = false;
-                    //    btnAftOut.Enabled = true;
-                    //}
-                    //if (time == aOut && aOut != "NONE" && mIn == "NONE"  && eIn == "NONE" && aIn != "NONE")
-                    //{
-                    //    btnMornIn.Enabled = false;
-                    //    btnMornOut.Enabled = false;
-                    //    btnAftIn.Enabled = false;
-                    //    btnAftOut.Enabled = true;
-                    //}
-                    //// Evening Out
-                    //if (time == eOut && eOut != "NONE" && mIn != "NONE" && aIn != "NONE" && eIn != "NONE")
-                    //{
-                    //    btnMornIn.Enabled = false;
-                    //    btnMornOut.Enabled = false;
-                    //    btnAftIn.Enabled = false;
-                    //    btnAftOut.Enabled = false;
-                    //    btnEveIn.Enabled = false;
-                    //    btnEveOut.Enabled = true;
-                    //}
+                   
                 }
             }
             catch (Exception f)
@@ -4701,6 +4820,7 @@ namespace QRScan
         }
         private void cBEvt_SelectedIndexChanged(object sender, EventArgs e)
         {
+            clear();
             if (cBEvt.Text != null)
             {
                 if (cBEvt.Text == "Regular Employee LogIn")
@@ -4728,8 +4848,22 @@ namespace QRScan
         }
         private void Scanner_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FinalFrame.Stop();
-            Application.Exit();
+            if (MessageBox.Show("This will also end any ongoing attendace, Continue anyway?", " Verify", MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                FinalFrame.Stop();
+                if (lblEvtCode.Text != "0000000")
+                {
+                    wrap();
+                }
+                this.FormClosing -= Scanner_FormClosing;
+                Application.Exit();
+            }
+           
         }
         private void btnLock_Click(object sender, EventArgs e)
         {
@@ -4744,7 +4878,7 @@ namespace QRScan
             }
         }
         private void btnWrap_Click(object sender, EventArgs e)
-        {
+        {      
             if (btnMornOut.Enabled == true ||
                 btnAftIn.Enabled == true ||
                 btnEveOut.Enabled == true)
@@ -4793,7 +4927,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                sinMornInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                snLogMornIn();
             }
 
         }
@@ -4829,7 +4968,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                sinMornOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                snLogMornOut();
             }
         }
 
@@ -4863,7 +5007,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                sinAftInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                snLogAftIn();
             }
 
         }
@@ -4899,7 +5048,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                sinAftOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                snLogAftOut();
             }
         }
 
@@ -4933,7 +5087,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                sinEveInTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                snLogEveIn();
             }
 
         }
@@ -4969,7 +5128,12 @@ namespace QRScan
             }
             catch (Exception f)
             {
-                MessageBox.Show(f.Message, " Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblStat.Text = f.Message;
+                tBId.Text = "";
+                sinEveOutTimer.Stop();
+                FinalFrame.Stop();
+                pBQR.Image = Properties.Resources.abc;
+                snLogEveOut();
             }
         }
     }

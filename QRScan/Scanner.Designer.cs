@@ -31,14 +31,27 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scanner));
             this.paneMain = new System.Windows.Forms.Panel();
+            this.paneLogo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.paneSlide = new System.Windows.Forms.Panel();
+            this.gBLog = new System.Windows.Forms.GroupBox();
+            this.btnLog = new System.Windows.Forms.Button();
+            this.tBUser = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tBPass = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.paneHome = new System.Windows.Forms.Panel();
             this.tBWPass = new System.Windows.Forms.TextBox();
             this.btnWrap = new System.Windows.Forms.Button();
             this.tBPassLock = new System.Windows.Forms.TextBox();
+            this.btnLock = new System.Windows.Forms.Button();
             this.lblStat = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.pBImg = new System.Windows.Forms.PictureBox();
             this.tBLast = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tbMid = new System.Windows.Forms.TextBox();
@@ -48,6 +61,7 @@
             this.tBId = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.pBQR = new System.Windows.Forms.PictureBox();
             this.paneSet = new System.Windows.Forms.Panel();
             this.btnEveOut = new System.Windows.Forms.Button();
             this.btnAftOut = new System.Windows.Forms.Button();
@@ -78,15 +92,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.paneLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.paneSlide = new System.Windows.Forms.Panel();
-            this.gBLog = new System.Windows.Forms.GroupBox();
-            this.lblForgot = new System.Windows.Forms.LinkLabel();
-            this.btnLog = new System.Windows.Forms.Button();
-            this.tBUser = new System.Windows.Forms.TextBox();
-            this.tBPass = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -102,26 +107,18 @@
             this.sinAftOutTimer = new System.Windows.Forms.Timer(this.components);
             this.sinEveInTimer = new System.Windows.Forms.Timer(this.components);
             this.sinEveOutTimer = new System.Windows.Forms.Timer(this.components);
-            this.btnLock = new System.Windows.Forms.Button();
-            this.pBImg = new System.Windows.Forms.PictureBox();
-            this.pBQR = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pBLogBack = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.paneMain.SuspendLayout();
-            this.paneHome.SuspendLayout();
-            this.paneSet.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.paneLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             this.gBLog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.paneHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).BeginInit();
+            this.paneSet.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneMain
@@ -134,6 +131,124 @@
             this.paneMain.Name = "paneMain";
             this.paneMain.Size = new System.Drawing.Size(1178, 661);
             this.paneMain.TabIndex = 0;
+            // 
+            // paneLogo
+            // 
+            this.paneLogo.Controls.Add(this.pictureBox4);
+            this.paneLogo.Controls.Add(this.label1);
+            this.paneLogo.Controls.Add(this.panel1);
+            this.paneLogo.Location = new System.Drawing.Point(573, 554);
+            this.paneLogo.Name = "paneLogo";
+            this.paneLogo.Size = new System.Drawing.Size(593, 95);
+            this.paneLogo.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::QRScan.Properties.Resources.Checklist_icon;
+            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(101, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(490, 36);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Attendance Management System";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.paneSlide);
+            this.panel1.Location = new System.Drawing.Point(108, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(470, 13);
+            this.panel1.TabIndex = 2;
+            // 
+            // paneSlide
+            // 
+            this.paneSlide.BackColor = System.Drawing.Color.Black;
+            this.paneSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSlide.Location = new System.Drawing.Point(355, -1);
+            this.paneSlide.Name = "paneSlide";
+            this.paneSlide.Size = new System.Drawing.Size(114, 15);
+            this.paneSlide.TabIndex = 3;
+            // 
+            // gBLog
+            // 
+            this.gBLog.Controls.Add(this.btnLog);
+            this.gBLog.Controls.Add(this.tBUser);
+            this.gBLog.Controls.Add(this.pictureBox2);
+            this.gBLog.Controls.Add(this.tBPass);
+            this.gBLog.Controls.Add(this.pictureBox3);
+            this.gBLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.gBLog.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gBLog.Location = new System.Drawing.Point(424, 223);
+            this.gBLog.Name = "gBLog";
+            this.gBLog.Size = new System.Drawing.Size(331, 214);
+            this.gBLog.TabIndex = 6;
+            this.gBLog.TabStop = false;
+            this.gBLog.Text = "LOGIN";
+            // 
+            // btnLog
+            // 
+            this.btnLog.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLog.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLog.ForeColor = System.Drawing.Color.Black;
+            this.btnLog.Location = new System.Drawing.Point(227, 171);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(75, 30);
+            this.btnLog.TabIndex = 4;
+            this.btnLog.Text = "LOGIN";
+            this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
+            // 
+            // tBUser
+            // 
+            this.tBUser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBUser.Location = new System.Drawing.Point(77, 81);
+            this.tBUser.Name = "tBUser";
+            this.tBUser.Size = new System.Drawing.Size(225, 31);
+            this.tBUser.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(34, 81);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // tBPass
+            // 
+            this.tBPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBPass.Location = new System.Drawing.Point(77, 134);
+            this.tBPass.Name = "tBPass";
+            this.tBPass.PasswordChar = '*';
+            this.tBPass.Size = new System.Drawing.Size(225, 31);
+            this.tBPass.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(34, 134);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // paneHome
             // 
@@ -167,7 +282,7 @@
             // tBWPass
             // 
             this.tBWPass.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBWPass.Location = new System.Drawing.Point(924, 624);
+            this.tBWPass.Location = new System.Drawing.Point(908, 625);
             this.tBWPass.Name = "tBWPass";
             this.tBWPass.PasswordChar = '*';
             this.tBWPass.Size = new System.Drawing.Size(162, 27);
@@ -177,11 +292,11 @@
             // btnWrap
             // 
             this.btnWrap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWrap.Location = new System.Drawing.Point(1092, 625);
+            this.btnWrap.Location = new System.Drawing.Point(1075, 625);
             this.btnWrap.Name = "btnWrap";
-            this.btnWrap.Size = new System.Drawing.Size(75, 27);
+            this.btnWrap.Size = new System.Drawing.Size(92, 27);
             this.btnWrap.TabIndex = 106;
-            this.btnWrap.Text = "CLOSE";
+            this.btnWrap.Text = "END NOW";
             this.btnWrap.UseVisualStyleBackColor = true;
             this.btnWrap.Click += new System.EventHandler(this.btnWrap_Click);
             // 
@@ -195,12 +310,24 @@
             this.tBPassLock.TabIndex = 105;
             this.tBPassLock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBPassLock_KeyPress);
             // 
+            // btnLock
+            // 
+            this.btnLock.FlatAppearance.BorderSize = 0;
+            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLock.Image = global::QRScan.Properties.Resources.Lock_Lock_icon;
+            this.btnLock.Location = new System.Drawing.Point(369, 621);
+            this.btnLock.Name = "btnLock";
+            this.btnLock.Size = new System.Drawing.Size(35, 35);
+            this.btnLock.TabIndex = 104;
+            this.btnLock.UseVisualStyleBackColor = true;
+            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            // 
             // lblStat
             // 
             this.lblStat.AutoSize = true;
             this.lblStat.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStat.ForeColor = System.Drawing.Color.Lime;
-            this.lblStat.Location = new System.Drawing.Point(459, 535);
+            this.lblStat.Location = new System.Drawing.Point(704, 542);
             this.lblStat.Name = "lblStat";
             this.lblStat.Size = new System.Drawing.Size(35, 23);
             this.lblStat.TabIndex = 66;
@@ -211,7 +338,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label19.Location = new System.Drawing.Point(384, 535);
+            this.label19.Location = new System.Drawing.Point(639, 541);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(69, 23);
             this.label19.TabIndex = 65;
@@ -238,6 +365,17 @@
             this.label17.Size = new System.Drawing.Size(177, 23);
             this.label17.TabIndex = 63;
             this.label17.Text = "Holder\'s QR Code:";
+            // 
+            // pBImg
+            // 
+            this.pBImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBImg.Image = global::QRScan.Properties.Resources.download;
+            this.pBImg.Location = new System.Drawing.Point(903, 221);
+            this.pBImg.Name = "pBImg";
+            this.pBImg.Size = new System.Drawing.Size(245, 245);
+            this.pBImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBImg.TabIndex = 62;
+            this.pBImg.TabStop = false;
             // 
             // tBLast
             // 
@@ -402,6 +540,17 @@
             this.label10.TabIndex = 53;
             this.label10.Text = "Please face the QR Code in front of Camera:";
             // 
+            // pBQR
+            // 
+            this.pBQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBQR.Image = global::QRScan.Properties.Resources.abc;
+            this.pBQR.Location = new System.Drawing.Point(388, 221);
+            this.pBQR.Name = "pBQR";
+            this.pBQR.Size = new System.Drawing.Size(245, 245);
+            this.pBQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBQR.TabIndex = 1;
+            this.pBQR.TabStop = false;
+            // 
             // paneSet
             // 
             this.paneSet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -441,6 +590,7 @@
             // btnEveOut
             // 
             this.btnEveOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEveOut.ForeColor = System.Drawing.Color.Red;
             this.btnEveOut.Location = new System.Drawing.Point(290, 557);
             this.btnEveOut.Name = "btnEveOut";
             this.btnEveOut.Size = new System.Drawing.Size(57, 28);
@@ -452,6 +602,7 @@
             // btnAftOut
             // 
             this.btnAftOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAftOut.ForeColor = System.Drawing.Color.Red;
             this.btnAftOut.Location = new System.Drawing.Point(290, 523);
             this.btnAftOut.Name = "btnAftOut";
             this.btnAftOut.Size = new System.Drawing.Size(57, 28);
@@ -463,6 +614,7 @@
             // btnMornOut
             // 
             this.btnMornOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMornOut.ForeColor = System.Drawing.Color.Red;
             this.btnMornOut.Location = new System.Drawing.Point(290, 489);
             this.btnMornOut.Name = "btnMornOut";
             this.btnMornOut.Size = new System.Drawing.Size(57, 28);
@@ -474,6 +626,7 @@
             // btnEveIn
             // 
             this.btnEveIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEveIn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnEveIn.Location = new System.Drawing.Point(7, 557);
             this.btnEveIn.Name = "btnEveIn";
             this.btnEveIn.Size = new System.Drawing.Size(169, 28);
@@ -485,6 +638,7 @@
             // btnAftIn
             // 
             this.btnAftIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAftIn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnAftIn.Location = new System.Drawing.Point(7, 523);
             this.btnAftIn.Name = "btnAftIn";
             this.btnAftIn.Size = new System.Drawing.Size(169, 28);
@@ -507,6 +661,7 @@
             // btnMornIn
             // 
             this.btnMornIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMornIn.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnMornIn.Location = new System.Drawing.Point(7, 489);
             this.btnMornIn.Name = "btnMornIn";
             this.btnMornIn.Size = new System.Drawing.Size(169, 28);
@@ -541,7 +696,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.Lime;
             this.label8.Location = new System.Drawing.Point(20, 371);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 18);
@@ -552,7 +707,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(211, 371);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 18);
@@ -644,7 +799,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(211, 338);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 18);
@@ -655,7 +810,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(211, 305);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 18);
@@ -720,7 +875,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.Lime;
             this.label4.Location = new System.Drawing.Point(6, 338);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 18);
@@ -758,7 +913,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.ForeColor = System.Drawing.Color.Lime;
             this.label14.Location = new System.Drawing.Point(17, 305);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 18);
@@ -853,108 +1008,6 @@
             this.lblTime.TabIndex = 3;
             this.lblTime.Text = "label59";
             // 
-            // paneLogo
-            // 
-            this.paneLogo.Controls.Add(this.pictureBox4);
-            this.paneLogo.Controls.Add(this.label1);
-            this.paneLogo.Controls.Add(this.panel1);
-            this.paneLogo.Location = new System.Drawing.Point(573, 554);
-            this.paneLogo.Name = "paneLogo";
-            this.paneLogo.Size = new System.Drawing.Size(593, 95);
-            this.paneLogo.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(101, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(490, 36);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Attendance Management System";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.paneSlide);
-            this.panel1.Location = new System.Drawing.Point(108, 75);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(470, 13);
-            this.panel1.TabIndex = 2;
-            // 
-            // paneSlide
-            // 
-            this.paneSlide.BackColor = System.Drawing.Color.Black;
-            this.paneSlide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSlide.Location = new System.Drawing.Point(355, -1);
-            this.paneSlide.Name = "paneSlide";
-            this.paneSlide.Size = new System.Drawing.Size(114, 15);
-            this.paneSlide.TabIndex = 3;
-            // 
-            // gBLog
-            // 
-            this.gBLog.Controls.Add(this.pBLogBack);
-            this.gBLog.Controls.Add(this.lblForgot);
-            this.gBLog.Controls.Add(this.btnLog);
-            this.gBLog.Controls.Add(this.tBUser);
-            this.gBLog.Controls.Add(this.pictureBox2);
-            this.gBLog.Controls.Add(this.tBPass);
-            this.gBLog.Controls.Add(this.pictureBox3);
-            this.gBLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gBLog.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBLog.Location = new System.Drawing.Point(424, 223);
-            this.gBLog.Name = "gBLog";
-            this.gBLog.Size = new System.Drawing.Size(331, 214);
-            this.gBLog.TabIndex = 6;
-            this.gBLog.TabStop = false;
-            this.gBLog.Text = "LOGIN";
-            // 
-            // lblForgot
-            // 
-            this.lblForgot.AutoSize = true;
-            this.lblForgot.Font = new System.Drawing.Font("Century Gothic", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgot.LinkColor = System.Drawing.Color.Red;
-            this.lblForgot.Location = new System.Drawing.Point(74, 171);
-            this.lblForgot.Name = "lblForgot";
-            this.lblForgot.Size = new System.Drawing.Size(109, 16);
-            this.lblForgot.TabIndex = 5;
-            this.lblForgot.TabStop = true;
-            this.lblForgot.Text = "Fogot Password?";
-            // 
-            // btnLog
-            // 
-            this.btnLog.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLog.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLog.ForeColor = System.Drawing.Color.Black;
-            this.btnLog.Location = new System.Drawing.Point(227, 171);
-            this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(75, 30);
-            this.btnLog.TabIndex = 4;
-            this.btnLog.Text = "LOGIN";
-            this.btnLog.UseVisualStyleBackColor = true;
-            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
-            // 
-            // tBUser
-            // 
-            this.tBUser.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBUser.Location = new System.Drawing.Point(77, 81);
-            this.tBUser.Name = "tBUser";
-            this.tBUser.Size = new System.Drawing.Size(225, 31);
-            this.tBUser.TabIndex = 1;
-            // 
-            // tBPass
-            // 
-            this.tBPass.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBPass.Location = new System.Drawing.Point(77, 134);
-            this.tBPass.Name = "tBPass";
-            this.tBPass.PasswordChar = '*';
-            this.tBPass.Size = new System.Drawing.Size(225, 31);
-            this.tBPass.TabIndex = 3;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -1033,80 +1086,6 @@
             this.sinEveOutTimer.Interval = 2000;
             this.sinEveOutTimer.Tick += new System.EventHandler(this.sinEveOutTimer_Tick);
             // 
-            // btnLock
-            // 
-            this.btnLock.FlatAppearance.BorderSize = 0;
-            this.btnLock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLock.Image = global::QRScan.Properties.Resources.Lock_Lock_icon;
-            this.btnLock.Location = new System.Drawing.Point(369, 621);
-            this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(35, 35);
-            this.btnLock.TabIndex = 104;
-            this.btnLock.UseVisualStyleBackColor = true;
-            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
-            // 
-            // pBImg
-            // 
-            this.pBImg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBImg.Image = global::QRScan.Properties.Resources.download;
-            this.pBImg.Location = new System.Drawing.Point(903, 221);
-            this.pBImg.Name = "pBImg";
-            this.pBImg.Size = new System.Drawing.Size(245, 245);
-            this.pBImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBImg.TabIndex = 62;
-            this.pBImg.TabStop = false;
-            // 
-            // pBQR
-            // 
-            this.pBQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBQR.Image = global::QRScan.Properties.Resources.abc;
-            this.pBQR.Location = new System.Drawing.Point(388, 221);
-            this.pBQR.Name = "pBQR";
-            this.pBQR.Size = new System.Drawing.Size(245, 245);
-            this.pBQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBQR.TabIndex = 1;
-            this.pBQR.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::QRScan.Properties.Resources.Checklist_icon;
-            this.pictureBox4.Location = new System.Drawing.Point(6, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 86);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pBLogBack
-            // 
-            this.pBLogBack.Image = ((System.Drawing.Image)(resources.GetObject("pBLogBack.Image")));
-            this.pBLogBack.Location = new System.Drawing.Point(299, 22);
-            this.pBLogBack.Name = "pBLogBack";
-            this.pBLogBack.Size = new System.Drawing.Size(30, 28);
-            this.pBLogBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pBLogBack.TabIndex = 6;
-            this.pBLogBack.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 81);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(34, 134);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(37, 31);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
             // Scanner
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1114,6 +1093,7 @@
             this.ClientSize = new System.Drawing.Size(1178, 661);
             this.Controls.Add(this.paneMain);
             this.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Scanner";
@@ -1123,23 +1103,22 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Scanner_FormClosing);
             this.Load += new System.EventHandler(this.Scanner_Load);
             this.paneMain.ResumeLayout(false);
+            this.paneLogo.ResumeLayout(false);
+            this.paneLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.gBLog.ResumeLayout(false);
+            this.gBLog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.paneHome.ResumeLayout(false);
             this.paneHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).EndInit();
             this.paneSet.ResumeLayout(false);
             this.paneSet.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.paneLogo.ResumeLayout(false);
-            this.paneLogo.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.gBLog.ResumeLayout(false);
-            this.gBLog.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pBImg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBQR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBLogBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1151,8 +1130,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.GroupBox gBLog;
-        private System.Windows.Forms.PictureBox pBLogBack;
-        private System.Windows.Forms.LinkLabel lblForgot;
         private System.Windows.Forms.Button btnLog;
         public System.Windows.Forms.TextBox tBUser;
         private System.Windows.Forms.PictureBox pictureBox2;

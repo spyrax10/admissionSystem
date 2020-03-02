@@ -31,26 +31,39 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnAddEvent = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.btnAttdLog = new System.Windows.Forms.Button();
+            this.btnSet = new System.Windows.Forms.Button();
+            this.btnAddStud = new System.Windows.Forms.Button();
+            this.btnAddEmp = new System.Windows.Forms.Button();
+            this.paneSide = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.Button();
             this.paneSet = new System.Windows.Forms.Panel();
             this.lblId = new System.Windows.Forms.Label();
+            this.btnSetSave = new System.Windows.Forms.Button();
             this.tbUser = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.paneSide = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabHome = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabAddEmp = new System.Windows.Forms.TabPage();
             this.paneEmp = new System.Windows.Forms.Panel();
+            this.btnReEmp = new System.Windows.Forms.Button();
             this.tBEmpSer = new System.Windows.Forms.TextBox();
             this.gVEmp = new System.Windows.Forms.DataGridView();
             this.gBEmp = new System.Windows.Forms.GroupBox();
             this.lblRegEmp = new System.Windows.Forms.Label();
             this.btnEmpGen = new System.Windows.Forms.Button();
+            this.pBEmpQR = new System.Windows.Forms.PictureBox();
+            this.bntEmpRe = new System.Windows.Forms.Button();
             this.btnEmpPH = new System.Windows.Forms.Button();
+            this.pBEmp = new System.Windows.Forms.PictureBox();
             this.tBEmpPos = new System.Windows.Forms.TextBox();
             this.tBEmpDept = new System.Windows.Forms.TextBox();
             this.btnEmpAdd = new System.Windows.Forms.Button();
@@ -64,8 +77,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnEPrint = new System.Windows.Forms.Button();
             this.tabStud = new System.Windows.Forms.TabPage();
             this.paneStud = new System.Windows.Forms.Panel();
+            this.btnReStud = new System.Windows.Forms.Button();
             this.gBStud = new System.Windows.Forms.GroupBox();
             this.lblRegStud = new System.Windows.Forms.Label();
             this.tBStudCour = new System.Windows.Forms.TextBox();
@@ -74,8 +89,11 @@
             this.btnStudGen = new System.Windows.Forms.Button();
             this.btnStudPH = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
+            this.pBStud = new System.Windows.Forms.PictureBox();
             this.cbStudSex = new System.Windows.Forms.ComboBox();
+            this.pBStudQR = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnStudRe = new System.Windows.Forms.Button();
             this.btnStudAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -89,8 +107,16 @@
             this.label10 = new System.Windows.Forms.Label();
             this.tbStudSer = new System.Windows.Forms.TextBox();
             this.gVStud = new System.Windows.Forms.DataGridView();
+            this.btnSPrint = new System.Windows.Forms.Button();
             this.tabLog = new System.Windows.Forms.TabPage();
             this.paneLog = new System.Windows.Forms.Panel();
+            this.cbDept = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.cbCour = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tBTit = new System.Windows.Forms.TextBox();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnEmpAb = new System.Windows.Forms.Button();
             this.btnEmp = new System.Windows.Forms.Button();
             this.btnStud = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -103,6 +129,8 @@
             this.gVLog = new System.Windows.Forms.DataGridView();
             this.tabEvent = new System.Windows.Forms.TabPage();
             this.paneEvent = new System.Windows.Forms.Panel();
+            this.btnReEvt = new System.Windows.Forms.Button();
+            this.tBSerEvt = new System.Windows.Forms.TextBox();
             this.btnDelEvt = new System.Windows.Forms.Button();
             this.btnCPEvt = new System.Windows.Forms.Button();
             this.gBEvent = new System.Windows.Forms.GroupBox();
@@ -124,48 +152,29 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnEventRe = new System.Windows.Forms.Button();
             this.btnEvtAdd = new System.Windows.Forms.Button();
             this.tBEventName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.gVEvent = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnEmpAb = new System.Windows.Forms.Button();
-            this.tBTit = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnReEmp = new System.Windows.Forms.Button();
-            this.pBEmpQR = new System.Windows.Forms.PictureBox();
-            this.bntEmpRe = new System.Windows.Forms.Button();
-            this.pBEmp = new System.Windows.Forms.PictureBox();
-            this.btnEPrint = new System.Windows.Forms.Button();
-            this.btnReStud = new System.Windows.Forms.Button();
-            this.pBStud = new System.Windows.Forms.PictureBox();
-            this.pBStudQR = new System.Windows.Forms.PictureBox();
-            this.btnStudRe = new System.Windows.Forms.Button();
-            this.btnSPrint = new System.Windows.Forms.Button();
-            this.btnPrint = new System.Windows.Forms.Button();
-            this.btnEventRe = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnAddEvent = new System.Windows.Forms.Button();
-            this.btnAttdLog = new System.Windows.Forms.Button();
-            this.btnSet = new System.Windows.Forms.Button();
-            this.btnAddStud = new System.Windows.Forms.Button();
-            this.btnAddEmp = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnSetSave = new System.Windows.Forms.Button();
-            this.btnReEvt = new System.Windows.Forms.Button();
-            this.tBSerEvt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            this.paneSet.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.paneSet.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabAddEmp.SuspendLayout();
             this.paneEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVEmp)).BeginInit();
             this.gBEmp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpQR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmp)).BeginInit();
             this.tabStud.SuspendLayout();
             this.paneStud.SuspendLayout();
             this.gBStud.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStud)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStudQR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gVStud)).BeginInit();
             this.tabLog.SuspendLayout();
             this.paneLog.SuspendLayout();
@@ -174,11 +183,6 @@
             this.paneEvent.SuspendLayout();
             this.gBEvent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVEvent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpQR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBStud)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBStudQR)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -197,8 +201,169 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 741);
+            this.panel1.Size = new System.Drawing.Size(205, 731);
             this.panel1.TabIndex = 0;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut.Image = global::admissionSystem.Properties.Resources.Log_Out_icon;
+            this.btnLogOut.Location = new System.Drawing.Point(2, 689);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(40, 39);
+            this.btnLogOut.TabIndex = 32;
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnAddEvent
+            // 
+            this.btnAddEvent.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAddEvent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAddEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEvent.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEvent.Image = global::admissionSystem.Properties.Resources.checklist_icon1;
+            this.btnAddEvent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEvent.Location = new System.Drawing.Point(22, 273);
+            this.btnAddEvent.Name = "btnAddEvent";
+            this.btnAddEvent.Size = new System.Drawing.Size(176, 36);
+            this.btnAddEvent.TabIndex = 4;
+            this.btnAddEvent.Text = "EVENT LIST";
+            this.btnAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddEvent.UseVisualStyleBackColor = true;
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.lblTime);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(203, 113);
+            this.panel2.TabIndex = 8;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblDate.Location = new System.Drawing.Point(5, 64);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(52, 16);
+            this.lblDate.TabIndex = 2;
+            this.lblDate.Text = "label60";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(3, 34);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(110, 32);
+            this.lblTime.TabIndex = 1;
+            this.lblTime.Text = "label59";
+            // 
+            // btnAttdLog
+            // 
+            this.btnAttdLog.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAttdLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAttdLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAttdLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAttdLog.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttdLog.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
+            this.btnAttdLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAttdLog.Location = new System.Drawing.Point(22, 315);
+            this.btnAttdLog.Name = "btnAttdLog";
+            this.btnAttdLog.Size = new System.Drawing.Size(176, 36);
+            this.btnAttdLog.TabIndex = 5;
+            this.btnAttdLog.Text = "ATTENDANCE LOG";
+            this.btnAttdLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAttdLog.UseVisualStyleBackColor = true;
+            this.btnAttdLog.Click += new System.EventHandler(this.btnAttdLog_Click);
+            // 
+            // btnSet
+            // 
+            this.btnSet.FlatAppearance.BorderSize = 0;
+            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSet.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
+            this.btnSet.Location = new System.Drawing.Point(178, 119);
+            this.btnSet.Name = "btnSet";
+            this.btnSet.Size = new System.Drawing.Size(25, 22);
+            this.btnSet.TabIndex = 0;
+            this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
+            // 
+            // btnAddStud
+            // 
+            this.btnAddStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAddStud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAddStud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStud.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStud.Image = global::admissionSystem.Properties.Resources.Male_user_add_icon;
+            this.btnAddStud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddStud.Location = new System.Drawing.Point(22, 231);
+            this.btnAddStud.Name = "btnAddStud";
+            this.btnAddStud.Size = new System.Drawing.Size(176, 36);
+            this.btnAddStud.TabIndex = 3;
+            this.btnAddStud.Text = "STUDENT INFO";
+            this.btnAddStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStud.UseVisualStyleBackColor = true;
+            this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
+            // 
+            // btnAddEmp
+            // 
+            this.btnAddEmp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnAddEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAddEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmp.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmp.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
+            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEmp.Location = new System.Drawing.Point(22, 189);
+            this.btnAddEmp.Name = "btnAddEmp";
+            this.btnAddEmp.Size = new System.Drawing.Size(176, 36);
+            this.btnAddEmp.TabIndex = 2;
+            this.btnAddEmp.Text = "EMPLOYEE INFO";
+            this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddEmp.UseVisualStyleBackColor = true;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
+            // 
+            // paneSide
+            // 
+            this.paneSide.BackColor = System.Drawing.Color.DodgerBlue;
+            this.paneSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneSide.Location = new System.Drawing.Point(10, 147);
+            this.paneSide.Name = "paneSide";
+            this.paneSide.Size = new System.Drawing.Size(10, 36);
+            this.paneSide.TabIndex = 1;
+            // 
+            // btnHome
+            // 
+            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Image = global::admissionSystem.Properties.Resources.One_storied_house_icon__1_;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(22, 147);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(176, 36);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "HOMEPAGE";
+            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // paneSet
             // 
@@ -226,6 +391,18 @@
             this.lblId.Size = new System.Drawing.Size(42, 15);
             this.lblId.TabIndex = 5;
             this.lblId.Text = "00000";
+            // 
+            // btnSetSave
+            // 
+            this.btnSetSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSetSave.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
+            this.btnSetSave.Location = new System.Drawing.Point(150, 112);
+            this.btnSetSave.Name = "btnSetSave";
+            this.btnSetSave.Size = new System.Drawing.Size(33, 32);
+            this.btnSetSave.TabIndex = 4;
+            this.btnSetSave.UseVisualStyleBackColor = true;
+            this.btnSetSave.Click += new System.EventHandler(this.btnSetSave_Click);
             // 
             // tbUser
             // 
@@ -265,48 +442,6 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Username:";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.lblDate);
-            this.panel2.Controls.Add(this.lblTime);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 113);
-            this.panel2.TabIndex = 8;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDate.Location = new System.Drawing.Point(5, 64);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(52, 16);
-            this.lblDate.TabIndex = 2;
-            this.lblDate.Text = "label60";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(3, 34);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(110, 32);
-            this.lblTime.TabIndex = 1;
-            this.lblTime.Text = "label59";
-            // 
-            // paneSide
-            // 
-            this.paneSide.BackColor = System.Drawing.Color.DodgerBlue;
-            this.paneSide.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.paneSide.Location = new System.Drawing.Point(10, 147);
-            this.paneSide.Name = "paneSide";
-            this.paneSide.Size = new System.Drawing.Size(10, 36);
-            this.paneSide.TabIndex = 1;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabHome);
@@ -319,7 +454,7 @@
             this.tabControl1.Location = new System.Drawing.Point(205, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1152, 741);
+            this.tabControl1.Size = new System.Drawing.Size(1152, 731);
             this.tabControl1.TabIndex = 1;
             // 
             // tabHome
@@ -330,9 +465,20 @@
             this.tabHome.Location = new System.Drawing.Point(4, 25);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1144, 712);
+            this.tabHome.Size = new System.Drawing.Size(1144, 692);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Homepage";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::admissionSystem.Properties.Resources.attendance_management_system;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1136, 684);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // tabAddEmp
             // 
@@ -340,7 +486,7 @@
             this.tabAddEmp.Location = new System.Drawing.Point(4, 25);
             this.tabAddEmp.Name = "tabAddEmp";
             this.tabAddEmp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddEmp.Size = new System.Drawing.Size(1144, 712);
+            this.tabAddEmp.Size = new System.Drawing.Size(1144, 692);
             this.tabAddEmp.TabIndex = 1;
             this.tabAddEmp.Text = "Employee Information";
             this.tabAddEmp.UseVisualStyleBackColor = true;
@@ -356,8 +502,23 @@
             this.paneEmp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneEmp.Location = new System.Drawing.Point(3, 3);
             this.paneEmp.Name = "paneEmp";
-            this.paneEmp.Size = new System.Drawing.Size(1138, 706);
+            this.paneEmp.Size = new System.Drawing.Size(1138, 686);
             this.paneEmp.TabIndex = 35;
+            // 
+            // btnReEmp
+            // 
+            this.btnReEmp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnReEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnReEmp.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnReEmp.Location = new System.Drawing.Point(177, 5);
+            this.btnReEmp.Name = "btnReEmp";
+            this.btnReEmp.Size = new System.Drawing.Size(25, 25);
+            this.btnReEmp.TabIndex = 18;
+            this.btnReEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReEmp.UseVisualStyleBackColor = true;
+            this.btnReEmp.Click += new System.EventHandler(this.btnReEmp_Click);
             // 
             // tBEmpSer
             // 
@@ -446,6 +607,31 @@
             this.btnEmpGen.UseVisualStyleBackColor = true;
             this.btnEmpGen.Click += new System.EventHandler(this.btnEmpGen_Click);
             // 
+            // pBEmpQR
+            // 
+            this.pBEmpQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEmpQR.Location = new System.Drawing.Point(357, 167);
+            this.pBEmpQR.Name = "pBEmpQR";
+            this.pBEmpQR.Size = new System.Drawing.Size(85, 85);
+            this.pBEmpQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmpQR.TabIndex = 42;
+            this.pBEmpQR.TabStop = false;
+            // 
+            // bntEmpRe
+            // 
+            this.bntEmpRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.bntEmpRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bntEmpRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntEmpRe.ForeColor = System.Drawing.Color.Black;
+            this.bntEmpRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.bntEmpRe.Location = new System.Drawing.Point(6, 266);
+            this.bntEmpRe.Name = "bntEmpRe";
+            this.bntEmpRe.Size = new System.Drawing.Size(25, 25);
+            this.bntEmpRe.TabIndex = 15;
+            this.bntEmpRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bntEmpRe.UseVisualStyleBackColor = true;
+            this.bntEmpRe.Click += new System.EventHandler(this.bntEmpRe_Click);
+            // 
             // btnEmpPH
             // 
             this.btnEmpPH.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
@@ -461,6 +647,17 @@
             this.btnEmpPH.Text = "UPLOAD";
             this.btnEmpPH.UseVisualStyleBackColor = true;
             this.btnEmpPH.Click += new System.EventHandler(this.btnEmpPH_Click);
+            // 
+            // pBEmp
+            // 
+            this.pBEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBEmp.Image = global::admissionSystem.Properties.Resources.download;
+            this.pBEmp.Location = new System.Drawing.Point(357, 26);
+            this.pBEmp.Name = "pBEmp";
+            this.pBEmp.Size = new System.Drawing.Size(85, 85);
+            this.pBEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBEmp.TabIndex = 21;
+            this.pBEmp.TabStop = false;
             // 
             // tBEmpPos
             // 
@@ -598,13 +795,29 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Middlename:";
             // 
+            // btnEPrint
+            // 
+            this.btnEPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnEPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnEPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
+            this.btnEPrint.Location = new System.Drawing.Point(1092, 317);
+            this.btnEPrint.Name = "btnEPrint";
+            this.btnEPrint.Size = new System.Drawing.Size(40, 39);
+            this.btnEPrint.TabIndex = 16;
+            this.btnEPrint.UseVisualStyleBackColor = true;
+            this.btnEPrint.Click += new System.EventHandler(this.btnEPrint_Click);
+            // 
             // tabStud
             // 
             this.tabStud.Controls.Add(this.paneStud);
             this.tabStud.Location = new System.Drawing.Point(4, 25);
             this.tabStud.Name = "tabStud";
             this.tabStud.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStud.Size = new System.Drawing.Size(1144, 712);
+            this.tabStud.Size = new System.Drawing.Size(1144, 692);
             this.tabStud.TabIndex = 2;
             this.tabStud.Text = "Student Information";
             this.tabStud.UseVisualStyleBackColor = true;
@@ -620,8 +833,23 @@
             this.paneStud.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneStud.Location = new System.Drawing.Point(3, 3);
             this.paneStud.Name = "paneStud";
-            this.paneStud.Size = new System.Drawing.Size(1138, 706);
+            this.paneStud.Size = new System.Drawing.Size(1138, 686);
             this.paneStud.TabIndex = 0;
+            // 
+            // btnReStud
+            // 
+            this.btnReStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnReStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReStud.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReStud.ForeColor = System.Drawing.Color.Black;
+            this.btnReStud.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnReStud.Location = new System.Drawing.Point(177, 5);
+            this.btnReStud.Name = "btnReStud";
+            this.btnReStud.Size = new System.Drawing.Size(25, 25);
+            this.btnReStud.TabIndex = 33;
+            this.btnReStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReStud.UseVisualStyleBackColor = true;
+            this.btnReStud.Click += new System.EventHandler(this.btnReStud_Click);
             // 
             // gBStud
             // 
@@ -820,6 +1048,17 @@
             this.label11.TabIndex = 47;
             this.label11.Text = "Year:";
             // 
+            // pBStud
+            // 
+            this.pBStud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBStud.Image = global::admissionSystem.Properties.Resources.stud;
+            this.pBStud.Location = new System.Drawing.Point(400, 26);
+            this.pBStud.Name = "pBStud";
+            this.pBStud.Size = new System.Drawing.Size(85, 85);
+            this.pBStud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBStud.TabIndex = 21;
+            this.pBStud.TabStop = false;
+            // 
             // cbStudSex
             // 
             this.cbStudSex.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -832,6 +1071,16 @@
             this.cbStudSex.Size = new System.Drawing.Size(36, 24);
             this.cbStudSex.TabIndex = 23;
             // 
+            // pBStudQR
+            // 
+            this.pBStudQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBStudQR.Location = new System.Drawing.Point(400, 264);
+            this.pBStudQR.Name = "pBStudQR";
+            this.pBStudQR.Size = new System.Drawing.Size(85, 85);
+            this.pBStudQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBStudQR.TabIndex = 42;
+            this.pBStudQR.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -842,6 +1091,21 @@
             this.label5.Size = new System.Drawing.Size(69, 18);
             this.label5.TabIndex = 45;
             this.label5.Text = "Gender:";
+            // 
+            // btnStudRe
+            // 
+            this.btnStudRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnStudRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudRe.ForeColor = System.Drawing.Color.Black;
+            this.btnStudRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnStudRe.Location = new System.Drawing.Point(6, 324);
+            this.btnStudRe.Name = "btnStudRe";
+            this.btnStudRe.Size = new System.Drawing.Size(25, 25);
+            this.btnStudRe.TabIndex = 30;
+            this.btnStudRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStudRe.UseVisualStyleBackColor = true;
+            this.btnStudRe.Click += new System.EventHandler(this.btnStudRe_Click);
             // 
             // btnStudAdd
             // 
@@ -990,13 +1254,29 @@
             this.gVStud.TabIndex = 71;
             this.gVStud.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gVStud_CellClick);
             // 
+            // btnSPrint
+            // 
+            this.btnSPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnSPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSPrint.ForeColor = System.Drawing.Color.Black;
+            this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
+            this.btnSPrint.Location = new System.Drawing.Point(1092, 317);
+            this.btnSPrint.Name = "btnSPrint";
+            this.btnSPrint.Size = new System.Drawing.Size(40, 39);
+            this.btnSPrint.TabIndex = 31;
+            this.btnSPrint.UseVisualStyleBackColor = true;
+            this.btnSPrint.Click += new System.EventHandler(this.btnSPrint_Click);
+            // 
             // tabLog
             // 
             this.tabLog.Controls.Add(this.paneLog);
             this.tabLog.Location = new System.Drawing.Point(4, 25);
             this.tabLog.Name = "tabLog";
             this.tabLog.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLog.Size = new System.Drawing.Size(1144, 712);
+            this.tabLog.Size = new System.Drawing.Size(1144, 702);
             this.tabLog.TabIndex = 3;
             this.tabLog.Text = "Attendance Log";
             this.tabLog.UseVisualStyleBackColor = true;
@@ -1004,6 +1284,10 @@
             // paneLog
             // 
             this.paneLog.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.paneLog.Controls.Add(this.cbDept);
+            this.paneLog.Controls.Add(this.label31);
+            this.paneLog.Controls.Add(this.cbCour);
+            this.paneLog.Controls.Add(this.label30);
             this.paneLog.Controls.Add(this.tBTit);
             this.paneLog.Controls.Add(this.btnPrint);
             this.paneLog.Controls.Add(this.btnEmpAb);
@@ -1020,14 +1304,149 @@
             this.paneLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneLog.Location = new System.Drawing.Point(3, 3);
             this.paneLog.Name = "paneLog";
-            this.paneLog.Size = new System.Drawing.Size(1138, 706);
+            this.paneLog.Size = new System.Drawing.Size(1138, 696);
             this.paneLog.TabIndex = 0;
+            // 
+            // cbDept
+            // 
+            this.cbDept.FormattingEnabled = true;
+            this.cbDept.Items.AddRange(new object[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS"});
+            this.cbDept.Location = new System.Drawing.Point(349, 658);
+            this.cbDept.Name = "cbDept";
+            this.cbDept.Size = new System.Drawing.Size(355, 24);
+            this.cbDept.TabIndex = 85;
+            this.cbDept.SelectedIndexChanged += new System.EventHandler(this.cbDept_SelectedIndexChanged);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label31.Location = new System.Drawing.Point(321, 636);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(105, 19);
+            this.label31.TabIndex = 84;
+            this.label31.Text = "Department:";
+            // 
+            // cbCour
+            // 
+            this.cbCour.FormattingEnabled = true;
+            this.cbCour.Items.AddRange(new object[] {
+            "BS in Computer Science",
+            "BS in Information Technology",
+            "BS in Industrial Technology",
+            "BS in Civil Engineering",
+            "BS in Computer Engineering",
+            "BS in Mechanical Engineering",
+            "BS in Electrical Engineering",
+            "BS in Electronics and Communication Engineering",
+            "Electrical and Automotive Technology",
+            "Associate in Computer Technology",
+            "Doctor of Philosophy",
+            "Master of Arts in Education",
+            "Master of Arts in Teaching Computer Science",
+            "Master in Public Administration",
+            "Master in Business Administration",
+            "Pre-school",
+            "Elementary",
+            "Junior High School",
+            "Senior High School",
+            "AB majors of Political Science and English",
+            "BS in Hotel and Restaurant Management",
+            "BS in Tourism Management",
+            "BS in Business Administration",
+            "BS in Accountancy",
+            "BS in Criminology",
+            "BS of Laws",
+            "BS in Marine Transportation",
+            "BS in Marine Engineering",
+            "BS in Physical Therapy",
+            "BS in Nursing",
+            "BS in Radiologic Technology",
+            "Midwifery",
+            "Bachelor of Secondary Education",
+            "Bachelor of Elementary Education",
+            "Agri Corps Production NC I",
+            "Agri Corps Production NC II",
+            "Animal Production NC II",
+            "Computer Hardware Servicing NCII",
+            "Driving NC II (118 hours)",
+            "Health Care Services NC II",
+            "Security Services NC II ",
+            "Security Services NC III ",
+            "Shielded Metal Arc Welding (SMAW) NC II"});
+            this.cbCour.Location = new System.Drawing.Point(349, 609);
+            this.cbCour.Name = "cbCour";
+            this.cbCour.Size = new System.Drawing.Size(355, 24);
+            this.cbCour.TabIndex = 83;
+            this.cbCour.SelectedIndexChanged += new System.EventHandler(this.cbCour_SelectedIndexChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label30.Location = new System.Drawing.Point(321, 589);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(66, 19);
+            this.label30.TabIndex = 81;
+            this.label30.Text = "Course:";
+            // 
+            // tBTit
+            // 
+            this.tBTit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBTit.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBTit.ForeColor = System.Drawing.Color.Gray;
+            this.tBTit.Location = new System.Drawing.Point(755, 628);
+            this.tBTit.Name = "tBTit";
+            this.tBTit.Size = new System.Drawing.Size(377, 27);
+            this.tBTit.TabIndex = 40;
+            this.tBTit.Text = "REPORT TITTLE";
+            this.tBTit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tBTit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tBTit_MouseClick);
+            this.tBTit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBTit_KeyPress);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Image = global::admissionSystem.Properties.Resources.print_icon;
+            this.btnPrint.Location = new System.Drawing.Point(1102, 592);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(30, 30);
+            this.btnPrint.TabIndex = 39;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnEmpAb
+            // 
+            this.btnEmpAb.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnEmpAb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpAb.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpAb.Location = new System.Drawing.Point(3, 645);
+            this.btnEmpAb.Name = "btnEmpAb";
+            this.btnEmpAb.Size = new System.Drawing.Size(175, 28);
+            this.btnEmpAb.TabIndex = 36;
+            this.btnEmpAb.Text = "ABSENT EMPLOYEES";
+            this.btnEmpAb.UseVisualStyleBackColor = true;
+            this.btnEmpAb.Click += new System.EventHandler(this.btnEmpAb_Click);
             // 
             // btnEmp
             // 
             this.btnEmp.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
             this.btnEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmp.Location = new System.Drawing.Point(184, 665);
+            this.btnEmp.Location = new System.Drawing.Point(184, 645);
             this.btnEmp.Name = "btnEmp";
             this.btnEmp.Size = new System.Drawing.Size(114, 28);
             this.btnEmp.TabIndex = 38;
@@ -1039,7 +1458,7 @@
             // 
             this.btnStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.btnStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStud.Location = new System.Drawing.Point(184, 631);
+            this.btnStud.Location = new System.Drawing.Point(184, 611);
             this.btnStud.Name = "btnStud";
             this.btnStud.Size = new System.Drawing.Size(114, 28);
             this.btnStud.TabIndex = 37;
@@ -1052,7 +1471,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(-1, 609);
+            this.label13.Location = new System.Drawing.Point(2, 589);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 19);
             this.label13.TabIndex = 80;
@@ -1062,7 +1481,7 @@
             // 
             this.btnStudAb.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
             this.btnStudAb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudAb.Location = new System.Drawing.Point(3, 631);
+            this.btnStudAb.Location = new System.Drawing.Point(3, 611);
             this.btnStudAb.Name = "btnStudAb";
             this.btnStudAb.Size = new System.Drawing.Size(175, 28);
             this.btnStudAb.TabIndex = 35;
@@ -1151,7 +1570,7 @@
             this.gVLog.Name = "gVLog";
             this.gVLog.RowHeadersVisible = false;
             this.gVLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gVLog.Size = new System.Drawing.Size(1129, 570);
+            this.gVLog.Size = new System.Drawing.Size(1129, 550);
             this.gVLog.TabIndex = 72;
             // 
             // tabEvent
@@ -1160,7 +1579,7 @@
             this.tabEvent.Location = new System.Drawing.Point(4, 25);
             this.tabEvent.Name = "tabEvent";
             this.tabEvent.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEvent.Size = new System.Drawing.Size(1144, 712);
+            this.tabEvent.Size = new System.Drawing.Size(1144, 692);
             this.tabEvent.TabIndex = 4;
             this.tabEvent.Text = "Event List";
             this.tabEvent.UseVisualStyleBackColor = true;
@@ -1177,8 +1596,52 @@
             this.paneEvent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneEvent.Location = new System.Drawing.Point(3, 3);
             this.paneEvent.Name = "paneEvent";
-            this.paneEvent.Size = new System.Drawing.Size(1138, 706);
+            this.paneEvent.Size = new System.Drawing.Size(1138, 686);
             this.paneEvent.TabIndex = 0;
+            // 
+            // btnReEvt
+            // 
+            this.btnReEvt.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnReEvt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReEvt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReEvt.ForeColor = System.Drawing.Color.Black;
+            this.btnReEvt.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnReEvt.Location = new System.Drawing.Point(359, 6);
+            this.btnReEvt.Name = "btnReEvt";
+            this.btnReEvt.Size = new System.Drawing.Size(25, 25);
+            this.btnReEvt.TabIndex = 76;
+            this.btnReEvt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReEvt.UseVisualStyleBackColor = true;
+            this.btnReEvt.Click += new System.EventHandler(this.btnReEvt_Click);
+            // 
+            // tBSerEvt
+            // 
+            this.tBSerEvt.AutoCompleteCustomSource.AddRange(new string[] {
+            "GRADUATE SCHOOL",
+            "BASIC EDUCATION DEPARTMENT",
+            "COLLEGE OF ARTS AND SCIENCES",
+            "COLLEGE OF BUSINESS EDUCATION",
+            "COLLEGE OF CRIMINAL JUSTICE",
+            "COLLEGE OF LAW",
+            "COLLEGE OF MARITIME EDUCATION",
+            "COLLEGE OF PARAMEDICS",
+            "COLLEGE OF TEACHER EDUCATION",
+            "COLLEGE OF TECHNOLOGY",
+            "TVET PROGRAMS",
+            "ALL STUDENTS",
+            "ALL EMPLOYEES",
+            "GENERAL"});
+            this.tBSerEvt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBSerEvt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.tBSerEvt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tBSerEvt.ForeColor = System.Drawing.Color.Gray;
+            this.tBSerEvt.Location = new System.Drawing.Point(3, 7);
+            this.tBSerEvt.Name = "tBSerEvt";
+            this.tBSerEvt.Size = new System.Drawing.Size(355, 23);
+            this.tBSerEvt.TabIndex = 75;
+            this.tBSerEvt.Text = "SEARCH HERE";
+            this.tBSerEvt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tBSerEvt_MouseClick);
+            this.tBSerEvt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBSerEvt_KeyPress);
             // 
             // btnDelEvt
             // 
@@ -1490,6 +1953,21 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "Attendee:";
             // 
+            // btnEventRe
+            // 
+            this.btnEventRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.btnEventRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEventRe.ForeColor = System.Drawing.Color.Black;
+            this.btnEventRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
+            this.btnEventRe.Location = new System.Drawing.Point(479, 14);
+            this.btnEventRe.Name = "btnEventRe";
+            this.btnEventRe.Size = new System.Drawing.Size(25, 25);
+            this.btnEventRe.TabIndex = 38;
+            this.btnEventRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEventRe.UseVisualStyleBackColor = true;
+            this.btnEventRe.Click += new System.EventHandler(this.btnEventRe_Click);
+            // 
             // btnEvtAdd
             // 
             this.btnEvtAdd.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
@@ -1549,389 +2027,16 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnEmpAb
-            // 
-            this.btnEmpAb.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnEmpAb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpAb.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpAb.Location = new System.Drawing.Point(3, 665);
-            this.btnEmpAb.Name = "btnEmpAb";
-            this.btnEmpAb.Size = new System.Drawing.Size(175, 28);
-            this.btnEmpAb.TabIndex = 36;
-            this.btnEmpAb.Text = "ABSENT EMPLOYEES";
-            this.btnEmpAb.UseVisualStyleBackColor = true;
-            this.btnEmpAb.Click += new System.EventHandler(this.btnEmpAb_Click);
-            // 
-            // tBTit
-            // 
-            this.tBTit.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tBTit.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBTit.ForeColor = System.Drawing.Color.Gray;
-            this.tBTit.Location = new System.Drawing.Point(755, 644);
-            this.tBTit.Name = "tBTit";
-            this.tBTit.Size = new System.Drawing.Size(377, 27);
-            this.tBTit.TabIndex = 40;
-            this.tBTit.Text = "REPORT TITTLE";
-            this.tBTit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tBTit.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tBTit_MouseClick);
-            this.tBTit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBTit_KeyPress);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::admissionSystem.Properties.Resources.attendance_management_system;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1136, 704);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnReEmp
-            // 
-            this.btnReEmp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnReEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReEmp.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReEmp.ForeColor = System.Drawing.Color.Black;
-            this.btnReEmp.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
-            this.btnReEmp.Location = new System.Drawing.Point(177, 5);
-            this.btnReEmp.Name = "btnReEmp";
-            this.btnReEmp.Size = new System.Drawing.Size(25, 25);
-            this.btnReEmp.TabIndex = 18;
-            this.btnReEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReEmp.UseVisualStyleBackColor = true;
-            this.btnReEmp.Click += new System.EventHandler(this.btnReEmp_Click);
-            // 
-            // pBEmpQR
-            // 
-            this.pBEmpQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmpQR.Location = new System.Drawing.Point(357, 167);
-            this.pBEmpQR.Name = "pBEmpQR";
-            this.pBEmpQR.Size = new System.Drawing.Size(85, 85);
-            this.pBEmpQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBEmpQR.TabIndex = 42;
-            this.pBEmpQR.TabStop = false;
-            // 
-            // bntEmpRe
-            // 
-            this.bntEmpRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.bntEmpRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bntEmpRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntEmpRe.ForeColor = System.Drawing.Color.Black;
-            this.bntEmpRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
-            this.bntEmpRe.Location = new System.Drawing.Point(6, 266);
-            this.bntEmpRe.Name = "bntEmpRe";
-            this.bntEmpRe.Size = new System.Drawing.Size(25, 25);
-            this.bntEmpRe.TabIndex = 15;
-            this.bntEmpRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bntEmpRe.UseVisualStyleBackColor = true;
-            this.bntEmpRe.Click += new System.EventHandler(this.bntEmpRe_Click);
-            // 
-            // pBEmp
-            // 
-            this.pBEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBEmp.Image = global::admissionSystem.Properties.Resources.download;
-            this.pBEmp.Location = new System.Drawing.Point(357, 26);
-            this.pBEmp.Name = "pBEmp";
-            this.pBEmp.Size = new System.Drawing.Size(85, 85);
-            this.pBEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBEmp.TabIndex = 21;
-            this.pBEmp.TabStop = false;
-            // 
-            // btnEPrint
-            // 
-            this.btnEPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnEPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnEPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnEPrint.Location = new System.Drawing.Point(1092, 317);
-            this.btnEPrint.Name = "btnEPrint";
-            this.btnEPrint.Size = new System.Drawing.Size(40, 39);
-            this.btnEPrint.TabIndex = 16;
-            this.btnEPrint.UseVisualStyleBackColor = true;
-            this.btnEPrint.Click += new System.EventHandler(this.btnEPrint_Click);
-            // 
-            // btnReStud
-            // 
-            this.btnReStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnReStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReStud.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReStud.ForeColor = System.Drawing.Color.Black;
-            this.btnReStud.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
-            this.btnReStud.Location = new System.Drawing.Point(177, 5);
-            this.btnReStud.Name = "btnReStud";
-            this.btnReStud.Size = new System.Drawing.Size(25, 25);
-            this.btnReStud.TabIndex = 33;
-            this.btnReStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReStud.UseVisualStyleBackColor = true;
-            this.btnReStud.Click += new System.EventHandler(this.btnReStud_Click);
-            // 
-            // pBStud
-            // 
-            this.pBStud.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBStud.Image = global::admissionSystem.Properties.Resources.stud;
-            this.pBStud.Location = new System.Drawing.Point(400, 26);
-            this.pBStud.Name = "pBStud";
-            this.pBStud.Size = new System.Drawing.Size(85, 85);
-            this.pBStud.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBStud.TabIndex = 21;
-            this.pBStud.TabStop = false;
-            // 
-            // pBStudQR
-            // 
-            this.pBStudQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBStudQR.Location = new System.Drawing.Point(400, 264);
-            this.pBStudQR.Name = "pBStudQR";
-            this.pBStudQR.Size = new System.Drawing.Size(85, 85);
-            this.pBStudQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pBStudQR.TabIndex = 42;
-            this.pBStudQR.TabStop = false;
-            // 
-            // btnStudRe
-            // 
-            this.btnStudRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnStudRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudRe.ForeColor = System.Drawing.Color.Black;
-            this.btnStudRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
-            this.btnStudRe.Location = new System.Drawing.Point(6, 324);
-            this.btnStudRe.Name = "btnStudRe";
-            this.btnStudRe.Size = new System.Drawing.Size(25, 25);
-            this.btnStudRe.TabIndex = 30;
-            this.btnStudRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStudRe.UseVisualStyleBackColor = true;
-            this.btnStudRe.Click += new System.EventHandler(this.btnStudRe_Click);
-            // 
-            // btnSPrint
-            // 
-            this.btnSPrint.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnSPrint.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSPrint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSPrint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSPrint.ForeColor = System.Drawing.Color.Black;
-            this.btnSPrint.Image = global::admissionSystem.Properties.Resources.Printer_blue_icon;
-            this.btnSPrint.Location = new System.Drawing.Point(1092, 317);
-            this.btnSPrint.Name = "btnSPrint";
-            this.btnSPrint.Size = new System.Drawing.Size(40, 39);
-            this.btnSPrint.TabIndex = 31;
-            this.btnSPrint.UseVisualStyleBackColor = true;
-            this.btnSPrint.Click += new System.EventHandler(this.btnSPrint_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Image = global::admissionSystem.Properties.Resources.print_icon;
-            this.btnPrint.Location = new System.Drawing.Point(1102, 608);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(30, 30);
-            this.btnPrint.TabIndex = 39;
-            this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // btnEventRe
-            // 
-            this.btnEventRe.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnEventRe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventRe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEventRe.ForeColor = System.Drawing.Color.Black;
-            this.btnEventRe.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
-            this.btnEventRe.Location = new System.Drawing.Point(479, 14);
-            this.btnEventRe.Name = "btnEventRe";
-            this.btnEventRe.Size = new System.Drawing.Size(25, 25);
-            this.btnEventRe.TabIndex = 38;
-            this.btnEventRe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEventRe.UseVisualStyleBackColor = true;
-            this.btnEventRe.Click += new System.EventHandler(this.btnEventRe_Click);
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Image = global::admissionSystem.Properties.Resources.Log_Out_icon;
-            this.btnLogOut.Location = new System.Drawing.Point(3, 689);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(40, 39);
-            this.btnLogOut.TabIndex = 32;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnAddEvent
-            // 
-            this.btnAddEvent.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAddEvent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAddEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEvent.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEvent.Image = global::admissionSystem.Properties.Resources.checklist_icon1;
-            this.btnAddEvent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEvent.Location = new System.Drawing.Point(22, 273);
-            this.btnAddEvent.Name = "btnAddEvent";
-            this.btnAddEvent.Size = new System.Drawing.Size(176, 36);
-            this.btnAddEvent.TabIndex = 4;
-            this.btnAddEvent.Text = "EVENT LIST";
-            this.btnAddEvent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddEvent.UseVisualStyleBackColor = true;
-            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
-            // 
-            // btnAttdLog
-            // 
-            this.btnAttdLog.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAttdLog.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAttdLog.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAttdLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttdLog.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttdLog.Image = global::admissionSystem.Properties.Resources.Get_Info_icon;
-            this.btnAttdLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAttdLog.Location = new System.Drawing.Point(22, 315);
-            this.btnAttdLog.Name = "btnAttdLog";
-            this.btnAttdLog.Size = new System.Drawing.Size(176, 36);
-            this.btnAttdLog.TabIndex = 5;
-            this.btnAttdLog.Text = "ATTENDANCE LOG";
-            this.btnAttdLog.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAttdLog.UseVisualStyleBackColor = true;
-            this.btnAttdLog.Click += new System.EventHandler(this.btnAttdLog_Click);
-            // 
-            // btnSet
-            // 
-            this.btnSet.FlatAppearance.BorderSize = 0;
-            this.btnSet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSet.Image = global::admissionSystem.Properties.Resources.Settings_L_icon;
-            this.btnSet.Location = new System.Drawing.Point(178, 119);
-            this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(25, 22);
-            this.btnSet.TabIndex = 0;
-            this.btnSet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSet.UseVisualStyleBackColor = true;
-            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
-            // 
-            // btnAddStud
-            // 
-            this.btnAddStud.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAddStud.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAddStud.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddStud.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStud.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddStud.Image = global::admissionSystem.Properties.Resources.Male_user_add_icon;
-            this.btnAddStud.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddStud.Location = new System.Drawing.Point(22, 231);
-            this.btnAddStud.Name = "btnAddStud";
-            this.btnAddStud.Size = new System.Drawing.Size(176, 36);
-            this.btnAddStud.TabIndex = 3;
-            this.btnAddStud.Text = "STUDENT INFO";
-            this.btnAddStud.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddStud.UseVisualStyleBackColor = true;
-            this.btnAddStud.Click += new System.EventHandler(this.btnAddStud_Click);
-            // 
-            // btnAddEmp
-            // 
-            this.btnAddEmp.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnAddEmp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnAddEmp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmp.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmp.Image = global::admissionSystem.Properties.Resources.add_user_icon__1_;
-            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(22, 189);
-            this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Size = new System.Drawing.Size(176, 36);
-            this.btnAddEmp.TabIndex = 2;
-            this.btnAddEmp.Text = "EMPLOYEE INFO";
-            this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddEmp.UseVisualStyleBackColor = true;
-            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.Image = global::admissionSystem.Properties.Resources.One_storied_house_icon__1_;
-            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(22, 147);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(176, 36);
-            this.btnHome.TabIndex = 1;
-            this.btnHome.Text = "HOMEPAGE";
-            this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnSetSave
-            // 
-            this.btnSetSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSetSave.Image = global::admissionSystem.Properties.Resources.Programming_Save_icon;
-            this.btnSetSave.Location = new System.Drawing.Point(150, 112);
-            this.btnSetSave.Name = "btnSetSave";
-            this.btnSetSave.Size = new System.Drawing.Size(33, 32);
-            this.btnSetSave.TabIndex = 4;
-            this.btnSetSave.UseVisualStyleBackColor = true;
-            this.btnSetSave.Click += new System.EventHandler(this.btnSetSave_Click);
-            // 
-            // btnReEvt
-            // 
-            this.btnReEvt.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnReEvt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReEvt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReEvt.ForeColor = System.Drawing.Color.Black;
-            this.btnReEvt.Image = global::admissionSystem.Properties.Resources.Button_Refresh_icon;
-            this.btnReEvt.Location = new System.Drawing.Point(359, 6);
-            this.btnReEvt.Name = "btnReEvt";
-            this.btnReEvt.Size = new System.Drawing.Size(25, 25);
-            this.btnReEvt.TabIndex = 76;
-            this.btnReEvt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReEvt.UseVisualStyleBackColor = true;
-            this.btnReEvt.Click += new System.EventHandler(this.btnReEvt_Click);
-            // 
-            // tBSerEvt
-            // 
-            this.tBSerEvt.AutoCompleteCustomSource.AddRange(new string[] {
-            "GRADUATE SCHOOL",
-            "BASIC EDUCATION DEPARTMENT",
-            "COLLEGE OF ARTS AND SCIENCES",
-            "COLLEGE OF BUSINESS EDUCATION",
-            "COLLEGE OF CRIMINAL JUSTICE",
-            "COLLEGE OF LAW",
-            "COLLEGE OF MARITIME EDUCATION",
-            "COLLEGE OF PARAMEDICS",
-            "COLLEGE OF TEACHER EDUCATION",
-            "COLLEGE OF TECHNOLOGY",
-            "TVET PROGRAMS",
-            "ALL STUDENTS",
-            "ALL EMPLOYEES",
-            "GENERAL"});
-            this.tBSerEvt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.tBSerEvt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.tBSerEvt.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tBSerEvt.ForeColor = System.Drawing.Color.Gray;
-            this.tBSerEvt.Location = new System.Drawing.Point(3, 7);
-            this.tBSerEvt.Name = "tBSerEvt";
-            this.tBSerEvt.Size = new System.Drawing.Size(355, 23);
-            this.tBSerEvt.TabIndex = 75;
-            this.tBSerEvt.Text = "SEARCH HERE";
-            this.tBSerEvt.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tBSerEvt_MouseClick);
-            this.tBSerEvt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBSerEvt_KeyPress);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1357, 741);
+            this.ClientSize = new System.Drawing.Size(1357, 731);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
@@ -1939,28 +2044,32 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
-            this.paneSet.ResumeLayout(false);
-            this.paneSet.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.paneSet.ResumeLayout(false);
+            this.paneSet.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabAddEmp.ResumeLayout(false);
             this.paneEmp.ResumeLayout(false);
             this.paneEmp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVEmp)).EndInit();
             this.gBEmp.ResumeLayout(false);
             this.gBEmp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmpQR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBEmp)).EndInit();
             this.tabStud.ResumeLayout(false);
             this.paneStud.ResumeLayout(false);
             this.paneStud.PerformLayout();
             this.gBStud.ResumeLayout(false);
             this.gBStud.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStud)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBStudQR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gVStud)).EndInit();
             this.tabLog.ResumeLayout(false);
             this.paneLog.ResumeLayout(false);
@@ -1972,11 +2081,6 @@
             this.gBEvent.ResumeLayout(false);
             this.gBEvent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gVEvent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmpQR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBEmp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBStud)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pBStudQR)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2107,5 +2211,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnReEvt;
         private System.Windows.Forms.TextBox tBSerEvt;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox cbDept;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ComboBox cbCour;
     }
 }
