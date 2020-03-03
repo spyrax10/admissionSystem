@@ -465,7 +465,7 @@
             this.tabHome.Location = new System.Drawing.Point(4, 25);
             this.tabHome.Name = "tabHome";
             this.tabHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHome.Size = new System.Drawing.Size(1144, 692);
+            this.tabHome.Size = new System.Drawing.Size(1144, 702);
             this.tabHome.TabIndex = 0;
             this.tabHome.Text = "Homepage";
             // 
@@ -475,7 +475,7 @@
             this.pictureBox1.Image = global::admissionSystem.Properties.Resources.attendance_management_system;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1136, 684);
+            this.pictureBox1.Size = new System.Drawing.Size(1136, 694);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -486,7 +486,7 @@
             this.tabAddEmp.Location = new System.Drawing.Point(4, 25);
             this.tabAddEmp.Name = "tabAddEmp";
             this.tabAddEmp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddEmp.Size = new System.Drawing.Size(1144, 692);
+            this.tabAddEmp.Size = new System.Drawing.Size(1144, 702);
             this.tabAddEmp.TabIndex = 1;
             this.tabAddEmp.Text = "Employee Information";
             this.tabAddEmp.UseVisualStyleBackColor = true;
@@ -502,7 +502,7 @@
             this.paneEmp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneEmp.Location = new System.Drawing.Point(3, 3);
             this.paneEmp.Name = "paneEmp";
-            this.paneEmp.Size = new System.Drawing.Size(1138, 686);
+            this.paneEmp.Size = new System.Drawing.Size(1138, 696);
             this.paneEmp.TabIndex = 35;
             // 
             // btnReEmp
@@ -817,7 +817,7 @@
             this.tabStud.Location = new System.Drawing.Point(4, 25);
             this.tabStud.Name = "tabStud";
             this.tabStud.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStud.Size = new System.Drawing.Size(1144, 692);
+            this.tabStud.Size = new System.Drawing.Size(1144, 702);
             this.tabStud.TabIndex = 2;
             this.tabStud.Text = "Student Information";
             this.tabStud.UseVisualStyleBackColor = true;
@@ -833,7 +833,7 @@
             this.paneStud.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneStud.Location = new System.Drawing.Point(3, 3);
             this.paneStud.Name = "paneStud";
-            this.paneStud.Size = new System.Drawing.Size(1138, 686);
+            this.paneStud.Size = new System.Drawing.Size(1138, 696);
             this.paneStud.TabIndex = 0;
             // 
             // btnReStud
@@ -1579,7 +1579,7 @@
             this.tabEvent.Location = new System.Drawing.Point(4, 25);
             this.tabEvent.Name = "tabEvent";
             this.tabEvent.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEvent.Size = new System.Drawing.Size(1144, 692);
+            this.tabEvent.Size = new System.Drawing.Size(1144, 702);
             this.tabEvent.TabIndex = 4;
             this.tabEvent.Text = "Event List";
             this.tabEvent.UseVisualStyleBackColor = true;
@@ -1596,7 +1596,7 @@
             this.paneEvent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneEvent.Location = new System.Drawing.Point(3, 3);
             this.paneEvent.Name = "paneEvent";
-            this.paneEvent.Size = new System.Drawing.Size(1138, 686);
+            this.paneEvent.Size = new System.Drawing.Size(1138, 696);
             this.paneEvent.TabIndex = 0;
             // 
             // btnReEvt
@@ -1702,17 +1702,6 @@
             // 
             this.tBEventAtt.FormattingEnabled = true;
             this.tBEventAtt.Items.AddRange(new object[] {
-            "GRADUATE SCHOOL",
-            "BASIC EDUCATION DEPARTMENT",
-            "COLLEGE OF ARTS AND SCIENCES",
-            "COLLEGE OF BUSINESS EDUCATION",
-            "COLLEGE OF CRIMINAL JUSTICE",
-            "COLLEGE OF LAW",
-            "COLLEGE OF MARITIME EDUCATION",
-            "COLLEGE OF PARAMEDICS",
-            "COLLEGE OF TEACHER EDUCATION",
-            "COLLEGE OF TECHNOLOGY",
-            "TVET PROGRAMS",
             "ALL STUDENTS",
             "ALL EMPLOYEES",
             "GENERAL"});
