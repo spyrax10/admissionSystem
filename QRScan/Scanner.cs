@@ -21,7 +21,7 @@ namespace QRScan
         int move = 0;
         int left = 5;
         string imgLoc = "";
-        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice FinalFrame;
@@ -43,7 +43,7 @@ namespace QRScan
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "Update attendTB set mornStat = CASE WHEN mornTimeIn != '00:00' and mornTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END, " +
                     "aftStat = CASE WHEN aftTimeIn != '00:00' and aftTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END, " +
-                    "eveStat = CASE WHEN eveTimeIn != '00:00' and eveTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END " +
+                    "eveStat = CASE WHEN eveTimeIn != '00:00' and eveTimeOut != '00:00' THEN 'PRESENT' ELSE 'INC' END," +
                     "where evtCode = '" + code + "'";
                 cmd.ExecuteNonQuery();
                 wcon.Close();

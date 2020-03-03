@@ -14,7 +14,7 @@ namespace admissionSystem
 {
     public partial class Main : Form
     {
-        string empcs = @"Data Source=LOCALHOST192\SQL2019;Initial Catalog=facialDB;Integrated Security=True";
+        string empcs = @"Data Source=D8672B6A3F8B574\LOCAL;Initial Catalog=facialDB;Integrated Security=True";
 
         string imgLoc = "";
         SqlDataAdapter adapt;
@@ -439,16 +439,13 @@ namespace admissionSystem
                 while (dr.Read())
                 {
                     string evtName = (dr["eventName"].ToString());
-                    string att = "Regular Employee LogIn";
+                    
 
                     if (!cBEvt.Items.Contains(evtName))
                     {
                         cBEvt.Items.Add(evtName);
                     }
-                    if (!cBEvt.Items.Contains(att))
-                    {
-                        cBEvt.Items.Add(att);
-                    }
+                  
                 }
             }
             catch(Exception e)
@@ -1559,6 +1556,7 @@ namespace admissionSystem
         }
         private void btnAddEvent_Click(object sender, EventArgs e)
         {
+            
             paneSide.Height = btnAddEvent.Height;
             paneSide.Top = btnAddEvent.Top;
             tabControl1.TabPages.Clear();
